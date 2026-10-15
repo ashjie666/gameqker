@@ -7,9 +7,11 @@
 #     注意：last_run_at / generated_at / reports 每轮都会变，所以实际上基本每天都会产生
 #     一次 commit，正好把每天的完整数据留成快照历史（可用 git show <sha>:data/games.json 取回）。
 #
-# 说明：本地已 git init（使用项目内便携版 git：.tools/git），但 GitHub 仓库与 SSH Secrets
-# 还没配置，所以最后一步「推送静态站到服务器」默认是注释掉的。需要时：① 建 GitHub 仓库并推送代码；
-# ② 配好 Secrets；③ 取消注释即可每天自动上线。
+# 说明：GitHub 仓库已配置好（origin 走 ssh://git@ssh.github.com:443，本机 22 端口被拒，
+# 所以端口固化在 remote 里，日常 push 不需要额外环境变量）。本地巡检与 Actions 都会提交
+# 同一批数据文件，两边各自「先 rebase 再 push」，避免互相把对方顶成非快进。
+# 最后一步「推送静态站到服务器」仍默认注释掉：Secrets（SSH_HOST / SSH_USER / SSH_KEY）还没配置，
+# 配好后取消注释即可每天自动上线。
 
 name: refresh-intel
 
@@ -37,6 +39,9 @@ jobs:
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
+        with:
+          # 需要完整历史：下面推数据前要靠 rebase 对齐本地的巡检提交
+          fetch-depth: 0
 
       - name: 安装 Python
         uses: actions/setup-python@v5
@@ -56,6 +61,10 @@ jobs:
             echo "本轮无数据变更，跳过提交"
           else
             git commit -m "chore(data): refresh gameqker intel"
+            # 本地巡检也会提交同一批数据文件，先对齐再推，避免非快进被拒。
+            # -X theirs：rebase 里 theirs 指「正在被应用的那条提交」＝本次这条快照，
+            # 所以冲突处取本次采集的结果（谁后跑谁说了算，数据更新鲜）。
+            git pull --rebase -X theirs origin main
             git push
           fi
 
