@@ -56,7 +56,7 @@
       },
       "skipped": [],
       "error": "官网: https://www.phantombladezero.com/: URLError: <urlopen error timed out>",
-      "duration_ms": 26191
+      "duration_ms": 26461
     },
     {
       "id": "where-winds-meet",
@@ -65,12 +65,12 @@
       "steam": null,
       "official": {
         "matched": true,
-        "label": "测试/公测",
+        "label": "即将推出",
         "signals": [
-          "test"
+          "coming_soon"
         ],
         "url": "https://www.wherewindsmeetgame.com/",
-        "snippet": "O DISCORD HEAD TO X Where Winds Meet | Official Website Where Winds Meet's Final Beta Application is Now Open! Sign up for Where Winds Meet's final beta now! A groun",
+        "snippet": ". New Appearance Set [Aureate Dominion], specially designed for Global players, arrives after the October 15 version update, available until November 9 at 4:59:59 (UTC",
         "pages": [
           {
             "url": "https://www.wherewindsmeetgame.com/",
@@ -90,7 +90,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2591
+      "duration_ms": 2448
     },
     {
       "id": "lord-of-mysteries",
@@ -124,7 +124,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2264
+      "duration_ms": 2219
     },
     {
       "id": "world-of-jade-dynasty",
@@ -165,7 +165,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 3154
+      "duration_ms": 3114
     },
     {
       "id": "neverness-to-everness",
@@ -197,7 +197,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2166
+      "duration_ms": 2175
     },
     {
       "id": "scroll-of-taiwu",
@@ -238,7 +238,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 2907
+      "duration_ms": 2586
     },
     {
       "id": "legend-of-mortal-cultivation",
@@ -292,7 +292,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 3211
+      "duration_ms": 2908
     },
     {
       "id": "wang-yue",
@@ -324,7 +324,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 4177
+      "duration_ms": 3627
     },
     {
       "id": "sanguo-mou-ding-tianxia",
@@ -353,7 +353,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 1359
+      "duration_ms": 1720
     }
   ],
   "games": [
@@ -399,7 +399,7 @@
         "steam_appid": 4115450,
         "official": "https://www.phantombladezero.com/"
       },
-      "last_checked": "2026-10-15T15:35:12Z",
+      "last_checked": "2026-10-15T22:14:23Z",
       "steam_listed": true,
       "steam_release_date": "Oct 28, 2026",
       "official_signal": null,
@@ -467,21 +467,30 @@
         "steam_appid": null,
         "official": "https://www.wherewindsmeetgame.com/"
       },
-      "last_checked": "2026-10-15T15:35:15Z",
+      "last_checked": "2026-10-15T22:14:25Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
         "matched": true,
         "signals": [
-          "test"
+          "coming_soon"
         ],
-        "label": "测试/公测",
-        "pattern": "\\b(?:closed|open)?\\s*beta\\b|\\bCBT\\b|\\bOBT\\b|playtest|首测|二测|内测|公测|测试",
-        "snippet": "O DISCORD HEAD TO X Where Winds Meet | Official Website Where Winds Meet's Final Beta Application is Now Open! Sign up for Where Winds Meet's final beta now! A groun",
+        "label": "即将推出",
+        "pattern": "coming\\s+(?:soon|to)|due\\s+(?:out|on)|set\\s+for|arriv(?:es|ing)|敬请期待|即将(?:上线|推出|开服)",
+        "snippet": ". New Appearance Set [Aureate Dominion], specially designed for Global players, arrives after the October 15 version update, available until November 9 at 4:59:59 (UTC",
         "url": "https://www.wherewindsmeetgame.com/",
         "site": "燕云十六声英文官网"
       },
       "changes": [
+        {
+          "at": "2026-10-15T22:14:44Z",
+          "game_id": "where-winds-meet",
+          "field": "official_signal",
+          "old": "测试/公测",
+          "new": "即将推出",
+          "url": "https://www.wherewindsmeetgame.com/",
+          "evidence": ". New Appearance Set [Aureate Dominion], specially designed for Global players, arrives after the October 15 version update, available until November 9 at 4:59:59 (UTC"
+        },
         {
           "at": "2026-10-15T09:51:12Z",
           "game_id": "where-winds-meet",
@@ -536,7 +545,7 @@
         "steam_appid": null,
         "official": "https://lordofthemysteriesgame.com/"
       },
-      "last_checked": "2026-10-15T15:35:17Z",
+      "last_checked": "2026-10-15T22:14:27Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -606,7 +615,7 @@
         "steam_appid": 3384260,
         "official": "https://zx.wanmei.com/"
       },
-      "last_checked": "2026-10-15T15:35:20Z",
+      "last_checked": "2026-10-15T22:14:31Z",
       "steam_listed": false,
       "steam_release_date": null,
       "official_signal": {
@@ -683,7 +692,7 @@
         "steam_appid": null,
         "official": "https://nte.perfectworld.com/"
       },
-      "last_checked": "2026-10-15T15:35:22Z",
+      "last_checked": "2026-10-15T22:14:33Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -739,7 +748,7 @@
         "steam_appid": 838350,
         "official": "https://scrolloftaiwu.com/"
       },
-      "last_checked": "2026-10-15T15:35:25Z",
+      "last_checked": "2026-10-15T22:14:35Z",
       "steam_listed": true,
       "steam_release_date": "Jun 16, 2026",
       "official_signal": {
@@ -872,7 +881,7 @@
         "steam_appid": 4814120,
         "official": "https://ananta.163.com/"
       },
-      "last_checked": "2026-10-15T15:35:28Z",
+      "last_checked": "2026-10-15T22:14:38Z",
       "steam_listed": true,
       "steam_release_date": "Jan 15, 2027",
       "official_signal": {
@@ -959,7 +968,7 @@
         "steam_appid": null,
         "official": "https://wy.shiyue.com/"
       },
-      "last_checked": "2026-10-15T15:35:32Z",
+      "last_checked": "2026-10-15T22:14:42Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1017,7 +1026,7 @@
         "steam_appid": null,
         "official": "https://store.steamchina.com/app/4542640/"
       },
-      "last_checked": "2026-10-15T15:35:34Z",
+      "last_checked": "2026-10-15T22:14:44Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1048,5 +1057,5 @@
       ]
     }
   ],
-  "last_run_at": "2026-10-15T15:35:34Z"
+  "last_run_at": "2026-10-15T22:14:44Z"
 }
