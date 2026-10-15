@@ -56,7 +56,7 @@
       },
       "skipped": [],
       "error": "官网: https://www.phantombladezero.com/: URLError: <urlopen error timed out>",
-      "duration_ms": 26397
+      "duration_ms": 26191
     },
     {
       "id": "where-winds-meet",
@@ -90,7 +90,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2904
+      "duration_ms": 2591
     },
     {
       "id": "lord-of-mysteries",
@@ -124,7 +124,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2427
+      "duration_ms": 2264
     },
     {
       "id": "world-of-jade-dynasty",
@@ -165,7 +165,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 3309
+      "duration_ms": 3154
     },
     {
       "id": "neverness-to-everness",
@@ -197,7 +197,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2099
+      "duration_ms": 2166
     },
     {
       "id": "scroll-of-taiwu",
@@ -238,7 +238,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 2398
+      "duration_ms": 2907
     },
     {
       "id": "legend-of-mortal-cultivation",
@@ -292,7 +292,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 3152
+      "duration_ms": 3211
     },
     {
       "id": "wang-yue",
@@ -324,7 +324,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 4081
+      "duration_ms": 4177
     },
     {
       "id": "sanguo-mou-ding-tianxia",
@@ -353,7 +353,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 1157
+      "duration_ms": 1359
     }
   ],
   "games": [
@@ -399,7 +399,7 @@
         "steam_appid": 4115450,
         "official": "https://www.phantombladezero.com/"
       },
-      "last_checked": "2026-10-15T15:05:43Z",
+      "last_checked": "2026-10-15T15:35:12Z",
       "steam_listed": true,
       "steam_release_date": "Oct 28, 2026",
       "official_signal": null,
@@ -467,7 +467,7 @@
         "steam_appid": null,
         "official": "https://www.wherewindsmeetgame.com/"
       },
-      "last_checked": "2026-10-15T15:05:46Z",
+      "last_checked": "2026-10-15T15:35:15Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -536,7 +536,7 @@
         "steam_appid": null,
         "official": "https://lordofthemysteriesgame.com/"
       },
-      "last_checked": "2026-10-15T15:05:48Z",
+      "last_checked": "2026-10-15T15:35:17Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -606,7 +606,7 @@
         "steam_appid": 3384260,
         "official": "https://zx.wanmei.com/"
       },
-      "last_checked": "2026-10-15T15:05:52Z",
+      "last_checked": "2026-10-15T15:35:20Z",
       "steam_listed": false,
       "steam_release_date": null,
       "official_signal": {
@@ -683,7 +683,7 @@
         "steam_appid": null,
         "official": "https://nte.perfectworld.com/"
       },
-      "last_checked": "2026-10-15T15:05:54Z",
+      "last_checked": "2026-10-15T15:35:22Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -739,7 +739,7 @@
         "steam_appid": 838350,
         "official": "https://scrolloftaiwu.com/"
       },
-      "last_checked": "2026-10-15T15:05:56Z",
+      "last_checked": "2026-10-15T15:35:25Z",
       "steam_listed": true,
       "steam_release_date": "Jun 16, 2026",
       "official_signal": {
@@ -872,7 +872,7 @@
         "steam_appid": 4814120,
         "official": "https://ananta.163.com/"
       },
-      "last_checked": "2026-10-15T15:05:59Z",
+      "last_checked": "2026-10-15T15:35:28Z",
       "steam_listed": true,
       "steam_release_date": "Jan 15, 2027",
       "official_signal": {
@@ -959,7 +959,7 @@
         "steam_appid": null,
         "official": "https://wy.shiyue.com/"
       },
-      "last_checked": "2026-10-15T15:06:03Z",
+      "last_checked": "2026-10-15T15:35:32Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1017,7 +1017,7 @@
         "steam_appid": null,
         "official": "https://store.steamchina.com/app/4542640/"
       },
-      "last_checked": "2026-10-15T15:06:05Z",
+      "last_checked": "2026-10-15T15:35:34Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1048,5 +1048,5 @@
       ]
     }
   ],
-  "last_run_at": "2026-10-15T15:06:05Z"
+  "last_run_at": "2026-10-15T15:35:34Z"
 }
