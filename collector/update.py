@@ -14,7 +14,8 @@ steam_release_date / official_signal），cn_status、keywords 等人工定性�
 原样带过，绝不改写。
 
 写回之后：若项目内是 git 仓库，会把 data/games.json 与 web/data/games.json
-提交成一条「每日巡检快照」commit，作为当天数据的留存（用 --no-git 关闭）。
+提交成一条「每日巡检快照」commit，作为当天数据的留存（用 --no-git 关闭）；
+随后自动 rebase 到 origin/main，避免与 GitHub Actions 的每日提交分叉。
 """
 
 import argparse
@@ -92,8 +93,67 @@ def resolve_git():
     return shutil.which("git")
 
 
+def git_run(git, *extra):
+    """以项目根为工作目录执行一次 git，返回 CompletedProcess（不抛异常）。
+
+    统一带上提交身份：commit 会新建提交、rebase 会重写提交，两者都要 committer，
+    而本仓库没有配全局身份（避免污染用户的全局 git 配置），所以每处都得显式给。
+    """
+    return subprocess.run(
+        [git, "-c", "user.name=" + GIT_NAME, "-c", "user.email=" + GIT_EMAIL,
+         "-C", ROOT] + list(extra),
+        capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=60,
+    )
+
+
+def sync_with_remote(git, run):
+    """把本地快照 rebase 到 origin/main 之上。
+
+    本地巡检和 GitHub Actions 都会提交 data/games.json：本地攒一条、Actions 攒一条，
+    两边就会分叉，之后本地推送会被拒。这里在每次快照后自动对齐一次，让本地始终停在
+    origin/main 之上；两边都改过同一个数据文件时，冲突处取本地这条快照的版本。
+    离线、未配 origin、工作区不干净或 rebase 意外失败时都只提示并回退，
+    绝不让同步失败影响已经写好的数据和已经提交的快照。返回 True/False/None。
+    """
+    remotes = run("remote")
+    if remotes.returncode != 0 or "origin" not in (remotes.stdout or "").split():
+        print("跳过远端同步：未配置 origin")
+        return None
+
+    if run("rev-parse", "--verify", "--quiet", "origin/main").returncode != 0:
+        print("跳过远端同步：远端还没有 main 分支")
+        return None
+
+    if run("fetch", "origin").returncode != 0:
+        print("跳过远端同步：fetch 失败（离线或鉴权问题）", file=sys.stderr)
+        return False
+
+    # origin/main 已是 HEAD 的祖先，说明本地已包含远端最新提交，无需 rebase
+    if run("merge-base", "--is-ancestor", "origin/main", "HEAD").returncode == 0:
+        return True
+
+    # rebase 要求工作区干净；只看已跟踪文件，未跟踪文件不影响
+    dirty = run("status", "--porcelain", "--untracked-files=no")
+    if dirty.returncode != 0 or (dirty.stdout or "").strip():
+        print("跳过远端同步：工作区有未提交的改动，rebase 需要干净的工作区")
+        return None
+
+    # -X theirs：两边都改过 data/games.json，冲突是常态，这里让本地这条快照胜出。
+    # （rebase 里 theirs 指「正在被应用的那条提交」，也就是本地快照，方向与直觉相反，
+    #   已实测确认。）这样 rebase 能一次跑完，不需要人工解冲突。
+    rebased = run("rebase", "-X", "theirs", "origin/main")
+    if rebased.returncode != 0:
+        run("rebase", "--abort")
+        print("远端同步失败：rebase 未能完成，已回退到同步前状态；"
+              "推送前请手动执行 git pull --rebase 解决", file=sys.stderr)
+        return False
+
+    print("远端同步：本地快照已 rebase 到 origin/main（冲突取本地版本）")
+    return True
+
+
 def snapshot_git():
-    """提交一条当日快照 commit。
+    """提交一条当日快照 commit，随后把本地对齐到 origin/main。
 
     只在「当前是 git 仓库 + 找得到 git」时执行；任何失败都只打印提示，
     绝不让 git 的问题中断巡检本身。返回 True/False/None。
@@ -106,10 +166,7 @@ def snapshot_git():
         return None
 
     def run(*extra):
-        return subprocess.run(
-            [git, "-C", ROOT] + list(extra),
-            capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=60,
-        )
+        return git_run(git, *extra)
 
     try:
         added = run("add", *SNAPSHOT_PATHS)
@@ -120,17 +177,18 @@ def snapshot_git():
         # 退出码 0 表示暂存区没有变化（例如只更新了 last_checked 之外的字段）
         if run("diff", "--cached", "--quiet").returncode == 0:
             print("git 快照：本次无数据变更，跳过提交")
+            sync_with_remote(git, run)
             return True
 
         message = "chore(data): 每日巡检快照 " + today_str()
-        committed = run("-c", "user.name=" + GIT_NAME, "-c", "user.email=" + GIT_EMAIL,
-                        "commit", "-m", message)
+        committed = run("commit", "-m", message)
         if committed.returncode != 0:
             print("git 快照失败（commit）：" + (committed.stderr or "").strip(), file=sys.stderr)
             return False
 
         head = (committed.stdout or "").strip().splitlines()
         print("git 快照：已提交 " + (head[0] if head else message))
+        sync_with_remote(git, run)
         return True
     except Exception as exc:  # noqa: BLE001 - 快照失败不影响巡检结果
         print("git 快照异常：{0}: {1}".format(type(exc).__name__, exc), file=sys.stderr)
