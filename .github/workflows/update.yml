@@ -3,7 +3,8 @@
 # 北京时间每天 06:00（UTC 22:00）跑一次 collector.update：
 #   - 巡检 Steam 美区商店与各游戏官网，只改写 last_checked / steam_listed /
 #     steam_release_date / official_signal 四个自动字段；
-#   - 每次巡检后提交 data/games.json 与 web/data/games.json。
+#   - 每次巡检后提交 data/games.json、web/data/games.json 与倒计时数据
+#     data/events.json、web/data/events.json。
 #     注意：last_run_at / generated_at / reports 每轮都会变，所以实际上基本每天都会产生
 #     一次 commit，正好把每天的完整数据留成快照历史（可用 git show <sha>:data/games.json 取回）。
 #
@@ -56,7 +57,7 @@ jobs:
         run: |
           git config user.name "gameqker-bot"
           git config user.email "gameqker-bot@users.noreply.github.com"
-          git add data/games.json web/data/games.json
+          git add data/games.json web/data/games.json data/events.json web/data/events.json
           if git diff --cached --quiet; then
             echo "本轮无数据变更，跳过提交"
           else

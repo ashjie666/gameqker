@@ -13,6 +13,9 @@
 steam_release_date / official_signal），cn_status、keywords 等人工定性字段
 原样带过，绝不改写。
 
+写回同时会导出 web/data/events.json：把当前快照与 git 历史快照里的 Steam 发售日
+合并成「上线倒计时」数据，供页面顶部的倒计时面板使用（不做版本更新）。
+
 写回之后：若项目内是 git 仓库，会把 data/games.json 与 web/data/games.json
 提交成一条「每日巡检快照」commit，作为当天数据的留存（用 --no-git 关闭）；
 随后自动 rebase 到 origin/main 并推送，与 GitHub Actions 的每日提交收敛到同一条数据线。
@@ -27,7 +30,7 @@ import sys
 import time
 from datetime import date, datetime, timezone
 
-from . import __version__, official, steam
+from . import __version__, events, official, steam
 from .http import Fetcher
 from .official import signal_key
 
@@ -36,6 +39,8 @@ DATA_PATH = os.path.join(ROOT, "data", "games.json")
 CACHE_DIR = os.path.join(ROOT, "data", "cache")
 WEB_DIR = os.path.join(ROOT, "web")
 WEB_EXPORT_PATH = os.path.join(WEB_DIR, "data", "games.json")
+EVENTS_PATH = os.path.join(ROOT, "data", "events.json")
+WEB_EVENTS_PATH = os.path.join(WEB_DIR, "data", "events.json")
 
 # 脚本唯一有权改写的字段；其余一律视为人工维护。
 DYNAMIC_KEYS = ("last_checked", "steam_listed", "steam_release_date", "official_signal")
@@ -77,7 +82,8 @@ def write_json(path, payload):
 # --------------------------------------------------------------------------
 # 每日快照：把巡检结果提交进本地 git 历史
 # --------------------------------------------------------------------------
-SNAPSHOT_PATHS = ("data/games.json", "web/data/games.json")
+SNAPSHOT_PATHS = ("data/games.json", "web/data/games.json",
+                  "data/events.json", "web/data/events.json")
 GIT_NAME = "gameqker-bot"
 GIT_EMAIL = "gameqker-bot@users.noreply.github.com"
 
@@ -180,7 +186,9 @@ def snapshot_git():
         return git_run(git, *extra)
 
     try:
-        added = run("add", *SNAPSHOT_PATHS)
+        # events.json 是后加的产物，导出失败时可能不存在；缺了就跳过，别让 git add 整体失败
+        paths = [item for item in SNAPSHOT_PATHS if os.path.exists(os.path.join(ROOT, item))]
+        added = run("add", *paths)
         if added.returncode != 0:
             print("git 快照失败（add）：" + (added.stderr or "").strip(), file=sys.stderr)
             return False
@@ -204,6 +212,25 @@ def snapshot_git():
     except Exception as exc:  # noqa: BLE001 - 快照失败不影响巡检结果
         print("git 快照异常：{0}: {1}".format(type(exc).__name__, exc), file=sys.stderr)
         return False
+
+
+def export_events(payload):
+    """导出上线倒计时数据（data/events.json + web 副本）。
+
+    合并当前快照与 git 历史快照里的 Steam 发售日。倒计时只是页面上的一块附加面板，
+    任何失败都只提示，绝不影响已经写好的巡检结果。
+    """
+    try:
+        git = resolve_git() if os.path.isdir(os.path.join(ROOT, ".git")) else None
+        events_payload = events.build_payload(payload, git, utc_now_iso())
+        write_json(EVENTS_PATH, events_payload)
+        write_json(WEB_EVENTS_PATH, events_payload)
+        items = events_payload["events"]
+        upcoming = [item for item in items if item["date"] >= today_str()]
+        print("已导出 {0}（上线事件 {1} 条，其中 {2} 条尚未到）".format(
+            WEB_EVENTS_PATH, len(items), len(upcoming)))
+    except Exception as exc:  # noqa: BLE001 - 倒计时导出失败不影响巡检结果
+        print("倒计时导出失败：{0}: {1}".format(type(exc).__name__, exc), file=sys.stderr)
 
 
 # --------------------------------------------------------------------------
@@ -469,6 +496,7 @@ def main(argv=None):
     write_json(WEB_EXPORT_PATH, payload)
     print("已写入 {0}".format(DATA_PATH))
     print("已导出 {0}".format(WEB_EXPORT_PATH))
+    export_events(payload)
 
     if not args.no_git:
         snapshot_git()

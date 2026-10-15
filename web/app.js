@@ -1,6 +1,6 @@
 /* ==========================================================================
    gameqker - 国产游戏出海信息差情报表 · 前端渲染
-   数据来源: web/data/games.json（由 collector/update.py 每次巡检后导出）
+   数据来源: web/data/games.json 与 web/data/events.json（由 collector/update.py 巡检后导出）
    ========================================================================== */
 
 'use strict';
@@ -17,6 +17,7 @@ const LEVEL_CLASS = { '高': 'lv-high', '中高': 'lv-midhigh', '中': 'lv-mid',
 const LEVEL_VALUES = ['高', '中高', '中', '低中', '低'];
 
 const CHANGED_WINDOW_MS = 24 * 60 * 60 * 1000; // 巡检每天一次，24 小时内的变更即「今日变更」
+const NEAR_DAYS = 2; // 上线前 2 天进入倒计时提醒
 
 const state = {
   genre: 'all',
@@ -30,6 +31,7 @@ const state = {
 };
 
 let DATA = null;
+let EVENTS = null;
 
 /* -------------------------------------------------------------------------
    DOM / 时间 helpers
@@ -374,6 +376,93 @@ function renderChangesPanel() {
 }
 
 /* -------------------------------------------------------------------------
+   上线倒计时
+   ------------------------------------------------------------------------- */
+
+// 与今天零点相差的整天数：0=今天、1=明天、2=后天，负数=已经过去
+function daysUntil(isoDate) {
+  const parts = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(isoDate || ''));
+  if (!parts) return NaN;
+  const target = new Date(Number(parts[1]), Number(parts[2]) - 1, Number(parts[3]));
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  return Math.round((target - today) / 86400000);
+}
+
+function upcomingLaunches() {
+  return ((EVENTS && EVENTS.events) || [])
+    .map((event) => Object.assign({}, event, { days: daysUntil(event.date) }))
+    .filter((event) => !Number.isNaN(event.days) && event.days >= 0)
+    .sort((a, b) => a.days - b.days);
+}
+
+function countdownParts(days) {
+  if (days <= 0) return ['今天', '发售'];
+  if (days === 1) return ['明天', '发售'];
+  return [String(days), '天后'];
+}
+
+function renderCountdown() {
+  const note = $('countdown-note');
+  const list = $('countdown-list');
+  const alert = $('launch-alert');
+
+  if (!EVENTS) {
+    note.textContent = '数据载入失败';
+    alert.hidden = true;
+    list.replaceChildren(el('p', { class: 'countdown-empty', text: '暂时读不到倒计时数据。' }));
+    return;
+  }
+
+  const items = upcomingLaunches();
+  const near = items.filter((event) => event.days <= NEAR_DAYS);
+
+  note.textContent = items.length
+    ? `已确认发售日 ${items.length} 款 · 上线前 ${NEAR_DAYS} 天进入倒计时`
+    : '暂无尚未上线的游戏';
+
+  if (near.length) {
+    alert.hidden = false;
+    alert.textContent = near.length === 1
+      ? `${near[0].name_cn} ${countdownParts(near[0].days).join('')}`
+      : `近 ${NEAR_DAYS} 天内有 ${near.length} 款即将上线`;
+    alert.title = `上线前 ${NEAR_DAYS} 天的倒计时提醒`;
+  } else {
+    alert.hidden = true;
+  }
+
+  if (!items.length) {
+    list.replaceChildren(el('p', {
+      class: 'countdown-empty',
+      text: '目前没有解析出具体发售日的游戏（"待定 / Q1 2027" 这类模糊档期不入表）。',
+    }));
+    return;
+  }
+
+  list.replaceChildren(...items.map((event) => {
+    const parts = countdownParts(event.days);
+    const origin = event.origin === 'history'
+      ? `历史名单中的游戏${event.first_seen ? ' · 首次记录于 ' + formatDay(event.first_seen) : ''}`
+      : (event.first_seen ? `首次记录于 ${formatDay(event.first_seen)}` : null);
+
+    return el('div', { class: 'countdown-card' + (event.days <= NEAR_DAYS ? ' is-near' : '') }, [
+      el('div', { class: 'countdown-days' }, [parts[0], el('small', { text: parts[1] })]),
+      el('div', {}, [
+        el('div', { class: 'countdown-name', text: event.name_cn || event.game_id }),
+        event.name_en ? el('div', { class: 'countdown-name-en', text: event.name_en }) : null,
+      ]),
+      el('div', { class: 'countdown-meta' }, [
+        el('span', { class: 'countdown-date', text: formatDay(event.date) }),
+        event.store_url
+          ? el('a', { href: event.store_url, target: '_blank', rel: 'noopener noreferrer' }, ['商店页'])
+          : null,
+      ]),
+      origin ? el('div', { class: 'countdown-origin', text: origin }) : null,
+    ]);
+  }));
+}
+
+/* -------------------------------------------------------------------------
    顶栏 / 概览
    ------------------------------------------------------------------------- */
 
@@ -478,6 +567,14 @@ async function boot() {
   $('search').addEventListener('input', (event) => { state.query = event.target.value; render(); });
   $('reset').addEventListener('click', resetFilters);
 
+  // 倒计时数据只是附加面板，读不到也不影响主表
+  try {
+    const eventsResponse = await fetch('data/events.json', { cache: 'no-store' });
+    if (eventsResponse.ok) EVENTS = await eventsResponse.json();
+  } catch (error) {
+    EVENTS = null;
+  }
+
   try {
     const response = await fetch('data/games.json', { cache: 'no-store' });
     if (!response.ok) throw new Error('HTTP ' + response.status);
@@ -486,12 +583,14 @@ async function boot() {
     $('intro-text').textContent = '数据载入失败：' + error.message;
     $('empty-state').hidden = false;
     $('empty-state').replaceChildren(el('p', {}, ['数据载入失败：', error.message]));
+    renderCountdown();
     return;
   }
 
   renderFilters();
   render();
   renderChangesPanel();
+  renderCountdown();
 }
 
 document.addEventListener('DOMContentLoaded', boot);
