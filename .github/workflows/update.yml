@@ -1,0 +1,87 @@
+# gameqker · 每日巡检并刷新情报表
+#
+# 北京时间每天 06:00（UTC 22:00）跑一次 collector.update：
+#   - 巡检 Steam 美区商店与各游戏官网，只改写 last_checked / steam_listed /
+#     steam_release_date / official_signal 四个自动字段；
+#   - 每次巡检后提交 data/games.json 与 web/data/games.json。
+#     注意：last_run_at / generated_at / reports 每轮都会变，所以实际上基本每天都会产生
+#     一次 commit，正好把每天的完整数据留成快照历史（可用 git show <sha>:data/games.json 取回）。
+#
+# 说明：本地已 git init（使用项目内便携版 git：.tools/git），但 GitHub 仓库与 SSH Secrets
+# 还没配置，所以最后一步「推送静态站到服务器」默认是注释掉的。需要时：① 建 GitHub 仓库并推送代码；
+# ② 配好 Secrets；③ 取消注释即可每天自动上线。
+
+name: refresh-intel
+
+on:
+  schedule:
+    # UTC 22:00 = 北京时间次日 06:00
+    - cron: '0 22 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'collector/**'
+      - '.github/workflows/update.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-intel
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 巡检（Steam + 官网）
+        run: python -m collector.update --budget-seconds 300
+
+      - name: 提交数据变更
+        run: |
+          git config user.name "gameqker-bot"
+          git config user.email "gameqker-bot@users.noreply.github.com"
+          git add data/games.json web/data/games.json
+          if git diff --cached --quiet; then
+            echo "本轮无数据变更，跳过提交"
+          else
+            git commit -m "chore(data): refresh gameqker intel"
+            git push
+          fi
+
+      # ----------------------------------------------------------------------
+      # 可选：把静态站推送到阿里云（nginx 子路径 /www/wwwroot/sites/gameqker/）
+      #
+      # 前置条件（目前都还没做，所以在 GitHub 上跑这一步会直接失败）：
+      #   1. 在仓库 Settings → Secrets and variables → Actions 里新增：
+      #        SSH_HOST  服务器公网 IP（如 101.132.195.92）
+      #        SSH_USER  登录用户（如 root）
+      #        SSH_KEY   部署用私钥全文（含 BEGIN/END 行）
+      #   2. 服务器上已有 /www/wwwroot/sites/gameqker/ 目录
+      #
+      # - name: 推送静态站到阿里云
+      #   env:
+      #     SSH_HOST: ${{ secrets.SSH_HOST }}
+      #     SSH_USER: ${{ secrets.SSH_USER }}
+      #     SSH_KEY: ${{ secrets.SSH_KEY }}
+      #   run: |
+      #     mkdir -p ~/.ssh
+      #     printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key
+      #     chmod 600 ~/.ssh/deploy_key
+      #     ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null
+      #     rsync -az --delete \
+      #       -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=yes" \
+      #       web/ "$SSH_USER@$SSH_HOST:/www/wwwroot/sites/gameqker/"
+      #     ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=yes \
+      #       "$SSH_USER@$SSH_HOST" \
+      #       "chown -R www:www /www/wwwroot/sites/gameqker && find /www/wwwroot/sites/gameqker -type d -exec chmod 755 {} \; && find /www/wwwroot/sites/gameqker -type f -exec chmod 644 {} \;"
+      # ----------------------------------------------------------------------

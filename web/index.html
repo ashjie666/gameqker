@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gameqker · 国产游戏出海信息差情报表</title>
+<meta name="description" content="10 款国产游戏的出海信息差情报表：国内状态、海外状态、信息差窗口、目标市场、英文关键词、内容机会、变现与风险点，每日自动巡检一次。">
+<link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 5h18v14H3z"></path>
+          <path d="M3 10h18M9 10v9"></path>
+        </svg>
+      </span>
+      <div class="brand-text">
+        <h1>gameqker</h1>
+        <p>国产游戏出海信息差情报表 · 每日巡检一次</p>
+      </div>
+    </div>
+
+    <div class="topbar-actions">
+      <span class="chip chip-quiet" id="updated-at">正在载入数据…</span>
+      <span class="chip chip-changed" id="changed-today" hidden></span>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="切换配色">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6L17 7M7 17l-1.4 1.4"></path>
+          <circle cx="12" cy="12" r="4"></circle>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="shell">
+
+  <section class="panel intro-panel" aria-label="说明">
+    <p class="intro-text" id="intro-text"></p>
+    <p class="legend">
+      <span class="badge badge-manual">人工维护</span> 定性判断字段，由人工更新，脚本不会改写
+      <span class="legend-gap"></span>
+      <span class="badge badge-auto">自动校验</span> 由采集器每日巡检 Steam / 官网写入
+    </p>
+  </section>
+
+  <section class="panel filter-panel" aria-label="筛选">
+    <div class="filter-row">
+      <span class="filter-label">类型</span>
+      <div class="chips" id="filter-genre"></div>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">目标市场</span>
+      <div class="chips" id="filter-market"></div>
+      <span class="filter-label">变现等级</span>
+      <div class="chips" id="filter-level"></div>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">优先级</span>
+      <div class="chips" id="filter-priority"></div>
+      <span class="filter-label">变更</span>
+      <div class="chips" id="filter-changed"></div>
+    </div>
+    <div class="filter-row">
+      <span class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="M20 20l-3.5-3.5"></path>
+        </svg>
+        <input type="search" id="search" placeholder="搜索游戏名、厂商或英文关键词…" autocomplete="off">
+      </span>
+      <button class="text-btn" id="reset" type="button">重置筛选</button>
+      <span class="result-count" id="result-count"></span>
+    </div>
+  </section>
+
+  <section class="panel table-panel" aria-label="情报表">
+    <div class="table-scroll">
+      <table class="cmp-table" id="cmp-table">
+        <thead>
+          <tr class="group-row">
+            <th colspan="4">基础信息</th>
+            <th colspan="5">情报差</th>
+            <th colspan="3">落地建议</th>
+          </tr>
+          <tr class="col-row">
+            <th class="col-first" data-col="name"><button class="th-btn" data-sort-key="name_cn" type="button">游戏</button></th>
+            <th data-col="developer"><button class="th-btn" data-sort-key="developer" type="button">厂商</button></th>
+            <th data-col="genre"><button class="th-btn" data-sort-key="genre" type="button">类型</button></th>
+            <th data-col="priority"><button class="th-btn" data-sort-key="priority" type="button">优先级</button></th>
+            <th data-col="cn_status"><button class="th-btn" data-sort-key="cn_status" type="button">国内状态</button></th>
+            <th data-col="global_status"><button class="th-btn" data-sort-key="global_status" type="button">海外状态</button><span class="badge badge-auto">自动校验</span></th>
+            <th data-col="gap_window"><button class="th-btn" data-sort-key="gap_window" type="button">信息差窗口</button></th>
+            <th data-col="markets">目标市场</th>
+            <th data-col="keywords">潜在英文关键词</th>
+            <th data-col="opportunities">内容机会</th>
+            <th data-col="monetization"><button class="th-btn" data-sort-key="monetization_level" type="button">变现可能性</button></th>
+            <th data-col="risks">风险点</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel empty-state" id="empty-state" hidden></section>
+
+  <details class="panel changes-panel" id="changes-panel">
+    <summary>
+      <span>变更历史</span>
+      <span class="changes-count" id="changes-count"></span>
+    </summary>
+    <div class="changes-body" id="changes-body"></div>
+  </details>
+
+  <footer class="site-footer">
+    <p>
+      本表的「人工维护」字段（国内状态 / 海外状态 / 海外热度 / 信息差窗口 / 目标市场 / 英文关键词 / 内容机会 / 变现 / 风险点）
+      为定性判断，其中「海外热度」逐行标注各自的复核日期；关键词搜索量未经关键词工具实测；「自动校验」字段由 <code>collector/update.py</code> 每日巡检
+      Steam 美区商店与官网后写入，每日更新一次。
+    </p>
+    <p class="footer-meta" id="footer-meta"></p>
+  </footer>
+
+</main>
+
+<script src="app.js?v=3"></script>
+</body>
+</html>

@@ -1,0 +1,1052 @@
+{
+  "generated_at": "2026-10-15",
+  "data_cutoff": "2026-10-15",
+  "note": "关键词搜索量为定性判断，未经关键词工具实测。cn_status / global_status / overseas_heat / overseas_heat_checked / gap_window / target_markets / keywords / content_opportunities / monetization / monetization_level / risks 为人工维护字段；last_checked / steam_listed / steam_release_date / official_signal / changes 由 collector/update.py 自动写入。data_cutoff 记录人工字段最后一次整体复核日期，脚本不会推进它。",
+  "field_origin": {
+    "auto": [
+      "last_checked",
+      "steam_listed",
+      "steam_release_date",
+      "official_signal"
+    ],
+    "manual": [
+      "cn_status",
+      "global_status",
+      "overseas_heat",
+      "overseas_heat_checked",
+      "gap_window",
+      "target_markets",
+      "keywords",
+      "content_opportunities",
+      "monetization",
+      "monetization_level",
+      "risks"
+    ]
+  },
+  "reports": [
+    {
+      "id": "phantom-blade-zero",
+      "name": "影之刃零",
+      "status": "partial",
+      "steam": {
+        "appid": 4115450,
+        "listed": true,
+        "release_date": "Oct 28, 2026",
+        "coming_soon": true,
+        "name": "Phantom Blade Zero",
+        "url": "https://store.steampowered.com/app/4115450/",
+        "error": null,
+        "stale": false
+      },
+      "official": {
+        "matched": false,
+        "label": "unknown",
+        "signals": [],
+        "url": "https://www.phantombladezero.com/",
+        "snippet": null,
+        "pages": [
+          {
+            "url": "https://www.phantombladezero.com/",
+            "status": null,
+            "ok": false
+          }
+        ],
+        "error": "https://www.phantombladezero.com/: URLError: <urlopen error timed out>",
+        "stale": false
+      },
+      "skipped": [],
+      "error": "官网: https://www.phantombladezero.com/: URLError: <urlopen error timed out>",
+      "duration_ms": 26516
+    },
+    {
+      "id": "where-winds-meet",
+      "name": "燕云十六声",
+      "status": "ok",
+      "steam": null,
+      "official": {
+        "matched": true,
+        "label": "测试/公测",
+        "signals": [
+          "test"
+        ],
+        "url": "https://www.wherewindsmeetgame.com/",
+        "snippet": "O DISCORD HEAD TO X Where Winds Meet | Official Website Where Winds Meet's Final Beta Application is Now Open! Sign up for Where Winds Meet's final beta now! A groun",
+        "pages": [
+          {
+            "url": "https://www.wherewindsmeetgame.com/",
+            "status": 200,
+            "ok": true
+          },
+          {
+            "url": "https://www.wherewindsmeetgame.com/news/",
+            "status": 200,
+            "ok": true
+          }
+        ],
+        "error": null,
+        "stale": false
+      },
+      "skipped": [
+        "steam(未配置 appid)"
+      ],
+      "error": null,
+      "duration_ms": 2921
+    },
+    {
+      "id": "lord-of-mysteries",
+      "name": "诡秘之主",
+      "status": "ok",
+      "steam": null,
+      "official": {
+        "matched": true,
+        "label": "全球上线",
+        "signals": [
+          "global_launch"
+        ],
+        "url": "https://lordofthemysteriesgame.com/",
+        "snippet": "verification requirements still apply; these clients do not confirm a separate global release. PC · Official Launcher GMZZLauncher v1.1.43.0 Download: 149 MB installer Impor",
+        "pages": [
+          {
+            "url": "https://lordofthemysteriesgame.com/",
+            "status": 200,
+            "ok": true
+          },
+          {
+            "url": "https://lordofthemysteriesgame.com/faq/",
+            "status": 200,
+            "ok": true
+          }
+        ],
+        "error": null,
+        "stale": false
+      },
+      "skipped": [
+        "steam(未配置 appid)"
+      ],
+      "error": null,
+      "duration_ms": 3640
+    },
+    {
+      "id": "world-of-jade-dynasty",
+      "name": "诛仙世界",
+      "status": "ok",
+      "steam": {
+        "appid": 3384260,
+        "listed": false,
+        "release_date": null,
+        "coming_soon": null,
+        "name": null,
+        "url": "https://store.steampowered.com/app/3384260/",
+        "error": null,
+        "stale": false
+      },
+      "official": {
+        "matched": true,
+        "label": "发售日期",
+        "signals": [
+          "release_date"
+        ],
+        "url": "https://zx.wanmei.com/news/",
+        "snippet": "3 【焕新体验服】10月13日更新维护公告 2026-10-12 【经典体验服】10月13日更新维护公告 2026-10-12 焕新432区暮色苍茫10月12日开服公告 2026-10-12 焕新431区松涛听雪10月9日开服公告 2026-10-09 【焕新服】10月8日更新维护公告 2026-10-07 【经典体验服】",
+        "pages": [
+          {
+            "url": "https://zx.wanmei.com/",
+            "status": 200,
+            "ok": true
+          },
+          {
+            "url": "https://zx.wanmei.com/news/",
+            "status": 200,
+            "ok": true
+          }
+        ],
+        "error": null,
+        "stale": false
+      },
+      "skipped": [],
+      "error": null,
+      "duration_ms": 2984
+    },
+    {
+      "id": "neverness-to-everness",
+      "name": "异环",
+      "status": "ok",
+      "steam": null,
+      "official": {
+        "matched": false,
+        "label": "unknown",
+        "signals": [],
+        "url": "https://nte.perfectworld.com/",
+        "snippet": null,
+        "pages": [
+          {
+            "url": "https://nte.perfectworld.com/",
+            "status": 200,
+            "ok": true
+          },
+          {
+            "url": "https://nte.perfectworld.com/news/",
+            "status": null,
+            "ok": false
+          }
+        ],
+        "error": null,
+        "stale": false
+      },
+      "skipped": [
+        "steam(未配置 appid)"
+      ],
+      "error": null,
+      "duration_ms": 2515
+    },
+    {
+      "id": "scroll-of-taiwu",
+      "name": "太吾绘卷",
+      "status": "ok",
+      "steam": {
+        "appid": 838350,
+        "listed": true,
+        "release_date": "Jun 16, 2026",
+        "coming_soon": false,
+        "name": "The Scroll of Taiwu : Beyond The Dome",
+        "url": "https://store.steampowered.com/app/838350/",
+        "error": null,
+        "stale": false
+      },
+      "official": {
+        "matched": true,
+        "label": "英文/多语言",
+        "signals": [
+          "english"
+        ],
+        "url": "https://scrolloftaiwu.com/",
+        "snippet": "f Taiwu Guide — Beginner Routes, Factions & Martial Arts (2026) Scroll of Taiwu English Guide Menu Wiki Beginner Launch Factions Martial Arts Builds Guides Tools scrol",
+        "pages": [
+          {
+            "url": "https://scrolloftaiwu.com/",
+            "status": 304,
+            "ok": true
+          },
+          {
+            "url": "https://scrolloftaiwu.com/news/",
+            "status": null,
+            "ok": false
+          }
+        ],
+        "error": null,
+        "stale": false
+      },
+      "skipped": [],
+      "error": null,
+      "duration_ms": 4687
+    },
+    {
+      "id": "legend-of-mortal-cultivation",
+      "name": "凡人修仙传奇",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "ananta",
+      "name": "无限大",
+      "status": "ok",
+      "steam": {
+        "appid": 4814120,
+        "listed": true,
+        "release_date": "Jan 15, 2027",
+        "coming_soon": true,
+        "name": "ANANTA",
+        "url": "https://store.steampowered.com/app/4814120/",
+        "error": null,
+        "stale": false
+      },
+      "official": {
+        "matched": true,
+        "label": "全球上线",
+        "signals": [
+          "global_launch"
+        ],
+        "url": "https://ananta.163.com/",
+        "snippet": "《无限大》官方网站 | 27年1月15日全球上线 《无限大》官方网站 | 27年1月15日全球上线 《无限大》官方网站 | 27年1月15日全球上线 您使用的浏览器版本过低，可能会影响到您浏览本网页，建议您升",
+        "pages": [
+          {
+            "url": "https://ananta.163.com/",
+            "status": 200,
+            "ok": true
+          },
+          {
+            "url": "https://ananta.163.com/news/",
+            "status": 200,
+            "ok": true
+          }
+        ],
+        "error": null,
+        "stale": false
+      },
+      "skipped": [],
+      "error": null,
+      "duration_ms": 2952
+    },
+    {
+      "id": "wang-yue",
+      "name": "望月",
+      "status": "ok",
+      "steam": null,
+      "official": {
+        "matched": false,
+        "label": "unknown",
+        "signals": [],
+        "url": "https://wy.shiyue.com/",
+        "snippet": null,
+        "pages": [
+          {
+            "url": "https://wy.shiyue.com/",
+            "status": 200,
+            "ok": true
+          },
+          {
+            "url": "https://wy.shiyue.com/news/",
+            "status": 200,
+            "ok": true
+          }
+        ],
+        "error": null,
+        "stale": false
+      },
+      "skipped": [
+        "steam(未配置 appid)"
+      ],
+      "error": null,
+      "duration_ms": 2155
+    },
+    {
+      "id": "sanguo-mou-ding-tianxia",
+      "name": "三国：谋定天下",
+      "status": "ok",
+      "steam": null,
+      "official": {
+        "matched": true,
+        "label": "发售日期",
+        "signals": [
+          "release_date"
+        ],
+        "url": "https://store.steamchina.com/app/4542640/",
+        "snippet": "开发者 浙江华娱网络科技有限公司 发行商 上海幻电信息科技有限公司 运营商 浙江华娱网络科技有限公司 出版物号 ISBN 978-7-498-12351-0 发行日期 2026 年 5 月 6 日 多职业战争策略手游，你可以在每个赛季中体验镇军、青囊、奇佐、天工等六大职业，在沙盘中施展多样的职业天赋与职业技能去影响补给、战术",
+        "pages": [
+          {
+            "url": "https://store.steamchina.com/app/4542640/",
+            "status": 200,
+            "ok": true
+          }
+        ],
+        "error": null,
+        "stale": false
+      },
+      "skipped": [
+        "steam(未配置 appid)"
+      ],
+      "error": null,
+      "duration_ms": 532
+    }
+  ],
+  "games": [
+    {
+      "id": "phantom-blade-zero",
+      "name_cn": "影之刃零",
+      "name_en": "Phantom Blade Zero",
+      "developer": "S-GAME",
+      "genre": "武侠 / 动作 RPG",
+      "priority": 1,
+      "cn_status": "国内预售开启，国内宣发密集",
+      "global_status": "PS5/PC 2026-10-29 全球同步（PS5 限时独占），预购已开",
+      "overseas_heat": "高 · 发售前两周 PS 官方持续造势，英文硬核动作社区已进入抢跑期，攻略站提前占位",
+      "overseas_heat_checked": "2026-10-15",
+      "gap_window": "上线前 2 周 + 上线后 4-8 周（短期爆发窗口）",
+      "target_markets": [
+        "欧美硬核动作/魂系受众",
+        "功夫片受众",
+        "东南亚"
+      ],
+      "keywords": [
+        "phantom blade zero wiki",
+        "phantom blade zero boss guide",
+        "phantom blade zero best weapon",
+        "phantom blade zero build",
+        "phantom blade zero parry timing",
+        "phantom blade zero donnie yen weapon"
+      ],
+      "content_opportunities": [
+        "BOSS 打法与阶段拆解",
+        "武器与流派 build",
+        "格挡/反击帧数与战斗系统",
+        "隐藏结局与收集要素",
+        "甄子丹招式与联动解析"
+      ],
+      "monetization_level": "高",
+      "monetization": "首发期搜索峰值极大；AdSense + 攻略 PDF / 游戏 key affiliate",
+      "risks": [
+        "与 IGN、Fextralife、PowerPyx 正面竞争，须在上线后 72 小时内抢首发",
+        "PS5 限时独占会分流部分流量"
+      ],
+      "watch": {
+        "steam_appid": 4115450,
+        "official": "https://www.phantombladezero.com/"
+      },
+      "last_checked": "2026-10-15T09:52:57Z",
+      "steam_listed": true,
+      "steam_release_date": "Oct 28, 2026",
+      "official_signal": null,
+      "changes": [
+        {
+          "at": "2026-10-15T09:51:12Z",
+          "game_id": "phantom-blade-zero",
+          "field": "steam_release_date",
+          "old": null,
+          "new": "Oct 28, 2026",
+          "url": "https://store.steampowered.com/app/4115450/",
+          "evidence": "release_date.date=Oct 28, 2026；coming_soon=True"
+        },
+        {
+          "at": "2026-10-15T09:51:12Z",
+          "game_id": "phantom-blade-zero",
+          "field": "steam_listed",
+          "old": null,
+          "new": true,
+          "url": "https://store.steampowered.com/app/4115450/",
+          "evidence": "Steam cc=us 商店 success=true；name=Phantom Blade Zero"
+        }
+      ],
+      "sources": [
+        "https://blog.playstation.com/2026/08/17/phantom-blade-zero-state-of-play-dives-deep-into-combat-and-the-wulin-world",
+        "https://store.steampowered.com/app/4115450/Phantom_Blade_Zero"
+      ]
+    },
+    {
+      "id": "where-winds-meet",
+      "name_cn": "燕云十六声",
+      "name_en": "Where Winds Meet",
+      "developer": "Everstone Studio / 网易",
+      "genre": "武侠 / 开放世界 ARPG",
+      "priority": 2,
+      "cn_status": "2024-12 上线，版本持续领先",
+      "global_status": "2025-11-14 全球上线；2026-06 登陆 Xbox/Game Pass；累计 1 亿玩家",
+      "overseas_heat": "中高 · 上线近一年 + Xbox/Game Pass 加持，玩家基数大；需求已从「找攻略」转向「查版本」，热度平稳",
+      "overseas_heat_checked": "2026-10-15",
+      "gap_window": "已收窄，但英文攻略仍碎片化、不成体系",
+      "target_markets": [
+        "欧美免费开放世界 MMO 玩家"
+      ],
+      "keywords": [
+        "where winds meet beginner guide",
+        "where winds meet inner way builds",
+        "where winds meet best sect",
+        "where winds meet martial arts combos",
+        "where winds meet pvp lag fix"
+      ],
+      "content_opportunities": [
+        "体系化 0→满级路线",
+        "内功(Build)配装器",
+        "门派选择与转职",
+        "PvP 延迟与帧数问题",
+        "版本更新解读"
+      ],
+      "monetization_level": "高",
+      "monetization": "用户基数大、搜索稳定；AdSense + 官方 top-up / 加速器 affiliate",
+      "risks": [
+        "竞品站点已成型（wherewindsmeet.live、wwmbuilds 等）",
+        "需靠体系化与更新速度差异化"
+      ],
+      "watch": {
+        "steam_appid": null,
+        "official": "https://www.wherewindsmeetgame.com/"
+      },
+      "last_checked": "2026-10-15T09:53:00Z",
+      "steam_listed": null,
+      "steam_release_date": null,
+      "official_signal": {
+        "matched": true,
+        "signals": [
+          "test"
+        ],
+        "label": "测试/公测",
+        "pattern": "\\b(?:closed|open)?\\s*beta\\b|\\bCBT\\b|\\bOBT\\b|playtest|首测|二测|内测|公测|测试",
+        "snippet": "O DISCORD HEAD TO X Where Winds Meet | Official Website Where Winds Meet's Final Beta Application is Now Open! Sign up for Where Winds Meet's final beta now! A groun",
+        "url": "https://www.wherewindsmeetgame.com/",
+        "site": "燕云十六声英文官网"
+      },
+      "changes": [
+        {
+          "at": "2026-10-15T09:51:12Z",
+          "game_id": "where-winds-meet",
+          "field": "official_signal",
+          "old": "unknown",
+          "new": "测试/公测",
+          "url": "https://www.wherewindsmeetgame.com/",
+          "evidence": "O DISCORD HEAD TO X Where Winds Meet | Official Website Where Winds Meet's Final Beta Application is Now Open! Sign up for Where Winds Meet's final beta now! A groun"
+        }
+      ],
+      "sources": [
+        "https://www.neteasegames.com/m/news/20260618/37000_1304836.html",
+        "https://www.switchbladegaming.com/where-winds-meet/beginners-guide-24/"
+      ]
+    },
+    {
+      "id": "lord-of-mysteries",
+      "name_cn": "诡秘之主",
+      "name_en": "Lord of Mysteries",
+      "developer": "SPARK NEXA",
+      "genre": "奇幻 / RPG MMO",
+      "priority": 3,
+      "cn_status": "国服 2026-08-21 公测",
+      "global_status": "官方英文站与英文社媒已开，但日期、地区、发行均未公布",
+      "overseas_heat": "中 · 英文网文读者盘稳定，讨论多集中在 IP 本身；游戏侧英文内容极少，真实关注度尚未起量",
+      "overseas_heat_checked": "2026-10-15",
+      "gap_window": "大：国服已积累版本与攻略，海外攻略几乎为零",
+      "target_markets": [
+        "英文网文读者（WebNovel 粉丝）",
+        "奇幻 MMO 玩家"
+      ],
+      "keywords": [
+        "lord of mysteries game global release",
+        "lord of mysteries pathways guide",
+        "lord of mysteries best pathway",
+        "lord of mysteries wiki"
+      ],
+      "content_opportunities": [
+        "途径(Pathway)与序列体系解读",
+        "角色养成与资源规划",
+        "氪金争议与性价比解读",
+        "全球上线前预热内容"
+      ],
+      "monetization_level": "中高",
+      "monetization": "IP 英文基础盘稳定；AdSense + 上线期 funnel",
+      "risks": [
+        "全球上线时间未定，可能长期拖延",
+        "官方英文站可能自建攻略",
+        "IP 图文版权使用需谨慎"
+      ],
+      "watch": {
+        "steam_appid": null,
+        "official": "https://lordofthemysteriesgame.com/"
+      },
+      "last_checked": "2026-10-15T09:53:03Z",
+      "steam_listed": null,
+      "steam_release_date": null,
+      "official_signal": {
+        "matched": true,
+        "signals": [
+          "global_launch"
+        ],
+        "label": "全球上线",
+        "pattern": "global\\s+(?:launch|release|version)|worldwide\\s+(?:launch|release)|国际版|英文版|海外版|全球(?:上线|发行|同步)",
+        "snippet": "verification requirements still apply; these clients do not confirm a separate global release. PC · Official Launcher GMZZLauncher v1.1.43.0 Download: 149 MB installer Impor",
+        "url": "https://lordofthemysteriesgame.com/",
+        "site": "诡秘之主官网"
+      },
+      "changes": [
+        {
+          "at": "2026-10-15T09:51:12Z",
+          "game_id": "lord-of-mysteries",
+          "field": "official_signal",
+          "old": "unknown",
+          "new": "全球上线",
+          "url": "https://lordofthemysteriesgame.com/",
+          "evidence": "verification requirements still apply; these clients do not confirm a separate global release. PC · Official Launcher GMZZLauncher v1.1.43.0 Download: 149 MB installer Impor"
+        }
+      ],
+      "sources": [
+        "https://mmoculture.com/tips-guides/lord-of-mysteries-global-launch/",
+        "https://lordofthemysteriesgame.com/faq/"
+      ]
+    },
+    {
+      "id": "world-of-jade-dynasty",
+      "name_cn": "诛仙世界",
+      "name_en": "World of Jade Dynasty",
+      "developer": "完美世界",
+      "genre": "仙侠 / MMO",
+      "priority": 4,
+      "cn_status": "2024-12-19 国服公测，月卡制，运营 22 个月",
+      "global_status": "无官方英文；台港澳/新马服 2025-06-05 上线（需当地手机号、约 $5/月、免 VPN）；Steam 页标 Q4 2027；客户端内已发现 NA/EU 目录但未官宣；民间英化补丁已出现",
+      "overseas_heat": "低中 · 无官方英文，热度几乎全在中文圈；海外仅靠民间英化补丁与小众 MMO 社区零星报道",
+      "overseas_heat_checked": "2026-10-15",
+      "gap_window": "约 22 个月，且官方英文仍在未定状态",
+      "target_markets": [
+        "欧美仙侠/武侠 MMO 老玩家",
+        "东南亚英文用户"
+      ],
+      "keywords": [
+        "world of jade dynasty english",
+        "jade dynasty world guide",
+        "jade dynasty english patch",
+        "zhu xian mmo global release"
+      ],
+      "content_opportunities": [
+        "门派职业开荒",
+        "法宝炼制与灵宠培养",
+        "世界 BOSS 与副本机制",
+        "月卡性价比",
+        "如何进台服并装英化补丁的实操教程"
+      ],
+      "monetization_level": "中",
+      "monetization": "长尾精准；官方月卡/礼包代购 affiliate + AdSense",
+      "risks": [
+        "注册需区域手机号，门槛高",
+        "官方英化或 Steam 版上线后长尾迅速贬值",
+        "粉丝补丁属合规灰区，不要分发补丁本体"
+      ],
+      "watch": {
+        "steam_appid": 3384260,
+        "official": "https://zx.wanmei.com/"
+      },
+      "last_checked": "2026-10-15T09:53:06Z",
+      "steam_listed": false,
+      "steam_release_date": null,
+      "official_signal": {
+        "matched": true,
+        "signals": [
+          "release_date"
+        ],
+        "label": "发售日期",
+        "pattern": "release\\s+date|(?:launch|release)(?:es|ed|ing)?\\s+(?:on|in)\\b|上线日期|发行日期|正式上线|开服",
+        "snippet": "3 【焕新体验服】10月13日更新维护公告 2026-10-12 【经典体验服】10月13日更新维护公告 2026-10-12 焕新432区暮色苍茫10月12日开服公告 2026-10-12 焕新431区松涛听雪10月9日开服公告 2026-10-09 【焕新服】10月8日更新维护公告 2026-10-07 【经典体验服】",
+        "url": "https://zx.wanmei.com/news/",
+        "site": "诛仙世界官网"
+      },
+      "changes": [
+        {
+          "at": "2026-10-15T09:51:12Z",
+          "game_id": "world-of-jade-dynasty",
+          "field": "official_signal",
+          "old": "unknown",
+          "new": "发售日期",
+          "url": "https://zx.wanmei.com/news/",
+          "evidence": "3 【焕新体验服】10月13日更新维护公告 2026-10-12 【经典体验服】10月13日更新维护公告 2026-10-12 焕新432区暮色苍茫10月12日开服公告 2026-10-12 焕新431区松涛听雪10月9日开服公告 2026-10-09 【焕新服】10月8日更新维护公告 2026-10-07 【经典体验服】"
+        },
+        {
+          "at": "2026-10-15T09:51:12Z",
+          "game_id": "world-of-jade-dynasty",
+          "field": "steam_listed",
+          "old": null,
+          "new": false,
+          "url": "https://store.steampowered.com/app/3384260/",
+          "evidence": "Steam cc=us 商店 success=false；name=-"
+        }
+      ],
+      "sources": [
+        "https://www.bladerpg.com/en/cultivation-mmo/",
+        "https://store.steampowered.com/app/3384260/",
+        "https://www.goha.ru/mmorpg-world-of-jade-dynasty-stanet-dostupnoj-dlya-vseh-blagodarya-fanatskomu-perevodu-na-anglijskij-dm7XMB"
+      ]
+    },
+    {
+      "id": "neverness-to-everness",
+      "name_cn": "异环",
+      "name_en": "NTE: Neverness to Everness",
+      "developer": "Hotta Studio / 完美世界",
+      "genre": "二次元 / 都市开放世界",
+      "priority": 5,
+      "cn_status": "2026-04-23 全平台公测",
+      "global_status": "2026-04-29 全球上线（PC/PS5/iOS/Android/Mac）；国服与国际服数据不互通，国际服版本落后国服 1-2 个版本",
+      "overseas_heat": "中高 · 双服运营、二游受众活跃；但国际服版本落后，热度被 Prydwen / Game8 类站点分流",
+      "overseas_heat_checked": "2026-10-15",
+      "gap_window": "小，但存在版本领先的套利空间",
+      "target_markets": [
+        "欧美二次元开放世界玩家"
+      ],
+      "keywords": [
+        "neverness to everness next banner",
+        "neverness to everness version preview",
+        "neverness to everness best characters tier list",
+        "neverness to everness codes"
+      ],
+      "content_opportunities": [
+        "用国服已上线内容提前写国际服卡池/版本前瞻",
+        "角色强度榜",
+        "异常体收集与都市生活玩法",
+        "兑换码汇总"
+      ],
+      "monetization_level": "高",
+      "monetization": "二游玩家搜索活跃；AdSense + 官方代充/礼包 affiliate",
+      "risks": [
+        "Prydwen / Game8 类站点已覆盖二游，同质竞争激烈",
+        "前瞻稿需要卡时效，滞后即失效"
+      ],
+      "watch": {
+        "steam_appid": null,
+        "official": "https://nte.perfectworld.com/"
+      },
+      "last_checked": "2026-10-15T09:53:09Z",
+      "steam_listed": null,
+      "steam_release_date": null,
+      "official_signal": {
+        "matched": false,
+        "signals": [],
+        "label": "unknown",
+        "pattern": null,
+        "snippet": null,
+        "url": "https://nte.perfectworld.com/",
+        "site": "异环官网"
+      },
+      "changes": [],
+      "sources": [
+        "https://nte.global/nte-neverness-to-everness-official-launch-april-29/",
+        "https://nteguide.com/en/faq/cn-vs-global/"
+      ]
+    },
+    {
+      "id": "scroll-of-taiwu",
+      "name_cn": "太吾绘卷",
+      "name_en": "The Scroll of Taiwu",
+      "developer": "ConchShip Games",
+      "genre": "武侠 / 沙盒模拟",
+      "priority": 6,
+      "cn_status": "8 年 EA、国服 340 万+ 玩家，攻略体系极成熟",
+      "global_status": "2026-06-17 全球 1.0，首发即含首次官方英化（基础 UI/教程/百科可用，深度条目仍可能缺失）",
+      "overseas_heat": "中 · 1.0 官方英化刚开放，单机长尾搜索稳定，热度平缓、缺少爆发点",
+      "overseas_heat_checked": "2026-10-15",
+      "gap_window": "中：英文刚开放，深度内容仍空白",
+      "target_markets": [
+        "欧美沙盒/武侠/模拟经营玩家"
+      ],
+      "keywords": [
+        "scroll of taiwu guide",
+        "scroll of taiwu martial arts combos",
+        "scroll of taiwu best build 1.0",
+        "scroll of taiwu beginner tips"
+      ],
+      "content_opportunities": [
+        "武学搭配与连招",
+        "角色养成路线",
+        "奇遇/事件解法",
+        "1.0 新系统解析",
+        "英化不完整处的对照表"
+      ],
+      "monetization_level": "中高",
+      "monetization": "单机长尾搜索稳定；AdSense + Steam key / 攻略手册",
+      "risks": [
+        "官方英化已覆盖基础，必须做深度系统差异化",
+        "单机流量天花板低于 F2P"
+      ],
+      "watch": {
+        "steam_appid": 838350,
+        "official": "https://scrolloftaiwu.com/"
+      },
+      "last_checked": "2026-10-15T09:53:13Z",
+      "steam_listed": true,
+      "steam_release_date": "Jun 16, 2026",
+      "official_signal": {
+        "matched": true,
+        "signals": [
+          "english"
+        ],
+        "label": "英文/多语言",
+        "pattern": "\\benglish\\b|多语言|英文(?:化|字幕|语音|支持)|language\\s+support",
+        "snippet": "f Taiwu Guide — Beginner Routes, Factions & Martial Arts (2026) Scroll of Taiwu English Guide Menu Wiki Beginner Launch Factions Martial Arts Builds Guides Tools scrol",
+        "url": "https://scrolloftaiwu.com/",
+        "site": "太吾绘卷官网"
+      },
+      "changes": [
+        {
+          "at": "2026-10-15T09:51:12Z",
+          "game_id": "scroll-of-taiwu",
+          "field": "official_signal",
+          "old": "unknown",
+          "new": "英文/多语言",
+          "url": "https://scrolloftaiwu.com/",
+          "evidence": "f Taiwu Guide — Beginner Routes, Factions & Martial Arts (2026) Scroll of Taiwu English Guide Menu Wiki Beginner Launch Factions Martial Arts Builds Guides Tools scrol"
+        },
+        {
+          "at": "2026-10-15T09:51:12Z",
+          "game_id": "scroll-of-taiwu",
+          "field": "steam_release_date",
+          "old": null,
+          "new": "Jun 16, 2026",
+          "url": "https://store.steampowered.com/app/838350/",
+          "evidence": "release_date.date=Jun 16, 2026；coming_soon=False"
+        },
+        {
+          "at": "2026-10-15T09:51:12Z",
+          "game_id": "scroll-of-taiwu",
+          "field": "steam_listed",
+          "old": null,
+          "new": true,
+          "url": "https://store.steampowered.com/app/838350/",
+          "evidence": "Steam cc=us 商店 success=true；name=The Scroll of Taiwu : Beyond The Dome"
+        }
+      ],
+      "sources": [
+        "https://everygamemade.com/hub/scroll-of-taiwu/index.html",
+        "https://scrolloftaiwu.com/guides/official-english-translation"
+      ]
+    },
+    {
+      "id": "legend-of-mortal-cultivation",
+      "name_cn": "凡人修仙传奇",
+      "name_en": "Legend of Mortal Cultivation",
+      "developer": "独立 / Steam",
+      "genre": "仙侠 / 放置 MMO",
+      "priority": 7,
+      "cn_status": "国服运营中；Steam 1.0 = 2026-01-29，86% 好评",
+      "global_status": "Steam 全球可下载，但仅简体中文、无英文计划",
+      "overseas_heat": "低中 · Steam 可玩但仅简中，英文侧几乎无人公开讨论，热度局限在修仙题材小圈层",
+      "overseas_heat_checked": "2026-10-15",
+      "gap_window": "极大：英文玩家能玩但看不懂",
+      "target_markets": [
+        "修仙网文英文读者",
+        "放置/挂机 MMO 玩家"
+      ],
+      "keywords": [
+        "legend of mortal cultivation english",
+        "mortal cultivation game guide",
+        "legend of mortal cultivation how to play english"
+      ],
+      "content_opportunities": [
+        "界面与系统英文对照表",
+        "境界突破路线",
+        "挂机效率与资源分配",
+        "氪金点解析",
+        "翻译层内容（天然稀缺）"
+      ],
+      "monetization_level": "中",
+      "monetization": "精准但盘子小；AdSense + 辅助工具",
+      "risks": [
+        "无官方英文，内容需自行翻译且易随版本失效",
+        "放置品类留存差、生命周期不确定"
+      ],
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://www.notebookcheck.net/New-free-to-play-MMORPG-launches-on-Steam-with-promising-reviews-but-with-a-major-caveat.1216274.0.html",
+        "https://www.bladerpg.com/en/cultivation-mmo/"
+      ]
+    },
+    {
+      "id": "ananta",
+      "name_cn": "无限大",
+      "name_en": "ANANTA",
+      "developer": "Naked Rain / 网易",
+      "genre": "二次元 / 都市开放世界",
+      "priority": 8,
+      "cn_status": "至今未开放首次对外测试（官方口径：对齐全球同步发行）",
+      "global_status": "2027-01-15 全球上线（gamescom 2026 公布）",
+      "overseas_heat": "中高 · 网易量级 + 全球同步日期已定，预热期关注度上行；距上线约 3 个月，仍属潜伏期热度",
+      "overseas_heat_checked": "2026-10-15",
+      "gap_window": "上线前约 3 个月的 SEO 卡位期",
+      "target_markets": [
+        "欧美/东南亚二游受众",
+        "都市开放世界玩家"
+      ],
+      "keywords": [
+        "ananta release date",
+        "ananta characters",
+        "ananta pre registration rewards",
+        "ananta system requirements",
+        "ananta codes"
+      ],
+      "content_opportunities": [
+        "上线前预约奖励+配置需求+角色预析+新手路线预置页",
+        "上线首周切 BOSS/养成/活动攻略"
+      ],
+      "monetization_level": "中高",
+      "monetization": "大厂量级，但需自建流量；AdSense + 上线期 funnel",
+      "risks": [
+        "距上线 3 个月，当前投入属赌注",
+        "anantadb / anantadex 等专站已占位"
+      ],
+      "watch": {
+        "steam_appid": 4814120,
+        "official": "https://ananta.163.com/"
+      },
+      "last_checked": "2026-10-15T09:53:16Z",
+      "steam_listed": true,
+      "steam_release_date": "Jan 15, 2027",
+      "official_signal": {
+        "matched": true,
+        "signals": [
+          "global_launch"
+        ],
+        "label": "全球上线",
+        "pattern": "global\\s+(?:launch|release|version)|worldwide\\s+(?:launch|release)|国际版|英文版|海外版|全球(?:上线|发行|同步)",
+        "snippet": "《无限大》官方网站 | 27年1月15日全球上线 《无限大》官方网站 | 27年1月15日全球上线 《无限大》官方网站 | 27年1月15日全球上线 您使用的浏览器版本过低，可能会影响到您浏览本网页，建议您升",
+        "url": "https://ananta.163.com/",
+        "site": "无限大官网"
+      },
+      "changes": [
+        {
+          "at": "2026-10-15T09:51:12Z",
+          "game_id": "ananta",
+          "field": "official_signal",
+          "old": "unknown",
+          "new": "全球上线",
+          "url": "https://ananta.163.com/",
+          "evidence": "《无限大》官方网站 | 27年1月15日全球上线 《无限大》官方网站 | 27年1月15日全球上线 《无限大》官方网站 | 27年1月15日全球上线 您使用的浏览器版本过低，可能会影响到您浏览本网页，建议您升"
+        },
+        {
+          "at": "2026-10-15T09:51:12Z",
+          "game_id": "ananta",
+          "field": "steam_release_date",
+          "old": null,
+          "new": "Jan 15, 2027",
+          "url": "https://store.steampowered.com/app/4814120/",
+          "evidence": "release_date.date=Jan 15, 2027；coming_soon=True"
+        },
+        {
+          "at": "2026-10-15T09:51:12Z",
+          "game_id": "ananta",
+          "field": "steam_listed",
+          "old": null,
+          "new": true,
+          "url": "https://store.steampowered.com/app/4814120/",
+          "evidence": "Steam cc=us 商店 success=true；name=ANANTA"
+        }
+      ],
+      "sources": [
+        "https://anantadex.com/guides/release-date/",
+        "https://anantadb.com/",
+        "https://www.guancha.cn/economy/2026_05_21_817939.shtml"
+      ]
+    },
+    {
+      "id": "wang-yue",
+      "name_cn": "望月",
+      "name_en": "Wang Yue",
+      "developer": "诗悦网络 · 星辰工作室",
+      "genre": "二次元 / 都市开放世界捉宠",
+      "priority": 9,
+      "cn_status": "2026 年初首测、6 月二测、Q4 2026 PC 线上测试，尚未公测",
+      "global_status": "无全球发行计划与日期，测试仅限中国大陆",
+      "overseas_heat": "低 · 测试仅限国服，英文侧只有零星媒体报道，海外关注度尚未形成",
+      "overseas_heat_checked": "2026-10-15",
+      "gap_window": "极大：英文侧仅零星报道",
+      "target_markets": [
+        "欧美二游受众",
+        "捉宠/宠物收集受众"
+      ],
+      "keywords": [
+        "wang yue game english",
+        "wang yue release date",
+        "wang yue beta",
+        "houyi nine suns game"
+      ],
+      "content_opportunities": [
+        "测试情报汇总",
+        "月灵（宠物）图鉴",
+        "天月市地图与玩法",
+        "测试资格与全球上线跟踪"
+      ],
+      "monetization_level": "低中",
+      "monetization": "现阶段流量小，属提前占位型投入",
+      "risks": [
+        "尚未公测，海外上线与否不确定",
+        "都市捕捉题材与 ANANTA / NTE 重叠"
+      ],
+      "watch": {
+        "steam_appid": null,
+        "official": "https://wy.shiyue.com/"
+      },
+      "last_checked": "2026-10-15T09:53:19Z",
+      "steam_listed": null,
+      "steam_release_date": null,
+      "official_signal": {
+        "matched": false,
+        "signals": [],
+        "label": "unknown",
+        "pattern": null,
+        "snippet": null,
+        "url": "https://wy.shiyue.com/",
+        "site": "望月官网"
+      },
+      "changes": [],
+      "sources": [
+        "https://a.9game.cn/wangyue/11956785.html",
+        "https://www.taptap.cn/app/735263/strategy",
+        "https://www.icy-veins.com/other-games/news/wang-yues-new-beta-shows-why-this-might-be-the-most-unusual-gacha-rpg/"
+      ]
+    },
+    {
+      "id": "sanguo-mou-ding-tianxia",
+      "name_cn": "三国：谋定天下",
+      "name_en": "Sanguo: Mou Ding Tianxia",
+      "developer": "华娱网络 / Bilibili",
+      "genre": "策略 / SLG",
+      "priority": 10,
+      "cn_status": "国服运营成熟；蒸汽平台页 2026-05-06",
+      "global_status": "2026-01-22 港澳台/新马同步上市并登多地免费榜；欧美无专门英文服务",
+      "overseas_heat": "低中 · 港澳台/新马有免费榜榜位，但欧美无英文运营，热度限于东南亚华语与英语 SLG 小圈",
+      "overseas_heat_checked": "2026-10-15",
+      "gap_window": "中：中文 SLG 攻略极成熟，英文近乎为零",
+      "target_markets": [
+        "东南亚英文 SLG 玩家",
+        "欧美三国题材受众"
+      ],
+      "keywords": [
+        "sanguo mou ding tianxia guide",
+        "three kingdoms strategy beginner guide",
+        "sanguo mou ding tianxia best lineup",
+        "three kingdoms slg alliance guide"
+      ],
+      "content_opportunities": [
+        "开荒节奏表",
+        "阵容与职业搭配",
+        "同盟（公会）运营",
+        "跨服对抗",
+        "氪金性价比"
+      ],
+      "monetization_level": "中",
+      "monetization": "SLG 用户付费意愿强（funnel 好），但英文检索量低、周期长",
+      "risks": [
+        "西方搜索量小",
+        "SLG 攻略同质化，易被官方社区替代"
+      ],
+      "watch": {
+        "steam_appid": null,
+        "official": "https://store.steamchina.com/app/4542640/"
+      },
+      "last_checked": "2026-10-15T09:53:19Z",
+      "steam_listed": null,
+      "steam_release_date": null,
+      "official_signal": {
+        "matched": true,
+        "signals": [
+          "release_date"
+        ],
+        "label": "发售日期",
+        "pattern": "release\\s+date|(?:launch|release)(?:es|ed|ing)?\\s+(?:on|in)\\b|上线日期|发行日期|正式上线|开服",
+        "snippet": "开发者 浙江华娱网络科技有限公司 发行商 上海幻电信息科技有限公司 运营商 浙江华娱网络科技有限公司 出版物号 ISBN 978-7-498-12351-0 发行日期 2026 年 5 月 6 日 多职业战争策略手游，你可以在每个赛季中体验镇军、青囊、奇佐、天工等六大职业，在沙盘中施展多样的职业天赋与职业技能去影响补给、战术",
+        "url": "https://store.steamchina.com/app/4542640/",
+        "site": "蒸汽平台商店页"
+      },
+      "changes": [
+        {
+          "at": "2026-10-15T09:51:12Z",
+          "game_id": "sanguo-mou-ding-tianxia",
+          "field": "official_signal",
+          "old": "unknown",
+          "new": "发售日期",
+          "url": "https://store.steamchina.com/app/4542640/",
+          "evidence": "开发者 浙江华娱网络科技有限公司 发行商 上海幻电信息科技有限公司 运营商 浙江华娱网络科技有限公司 出版物号 ISBN 978-7-498-12351-0 发行日期 2026 年 5 月 6 日 多职业战争策略手游，你可以在每个赛季中体验镇军、青囊、奇佐、天工等六大职业，在沙盘中施展多样的职业天赋与职业技能去影响补给、战术"
+        }
+      ],
+      "sources": [
+        "https://store.steamchina.com/app/4542640/_/",
+        "https://m.ourplay.net/rank/detail/316888"
+      ]
+    }
+  ],
+  "last_run_at": "2026-10-15T09:53:19Z"
+}

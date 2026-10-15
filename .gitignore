@@ -1,0 +1,28 @@
+# 巡检用的 HTTP 落盘缓存（含 ETag / Last-Modified），不进仓库
+data/cache/
+
+# 注意：data/games.json 与 web/data/games.json 是「每日快照历史」的来源，必须入库，
+#       所以这里只排除 data/cache/，不排除 data/ 目录本身。
+
+# Python
+__pycache__/
+*.py[cod]
+
+# 原子写临时文件
+*.tmp
+
+# 项目内便携工具链（免安装的 git 等），不进仓库
+.tools/
+
+# 环境变量与密钥（GAMENEWS_LLM_API_KEY 等），绝不入库
+.env
+.env.*
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
