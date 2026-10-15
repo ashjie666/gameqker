@@ -11,8 +11,8 @@
 # 说明：GitHub 仓库已配置好（origin 走 ssh://git@ssh.github.com:443，本机 22 端口被拒，
 # 所以端口固化在 remote 里，日常 push 不需要额外环境变量）。本地巡检与 Actions 都会提交
 # 同一批数据文件，两边各自「先 rebase 再 push」，避免互相把对方顶成非快进。
-# 最后一步「推送静态站到服务器」仍默认注释掉：Secrets（SSH_HOST / SSH_USER / SSH_KEY）还没配置，
-# 配好后取消注释即可每天自动上线。
+# 最后一步会把静态站同步到阿里云（/www/wwwroot/sites/gameqker/）：需要仓库里配好
+# SSH_HOST / SSH_USER / SSH_KEY 三个 Secrets，且服务器已安装 rsync。
 
 name: refresh-intel
 
@@ -70,29 +70,23 @@ jobs:
           fi
 
       # ----------------------------------------------------------------------
-      # 可选：把静态站推送到阿里云（nginx 子路径 /www/wwwroot/sites/gameqker/）
-      #
-      # 前置条件（目前都还没做，所以在 GitHub 上跑这一步会直接失败）：
-      #   1. 在仓库 Settings → Secrets and variables → Actions 里新增：
-      #        SSH_HOST  服务器公网 IP（如 101.132.195.92）
-      #        SSH_USER  登录用户（如 root）
-      #        SSH_KEY   部署用私钥全文（含 BEGIN/END 行）
-      #   2. 服务器上已有 /www/wwwroot/sites/gameqker/ 目录
-      #
-      # - name: 推送静态站到阿里云
-      #   env:
-      #     SSH_HOST: ${{ secrets.SSH_HOST }}
-      #     SSH_USER: ${{ secrets.SSH_USER }}
-      #     SSH_KEY: ${{ secrets.SSH_KEY }}
-      #   run: |
-      #     mkdir -p ~/.ssh
-      #     printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key
-      #     chmod 600 ~/.ssh/deploy_key
-      #     ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null
-      #     rsync -az --delete \
-      #       -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=yes" \
-      #       web/ "$SSH_USER@$SSH_HOST:/www/wwwroot/sites/gameqker/"
-      #     ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=yes \
-      #       "$SSH_USER@$SSH_HOST" \
-      #       "chown -R www:www /www/wwwroot/sites/gameqker && find /www/wwwroot/sites/gameqker -type d -exec chmod 755 {} \; && find /www/wwwroot/sites/gameqker -type f -exec chmod 644 {} \;"
+      # 把静态站同步到阿里云（nginx 子路径 /www/wwwroot/sites/gameqker/）
+      # 依赖：仓库 Secrets SSH_HOST / SSH_USER / SSH_KEY，服务器已装 rsync。
+      # ----------------------------------------------------------------------
+      - name: 推送静态站到阿里云
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null
+          rsync -az --delete \
+            -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=yes" \
+            web/ "$SSH_USER@$SSH_HOST:/www/wwwroot/sites/gameqker/"
+          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=yes \
+            "$SSH_USER@$SSH_HOST" \
+            "chown -R www:www /www/wwwroot/sites/gameqker && find /www/wwwroot/sites/gameqker -type d -exec chmod 755 {} \; && find /www/wwwroot/sites/gameqker -type f -exec chmod 644 {} \;"
       # ----------------------------------------------------------------------
