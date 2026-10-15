@@ -36,7 +36,7 @@
         "name": "Phantom Blade Zero",
         "url": "https://store.steampowered.com/app/4115450/",
         "error": null,
-        "stale": false
+        "stale": true
       },
       "official": {
         "matched": false,
@@ -56,7 +56,7 @@
       },
       "skipped": [],
       "error": "官网: https://www.phantombladezero.com/: URLError: <urlopen error timed out>",
-      "duration_ms": 27078
+      "duration_ms": 51953
     },
     {
       "id": "where-winds-meet",
@@ -90,7 +90,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 6125
+      "duration_ms": 2796
     },
     {
       "id": "lord-of-mysteries",
@@ -124,7 +124,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 3108
+      "duration_ms": 3609
     },
     {
       "id": "world-of-jade-dynasty",
@@ -138,7 +138,7 @@
         "name": null,
         "url": "https://store.steampowered.com/app/3384260/",
         "error": null,
-        "stale": false
+        "stale": true
       },
       "official": {
         "matched": true,
@@ -165,7 +165,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 3187
+      "duration_ms": 27625
     },
     {
       "id": "neverness-to-everness",
@@ -197,7 +197,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2562
+      "duration_ms": 4000
     },
     {
       "id": "scroll-of-taiwu",
@@ -211,34 +211,14 @@
         "name": "The Scroll of Taiwu : Beyond The Dome",
         "url": "https://store.steampowered.com/app/838350/",
         "error": null,
-        "stale": false
+        "stale": true
       },
-      "official": {
-        "matched": true,
-        "label": "英文/多语言",
-        "signals": [
-          "english"
-        ],
-        "url": "https://scrolloftaiwu.com/",
-        "snippet": "f Taiwu Guide — Beginner Routes, Factions & Martial Arts (2026) Scroll of Taiwu English Guide Menu Wiki Beginner Launch Factions Martial Arts Builds Guides Tools scrol",
-        "pages": [
-          {
-            "url": "https://scrolloftaiwu.com/",
-            "status": 304,
-            "ok": true
-          },
-          {
-            "url": "https://scrolloftaiwu.com/news/",
-            "status": null,
-            "ok": false
-          }
-        ],
-        "error": null,
-        "stale": false
-      },
-      "skipped": [],
+      "official": null,
+      "skipped": [
+        "official(超预算)"
+      ],
       "error": null,
-      "duration_ms": 5844
+      "duration_ms": 26156
     },
     {
       "id": "legend-of-mortal-cultivation",
@@ -256,104 +236,41 @@
     {
       "id": "ananta",
       "name": "无限大",
-      "status": "ok",
-      "steam": {
-        "appid": 4814120,
-        "listed": true,
-        "release_date": "Jan 15, 2027",
-        "coming_soon": true,
-        "name": "ANANTA",
-        "url": "https://store.steampowered.com/app/4814120/",
-        "error": null,
-        "stale": false
-      },
-      "official": {
-        "matched": true,
-        "label": "全球上线",
-        "signals": [
-          "global_launch"
-        ],
-        "url": "https://ananta.163.com/",
-        "snippet": "《无限大》官方网站 | 27年1月15日全球上线 《无限大》官方网站 | 27年1月15日全球上线 《无限大》官方网站 | 27年1月15日全球上线 您使用的浏览器版本过低，可能会影响到您浏览本网页，建议您升",
-        "pages": [
-          {
-            "url": "https://ananta.163.com/",
-            "status": 200,
-            "ok": true
-          },
-          {
-            "url": "https://ananta.163.com/news/",
-            "status": 200,
-            "ok": true
-          }
-        ],
-        "error": null,
-        "stale": false
-      },
-      "skipped": [],
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(超预算)",
+        "official(超预算)"
+      ],
       "error": null,
-      "duration_ms": 2905
+      "duration_ms": 0
     },
     {
       "id": "wang-yue",
       "name": "望月",
-      "status": "ok",
+      "status": "skipped",
       "steam": null,
-      "official": {
-        "matched": false,
-        "label": "unknown",
-        "signals": [],
-        "url": "https://wy.shiyue.com/",
-        "snippet": null,
-        "pages": [
-          {
-            "url": "https://wy.shiyue.com/",
-            "status": 200,
-            "ok": true
-          },
-          {
-            "url": "https://wy.shiyue.com/news/",
-            "status": 200,
-            "ok": true
-          }
-        ],
-        "error": null,
-        "stale": false
-      },
+      "official": null,
       "skipped": [
-        "steam(未配置 appid)"
+        "steam(未配置 appid)",
+        "official(超预算)"
       ],
       "error": null,
-      "duration_ms": 2172
+      "duration_ms": 0
     },
     {
       "id": "sanguo-mou-ding-tianxia",
       "name": "三国：谋定天下",
-      "status": "ok",
+      "status": "skipped",
       "steam": null,
-      "official": {
-        "matched": true,
-        "label": "发售日期",
-        "signals": [
-          "release_date"
-        ],
-        "url": "https://store.steamchina.com/app/4542640/",
-        "snippet": "开发者 浙江华娱网络科技有限公司 发行商 上海幻电信息科技有限公司 运营商 浙江华娱网络科技有限公司 出版物号 ISBN 978-7-498-12351-0 发行日期 2026 年 5 月 6 日 多职业战争策略手游，你可以在每个赛季中体验镇军、青囊、奇佐、天工等六大职业，在沙盘中施展多样的职业天赋与职业技能去影响补给、战术",
-        "pages": [
-          {
-            "url": "https://store.steamchina.com/app/4542640/",
-            "status": 200,
-            "ok": true
-          }
-        ],
-        "error": null,
-        "stale": false
-      },
+      "official": null,
       "skipped": [
-        "steam(未配置 appid)"
+        "steam(未配置 appid)",
+        "official(超预算)"
       ],
       "error": null,
-      "duration_ms": 546
+      "duration_ms": 0
     }
   ],
   "games": [
@@ -399,7 +316,7 @@
         "steam_appid": 4115450,
         "official": "https://www.phantombladezero.com/"
       },
-      "last_checked": "2026-10-15T12:34:47Z",
+      "last_checked": "2026-10-15T12:42:32Z",
       "steam_listed": true,
       "steam_release_date": "Oct 28, 2026",
       "official_signal": null,
@@ -467,7 +384,7 @@
         "steam_appid": null,
         "official": "https://www.wherewindsmeetgame.com/"
       },
-      "last_checked": "2026-10-15T12:34:53Z",
+      "last_checked": "2026-10-15T12:42:35Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -536,7 +453,7 @@
         "steam_appid": null,
         "official": "https://lordofthemysteriesgame.com/"
       },
-      "last_checked": "2026-10-15T12:34:56Z",
+      "last_checked": "2026-10-15T12:42:39Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -606,7 +523,7 @@
         "steam_appid": 3384260,
         "official": "https://zx.wanmei.com/"
       },
-      "last_checked": "2026-10-15T12:34:59Z",
+      "last_checked": "2026-10-15T12:43:06Z",
       "steam_listed": false,
       "steam_release_date": null,
       "official_signal": {
@@ -683,7 +600,7 @@
         "steam_appid": null,
         "official": "https://nte.perfectworld.com/"
       },
-      "last_checked": "2026-10-15T12:35:02Z",
+      "last_checked": "2026-10-15T12:43:10Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -739,7 +656,7 @@
         "steam_appid": 838350,
         "official": "https://scrolloftaiwu.com/"
       },
-      "last_checked": "2026-10-15T12:35:08Z",
+      "last_checked": "2026-10-15T12:43:36Z",
       "steam_listed": true,
       "steam_release_date": "Jun 16, 2026",
       "official_signal": {
@@ -1048,5 +965,5 @@
       ]
     }
   ],
-  "last_run_at": "2026-10-15T12:35:13Z"
+  "last_run_at": "2026-10-15T12:43:36Z"
 }
