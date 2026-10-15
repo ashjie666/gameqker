@@ -44,7 +44,8 @@ jobs:
           python-version: '3.12'
 
       - name: 巡检（Steam + 官网）
-        run: python -m collector.update --budget-seconds 300
+        # --no-git：快照提交交给下面那一步，由 Actions 自己 commit + push
+        run: python -m collector.update --budget-seconds 300 --no-git
 
       - name: 提交数据变更
         run: |

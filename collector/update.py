@@ -7,15 +7,21 @@
     python -m collector.update --only=a,b      # 只巡检指定 id
     python -m collector.update --no-cache      # 忽略本地 HTTP 缓存
     python -m collector.update --budget-seconds 180
+    python -m collector.update --no-git        # 巡检后不提交本地 git 快照
 
 写回原则：**只允许覆盖 DYNAMIC_KEYS**（last_checked / steam_listed /
 steam_release_date / official_signal），cn_status、keywords 等人工定性字段
 原样带过，绝不改写。
+
+写回之后：若项目内是 git 仓库，会把 data/games.json 与 web/data/games.json
+提交成一条「每日巡检快照」commit，作为当天数据的留存（用 --no-git 关闭）。
 """
 
 import argparse
 import json
 import os
+import shutil
+import subprocess
 import sys
 import time
 from datetime import date, datetime, timezone
@@ -65,6 +71,70 @@ def write_json(path, payload):
         handle.write("\n")
     os.replace(tmp, path)
     return path
+
+
+# --------------------------------------------------------------------------
+# 每日快照：把巡检结果提交进本地 git 历史
+# --------------------------------------------------------------------------
+SNAPSHOT_PATHS = ("data/games.json", "web/data/games.json")
+GIT_NAME = "gameqker-bot"
+GIT_EMAIL = "gameqker-bot@users.noreply.github.com"
+
+
+def resolve_git():
+    """便携 git（项目内 .tools/git）优先，其次 PATH 里的 git。"""
+    override = os.environ.get("GAMEQKER_GIT")
+    if override and os.path.exists(override):
+        return override
+    local = os.path.join(ROOT, ".tools", "git", "cmd", "git.exe")
+    if os.path.exists(local):
+        return local
+    return shutil.which("git")
+
+
+def snapshot_git():
+    """提交一条当日快照 commit。
+
+    只在「当前是 git 仓库 + 找得到 git」时执行；任何失败都只打印提示，
+    绝不让 git 的问题中断巡检本身。返回 True/False/None。
+    """
+    if not os.path.isdir(os.path.join(ROOT, ".git")):
+        return None
+    git = resolve_git()
+    if not git:
+        print("跳过 git 快照：未找到 git（可用 GAMEQKER_GIT 指定路径）")
+        return None
+
+    def run(*extra):
+        return subprocess.run(
+            [git, "-C", ROOT] + list(extra),
+            capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=60,
+        )
+
+    try:
+        added = run("add", *SNAPSHOT_PATHS)
+        if added.returncode != 0:
+            print("git 快照失败（add）：" + (added.stderr or "").strip(), file=sys.stderr)
+            return False
+
+        # 退出码 0 表示暂存区没有变化（例如只更新了 last_checked 之外的字段）
+        if run("diff", "--cached", "--quiet").returncode == 0:
+            print("git 快照：本次无数据变更，跳过提交")
+            return True
+
+        message = "chore(data): 每日巡检快照 " + today_str()
+        committed = run("-c", "user.name=" + GIT_NAME, "-c", "user.email=" + GIT_EMAIL,
+                        "commit", "-m", message)
+        if committed.returncode != 0:
+            print("git 快照失败（commit）：" + (committed.stderr or "").strip(), file=sys.stderr)
+            return False
+
+        head = (committed.stdout or "").strip().splitlines()
+        print("git 快照：已提交 " + (head[0] if head else message))
+        return True
+    except Exception as exc:  # noqa: BLE001 - 快照失败不影响巡检结果
+        print("git 快照异常：{0}: {1}".format(type(exc).__name__, exc), file=sys.stderr)
+        return False
 
 
 # --------------------------------------------------------------------------
@@ -291,6 +361,7 @@ def parse_args(argv):
     parser.add_argument("--no-cache", action="store_true", help="忽略本地 HTTP 缓存")
     parser.add_argument("--only", default="", help="逗号分隔的游戏 id，只巡检这些")
     parser.add_argument("--budget-seconds", type=int, default=180, help="单次巡检总预算（默认 180 秒）")
+    parser.add_argument("--no-git", action="store_true", help="写回后不提交本地 git 快照")
     return parser.parse_args(argv)
 
 
@@ -329,6 +400,9 @@ def main(argv=None):
     write_json(WEB_EXPORT_PATH, payload)
     print("已写入 {0}".format(DATA_PATH))
     print("已导出 {0}".format(WEB_EXPORT_PATH))
+
+    if not args.no_git:
+        snapshot_git()
 
     # 部分失败退出码 0，避免 Actions 假红；全部失败才算真失败。
     if reports and failed == len(reports):
