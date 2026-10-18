@@ -3,8 +3,8 @@
     "phantom-blade-zero": [
       {
         "date": "2026-10-18",
-        "source": "signal",
-        "value": 1
+        "source": "trends",
+        "value": 0
       }
     ],
     "where-winds-meet": [
@@ -17,8 +17,8 @@
     "lord-of-mysteries": [
       {
         "date": "2026-10-18",
-        "source": "signal",
-        "value": 2
+        "source": "trends",
+        "value": 0
       }
     ],
     "world-of-jade-dynasty": [
@@ -52,8 +52,8 @@
     "ananta": [
       {
         "date": "2026-10-18",
-        "source": "signal",
-        "value": 3
+        "source": "trends",
+        "value": 62
       }
     ],
     "wang-yue": [
