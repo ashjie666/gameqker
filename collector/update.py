@@ -486,7 +486,8 @@ def main(argv=None):
     deadline = (time.monotonic() + args.budget_seconds) if args.budget_seconds > 0 else None
     fetcher = Fetcher(
         cache_dir=CACHE_DIR,
-        timeout=12,               # 单个请求上限；官方站整域不可达时要尽快放弃
+        timeout=20,               # 单个请求上限；放宽到 20s 以容忍偶发慢站（如 phantombladezero.com 曾超时），
+                                  # 整域不可达时仍由 host_interval/retries 与总预算兜底
         host_interval=2.0,        # Steam / 官网 同一 host 至少隔 2 秒
         retries=1,
         use_cache=not args.no_cache,
