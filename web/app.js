@@ -1,6 +1,6 @@
 /* ==========================================================================
    gameqker - 国产游戏出海信息差情报表 · 前端渲染
-   数据来源: web/data/games.json 与 web/data/events.json（由 collector/update.py 巡检后导出）
+   数据来源: web/data/games.json、events.json 与 history.json（由 collector/update.py 巡检后导出）
    ========================================================================== */
 
 'use strict';
@@ -32,6 +32,7 @@ const state = {
 
 let DATA = null;
 let EVENTS = null;
+let HISTORY = null;
 
 /* -------------------------------------------------------------------------
    DOM / 时间 helpers
@@ -293,6 +294,84 @@ function heatBlock(game) {
   ]);
 }
 
+/* 热度趋势：行内迷你折线。数据来自 web/data/history.json（collector/trends.py 每日追加）。
+   取值优先级 A→B→C（Google Trends → Steam 评测数 → 自建信号活跃度），图中标注当前生效的来源；
+   不同来源量纲不同，切换来源处曲线会有台阶，这是逐级兜底的固有特性。 */
+const TREND_DAYS = 30;
+const TREND_SOURCE_LABEL = {
+  trends: 'A·Trends 热度',
+  reviews: 'B·Steam 评测数',
+  signal: 'C·信号活跃度',
+};
+
+function trendPoints(game) {
+  const all = ((HISTORY && HISTORY.series) || {})[game.id] || [];
+  return all.slice(-TREND_DAYS);
+}
+
+function sparkline(points) {
+  const ns = 'http://www.w3.org/2000/svg';
+  const width = 132, height = 26, pad = 3;
+  const values = points.map((point) => Number(point.value) || 0);
+  const min = Math.min(...values);
+  const max = Math.max(...values);
+  const span = max - min;
+  const stepX = points.length > 1 ? (width - pad * 2) / (points.length - 1) : 0;
+  const coords = values.map((value, index) => {
+    const ratio = span === 0 ? 0.5 : (value - min) / span;
+    return [pad + stepX * index, height - pad - ratio * (height - pad * 2)];
+  });
+
+  const svg = document.createElementNS(ns, 'svg');
+  svg.setAttribute('class', 'sparkline');
+  svg.setAttribute('viewBox', '0 0 ' + width + ' ' + height);
+  svg.setAttribute('preserveAspectRatio', 'none');
+  svg.setAttribute('role', 'img');
+
+  const line = document.createElementNS(ns, 'polyline');
+  line.setAttribute('points', coords.map(([x, y]) => x.toFixed(1) + ',' + y.toFixed(1)).join(' '));
+  svg.append(line);
+
+  const last = coords[coords.length - 1];
+  const dot = document.createElementNS(ns, 'circle');
+  dot.setAttribute('cx', last[0].toFixed(1));
+  dot.setAttribute('cy', last[1].toFixed(1));
+  dot.setAttribute('r', '2');
+  svg.append(dot);
+  return svg;
+}
+
+function trendBlock(game) {
+  const points = trendPoints(game);
+  const latest = points.length ? points[points.length - 1] : null;
+  const head = el('div', { class: 'heat-head' }, [
+    el('span', { class: 'heat-key trend-key', text: '热度趋势' }),
+    latest ? el('span', {
+      class: 'trend-source trend-src-' + (latest.source || 'signal'),
+      text: TREND_SOURCE_LABEL[latest.source] || latest.source,
+    }) : null,
+  ]);
+
+  if (points.length < 2) {
+    const note = points.length
+      ? '数据积累中（已有 ' + points.length + ' 天，至少 2 天才画线）'
+      : '暂无数据';
+    return el('div', { class: 'heat-block trend-block' }, [
+      head,
+      el('div', { class: 'trend-pending', text: note }),
+    ]);
+  }
+
+  const delta = Number(latest.value) - Number(points[0].value);
+  const body = el('div', { class: 'trend-body' }, [
+    sparkline(points),
+    el('span', { class: 'trend-delta', text: (delta > 0 ? '+' : '') + delta }),
+  ]);
+  body.title = '近 ' + points.length + ' 天：' + points.map((point) => point.date + ' ' + point.value).join(' · ');
+
+  return el('div', { class: 'heat-block trend-block' }, [head, body]);
+}
+
 function buildRow(game) {
   const changed = hasRecentChange(game);
   const level = game.monetization_level || '';
@@ -310,6 +389,7 @@ function buildRow(game) {
     cell('col-cn_status', '国内状态', [game.cn_status]),
     cell('col-global_status', '海外状态', [
       el('div', {}, [game.global_status]),
+      trendBlock(game),
       heatBlock(game),
       buildAutoBlock(game),
     ]),
@@ -567,12 +647,19 @@ async function boot() {
   $('search').addEventListener('input', (event) => { state.query = event.target.value; render(); });
   $('reset').addEventListener('click', resetFilters);
 
-  // 倒计时数据只是附加面板，读不到也不影响主表
+  // 倒计时与热度趋势都只是附加面板，读不到也不影响主表
   try {
     const eventsResponse = await fetch('data/events.json', { cache: 'no-store' });
     if (eventsResponse.ok) EVENTS = await eventsResponse.json();
   } catch (error) {
     EVENTS = null;
+  }
+
+  try {
+    const historyResponse = await fetch('data/history.json', { cache: 'no-store' });
+    if (historyResponse.ok) HISTORY = await historyResponse.json();
+  } catch (error) {
+    HISTORY = null;
   }
 
   try {

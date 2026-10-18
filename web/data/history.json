@@ -1,0 +1,82 @@
+{
+  "series": {
+    "phantom-blade-zero": [
+      {
+        "date": "2026-10-18",
+        "source": "signal",
+        "value": 1
+      }
+    ],
+    "where-winds-meet": [
+      {
+        "date": "2026-10-18",
+        "source": "signal",
+        "value": 2
+      }
+    ],
+    "lord-of-mysteries": [
+      {
+        "date": "2026-10-18",
+        "source": "signal",
+        "value": 2
+      }
+    ],
+    "world-of-jade-dynasty": [
+      {
+        "date": "2026-10-18",
+        "source": "signal",
+        "value": 2
+      }
+    ],
+    "neverness-to-everness": [
+      {
+        "date": "2026-10-18",
+        "source": "signal",
+        "value": 0
+      }
+    ],
+    "scroll-of-taiwu": [
+      {
+        "date": "2026-10-18",
+        "source": "reviews",
+        "value": 70451
+      }
+    ],
+    "legend-of-mortal-cultivation": [
+      {
+        "date": "2026-10-18",
+        "source": "signal",
+        "value": 0
+      }
+    ],
+    "ananta": [
+      {
+        "date": "2026-10-18",
+        "source": "signal",
+        "value": 3
+      }
+    ],
+    "wang-yue": [
+      {
+        "date": "2026-10-18",
+        "source": "signal",
+        "value": 0
+      }
+    ],
+    "sanguo-mou-ding-tianxia": [
+      {
+        "date": "2026-10-18",
+        "source": "signal",
+        "value": 2
+      }
+    ]
+  },
+  "generated_at": "2026-10-18",
+  "note": "每款游戏按天的热度序列；取值优先级 A→B→C：Google Trends 关键词热度 → Steam 评测总数 → 自建信号活跃度。",
+  "days": 90,
+  "sources": {
+    "trends": "Google Trends 关键词热度（0-100）",
+    "reviews": "Steam 评测总数",
+    "signal": "自建信号活跃度（当日证据强度 0-10）"
+  }
+}

@@ -442,6 +442,30 @@ ul.cell-list li::marker { color: var(--text-faint); }
 .heat-checked { margin-left: auto; color: var(--text-faint); font-size: 11px; font-family: var(--font-mono); }
 .heat-text { margin-top: 2px; }
 
+/* 热度趋势：行内迷你折线（A·Trends 热度 / B·Steam 评测数 / C·自建信号活跃度 逐级兜底） */
+.trend-block { border-left-color: var(--blue); }
+.trend-key { color: var(--blue); }
+.trend-source {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+}
+.trend-body { display: flex; align-items: center; gap: 8px; margin-top: 4px; }
+.sparkline {
+  width: 132px;
+  height: 26px;
+  flex: none;
+  fill: none;
+  stroke: var(--blue);
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.sparkline circle { fill: var(--blue); stroke: none; }
+.trend-delta { font-size: 11px; font-family: var(--font-mono); color: var(--text-faint); }
+.trend-pending { margin-top: 2px; color: var(--text-faint); font-size: 11px; }
+
 /* 今日变更：色条只画在首列，避免每一列左边缘都出现一条色条 */
 tr.row-changed td.col-first { box-shadow: inset 3px 0 0 var(--brand); }
 .tag-changed {

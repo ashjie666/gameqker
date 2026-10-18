@@ -30,7 +30,7 @@ import sys
 import time
 from datetime import date, datetime, timezone
 
-from . import __version__, events, official, steam
+from . import __version__, events, official, steam, trends
 from .http import Fetcher
 from .official import signal_key
 
@@ -41,6 +41,8 @@ WEB_DIR = os.path.join(ROOT, "web")
 WEB_EXPORT_PATH = os.path.join(WEB_DIR, "data", "games.json")
 EVENTS_PATH = os.path.join(ROOT, "data", "events.json")
 WEB_EVENTS_PATH = os.path.join(WEB_DIR, "data", "events.json")
+HISTORY_PATH = os.path.join(ROOT, "data", "history.json")
+WEB_HISTORY_PATH = os.path.join(WEB_DIR, "data", "history.json")
 
 # 脚本唯一有权改写的字段；其余一律视为人工维护。
 DYNAMIC_KEYS = ("last_checked", "steam_listed", "steam_release_date", "official_signal")
@@ -83,7 +85,8 @@ def write_json(path, payload):
 # 每日快照：把巡检结果提交进本地 git 历史
 # --------------------------------------------------------------------------
 SNAPSHOT_PATHS = ("data/games.json", "web/data/games.json",
-                  "data/events.json", "web/data/events.json")
+                  "data/events.json", "web/data/events.json",
+                  "data/history.json", "web/data/history.json")
 GIT_NAME = "gameqker-bot"
 GIT_EMAIL = "gameqker-bot@users.noreply.github.com"
 
@@ -231,6 +234,20 @@ def export_events(payload):
             WEB_EVENTS_PATH, len(items), len(upcoming)))
     except Exception as exc:  # noqa: BLE001 - 倒计时导出失败不影响巡检结果
         print("倒计时导出失败：{0}: {1}".format(type(exc).__name__, exc), file=sys.stderr)
+
+
+def export_trends(payload, fetcher, deadline=None):
+    """导出热度趋势数据（data/history.json + web 副本）。
+
+    按 A→B→C 逐级兜底取值（Google Trends → Steam 评测数 → 自建信号活跃度）。
+    任何失败都只提示，绝不影响已经写好的巡检结果。
+    """
+    try:
+        stats = trends.export(payload, fetcher, deadline=deadline)
+        print("已导出 {0}（趋势来源：Trends {1} / Steam 评测 {2} / 自建信号 {3}）".format(
+            WEB_HISTORY_PATH, stats["trends"], stats["reviews"], stats["signal"]))
+    except Exception as exc:  # noqa: BLE001 - 趋势导出失败不影响巡检结果
+        print("热度趋势导出失败：{0}: {1}".format(type(exc).__name__, exc), file=sys.stderr)
 
 
 # --------------------------------------------------------------------------
@@ -497,6 +514,7 @@ def main(argv=None):
     print("已写入 {0}".format(DATA_PATH))
     print("已导出 {0}".format(WEB_EXPORT_PATH))
     export_events(payload)
+    export_trends(payload, fetcher)
 
     if not args.no_git:
         snapshot_git()
