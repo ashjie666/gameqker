@@ -31,7 +31,7 @@
     "neverness-to-everness": [
       {
         "date": "2026-10-18",
-        "source": "signal",
+        "source": "trends",
         "value": 0
       }
     ],
@@ -52,8 +52,8 @@
     "ananta": [
       {
         "date": "2026-10-18",
-        "source": "trends",
-        "value": 68
+        "source": "signal",
+        "value": 3
       }
     ],
     "wang-yue": [
