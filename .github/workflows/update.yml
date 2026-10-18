@@ -68,6 +68,8 @@ jobs:
           git config user.name "gameqker-bot"
           git config user.email "gameqker-bot@users.noreply.github.com"
           git add data/games.json web/data/games.json data/events.json web/data/events.json
+          # 热度趋势序列每轮也会追加，一并暂存：留下的未暂存改动会让下面的 pull --rebase 直接失败
+          git add data/history.json web/data/history.json
           if git diff --cached --quiet; then
             echo "本轮无数据变更，跳过提交"
           else
