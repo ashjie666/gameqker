@@ -336,6 +336,12 @@ code { font-family: var(--font-mono); font-size: 0.92em; color: var(--text-dim);
   border-bottom: 1px solid var(--border-strong);
 }
 
+/* 单级表头（thead 里只有 col-row、没有 group-row）不能沿用 27px 偏移：
+   没有上一级表头时，sticky 会把表头下移 27px、盖住首行数据
+   （xinxicha 的「数据源健康」「评分模型」「回退源表」等单级表头表踩过这个坑，
+     见 site_memory §7；gameqker 现有表都是两级表头，此规则对其渲染无影响） */
+.cmp-table thead > .col-row:first-child th { top: 0; }
+
 .th-btn {
   border: none;
   background: transparent;
