@@ -11,8 +11,11 @@
 # 说明：GitHub 仓库已配置好（origin 走 ssh://git@ssh.github.com:443，本机 22 端口被拒，
 # 所以端口固化在 remote 里，日常 push 不需要额外环境变量）。本地巡检与 Actions 都会提交
 # 同一批数据文件，两边各自「先 rebase 再 push」，避免互相把对方顶成非快进。
-# 最后一步会把静态站同步到阿里云（/www/wwwroot/sites/gameqker/）：需要仓库里配好
-# SSH_HOST / SSH_USER / SSH_KEY 三个 Secrets，且服务器已安装 rsync。
+# 部署拆成两个并列 job，互不传导失败、均 needs: update，且共用 update 上传的同一份 web 产物：
+#   - deploy → GitHub Pages（仓库 Settings → Pages → Source 必须选 GitHub Actions）
+#   - aliyun → rsync 同步到阿里云 /www/wwwroot/sites/gameqker/
+# 注意：不要让 aliyun 自己 checkout —— 那会拿到触发提交里的旧数据（比 Pages 慢一个采集周期）。
+# aliyun 需要仓库里配好 SSH_HOST / SSH_USER / SSH_KEY 三个 Secrets，且服务器已安装 rsync。
 
 name: refresh-intel
 
@@ -29,6 +32,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: refresh-intel
@@ -48,6 +53,11 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
+      # Google Trends 抓取（A 级数据源）用。装不上不影响巡检：
+      # trends.py 会吞掉 ImportError 并自动降级到 Steam 评测数 / 自建信号。
+      - name: 安装可选依赖（pytrends）
+        run: pip install --quiet pytrends || echo "pytrends 安装失败，本轮热度趋势降级到 B/C"
 
       - name: 巡检（Steam + 官网）
         # --no-git：快照提交交给下面那一步，由 Actions 自己 commit + push
@@ -69,10 +79,41 @@ jobs:
             git push
           fi
 
-      # ----------------------------------------------------------------------
-      # 把静态站同步到阿里云（nginx 子路径 /www/wwwroot/sites/gameqker/）
-      # 依赖：仓库 Secrets SSH_HOST / SSH_USER / SSH_KEY，服务器已装 rsync。
-      # ----------------------------------------------------------------------
+      # 打包静态站，供 Pages 与阿里云两个 job 共用（同一次采集结果，保证内容同源）
+      - name: Package site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+
+      # 同一份产物也交给 aliyun 部署，避免它 checkout 到旧提交
+      - name: Upload site for aliyun
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: web
+
+  # 发布到 GitHub Pages（与下面 aliyun 并列、互不影响）
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  # 与上面 deploy 并列、互不影响：它失败不会让 Pages 不发布，反之亦然。
+  aliyun:
+    needs: update
+    runs-on: ubuntu-latest
+    steps:
+      # 取 update 刚产出的同一份静态站（不要 checkout：那会拿到触发提交里的旧数据）
+      - uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: site
+
       - name: 推送静态站到阿里云
         env:
           SSH_HOST: ${{ secrets.SSH_HOST }}
@@ -85,8 +126,7 @@ jobs:
           ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null
           rsync -az --delete \
             -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=yes" \
-            web/ "$SSH_USER@$SSH_HOST:/www/wwwroot/sites/gameqker/"
+            site/ "$SSH_USER@$SSH_HOST:/www/wwwroot/sites/gameqker/"
           ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=yes \
             "$SSH_USER@$SSH_HOST" \
             "chown -R www:www /www/wwwroot/sites/gameqker && find /www/wwwroot/sites/gameqker -type d -exec chmod 755 {} \; && find /www/wwwroot/sites/gameqker -type f -exec chmod 644 {} \;"
-      # ----------------------------------------------------------------------
