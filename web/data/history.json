@@ -10,6 +10,11 @@
         "date": "2026-10-19",
         "source": "trends",
         "value": 0
+      },
+      {
+        "date": "2026-10-20",
+        "source": "trends",
+        "value": 79
       }
     ],
     "where-winds-meet": [
@@ -22,6 +27,11 @@
         "date": "2026-10-19",
         "source": "signal",
         "value": 2
+      },
+      {
+        "date": "2026-10-20",
+        "source": "trends",
+        "value": 0
       }
     ],
     "lord-of-mysteries": [
@@ -34,6 +44,11 @@
         "date": "2026-10-19",
         "source": "trends",
         "value": 99
+      },
+      {
+        "date": "2026-10-20",
+        "source": "trends",
+        "value": 0
       }
     ],
     "world-of-jade-dynasty": [
@@ -44,6 +59,11 @@
       },
       {
         "date": "2026-10-19",
+        "source": "signal",
+        "value": 2
+      },
+      {
+        "date": "2026-10-20",
         "source": "signal",
         "value": 2
       }
@@ -58,6 +78,11 @@
         "date": "2026-10-19",
         "source": "signal",
         "value": 0
+      },
+      {
+        "date": "2026-10-20",
+        "source": "signal",
+        "value": 0
       }
     ],
     "scroll-of-taiwu": [
@@ -70,6 +95,11 @@
         "date": "2026-10-19",
         "source": "reviews",
         "value": 70454
+      },
+      {
+        "date": "2026-10-20",
+        "source": "trends",
+        "value": 0
       }
     ],
     "legend-of-mortal-cultivation": [
@@ -80,6 +110,11 @@
       },
       {
         "date": "2026-10-19",
+        "source": "signal",
+        "value": 0
+      },
+      {
+        "date": "2026-10-20",
         "source": "signal",
         "value": 0
       }
@@ -94,6 +129,11 @@
         "date": "2026-10-19",
         "source": "trends",
         "value": 17
+      },
+      {
+        "date": "2026-10-20",
+        "source": "trends",
+        "value": 33
       }
     ],
     "wang-yue": [
@@ -105,6 +145,11 @@
       {
         "date": "2026-10-19",
         "source": "signal",
+        "value": 0
+      },
+      {
+        "date": "2026-10-20",
+        "source": "trends",
         "value": 0
       }
     ],
@@ -118,10 +163,15 @@
         "date": "2026-10-19",
         "source": "signal",
         "value": 2
+      },
+      {
+        "date": "2026-10-20",
+        "source": "signal",
+        "value": 2
       }
     ]
   },
-  "generated_at": "2026-10-19",
+  "generated_at": "2026-10-20",
   "note": "每款游戏按天的热度序列；取值优先级 A→B→C：Google Trends 关键词热度 → Steam 评测总数 → 自建信号活跃度。",
   "days": 90,
   "sources": {
