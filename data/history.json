@@ -8,8 +8,8 @@
       },
       {
         "date": "2026-10-22",
-        "source": "signal",
-        "value": 1
+        "source": "trends",
+        "value": 0
       }
     ],
     "where-winds-meet": [
@@ -32,8 +32,8 @@
       },
       {
         "date": "2026-10-22",
-        "source": "signal",
-        "value": 2
+        "source": "trends",
+        "value": 0
       }
     ],
     "world-of-jade-dynasty": [
@@ -80,8 +80,8 @@
       },
       {
         "date": "2026-10-22",
-        "source": "signal",
-        "value": 0
+        "source": "trends",
+        "value": 100
       }
     ],
     "ananta": [
@@ -92,8 +92,8 @@
       },
       {
         "date": "2026-10-22",
-        "source": "signal",
-        "value": 3
+        "source": "trends",
+        "value": 51
       }
     ],
     "wang-yue": [
@@ -104,8 +104,8 @@
       },
       {
         "date": "2026-10-22",
-        "source": "signal",
-        "value": 0
+        "source": "trends",
+        "value": 5
       }
     ],
     "sanguo-mou-ding-tianxia": [
