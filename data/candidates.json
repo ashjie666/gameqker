@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-10-22",
-  "generated_at_utc": "2026-10-22T05:09:25Z",
+  "generated_at_utc": "2026-10-22T05:22:23Z",
   "source": {
     "name": "国家新闻出版署 · 国产网络游戏审批信息",
     "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/",
@@ -20,9 +20,9 @@
   ],
   "stats": {
     "nppa_games": 461,
-    "evaluated": 11,
+    "evaluated": 20,
     "matched": 1,
-    "skipped_budget": 407
+    "skipped_budget": 389
   },
   "candidates": [
     {
@@ -33,6 +33,17 @@
       "gap_type": "cn_first",
       "gap_days": 148,
       "note": "国服版号早于 Steam 美区发售",
+      "stage": {
+        "cn": "launch",
+        "os": "launch",
+        "cn_release": "2026-08-19",
+        "os_release": "2026-08-19"
+      },
+      "version": {
+        "steam": null,
+        "source": null
+      },
+      "playtest_os": false,
       "nppa": {
         "approved_at": "2026-03-24",
         "publisher": "广州谷得网络科技有限公司",
@@ -56,7 +67,7 @@
         "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
         "https://store.steampowered.com/app/3337140/"
       ],
-      "first_seen": "2026-10-22T05:09:25Z",
+      "first_seen": "2026-10-22T05:21:39Z",
       "last_checked": "2026-10-22"
     }
   ],

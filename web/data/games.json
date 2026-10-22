@@ -36,7 +36,7 @@
         "name": "Phantom Blade Zero",
         "url": "https://store.steampowered.com/app/4115450/",
         "error": null,
-        "stale": true
+        "stale": false
       },
       "official": {
         "matched": false,
@@ -56,7 +56,7 @@
       },
       "skipped": [],
       "error": "官网: https://www.phantombladezero.com/: URLError: <urlopen error timed out>",
-      "duration_ms": 83187
+      "duration_ms": 42390
     },
     {
       "id": "where-winds-meet",
@@ -90,7 +90,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2719
+      "duration_ms": 3078
     },
     {
       "id": "lord-of-mysteries",
@@ -124,7 +124,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2812
+      "duration_ms": 2780
     },
     {
       "id": "world-of-jade-dynasty",
@@ -138,40 +138,107 @@
         "name": null,
         "url": "https://store.steampowered.com/app/3384260/",
         "error": null,
-        "stale": true
+        "stale": false
       },
-      "official": null,
-      "skipped": [
-        "official(超预算)"
-      ],
+      "official": {
+        "matched": true,
+        "label": "发售日期",
+        "signals": [
+          "release_date"
+        ],
+        "url": "https://zx.wanmei.com/news/",
+        "snippet": "1 【焕新体验服】10月22日更新维护公告 2026-10-21 【经典体验服】10月22日更新维护公告 2026-10-21 焕新434区麒麟踏云10月19日开服公告 2026-10-19 【焕新体验服】10月17日更新维护公告 2026-10-16 【经典体验服】10月17日更新维护公告 2026-10-16 焕新43",
+        "pages": [
+          {
+            "url": "https://zx.wanmei.com/",
+            "status": 200,
+            "ok": true
+          },
+          {
+            "url": "https://zx.wanmei.com/news/",
+            "status": 200,
+            "ok": true
+          }
+        ],
+        "error": null,
+        "stale": false
+      },
+      "skipped": [],
       "error": null,
-      "duration_ms": 41562
+      "duration_ms": 2734
     },
     {
       "id": "neverness-to-everness",
       "name": "异环",
-      "status": "skipped",
+      "status": "ok",
       "steam": null,
-      "official": null,
+      "official": {
+        "matched": false,
+        "label": "unknown",
+        "signals": [],
+        "url": "https://nte.perfectworld.com/",
+        "snippet": null,
+        "pages": [
+          {
+            "url": "https://nte.perfectworld.com/",
+            "status": 200,
+            "ok": true
+          },
+          {
+            "url": "https://nte.perfectworld.com/news/",
+            "status": null,
+            "ok": false
+          }
+        ],
+        "error": null,
+        "stale": false
+      },
       "skipped": [
-        "steam(未配置 appid)",
-        "official(超预算)"
+        "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 0
+      "duration_ms": 2562
     },
     {
       "id": "scroll-of-taiwu",
       "name": "太吾绘卷",
-      "status": "skipped",
-      "steam": null,
-      "official": null,
-      "skipped": [
-        "steam(超预算)",
-        "official(超预算)"
-      ],
+      "status": "ok",
+      "steam": {
+        "appid": 838350,
+        "listed": true,
+        "release_date": "Jun 16, 2026",
+        "coming_soon": false,
+        "name": "The Scroll of Taiwu : Beyond The Dome",
+        "url": "https://store.steampowered.com/app/838350/",
+        "error": null,
+        "stale": false
+      },
+      "official": {
+        "matched": true,
+        "label": "英文/多语言",
+        "signals": [
+          "english"
+        ],
+        "url": "https://scrolloftaiwu.com/",
+        "snippet": "f Taiwu Guide — Beginner Routes, Factions & Martial Arts (2026) Scroll of Taiwu English Guide Menu Wiki Beginner Launch Factions Martial Arts Builds Guides Tools scrol",
+        "pages": [
+          {
+            "url": "https://scrolloftaiwu.com/",
+            "status": 200,
+            "ok": true
+          },
+          {
+            "url": "https://scrolloftaiwu.com/news/",
+            "status": null,
+            "ok": false
+          }
+        ],
+        "error": null,
+        "stale": false
+      },
+      "skipped": [],
       "error": null,
-      "duration_ms": 0
+      "duration_ms": 4687
     },
     {
       "id": "legend-of-mortal-cultivation",
@@ -189,41 +256,104 @@
     {
       "id": "ananta",
       "name": "无限大",
-      "status": "skipped",
-      "steam": null,
-      "official": null,
-      "skipped": [
-        "steam(超预算)",
-        "official(超预算)"
-      ],
+      "status": "ok",
+      "steam": {
+        "appid": 4814120,
+        "listed": true,
+        "release_date": "Jan 15, 2027",
+        "coming_soon": true,
+        "name": "ANANTA",
+        "url": "https://store.steampowered.com/app/4814120/",
+        "error": null,
+        "stale": false
+      },
+      "official": {
+        "matched": true,
+        "label": "全球上线",
+        "signals": [
+          "global_launch"
+        ],
+        "url": "https://ananta.163.com/",
+        "snippet": "《无限大》官方网站 | 27年1月15日全球上线 《无限大》官方网站 | 27年1月15日全球上线 《无限大》官方网站 | 27年1月15日全球上线 您使用的浏览器版本过低，可能会影响到您浏览本网页，建议您升",
+        "pages": [
+          {
+            "url": "https://ananta.163.com/",
+            "status": 200,
+            "ok": true
+          },
+          {
+            "url": "https://ananta.163.com/news/",
+            "status": 200,
+            "ok": true
+          }
+        ],
+        "error": null,
+        "stale": false
+      },
+      "skipped": [],
       "error": null,
-      "duration_ms": 0
+      "duration_ms": 2735
     },
     {
       "id": "wang-yue",
       "name": "望月",
-      "status": "skipped",
+      "status": "ok",
       "steam": null,
-      "official": null,
+      "official": {
+        "matched": false,
+        "label": "unknown",
+        "signals": [],
+        "url": "https://wy.shiyue.com/",
+        "snippet": null,
+        "pages": [
+          {
+            "url": "https://wy.shiyue.com/",
+            "status": 200,
+            "ok": true
+          },
+          {
+            "url": "https://wy.shiyue.com/news/",
+            "status": 200,
+            "ok": true
+          }
+        ],
+        "error": null,
+        "stale": false
+      },
       "skipped": [
-        "steam(未配置 appid)",
-        "official(超预算)"
+        "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 0
+      "duration_ms": 2671
     },
     {
       "id": "sanguo-mou-ding-tianxia",
       "name": "三国：谋定天下",
-      "status": "skipped",
+      "status": "ok",
       "steam": null,
-      "official": null,
+      "official": {
+        "matched": true,
+        "label": "发售日期",
+        "signals": [
+          "release_date"
+        ],
+        "url": "https://store.steamchina.com/app/4542640/",
+        "snippet": "开发者 浙江华娱网络科技有限公司 发行商 上海幻电信息科技有限公司 运营商 浙江华娱网络科技有限公司 出版物号 ISBN 978-7-498-12351-0 发行日期 2026 年 5 月 6 日 多职业战争策略手游，你可以在每个赛季中体验镇军、青囊、奇佐、天工等六大职业，在沙盘中施展多样的职业天赋与职业技能去影响补给、战术",
+        "pages": [
+          {
+            "url": "https://store.steamchina.com/app/4542640/",
+            "status": 200,
+            "ok": true
+          }
+        ],
+        "error": null,
+        "stale": false
+      },
       "skipped": [
-        "steam(未配置 appid)",
-        "official(超预算)"
+        "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 0
+      "duration_ms": 625
     }
   ],
   "games": [
@@ -269,7 +399,7 @@
         "steam_appid": 4115450,
         "official": "https://www.phantombladezero.com/"
       },
-      "last_checked": "2026-10-22T05:06:27Z",
+      "last_checked": "2026-10-22T05:20:29Z",
       "steam_listed": true,
       "steam_release_date": "Oct 28, 2026",
       "official_signal": null,
@@ -337,7 +467,7 @@
         "steam_appid": null,
         "official": "https://www.wherewindsmeetgame.com/"
       },
-      "last_checked": "2026-10-22T05:06:30Z",
+      "last_checked": "2026-10-22T05:20:32Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -415,7 +545,7 @@
         "steam_appid": null,
         "official": "https://lordofthemysteriesgame.com/"
       },
-      "last_checked": "2026-10-22T05:06:32Z",
+      "last_checked": "2026-10-22T05:20:35Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -485,7 +615,7 @@
         "steam_appid": 3384260,
         "official": "https://zx.wanmei.com/"
       },
-      "last_checked": "2026-10-22T05:07:14Z",
+      "last_checked": "2026-10-22T05:20:38Z",
       "steam_listed": false,
       "steam_release_date": null,
       "official_signal": {
@@ -562,7 +692,7 @@
         "steam_appid": null,
         "official": "https://nte.perfectworld.com/"
       },
-      "last_checked": "2026-10-22T04:59:37Z",
+      "last_checked": "2026-10-22T05:20:40Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -618,7 +748,7 @@
         "steam_appid": 838350,
         "official": "https://scrolloftaiwu.com/"
       },
-      "last_checked": "2026-10-22T05:00:18Z",
+      "last_checked": "2026-10-22T05:20:45Z",
       "steam_listed": true,
       "steam_release_date": "Jun 16, 2026",
       "official_signal": {
@@ -751,7 +881,7 @@
         "steam_appid": 4814120,
         "official": "https://ananta.163.com/"
       },
-      "last_checked": "2026-10-22T04:56:20Z",
+      "last_checked": "2026-10-22T05:20:48Z",
       "steam_listed": true,
       "steam_release_date": "Jan 15, 2027",
       "official_signal": {
@@ -838,7 +968,7 @@
         "steam_appid": null,
         "official": "https://wy.shiyue.com/"
       },
-      "last_checked": "2026-10-22T04:56:22Z",
+      "last_checked": "2026-10-22T05:20:50Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -896,7 +1026,7 @@
         "steam_appid": null,
         "official": "https://store.steamchina.com/app/4542640/"
       },
-      "last_checked": "2026-10-22T04:56:23Z",
+      "last_checked": "2026-10-22T05:20:51Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -927,5 +1057,5 @@
       ]
     }
   ],
-  "last_run_at": "2026-10-22T05:07:14Z"
+  "last_run_at": "2026-10-22T05:20:51Z"
 }

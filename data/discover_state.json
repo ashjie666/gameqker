@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-22T05:09:25Z",
+  "updated_at": "2026-10-22T05:22:23Z",
   "items": {
     "domestic:暗夜勇士": {
       "checked_at": "2026-10-22",
@@ -277,6 +277,17 @@
         "gap_type": "cn_first",
         "gap_days": 148,
         "note": "国服版号早于 Steam 美区发售",
+        "stage": {
+          "cn": "launch",
+          "os": "launch",
+          "cn_release": "2026-08-19",
+          "os_release": "2026-08-19"
+        },
+        "version": {
+          "steam": null,
+          "source": null
+        },
+        "playtest_os": false,
         "nppa": {
           "approved_at": "2026-03-24",
           "publisher": "广州谷得网络科技有限公司",
@@ -300,9 +311,99 @@
           "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
           "https://store.steampowered.com/app/3337140/"
         ],
-        "first_seen": "2026-10-22T05:09:25Z",
+        "first_seen": "2026-10-22T05:21:39Z",
         "last_checked": "2026-10-22"
       }
+    },
+    "import:神泣纷争": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-03-24",
+      "candidate": null
+    },
+    "import:宝石战争": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-02-26",
+      "candidate": null
+    },
+    "import:基地银河纵横": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-02-26",
+      "candidate": null
+    },
+    "import:飘流幻境新世界": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-02-26",
+      "candidate": null
+    },
+    "import:神泣光与暗": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-02-26",
+      "candidate": null
+    },
+    "import:小浣熊百将传2": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-02-26",
+      "candidate": null
+    },
+    "import:辛特堡传说": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-02-26",
+      "candidate": null
+    },
+    "import:彩虹六号攻势": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-01-23",
+      "candidate": null
+    },
+    "import:彩虹岛爱丽丝之境": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-01-23",
+      "candidate": null
+    },
+    "import:愤怒的小鸟经典归来": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-01-23",
+      "candidate": null
+    },
+    "import:愤怒的小鸟梦幻爆破": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-01-23",
+      "candidate": null
+    },
+    "import:秘境夺金": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-01-23",
+      "candidate": null
+    },
+    "domestic:防线出征": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:放开来合合": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:封天魔兽": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:封印之书": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:烽火江湖": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:疯狂开火": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
     }
   }
 }
