@@ -551,6 +551,18 @@ const GAP_META = {
   cn_first: { label: '国服先行', cls: 'gap-cn' },
 };
 
+const STAGE_LABEL = {
+  none: '无页面',
+  approved: '已获版号',
+  preorder: '预约中',
+  launch: '已上线',
+};
+
+function stageText(stage, release) {
+  const label = STAGE_LABEL[stage] || '未知';
+  return release ? `${label} · ${formatDay(release)}` : label;
+}
+
 function renderDiscover() {
   const panel = $('discover-panel');
   const list = $('discover-list');
@@ -586,9 +598,15 @@ function renderCandidate(candidate) {
       ? (steam.us_coming_soon ? `未发售 · 定档 ${formatDay(steam.us_release_parsed)}` : formatDay(steam.us_release_parsed))
       : '未定档');
 
+  const stage = candidate.stage || {};
+  const version = candidate.version || {};
+
   const rows = [
     ['版号批准', formatDay(nppa.approved_at)],
     ['审批文号', nppa.approval_no || '—'],
+    ['阶段对照', `国服 ${stageText(stage.cn, stage.cn_release)} / 美区 ${stageText(stage.os, stage.os_release)}` +
+      (candidate.playtest_os ? '（美区 Playtest 中）' : '')],
+    ['最新版本', version.steam ? `v${version.steam}（Steam 公告）` : '未取得'],
     ['Steam 美区', usCell],
     ['Steam 国区', steam.cn_listed === false ? '不可购买' : (steam.cn_release_parsed ? formatDay(steam.cn_release_parsed) : '可购买')],
     ['运营单位', nppa.operator || '—'],

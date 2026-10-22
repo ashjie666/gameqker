@@ -15,6 +15,12 @@
 - cn_first：国服版号早于美区发售 / 美区尚未定档 / 美区没有页面
 海外先发（美区已发售且早于国服版号）不是目标，直接丢弃。
 
+「领先」同时看四个维度（2026-10-22 用户补充）：
+- 阶段：无页面 < 已获版号 < 预约中 < 已上线，国服阶段高于美区即领先
+- 发售 / 上线日期：国服早于美区
+- 版本号：取 Steam 最新公告里的版本号（Steam 公告按 appid 共享，无国区单独源）
+- 测试：美区仍在 Playtest，国服已上线或已定档，同样算领先
+
 结果写入候选池 data/candidates.json，由前端「新发现 · 待确认」区展示。
 **不直接写入 games 清单**：关键词、变现建议等定性字段是人工维护的，
 自动追加会污染报表质量。确认后由人工并入 data/games.json。
@@ -39,6 +45,11 @@ APPDETAILS_URL = (
     "https://store.steampowered.com/api/appdetails?appids={appid}&cc={cc}&l={lang}"
 )
 STEAM_STORE_URL = "https://store.steampowered.com/app/{appid}/"
+STEAM_NEWS_URL = (
+    "https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/"
+    "?appid={appid}&count=5&maxlength=300"
+)
+STEAM_PAGE_URL = "https://store.steampowered.com/app/{appid}/?l=english&cc=us"
 
 MAX_BATCHES = 2          # 只处理最新的两个月度批次
 MIN_SIMILARITY = 0.72    # 中文名匹配阈值，低于此值视为不同游戏
@@ -265,30 +276,92 @@ def match_appid(fetcher, nppa_item):
     return None
 
 
-def classify(nppa_item, us, cn):
+def stage_of(entry, approved_at=None):
+    """把一台区服状态折算成阶段：none < approved < preorder < launch。
+
+    approved 只对国服有意义：已获版号，但 Steam 国区还没有页面。
+    """
+    if entry.get("listed") is not True:
+        return "approved" if approved_at else "none"
+    if entry.get("coming_soon") is True:
+        return "preorder"
+    return "launch"
+
+
+_VERSION_RE = re.compile(
+    r"(?:patch|update|version|hotfix|build)\s*v?(\d+(?:\.\d+){1,3})", re.I)
+_VERSION_BARE_RE = re.compile(r"\bv(\d+(?:\.\d+){1,3})\b", re.I)
+# 正文里版本号后面常直接接字母（v1.0.2.2Balance），不能要求词边界
+_VERSION_BODY_RE = re.compile(r"\bv(\d+(?:\.\d+){1,3})", re.I)
+
+
+def fetch_latest_version(fetcher, appid):
+    """从 Steam 最新公告里取版本号，取不到返回 None。
+
+    公告标题经常只写「Patch Notes / Update 15」，版本号落在正文开头，
+    所以标题没有时再退到 contents（接口已截断到 300 字符）。
+    """
+    response = fetcher.get(STEAM_NEWS_URL.format(appid=appid))
+    if not response.body:
+        return None
+    try:
+        payload = json.loads(response.body.decode("utf-8", "replace"))
+    except (ValueError, AttributeError):
+        return None
+    items = (payload.get("appnews") or {}).get("newsitems") or []
+    for item in items[:5]:
+        title = str(item.get("title") or "")
+        match = _VERSION_RE.search(title) or _VERSION_BARE_RE.search(title)
+        if not match:
+            match = _VERSION_BODY_RE.search(str(item.get("contents") or ""))
+        if match:
+            return {"value": match.group(1), "source": title[:100],
+                    "at": item.get("date")}
+    return None
+
+
+def detect_playtest(fetcher, appid):
+    """抓商店页看是否有 Playtest 入口。抓不到返回 None（不当作否定）。"""
+    response = fetcher.get(STEAM_PAGE_URL.format(appid=appid))
+    if not response.body:
+        return None
+    html = response.body.decode("utf-8", "replace").lower()
+    return "playtest" in html and ("join playtest" in html or "sign up" in html)
+
+
+def classify(nppa_item, us, cn, cn_stage=None, os_stage=None):
     """只输出「国服领先」的候选，返回 (gap_type, gap_days, note) 或 None。
 
-    判定标准：国服已获版号，而 Steam 美区尚未上架、尚未发售，或发售日不早于版号批准日。
-    海外先发（美区已发售且早于国服版号）不是本模块要找的目标，一律丢弃。
+    领先的四种情形（按阶段优先级）：
+    1. 海外还没页面（none），国服已获版号 → 国服先行
+    2. 海外在预约（preorder），国服已上线（launch） → 国服上线领先
+    3. 海外定档日不早于国服版号批准日 → 版号领先（算出提前天数）
+    4. 两边都已上线，国服上线日早于海外 → 上线领先
+    海外先发（美区已发售且早于国服版号）不是目标，一律丢弃。
     """
-    if us.get("listed") is not True:
-        # 国服已有版号、Steam 海外查不到 → 国服先行
-        return "cn_first", None, "国服已获批版号，Steam 美区无页面或未上架"
-
     approved = parse_cn_date(nppa_item.get("approved_at") or "")
     us_release = parse_steam_date(us.get("release_date"))
+    cn_release = parse_steam_date(cn.get("release_date"))
+    cn_stage = cn_stage or stage_of(cn, nppa_item.get("approved_at"))
+    os_stage = os_stage or stage_of(us)
+
+    if us.get("listed") is not True:
+        return "cn_first", None, "国服已获批版号，Steam 美区无页面或未上架"
 
     if us.get("coming_soon") is True:
-        if approved and us_release:
-            days = (us_release - approved).days
-            if days > 0:
-                return "cn_first", days, "国服版号早于 Steam 美区定档"
-        return "cn_first", None, "国服已获批版号，Steam 美区尚未发售"
+        if cn_stage == "launch":
+            gap = (cn_release - us_release).days if (cn_release and us_release) else None
+            return "cn_first", gap, "国服已上线，Steam 美区仍在预约"
+        if approved and us_release and us_release > approved:
+            return "cn_first", (us_release - approved).days, "国服版号早于 Steam 美区定档"
+        return None  # 两边都还没上线，谈不上领先
+
+    if cn_stage == "launch" and cn_release and us_release and cn_release < us_release:
+        return "cn_first", (us_release - cn_release).days, "国服上线早于 Steam 美区发售"
 
     if us_release and approved:
         if us_release >= approved:
-            return "cn_first", (us_release - approved).days, \
-                "国服版号早于 Steam 美区发售"
+            return "cn_first", (us_release - approved).days, "国服版号早于 Steam 美区发售"
         return None  # 美区已发售且早于国服版号 → 海外先发，不是目标
     return None
 
@@ -300,10 +373,19 @@ def evaluate(fetcher, nppa_item):
     appid = matched["appid"]
     cn = matched["cn"]
     us = check_app(fetcher, appid, "us", "english")
-    verdict = classify(nppa_item, us, cn)
+    cn_stage = stage_of(cn, nppa_item.get("approved_at"))
+    os_stage = stage_of(us)
+    verdict = classify(nppa_item, us, cn, cn_stage, os_stage)
     if not verdict:
         return None
     gap_type, gap_days, note = verdict
+
+    # 阶段与版本只在确认是候选后再抓，避免对全部游戏额外发请求
+    version = fetch_latest_version(fetcher, appid)
+    playtest = detect_playtest(fetcher, appid)
+    if playtest and os_stage == "preorder":
+        note = note + "（美区仍在 Playtest 测试）"
+
     return {
         "origin": nppa_item.get("origin"),
         "name_cn": nppa_item["name"],
@@ -312,6 +394,17 @@ def evaluate(fetcher, nppa_item):
         "gap_type": gap_type,
         "gap_days": gap_days,
         "note": note,
+        "stage": {
+            "cn": cn_stage,
+            "os": os_stage,
+            "cn_release": cn.get("release_parsed"),
+            "os_release": us.get("release_parsed"),
+        },
+        "version": {
+            "steam": version["value"] if version else None,
+            "source": version["source"] if version else None,
+        },
+        "playtest_os": playtest,
         "nppa": {
             "approved_at": nppa_item.get("approved_at"),
             "publisher": nppa_item.get("publisher"),

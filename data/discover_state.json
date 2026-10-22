@@ -307,6 +307,17 @@
         "gap_type": "cn_first",
         "gap_days": 148,
         "note": "国服版号早于 Steam 美区发售",
+        "stage": {
+          "cn": "launch",
+          "os": "launch",
+          "cn_release": "2026-08-19",
+          "os_release": "2026-08-19"
+        },
+        "version": {
+          "steam": "1.0.2.2",
+          "source": "Halloween Horde - Patch Notes"
+        },
+        "playtest_os": false,
         "nppa": {
           "approved_at": "2026-03-24",
           "publisher": "广州谷得网络科技有限公司",
