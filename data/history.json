@@ -32,8 +32,8 @@
       },
       {
         "date": "2026-10-22",
-        "source": "signal",
-        "value": 2
+        "source": "trends",
+        "value": 0
       }
     ],
     "world-of-jade-dynasty": [
@@ -69,7 +69,7 @@
       {
         "date": "2026-10-22",
         "source": "reviews",
-        "value": 70462
+        "value": 70463
       }
     ],
     "legend-of-mortal-cultivation": [
@@ -92,8 +92,8 @@
       },
       {
         "date": "2026-10-22",
-        "source": "signal",
-        "value": 3
+        "source": "trends",
+        "value": 49
       }
     ],
     "wang-yue": [
@@ -104,7 +104,7 @@
       },
       {
         "date": "2026-10-22",
-        "source": "signal",
+        "source": "trends",
         "value": 0
       }
     ],
@@ -123,15 +123,15 @@
     "rainbow-six-siege": [
       {
         "date": "2026-10-22",
-        "source": "reviews",
-        "value": 1564576
+        "source": "trends",
+        "value": 0
       }
     ],
     "brotato": [
       {
         "date": "2026-10-22",
-        "source": "reviews",
-        "value": 120028
+        "source": "trends",
+        "value": 0
       }
     ],
     "loop-hero": [
@@ -151,8 +151,8 @@
     "after-inc-revival": [
       {
         "date": "2026-10-22",
-        "source": "reviews",
-        "value": 1538
+        "source": "trends",
+        "value": 0
       }
     ],
     "knightica": [

@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-10-22",
-  "generated_at_utc": "2026-10-22T03:50:47Z",
+  "generated_at_utc": "2026-10-22T04:15:52Z",
   "source": {
     "name": "国家新闻出版署 · 国产网络游戏审批信息",
     "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/",
@@ -22,7 +22,7 @@
     "nppa_games": 461,
     "evaluated": 20,
     "matched": 3,
-    "skipped_budget": 409
+    "skipped_budget": 403
   },
   "candidates": [
     {
@@ -226,7 +226,7 @@
         "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
         "https://store.steampowered.com/app/1983260/"
       ],
-      "first_seen": "2026-10-22T03:50:25Z",
+      "first_seen": "2026-10-22T04:15:31Z",
       "last_checked": "2026-10-22"
     },
     {
@@ -328,7 +328,7 @@
         "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
         "https://store.steampowered.com/app/3093400/"
       ],
-      "first_seen": "2026-10-22T03:49:57Z",
+      "first_seen": "2026-10-22T04:15:02Z",
       "last_checked": "2026-10-22"
     },
     {
@@ -396,7 +396,7 @@
         "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
         "https://store.steampowered.com/app/3337140/"
       ],
-      "first_seen": "2026-10-22T03:50:03Z",
+      "first_seen": "2026-10-22T04:15:08Z",
       "last_checked": "2026-10-22"
     }
   ],

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-22T03:50:47Z",
+  "updated_at": "2026-10-22T04:15:52Z",
   "items": {
     "import:3对3街篮": {
       "checked_at": "2026-10-22",
@@ -425,6 +425,36 @@
       "approved_at": "2026-04-28",
       "candidate": null
     },
+    "domestic:暗夜勇士": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:霸主征途": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:百变灵兽": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:被美食包围了": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:边境之歌": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:兵王之王": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
     "import:斗阵骑士": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-03-24",
@@ -459,7 +489,7 @@
           "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
           "https://store.steampowered.com/app/3093400/"
         ],
-        "first_seen": "2026-10-22T03:49:57Z",
+        "first_seen": "2026-10-22T04:15:02Z",
         "last_checked": "2026-10-22"
       }
     },
@@ -497,7 +527,7 @@
           "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
           "https://store.steampowered.com/app/3337140/"
         ],
-        "first_seen": "2026-10-22T03:50:03Z",
+        "first_seen": "2026-10-22T04:15:08Z",
         "last_checked": "2026-10-22"
       }
     },
@@ -565,7 +595,7 @@
           "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
           "https://store.steampowered.com/app/1983260/"
         ],
-        "first_seen": "2026-10-22T03:50:25Z",
+        "first_seen": "2026-10-22T04:15:31Z",
         "last_checked": "2026-10-22"
       }
     },
@@ -594,32 +624,32 @@
       "approved_at": "2026-01-23",
       "candidate": null
     },
-    "domestic:暗夜勇士": {
+    "domestic:不良人幻想": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-09-29",
       "candidate": null
     },
-    "domestic:霸主征途": {
+    "domestic:不一样的修真": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-09-29",
       "candidate": null
     },
-    "domestic:百变灵兽": {
+    "domestic:长歌霸业": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-09-29",
       "candidate": null
     },
-    "domestic:被美食包围了": {
+    "domestic:超凡进击": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-09-29",
       "candidate": null
     },
-    "domestic:边境之歌": {
+    "domestic:潮玩三国": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-09-29",
       "candidate": null
     },
-    "domestic:兵王之王": {
+    "domestic:盛世武神": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-09-29",
       "candidate": null

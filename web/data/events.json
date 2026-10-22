@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T03:48:43Z",
+  "generated_at": "2026-10-22T04:13:51Z",
   "note": "只汇总「上线」事件（来源：Steam 发售日）；解析不出具体日期的条目不列，不做版本更新。",
   "events": [
     {
@@ -11,7 +11,7 @@
       "date_text": "Dec 1, 2015",
       "store_url": "https://store.steampowered.com/app/359550/",
       "origin": "current",
-      "first_seen": null
+      "first_seen": "2026-10-22"
     },
     {
       "game_id": "loop-hero",
@@ -22,7 +22,7 @@
       "date_text": "Mar 4, 2021",
       "store_url": "https://store.steampowered.com/app/1282730/",
       "origin": "current",
-      "first_seen": null
+      "first_seen": "2026-10-22"
     },
     {
       "game_id": "spirit-of-the-island",
@@ -33,7 +33,7 @@
       "date_text": "Aug 17, 2022",
       "store_url": "https://store.steampowered.com/app/1592110/",
       "origin": "current",
-      "first_seen": null
+      "first_seen": "2026-10-22"
     },
     {
       "game_id": "brotato",
@@ -44,7 +44,7 @@
       "date_text": "Jun 23, 2023",
       "store_url": "https://store.steampowered.com/app/1942280/",
       "origin": "current",
-      "first_seen": null
+      "first_seen": "2026-10-22"
     },
     {
       "game_id": "core-keeper",
@@ -55,7 +55,7 @@
       "date_text": "Aug 27, 2024",
       "store_url": "https://store.steampowered.com/app/1621690/",
       "origin": "current",
-      "first_seen": null
+      "first_seen": "2026-10-22"
     },
     {
       "game_id": "big-helmet-heroes",
@@ -66,7 +66,7 @@
       "date_text": "Feb 6, 2025",
       "store_url": "https://store.steampowered.com/app/2397250/",
       "origin": "current",
-      "first_seen": null
+      "first_seen": "2026-10-22"
     },
     {
       "game_id": "day-of-the-shell",
@@ -77,7 +77,7 @@
       "date_text": "Jul 29, 2025",
       "store_url": "https://store.steampowered.com/app/3008340/",
       "origin": "current",
-      "first_seen": null
+      "first_seen": "2026-10-22"
     },
     {
       "game_id": "knightica",
@@ -88,7 +88,7 @@
       "date_text": "Aug 21, 2025",
       "store_url": "https://store.steampowered.com/app/3093400/",
       "origin": "current",
-      "first_seen": null
+      "first_seen": "2026-10-22"
     },
     {
       "game_id": "smash-it-wild",
@@ -99,7 +99,7 @@
       "date_text": "Apr 16, 2026",
       "store_url": "https://store.steampowered.com/app/2432240/",
       "origin": "current",
-      "first_seen": null
+      "first_seen": "2026-10-22"
     },
     {
       "game_id": "scroll-of-taiwu",
@@ -121,7 +121,7 @@
       "date_text": "Aug 19, 2026",
       "store_url": "https://store.steampowered.com/app/3337140/",
       "origin": "current",
-      "first_seen": null
+      "first_seen": "2026-10-22"
     },
     {
       "game_id": "phantom-blade-zero",
