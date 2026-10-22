@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-22T05:22:23Z",
+  "updated_at": "2026-10-22T05:25:28Z",
   "items": {
     "domestic:暗夜勇士": {
       "checked_at": "2026-10-22",
@@ -261,6 +261,36 @@
       "approved_at": "2026-04-28",
       "candidate": null
     },
+    "domestic:防线出征": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:放开来合合": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:封天魔兽": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:封印之书": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:烽火江湖": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:疯狂开火": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
     "import:斗阵骑士": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-03-24",
@@ -277,17 +307,6 @@
         "gap_type": "cn_first",
         "gap_days": 148,
         "note": "国服版号早于 Steam 美区发售",
-        "stage": {
-          "cn": "launch",
-          "os": "launch",
-          "cn_release": "2026-08-19",
-          "os_release": "2026-08-19"
-        },
-        "version": {
-          "steam": null,
-          "source": null
-        },
-        "playtest_os": false,
         "nppa": {
           "approved_at": "2026-03-24",
           "publisher": "广州谷得网络科技有限公司",
@@ -311,7 +330,7 @@
           "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
           "https://store.steampowered.com/app/3337140/"
         ],
-        "first_seen": "2026-10-22T05:21:39Z",
+        "first_seen": "2026-10-22T05:24:44Z",
         "last_checked": "2026-10-22"
       }
     },
@@ -328,7 +347,40 @@
     "import:基地银河纵横": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-02-26",
-      "candidate": null
+      "candidate": {
+        "origin": "import",
+        "name_cn": "基地：银河纵横",
+        "name_en": "Foundation: Galactic Frontier",
+        "appid": 4223760,
+        "gap_type": "cn_first",
+        "gap_days": null,
+        "note": "国服已获批版号，Steam 美区尚未发售",
+        "nppa": {
+          "approved_at": "2026-02-26",
+          "publisher": "天津电子出版社有限公司",
+          "operator": "北京能量盒科技有限公司",
+          "approval_no": "国新出审〔2026〕525号",
+          "batch": "2026年进口网络游戏审批信息",
+          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html"
+        },
+        "steam": {
+          "store_url": "https://store.steampowered.com/app/4223760/",
+          "us_listed": true,
+          "us_release_date": "Coming soon",
+          "us_release_parsed": null,
+          "us_coming_soon": true,
+          "cn_listed": true,
+          "cn_release_date": "即将推出",
+          "cn_release_parsed": null,
+          "match_score": 1.0
+        },
+        "evidence": [
+          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
+          "https://store.steampowered.com/app/4223760/"
+        ],
+        "first_seen": "2026-10-22T05:24:54Z",
+        "last_checked": "2026-10-22"
+      }
     },
     "import:飘流幻境新世界": {
       "checked_at": "2026-10-22",
@@ -375,32 +427,32 @@
       "approved_at": "2026-01-23",
       "candidate": null
     },
-    "domestic:防线出征": {
+    "domestic:疯狂领地": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-09-29",
       "candidate": null
     },
-    "domestic:放开来合合": {
+    "domestic:风暴突围队": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-09-29",
       "candidate": null
     },
-    "domestic:封天魔兽": {
+    "domestic:怪物文明": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-09-29",
       "candidate": null
     },
-    "domestic:封印之书": {
+    "domestic:诡道封仙": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-09-29",
       "candidate": null
     },
-    "domestic:烽火江湖": {
+    "domestic:诡秘之主愚者": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-09-29",
       "candidate": null
     },
-    "domestic:疯狂开火": {
+    "domestic:滚动的世界": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-09-29",
       "candidate": null

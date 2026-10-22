@@ -8,8 +8,8 @@
       },
       {
         "date": "2026-10-22",
-        "source": "signal",
-        "value": 1
+        "source": "trends",
+        "value": 0
       }
     ],
     "where-winds-meet": [
@@ -32,8 +32,8 @@
       },
       {
         "date": "2026-10-22",
-        "source": "signal",
-        "value": 2
+        "source": "trends",
+        "value": 0
       }
     ],
     "world-of-jade-dynasty": [
@@ -44,8 +44,8 @@
       },
       {
         "date": "2026-10-22",
-        "source": "signal",
-        "value": 2
+        "source": "trends",
+        "value": 0
       }
     ],
     "neverness-to-everness": [
@@ -92,8 +92,8 @@
       },
       {
         "date": "2026-10-22",
-        "source": "signal",
-        "value": 3
+        "source": "trends",
+        "value": 45
       }
     ],
     "wang-yue": [
