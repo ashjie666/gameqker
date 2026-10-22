@@ -17,7 +17,8 @@ const LEVEL_CLASS = { '高': 'lv-high', '中高': 'lv-midhigh', '中': 'lv-mid',
 const LEVEL_VALUES = ['高', '中高', '中', '低中', '低'];
 
 const CHANGED_WINDOW_MS = 24 * 60 * 60 * 1000; // 巡检每天一次，24 小时内的变更即「今日变更」
-const NEAR_DAYS = 2; // 上线前 2 天进入倒计时提醒
+const COUNTDOWN_DAYS = 30; // 上线倒计时只展示未来 30 天内发售 / 上线的游戏
+const NEAR_DAYS = 2; // 其中 2 天内进入高亮提醒
 
 const state = {
   genre: 'all',
@@ -495,11 +496,12 @@ function renderCountdown() {
     return;
   }
 
-  const items = upcomingLaunches();
+  const all = upcomingLaunches();
+  const items = all.filter((event) => event.days <= COUNTDOWN_DAYS);
   const near = items.filter((event) => event.days <= NEAR_DAYS);
 
-  note.textContent = items.length
-    ? `已确认发售日 ${items.length} 款 · 上线前 ${NEAR_DAYS} 天进入倒计时`
+  note.textContent = all.length
+    ? `未来 ${COUNTDOWN_DAYS} 天内发售 / 上线 ${items.length} 款 · 共 ${all.length} 款已确认发售日`
     : '暂无尚未上线的游戏';
 
   if (near.length) {
@@ -515,7 +517,7 @@ function renderCountdown() {
   if (!items.length) {
     list.replaceChildren(el('p', {
       class: 'countdown-empty',
-      text: '目前没有解析出具体发售日的游戏（"待定 / Q1 2027" 这类模糊档期不入表）。',
+      text: `未来 ${COUNTDOWN_DAYS} 天内没有已确认发售 / 上线日的游戏（更远的档期暂不展示）。`,
     }));
     return;
   }
