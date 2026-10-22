@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-22T03:32:20Z",
+  "updated_at": "2026-10-22T03:50:47Z",
   "items": {
     "import:3对3街篮": {
       "checked_at": "2026-10-22",
@@ -459,7 +459,7 @@
           "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
           "https://store.steampowered.com/app/3093400/"
         ],
-        "first_seen": "2026-10-22T03:31:58Z",
+        "first_seen": "2026-10-22T03:49:57Z",
         "last_checked": "2026-10-22"
       }
     },
@@ -497,7 +497,7 @@
           "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
           "https://store.steampowered.com/app/3337140/"
         ],
-        "first_seen": "2026-10-22T03:32:04Z",
+        "first_seen": "2026-10-22T03:50:03Z",
         "last_checked": "2026-10-22"
       }
     },
@@ -529,6 +529,99 @@
     "import:小浣熊百将传2": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-02-26",
+      "candidate": null
+    },
+    "import:辛特堡传说": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-02-26",
+      "candidate": {
+        "origin": "import",
+        "name_cn": "辛特堡传说",
+        "name_en": "Dungeons of Hinterberg",
+        "appid": 1983260,
+        "gap_type": "overseas_first",
+        "gap_days": 588,
+        "note": "Steam 美区已发售，早于国服版号批准",
+        "nppa": {
+          "approved_at": "2026-02-26",
+          "publisher": "北京联合出版有限责任公司",
+          "operator": "北京龙威互动科技有限公司",
+          "approval_no": "国新出审〔2026〕529号",
+          "batch": "2026年进口网络游戏审批信息",
+          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html"
+        },
+        "steam": {
+          "store_url": "https://store.steampowered.com/app/1983260/",
+          "us_listed": true,
+          "us_release_date": "Jul 18, 2024",
+          "us_release_parsed": "2024-07-18",
+          "us_coming_soon": false,
+          "cn_listed": true,
+          "cn_release_date": "2024 年 7 月 18 日",
+          "cn_release_parsed": "2024-07-18",
+          "match_score": 0.33
+        },
+        "evidence": [
+          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
+          "https://store.steampowered.com/app/1983260/"
+        ],
+        "first_seen": "2026-10-22T03:50:25Z",
+        "last_checked": "2026-10-22"
+      }
+    },
+    "import:彩虹六号攻势": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-01-23",
+      "candidate": null
+    },
+    "import:彩虹岛爱丽丝之境": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-01-23",
+      "candidate": null
+    },
+    "import:愤怒的小鸟经典归来": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-01-23",
+      "candidate": null
+    },
+    "import:愤怒的小鸟梦幻爆破": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-01-23",
+      "candidate": null
+    },
+    "import:秘境夺金": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-01-23",
+      "candidate": null
+    },
+    "domestic:暗夜勇士": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:霸主征途": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:百变灵兽": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:被美食包围了": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:边境之歌": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:兵王之王": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
       "candidate": null
     }
   }

@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-10-22",
-  "generated_at_utc": "2026-10-22T03:32:20Z",
+  "generated_at_utc": "2026-10-22T03:50:47Z",
   "source": {
     "name": "国家新闻出版署 · 国产网络游戏审批信息",
     "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/",
@@ -21,8 +21,8 @@
   "stats": {
     "nppa_games": 461,
     "evaluated": 20,
-    "matched": 5,
-    "skipped_budget": 421
+    "matched": 3,
+    "skipped_budget": 409
   },
   "candidates": [
     {
@@ -197,6 +197,40 @@
     },
     {
       "origin": "import",
+      "name_cn": "辛特堡传说",
+      "name_en": "Dungeons of Hinterberg",
+      "appid": 1983260,
+      "gap_type": "overseas_first",
+      "gap_days": 588,
+      "note": "Steam 美区已发售，早于国服版号批准",
+      "nppa": {
+        "approved_at": "2026-02-26",
+        "publisher": "北京联合出版有限责任公司",
+        "operator": "北京龙威互动科技有限公司",
+        "approval_no": "国新出审〔2026〕529号",
+        "batch": "2026年进口网络游戏审批信息",
+        "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html"
+      },
+      "steam": {
+        "store_url": "https://store.steampowered.com/app/1983260/",
+        "us_listed": true,
+        "us_release_date": "Jul 18, 2024",
+        "us_release_parsed": "2024-07-18",
+        "us_coming_soon": false,
+        "cn_listed": true,
+        "cn_release_date": "2024 年 7 月 18 日",
+        "cn_release_parsed": "2024-07-18",
+        "match_score": 0.33
+      },
+      "evidence": [
+        "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
+        "https://store.steampowered.com/app/1983260/"
+      ],
+      "first_seen": "2026-10-22T03:50:25Z",
+      "last_checked": "2026-10-22"
+    },
+    {
+      "origin": "import",
       "name_cn": "大头盔英雄",
       "name_en": "Big Helmet Heroes",
       "appid": 2397250,
@@ -294,7 +328,7 @@
         "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
         "https://store.steampowered.com/app/3093400/"
       ],
-      "first_seen": "2026-10-22T03:31:58Z",
+      "first_seen": "2026-10-22T03:49:57Z",
       "last_checked": "2026-10-22"
     },
     {
@@ -362,7 +396,7 @@
         "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
         "https://store.steampowered.com/app/3337140/"
       ],
-      "first_seen": "2026-10-22T03:32:04Z",
+      "first_seen": "2026-10-22T03:50:03Z",
       "last_checked": "2026-10-22"
     }
   ],

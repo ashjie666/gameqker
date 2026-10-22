@@ -8,8 +8,8 @@
       },
       {
         "date": "2026-10-22",
-        "source": "trends",
-        "value": 0
+        "source": "signal",
+        "value": 1
       }
     ],
     "where-winds-meet": [
@@ -32,8 +32,8 @@
       },
       {
         "date": "2026-10-22",
-        "source": "trends",
-        "value": 0
+        "source": "signal",
+        "value": 2
       }
     ],
     "world-of-jade-dynasty": [
@@ -80,8 +80,8 @@
       },
       {
         "date": "2026-10-22",
-        "source": "trends",
-        "value": 100
+        "source": "signal",
+        "value": 0
       }
     ],
     "ananta": [
@@ -92,8 +92,8 @@
       },
       {
         "date": "2026-10-22",
-        "source": "trends",
-        "value": 51
+        "source": "signal",
+        "value": 3
       }
     ],
     "wang-yue": [
@@ -104,8 +104,8 @@
       },
       {
         "date": "2026-10-22",
-        "source": "trends",
-        "value": 5
+        "source": "signal",
+        "value": 0
       }
     ],
     "sanguo-mou-ding-tianxia": [
@@ -118,6 +118,76 @@
         "date": "2026-10-22",
         "source": "signal",
         "value": 2
+      }
+    ],
+    "rainbow-six-siege": [
+      {
+        "date": "2026-10-22",
+        "source": "reviews",
+        "value": 1564576
+      }
+    ],
+    "brotato": [
+      {
+        "date": "2026-10-22",
+        "source": "reviews",
+        "value": 120028
+      }
+    ],
+    "loop-hero": [
+      {
+        "date": "2026-10-22",
+        "source": "reviews",
+        "value": 36633
+      }
+    ],
+    "core-keeper": [
+      {
+        "date": "2026-10-22",
+        "source": "reviews",
+        "value": 68059
+      }
+    ],
+    "after-inc-revival": [
+      {
+        "date": "2026-10-22",
+        "source": "reviews",
+        "value": 1538
+      }
+    ],
+    "knightica": [
+      {
+        "date": "2026-10-22",
+        "source": "reviews",
+        "value": 1209
+      }
+    ],
+    "day-of-the-shell": [
+      {
+        "date": "2026-10-22",
+        "source": "reviews",
+        "value": 426
+      }
+    ],
+    "big-helmet-heroes": [
+      {
+        "date": "2026-10-22",
+        "source": "reviews",
+        "value": 1166
+      }
+    ],
+    "spirit-of-the-island": [
+      {
+        "date": "2026-10-22",
+        "source": "reviews",
+        "value": 1908
+      }
+    ],
+    "smash-it-wild": [
+      {
+        "date": "2026-10-22",
+        "source": "reviews",
+        "value": 157
       }
     ]
   },
