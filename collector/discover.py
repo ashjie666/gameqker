@@ -6,13 +6,14 @@
 - Steam storesearch：按游戏名找 appid
 - Steam appdetails：分别查 cc=us / cc=cn 的区服状态
 
-进口批次排在前面优先处理：这些游戏在 Steam 美区早已发售、国服版号刚批，
-是「国服 / 海外服不同步」最典型的一类；国产批次以手游为主，Steam 命中率低。
+进口批次排在前面优先处理：判断「国服是否领先」必须先在 Steam 找到页面，
+进口批次几乎都有页面；国产批次以手游为主，Steam 命中率极低，只作补充。
 
-判定口径（2026-10-22 与用户确认）：
-- overseas_first：Steam 美区已发售，且发售日早于国服版号批准日 → 海外先发
-- cn_first：国服已有版号，Steam 美区无页面或未上架 → 国服先行
-- region_gap：Steam 美区可购、国区不可购 → 国区受限
+判定口径（2026-10-22 与用户确认，当日修正方向）：
+只找「国服领先」——国服已获版号，而海外（Steam 美区）尚未上架、尚未发售，
+或发售日不早于国服版号批准日：
+- cn_first：国服版号早于美区发售 / 美区尚未定档 / 美区没有页面
+海外先发（美区已发售且早于国服版号）不是目标，直接丢弃。
 
 结果写入候选池 data/candidates.json，由前端「新发现 · 待确认」区展示。
 **不直接写入 games 清单**：关键词、变现建议等定性字段是人工维护的，
@@ -265,29 +266,30 @@ def match_appid(fetcher, nppa_item):
 
 
 def classify(nppa_item, us, cn):
-    """返回 (gap_type, gap_days, note) 或 None。"""
+    """只输出「国服领先」的候选，返回 (gap_type, gap_days, note) 或 None。
+
+    判定标准：国服已获版号，而 Steam 美区尚未上架、尚未发售，或发售日不早于版号批准日。
+    海外先发（美区已发售且早于国服版号）不是本模块要找的目标，一律丢弃。
+    """
     if us.get("listed") is not True:
         # 国服已有版号、Steam 海外查不到 → 国服先行
         return "cn_first", None, "国服已获批版号，Steam 美区无页面或未上架"
 
     approved = parse_cn_date(nppa_item.get("approved_at") or "")
     us_release = parse_steam_date(us.get("release_date"))
-    overseas_live = us.get("coming_soon") is False and us_release is not None
-
-    if overseas_live:
-        if approved and us_release < approved:
-            return "overseas_first", (approved - us_release).days, \
-                "Steam 美区已发售，早于国服版号批准"
-        return "overseas_first", None, "Steam 美区已发售，国服版号刚获批"
 
     if us.get("coming_soon") is True:
-        if approved and us_release and us_release < approved:
-            return "overseas_first", (approved - us_release).days, \
-                "Steam 美区定档早于国服版号批准"
-        return None  # 都还没上线，谈不上不同步
+        if approved and us_release:
+            days = (us_release - approved).days
+            if days > 0:
+                return "cn_first", days, "国服版号早于 Steam 美区定档"
+        return "cn_first", None, "国服已获批版号，Steam 美区尚未发售"
 
-    if cn.get("listed") is False:
-        return "region_gap", None, "Steam 美区可购、国区不可购"
+    if us_release and approved:
+        if us_release >= approved:
+            return "cn_first", (us_release - approved).days, \
+                "国服版号早于 Steam 美区发售"
+        return None  # 美区已发售且早于国服版号 → 海外先发，不是目标
     return None
 
 
@@ -347,12 +349,11 @@ def _is_stale(entry, today):
 
 
 def collect_games(fetcher):
-    """抓国产（近两月）+ 进口（当年累计）两个审批来源。
+    """抓进口（当年累计）+ 国产（近两月）两个审批来源，进口排前面。
 
-    进口批次命中率高得多：这些游戏在 Steam 美区早已发售，国服版号刚批，
-    是「国服 / 海外服不同步」最典型的一类；国产批次里以手游为主，
-    Steam 有页面的比例很低，但一旦命中就是真正的「海外先发」。
-    进口排前面，保证预算先用在有效候选上。
+    判断「国服是否领先」必须先在 Steam 找到页面：进口批次几乎都有 Steam 页面，
+    国产批次以手游为主、Steam 命中率极低（实测近两月名单前 20 款 0 命中），
+    所以先用预算把进口批次跑完，国产批次作为补充。
     """
     games = []
     specs = (
@@ -429,7 +430,6 @@ def run(fetcher, state, max_new=MAX_NEW_PER_RUN, deadline=None, today=None):
             candidate["last_checked"] = entry.get("checked_at")
             candidates.append(candidate)
     candidates.sort(key=lambda c: (
-        0 if c.get("gap_type") == "overseas_first" else 1,
         -(c.get("gap_days") or 0),
         c.get("name_cn") or "",
     ))

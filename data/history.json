@@ -32,8 +32,8 @@
       },
       {
         "date": "2026-10-22",
-        "source": "trends",
-        "value": 0
+        "source": "signal",
+        "value": 2
       }
     ],
     "world-of-jade-dynasty": [
@@ -92,8 +92,8 @@
       },
       {
         "date": "2026-10-22",
-        "source": "trends",
-        "value": 49
+        "source": "signal",
+        "value": 3
       }
     ],
     "wang-yue": [
@@ -104,7 +104,7 @@
       },
       {
         "date": "2026-10-22",
-        "source": "trends",
+        "source": "signal",
         "value": 0
       }
     ],

@@ -548,9 +548,7 @@ function renderCountdown() {
    ------------------------------------------------------------------------- */
 
 const GAP_META = {
-  overseas_first: { label: '海外先发', cls: 'gap-overseas' },
   cn_first: { label: '国服先行', cls: 'gap-cn' },
-  region_gap: { label: '国区受限', cls: 'gap-region' },
 };
 
 function renderDiscover() {
@@ -579,13 +577,19 @@ function renderCandidate(candidate) {
     el('span', { class: 'd-tag ' + meta.cls, text: meta.label }),
   ];
   if (candidate.gap_days) {
-    tags.push(el('span', { class: 'd-tag d-days', text: `相差 ${candidate.gap_days} 天` }));
+    tags.push(el('span', { class: 'd-tag d-days', text: `国服早 ${candidate.gap_days} 天` }));
   }
+
+  const usCell = steam.us_listed !== true
+    ? '无页面 / 未上架'
+    : (steam.us_release_parsed
+      ? (steam.us_coming_soon ? `未发售 · 定档 ${formatDay(steam.us_release_parsed)}` : formatDay(steam.us_release_parsed))
+      : '未定档');
 
   const rows = [
     ['版号批准', formatDay(nppa.approved_at)],
     ['审批文号', nppa.approval_no || '—'],
-    ['Steam 美区', steam.us_release_parsed ? formatDay(steam.us_release_parsed) : (steam.us_release_date || '未上架')],
+    ['Steam 美区', usCell],
     ['Steam 国区', steam.cn_listed === false ? '不可购买' : (steam.cn_release_parsed ? formatDay(steam.cn_release_parsed) : '可购买')],
     ['运营单位', nppa.operator || '—'],
   ];
@@ -736,7 +740,7 @@ async function boot() {
 
   // 候选池：读不到就隐藏整个「新发现」区块
   try {
-    const candidatesResponse = await fetch('data/candidates.json', { cache: 'no-store' });
+    const candidatesResponse = await fetch(`data/candidates.json?t=${Date.now()}`, { cache: 'no-store' });
     if (candidatesResponse.ok) CANDIDATES = await candidatesResponse.json();
   } catch (error) {
     CANDIDATES = null;

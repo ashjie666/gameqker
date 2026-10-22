@@ -36,7 +36,7 @@
         "name": "Phantom Blade Zero",
         "url": "https://store.steampowered.com/app/4115450/",
         "error": null,
-        "stale": false
+        "stale": true
       },
       "official": {
         "matched": false,
@@ -56,7 +56,7 @@
       },
       "skipped": [],
       "error": "官网: https://www.phantombladezero.com/: URLError: <urlopen error timed out>",
-      "duration_ms": 42174
+      "duration_ms": 83187
     },
     {
       "id": "where-winds-meet",
@@ -90,7 +90,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2020
+      "duration_ms": 2719
     },
     {
       "id": "lord-of-mysteries",
@@ -124,7 +124,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2088
+      "duration_ms": 2812
     },
     {
       "id": "world-of-jade-dynasty",
@@ -138,107 +138,40 @@
         "name": null,
         "url": "https://store.steampowered.com/app/3384260/",
         "error": null,
-        "stale": false
+        "stale": true
       },
-      "official": {
-        "matched": true,
-        "label": "发售日期",
-        "signals": [
-          "release_date"
-        ],
-        "url": "https://zx.wanmei.com/news/",
-        "snippet": "1 【焕新体验服】10月22日更新维护公告 2026-10-21 【经典体验服】10月22日更新维护公告 2026-10-21 焕新434区麒麟踏云10月19日开服公告 2026-10-19 【焕新体验服】10月17日更新维护公告 2026-10-16 【经典体验服】10月17日更新维护公告 2026-10-16 焕新43",
-        "pages": [
-          {
-            "url": "https://zx.wanmei.com/",
-            "status": 200,
-            "ok": true
-          },
-          {
-            "url": "https://zx.wanmei.com/news/",
-            "status": 200,
-            "ok": true
-          }
-        ],
-        "error": null,
-        "stale": false
-      },
-      "skipped": [],
+      "official": null,
+      "skipped": [
+        "official(超预算)"
+      ],
       "error": null,
-      "duration_ms": 3152
+      "duration_ms": 41562
     },
     {
       "id": "neverness-to-everness",
       "name": "异环",
-      "status": "ok",
+      "status": "skipped",
       "steam": null,
-      "official": {
-        "matched": false,
-        "label": "unknown",
-        "signals": [],
-        "url": "https://nte.perfectworld.com/",
-        "snippet": null,
-        "pages": [
-          {
-            "url": "https://nte.perfectworld.com/",
-            "status": 200,
-            "ok": true
-          },
-          {
-            "url": "https://nte.perfectworld.com/news/",
-            "status": null,
-            "ok": false
-          }
-        ],
-        "error": null,
-        "stale": false
-      },
+      "official": null,
       "skipped": [
-        "steam(未配置 appid)"
+        "steam(未配置 appid)",
+        "official(超预算)"
       ],
       "error": null,
-      "duration_ms": 2090
+      "duration_ms": 0
     },
     {
       "id": "scroll-of-taiwu",
       "name": "太吾绘卷",
-      "status": "ok",
-      "steam": {
-        "appid": 838350,
-        "listed": true,
-        "release_date": "Jun 16, 2026",
-        "coming_soon": false,
-        "name": "The Scroll of Taiwu : Beyond The Dome",
-        "url": "https://store.steampowered.com/app/838350/",
-        "error": null,
-        "stale": false
-      },
-      "official": {
-        "matched": true,
-        "label": "英文/多语言",
-        "signals": [
-          "english"
-        ],
-        "url": "https://scrolloftaiwu.com/",
-        "snippet": "f Taiwu Guide — Beginner Routes, Factions & Martial Arts (2026) Scroll of Taiwu English Guide Menu Wiki Beginner Launch Factions Martial Arts Builds Guides Tools scrol",
-        "pages": [
-          {
-            "url": "https://scrolloftaiwu.com/",
-            "status": 200,
-            "ok": true
-          },
-          {
-            "url": "https://scrolloftaiwu.com/news/",
-            "status": null,
-            "ok": false
-          }
-        ],
-        "error": null,
-        "stale": false
-      },
-      "skipped": [],
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(超预算)",
+        "official(超预算)"
+      ],
       "error": null,
-      "duration_ms": 2272
+      "duration_ms": 0
     },
     {
       "id": "legend-of-mortal-cultivation",
@@ -256,314 +189,41 @@
     {
       "id": "ananta",
       "name": "无限大",
-      "status": "ok",
-      "steam": {
-        "appid": 4814120,
-        "listed": true,
-        "release_date": "Jan 15, 2027",
-        "coming_soon": true,
-        "name": "ANANTA",
-        "url": "https://store.steampowered.com/app/4814120/",
-        "error": null,
-        "stale": false
-      },
-      "official": {
-        "matched": true,
-        "label": "全球上线",
-        "signals": [
-          "global_launch"
-        ],
-        "url": "https://ananta.163.com/",
-        "snippet": "《无限大》官方网站 | 27年1月15日全球上线 《无限大》官方网站 | 27年1月15日全球上线 《无限大》官方网站 | 27年1月15日全球上线 您使用的浏览器版本过低，可能会影响到您浏览本网页，建议您升",
-        "pages": [
-          {
-            "url": "https://ananta.163.com/",
-            "status": 200,
-            "ok": true
-          },
-          {
-            "url": "https://ananta.163.com/news/",
-            "status": 200,
-            "ok": true
-          }
-        ],
-        "error": null,
-        "stale": false
-      },
-      "skipped": [],
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(超预算)",
+        "official(超预算)"
+      ],
       "error": null,
-      "duration_ms": 3237
+      "duration_ms": 0
     },
     {
       "id": "wang-yue",
       "name": "望月",
-      "status": "ok",
+      "status": "skipped",
       "steam": null,
-      "official": {
-        "matched": false,
-        "label": "unknown",
-        "signals": [],
-        "url": "https://wy.shiyue.com/",
-        "snippet": null,
-        "pages": [
-          {
-            "url": "https://wy.shiyue.com/",
-            "status": 200,
-            "ok": true
-          },
-          {
-            "url": "https://wy.shiyue.com/news/",
-            "status": 200,
-            "ok": true
-          }
-        ],
-        "error": null,
-        "stale": false
-      },
+      "official": null,
       "skipped": [
-        "steam(未配置 appid)"
+        "steam(未配置 appid)",
+        "official(超预算)"
       ],
       "error": null,
-      "duration_ms": 3517
+      "duration_ms": 0
     },
     {
       "id": "sanguo-mou-ding-tianxia",
       "name": "三国：谋定天下",
-      "status": "ok",
+      "status": "skipped",
       "steam": null,
-      "official": {
-        "matched": true,
-        "label": "发售日期",
-        "signals": [
-          "release_date"
-        ],
-        "url": "https://store.steamchina.com/app/4542640/",
-        "snippet": "开发者 浙江华娱网络科技有限公司 发行商 上海幻电信息科技有限公司 运营商 浙江华娱网络科技有限公司 出版物号 ISBN 978-7-498-12351-0 发行日期 2026 年 5 月 6 日 多职业战争策略手游，你可以在每个赛季中体验镇军、青囊、奇佐、天工等六大职业，在沙盘中施展多样的职业天赋与职业技能去影响补给、战术",
-        "pages": [
-          {
-            "url": "https://store.steamchina.com/app/4542640/",
-            "status": 200,
-            "ok": true
-          }
-        ],
-        "error": null,
-        "stale": false
-      },
-      "skipped": [
-        "steam(未配置 appid)"
-      ],
-      "error": null,
-      "duration_ms": 1424
-    },
-    {
-      "id": "rainbow-six-siege",
-      "name": "围攻",
-      "status": "ok",
-      "steam": {
-        "appid": 359550,
-        "listed": true,
-        "release_date": "Dec 1, 2015",
-        "coming_soon": false,
-        "name": "Tom Clancy's Rainbow Six Siege",
-        "url": "https://store.steampowered.com/app/359550/",
-        "error": null,
-        "stale": false
-      },
       "official": null,
       "skipped": [
-        "official(未配置官网)"
+        "steam(未配置 appid)",
+        "official(超预算)"
       ],
       "error": null,
-      "duration_ms": 137
-    },
-    {
-      "id": "brotato",
-      "name": "土豆兄弟",
-      "status": "ok",
-      "steam": {
-        "appid": 1942280,
-        "listed": true,
-        "release_date": "Jun 23, 2023",
-        "coming_soon": false,
-        "name": "Brotato",
-        "url": "https://store.steampowered.com/app/1942280/",
-        "error": null,
-        "stale": false
-      },
-      "official": null,
-      "skipped": [
-        "official(未配置官网)"
-      ],
-      "error": null,
-      "duration_ms": 2001
-    },
-    {
-      "id": "loop-hero",
-      "name": "循环勇士",
-      "status": "ok",
-      "steam": {
-        "appid": 1282730,
-        "listed": true,
-        "release_date": "Mar 4, 2021",
-        "coming_soon": false,
-        "name": "Loop Hero",
-        "url": "https://store.steampowered.com/app/1282730/",
-        "error": null,
-        "stale": false
-      },
-      "official": null,
-      "skipped": [
-        "official(未配置官网)"
-      ],
-      "error": null,
-      "duration_ms": 1984
-    },
-    {
-      "id": "core-keeper",
-      "name": "护核纪元",
-      "status": "ok",
-      "steam": {
-        "appid": 1621690,
-        "listed": true,
-        "release_date": "Aug 27, 2024",
-        "coming_soon": false,
-        "name": "Core Keeper",
-        "url": "https://store.steampowered.com/app/1621690/",
-        "error": null,
-        "stale": false
-      },
-      "official": null,
-      "skipped": [
-        "official(未配置官网)"
-      ],
-      "error": null,
-      "duration_ms": 2134
-    },
-    {
-      "id": "after-inc-revival",
-      "name": "劫后公司",
-      "status": "ok",
-      "steam": {
-        "appid": 3337140,
-        "listed": true,
-        "release_date": "Aug 19, 2026",
-        "coming_soon": false,
-        "name": "After Inc: Revival",
-        "url": "https://store.steampowered.com/app/3337140/",
-        "error": null,
-        "stale": false
-      },
-      "official": null,
-      "skipped": [
-        "official(未配置官网)"
-      ],
-      "error": null,
-      "duration_ms": 1903
-    },
-    {
-      "id": "knightica",
-      "name": "斗阵骑士",
-      "status": "ok",
-      "steam": {
-        "appid": 3093400,
-        "listed": true,
-        "release_date": "Aug 21, 2025",
-        "coming_soon": false,
-        "name": "Knightica",
-        "url": "https://store.steampowered.com/app/3093400/",
-        "error": null,
-        "stale": false
-      },
-      "official": null,
-      "skipped": [
-        "official(未配置官网)"
-      ],
-      "error": null,
-      "duration_ms": 1972
-    },
-    {
-      "id": "day-of-the-shell",
-      "name": "孤岛猎神",
-      "status": "ok",
-      "steam": {
-        "appid": 3008340,
-        "listed": true,
-        "release_date": "Jul 29, 2025",
-        "coming_soon": false,
-        "name": "Day of the Shell",
-        "url": "https://store.steampowered.com/app/3008340/",
-        "error": null,
-        "stale": false
-      },
-      "official": null,
-      "skipped": [
-        "official(未配置官网)"
-      ],
-      "error": null,
-      "duration_ms": 2036
-    },
-    {
-      "id": "big-helmet-heroes",
-      "name": "大头盔英雄",
-      "status": "ok",
-      "steam": {
-        "appid": 2397250,
-        "listed": true,
-        "release_date": "Feb 6, 2025",
-        "coming_soon": false,
-        "name": "Big Helmet Heroes",
-        "url": "https://store.steampowered.com/app/2397250/",
-        "error": null,
-        "stale": false
-      },
-      "official": null,
-      "skipped": [
-        "official(未配置官网)"
-      ],
-      "error": null,
-      "duration_ms": 1972
-    },
-    {
-      "id": "spirit-of-the-island",
-      "name": "海岛之魂",
-      "status": "ok",
-      "steam": {
-        "appid": 1592110,
-        "listed": true,
-        "release_date": "Aug 17, 2022",
-        "coming_soon": false,
-        "name": "Spirit of the Island",
-        "url": "https://store.steampowered.com/app/1592110/",
-        "error": null,
-        "stale": false
-      },
-      "official": null,
-      "skipped": [
-        "official(未配置官网)"
-      ],
-      "error": null,
-      "duration_ms": 2125
-    },
-    {
-      "id": "smash-it-wild",
-      "name": "动物排球社",
-      "status": "ok",
-      "steam": {
-        "appid": 2432240,
-        "listed": true,
-        "release_date": "Apr 16, 2026",
-        "coming_soon": false,
-        "name": "Smash it Wild: Tactical Volleyball Roguelike",
-        "url": "https://store.steampowered.com/app/2432240/",
-        "error": null,
-        "stale": false
-      },
-      "official": null,
-      "skipped": [
-        "official(未配置官网)"
-      ],
-      "error": null,
-      "duration_ms": 1896
+      "duration_ms": 0
     }
   ],
   "games": [
@@ -609,7 +269,7 @@
         "steam_appid": 4115450,
         "official": "https://www.phantombladezero.com/"
       },
-      "last_checked": "2026-10-22T04:13:13Z",
+      "last_checked": "2026-10-22T05:06:27Z",
       "steam_listed": true,
       "steam_release_date": "Oct 28, 2026",
       "official_signal": null,
@@ -677,7 +337,7 @@
         "steam_appid": null,
         "official": "https://www.wherewindsmeetgame.com/"
       },
-      "last_checked": "2026-10-22T04:13:15Z",
+      "last_checked": "2026-10-22T05:06:30Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -755,7 +415,7 @@
         "steam_appid": null,
         "official": "https://lordofthemysteriesgame.com/"
       },
-      "last_checked": "2026-10-22T04:13:17Z",
+      "last_checked": "2026-10-22T05:06:32Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -825,7 +485,7 @@
         "steam_appid": 3384260,
         "official": "https://zx.wanmei.com/"
       },
-      "last_checked": "2026-10-22T04:13:21Z",
+      "last_checked": "2026-10-22T05:07:14Z",
       "steam_listed": false,
       "steam_release_date": null,
       "official_signal": {
@@ -902,7 +562,7 @@
         "steam_appid": null,
         "official": "https://nte.perfectworld.com/"
       },
-      "last_checked": "2026-10-22T04:13:23Z",
+      "last_checked": "2026-10-22T04:59:37Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -958,7 +618,7 @@
         "steam_appid": 838350,
         "official": "https://scrolloftaiwu.com/"
       },
-      "last_checked": "2026-10-22T04:13:25Z",
+      "last_checked": "2026-10-22T05:00:18Z",
       "steam_listed": true,
       "steam_release_date": "Jun 16, 2026",
       "official_signal": {
@@ -1091,7 +751,7 @@
         "steam_appid": 4814120,
         "official": "https://ananta.163.com/"
       },
-      "last_checked": "2026-10-22T04:13:28Z",
+      "last_checked": "2026-10-22T04:56:20Z",
       "steam_listed": true,
       "steam_release_date": "Jan 15, 2027",
       "official_signal": {
@@ -1178,7 +838,7 @@
         "steam_appid": null,
         "official": "https://wy.shiyue.com/"
       },
-      "last_checked": "2026-10-22T04:13:32Z",
+      "last_checked": "2026-10-22T04:56:22Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1236,7 +896,7 @@
         "steam_appid": null,
         "official": "https://store.steamchina.com/app/4542640/"
       },
-      "last_checked": "2026-10-22T04:13:33Z",
+      "last_checked": "2026-10-22T04:56:23Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1265,482 +925,7 @@
         "https://store.steamchina.com/app/4542640/_/",
         "https://m.ourplay.net/rank/detail/316888"
       ]
-    },
-    {
-      "id": "rainbow-six-siege",
-      "name_cn": "围攻",
-      "name_en": "Tom Clancy's Rainbow Six Siege",
-      "developer": "Ubisoft Montreal",
-      "genre": "战术射击 / FPS",
-      "priority": 11,
-      "cn_status": "2026-04-28 获国服版号（国新出审〔2026〕981号），运营：南京市玩趣互动科技有限公司",
-      "global_status": "Steam 美区 2015-12-01 发售（早于国服版号 3801 天），评测口径见 overseas_heat",
-      "overseas_heat": "高 · 十年级长线运营的战术射击，评测 125 万条，英文攻略生态极度成熟",
-      "overseas_heat_checked": "2026-10-22",
-      "gap_window": "国服版号刚获批，窗口只在国服上线前后的本地化解读；英文向增量有限（存量市场已被吃透）",
-      "target_markets": [
-        "欧美战术射击受众",
-        "东南亚",
-        "拉美"
-      ],
-      "keywords": [
-        "rainbow six siege operator tier list",
-        "r6s best operators 2026",
-        "rainbow six siege map callouts",
-        "rainbow six siege beginner guide",
-        "r6s recoil control guide",
-        "rainbow six siege ranked tips"
-      ],
-      "content_opportunities": [
-        "干员分级与出场率清单（按赛季更新）",
-        "地图报点与卡点教学",
-        "后坐力/枪械配装速查",
-        "新手 30 小时路线图"
-      ],
-      "monetization_level": "高",
-      "monetization": "搜索体量大但竞争白热；AdSense + 配装工具页留存",
-      "risks": [
-        "与 IGN、SiegeGG 等专业站正面竞争，几乎无首发窗口",
-        "国服版号获批不等于国服开服，时间点需单独跟踪"
-      ],
-      "watch": {
-        "steam_appid": 359550,
-        "official": null
-      },
-      "last_checked": "2026-10-22T04:13:33Z",
-      "steam_listed": true,
-      "steam_release_date": "Dec 1, 2015",
-      "official_signal": null,
-      "changes": [],
-      "sources": [
-        "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
-        "https://store.steampowered.com/app/359550/"
-      ]
-    },
-    {
-      "id": "brotato",
-      "name_cn": "土豆兄弟",
-      "name_en": "Brotato",
-      "developer": "Blobfish",
-      "genre": "动作 / 肉鸽弹幕",
-      "priority": 12,
-      "cn_status": "2026-04-28 获国服版号（国新出审〔2026〕980号），运营：上海游一卡网络技术有限公司",
-      "global_status": "Steam 美区 2023-06-23 发售（早于国服版号 1040 天），评测口径见 overseas_heat",
-      "overseas_heat": "高 · 评测 11.2 万条，靠低价与手机端持续拉新，英文 build 攻略需求稳定",
-      "overseas_heat_checked": "2026-10-22",
-      "gap_window": "国服版号刚获批，窗口在国服上线首月的角色/武器 tier 内容；长尾稳定但已有成熟竞品",
-      "target_markets": [
-        "欧美独立游戏受众",
-        "东南亚",
-        "移动端玩家"
-      ],
-      "keywords": [
-        "brotato best characters",
-        "brotato tier list",
-        "brotato build guide",
-        "brotato danger 5 tips",
-        "brotato weapon tier list"
-      ],
-      "content_opportunities": [
-        "角色强度分级（按难度 5 重排）",
-        "武器组合与流派速查",
-        "难度 5 通关路线",
-        "成就与解锁条件表"
-      ],
-      "monetization_level": "中高",
-      "monetization": "低价大众向，流量宽；AdSense 为主，适合做长尾表格页",
-      "risks": [
-        "英文 tier list 站点众多，需靠更新频率取胜"
-      ],
-      "watch": {
-        "steam_appid": 1942280,
-        "official": null
-      },
-      "last_checked": "2026-10-22T04:13:35Z",
-      "steam_listed": true,
-      "steam_release_date": "Jun 23, 2023",
-      "official_signal": null,
-      "changes": [],
-      "sources": [
-        "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
-        "https://store.steampowered.com/app/1942280/"
-      ]
-    },
-    {
-      "id": "loop-hero",
-      "name_cn": "循环勇士",
-      "name_en": "Loop Hero",
-      "developer": "Four Quarters",
-      "genre": "独立 / 肉鸽 / 策略",
-      "priority": 13,
-      "cn_status": "2026-08-28 获国服版号（国新出审〔2026〕2131号），运营：南京西木优洛网络文化有限公司",
-      "global_status": "Steam 美区 2021-03-04 发售（早于国服版号 2003 天），评测口径见 overseas_heat",
-      "overseas_heat": "中高 · 评测 3.4 万条，Metacritic 82，卡组构筑讨论仍在活跃",
-      "overseas_heat_checked": "2026-10-22",
-      "gap_window": "国服版号刚获批，窗口在国服上线时的卡牌/地形构筑解读；老游戏长尾为主",
-      "target_markets": [
-        "欧美独立游戏受众",
-        "策略/肉鸽玩家"
-      ],
-      "keywords": [
-        "loop hero beginner guide",
-        "loop hero best cards",
-        "loop hero deck building",
-        "loop hero boss strategy",
-        "loop hero idle farming build"
-      ],
-      "content_opportunities": [
-        "卡牌与地形组合表",
-        "各章节 BOSS 应对",
-        "挂机刷资源布局",
-        "解锁顺序建议"
-      ],
-      "monetization_level": "中",
-      "monetization": "搜索量中等，适合做单页深度攻略 + AdSense 矩形位",
-      "risks": [
-        "发售已五年，热度峰值已过，只能吃长尾"
-      ],
-      "watch": {
-        "steam_appid": 1282730,
-        "official": null
-      },
-      "last_checked": "2026-10-22T04:13:37Z",
-      "steam_listed": true,
-      "steam_release_date": "Mar 4, 2021",
-      "official_signal": null,
-      "changes": [],
-      "sources": [
-        "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
-        "https://store.steampowered.com/app/1282730/"
-      ]
-    },
-    {
-      "id": "core-keeper",
-      "name_cn": "护核纪元",
-      "name_en": "Core Keeper",
-      "developer": "Pugstorm",
-      "genre": "沙盒 / 生存 / 建造",
-      "priority": 14,
-      "cn_status": "2026-07-22 获国服版号（国新出审〔2026〕1784号），运营：上海幻电信息科技有限公司",
-      "global_status": "Steam 美区 2024-08-27 发售（早于国服版号 694 天），评测口径见 overseas_heat",
-      "overseas_heat": "中高 · 评测 5.1 万条，Metacritic 86；发行商含 bilibili，国服上线概率高",
-      "overseas_heat_checked": "2026-10-22",
-      "gap_window": "国服版号已批 + bilibili 参与发行，窗口在国服开服前后的开荒路线与 BOSS 顺序",
-      "target_markets": [
-        "欧美沙盒/生存受众",
-        "东南亚",
-        "联机合作玩家"
-      ],
-      "keywords": [
-        "core keeper beginner guide",
-        "core keeper boss order",
-        "core keeper base building tips",
-        "core keeper farming guide",
-        "core keeper multiplayer guide"
-      ],
-      "content_opportunities": [
-        "BOSS 顺序与前置条件",
-        "开荒 10 小时路线",
-        "自动化农场布局",
-        "多人联机分工建议"
-      ],
-      "monetization_level": "中高",
-      "monetization": "沙盒类停留时长高，页内多图+表格，AdSense 表现好",
-      "risks": [
-        "国服可能由 bilibili 主导运营，内容需与官方渠道区分"
-      ],
-      "watch": {
-        "steam_appid": 1621690,
-        "official": null
-      },
-      "last_checked": "2026-10-22T04:13:39Z",
-      "steam_listed": true,
-      "steam_release_date": "Aug 27, 2024",
-      "official_signal": null,
-      "changes": [],
-      "sources": [
-        "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
-        "https://store.steampowered.com/app/1621690/"
-      ]
-    },
-    {
-      "id": "after-inc-revival",
-      "name_cn": "劫后公司",
-      "name_en": "After Inc: Revival",
-      "developer": "Ndemic Creations",
-      "genre": "模拟 / 策略 / 生存建造",
-      "priority": 15,
-      "cn_status": "2026-03-24 获国服版号（国新出审〔2026〕744号），运营：上海青禹游信息技术有限公司",
-      "global_status": "Steam 美区 2026-08-19 发售（早于国服版号 未定档），评测口径见 overseas_heat",
-      "overseas_heat": "中高 · 2026-08 新作，评测 1,518 条但来自《瘟疫公司》团队，品牌带动明显",
-      "overseas_heat_checked": "2026-10-22",
-      "gap_window": "国服版号刚获批 + 发售不足三月，窗口正处在新作攻略空白期（最有价值的一条）",
-      "target_markets": [
-        "欧美策略/模拟受众",
-        "移动端策略玩家"
-      ],
-      "keywords": [
-        "after inc revival guide",
-        "after inc revival tips",
-        "after inc revival best start",
-        "after inc revival resources guide",
-        "after inc revival beginner mistakes"
-      ],
-      "content_opportunities": [
-        "开局 30 天最优解",
-        "资源与人口平衡表",
-        "灾难事件应对",
-        "与前作 Plague Inc 的机制差异"
-      ],
-      "monetization_level": "中",
-      "monetization": "新作窗口 + 品牌流量，适合抢首发攻略页",
-      "risks": [
-        "发售仅两个月，内容量不足以支撑大量页面，先做 1-2 篇核心攻略"
-      ],
-      "watch": {
-        "steam_appid": 3337140,
-        "official": null
-      },
-      "last_checked": "2026-10-22T04:13:41Z",
-      "steam_listed": true,
-      "steam_release_date": "Aug 19, 2026",
-      "official_signal": null,
-      "changes": [],
-      "sources": [
-        "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
-        "https://store.steampowered.com/app/3337140/"
-      ]
-    },
-    {
-      "id": "knightica",
-      "name_cn": "斗阵骑士",
-      "name_en": "Knightica",
-      "developer": "Mad Mango Games",
-      "genre": "策略 / 自走棋",
-      "priority": 16,
-      "cn_status": "2026-03-24 获国服版号（国新出审〔2026〕743号），运营：厦门宽娱网络科技有限公司",
-      "global_status": "Steam 美区 2025-08-21 发售（早于国服版号 215 天），评测口径见 overseas_heat",
-      "overseas_heat": "低中 · 评测 1,139 条，属于 Goblinz 发行的小体量自走棋",
-      "overseas_heat_checked": "2026-10-22",
-      "gap_window": "国服版号刚获批，窗口在国服上线时的单位/羁绊 tier 内容；体量小，竞争少",
-      "target_markets": [
-        "欧美自走棋受众",
-        "策略小众"
-      ],
-      "keywords": [
-        "knightica tier list",
-        "knightica beginner guide",
-        "knightica best units",
-        "knightica build guide"
-      ],
-      "content_opportunities": [
-        "单位与羁绊 tier 表",
-        "开局阵容推荐",
-        "附魔组合速查"
-      ],
-      "monetization_level": "低中",
-      "monetization": "搜索量小，适合做单页工具型内容，低成本占位",
-      "risks": [
-        "受众窄，单页流量上限低"
-      ],
-      "watch": {
-        "steam_appid": 3093400,
-        "official": null
-      },
-      "last_checked": "2026-10-22T04:13:43Z",
-      "steam_listed": true,
-      "steam_release_date": "Aug 21, 2025",
-      "official_signal": null,
-      "changes": [],
-      "sources": [
-        "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
-        "https://store.steampowered.com/app/3093400/"
-      ]
-    },
-    {
-      "id": "day-of-the-shell",
-      "name_cn": "孤岛猎神",
-      "name_en": "Day of the Shell",
-      "developer": "Duper Games",
-      "genre": "策略 / 战棋 roguelite",
-      "priority": 17,
-      "cn_status": "2026-06-29 获国服版号（国新出审〔2026〕1501号），运营：重庆破晓之时网络科技有限公司",
-      "global_status": "Steam 美区 2025-07-29 发售（早于国服版号 335 天），评测口径见 overseas_heat",
-      "overseas_heat": "低中 · 评测 388 条，一回合一步的极简战棋，攻略需求集中在机制解释",
-      "overseas_heat_checked": "2026-10-22",
-      "gap_window": "国服版号刚获批，窗口在国服上线时的机制教学；小众但几乎无中文/英文竞品",
-      "target_markets": [
-        "欧美战棋受众",
-        "roguelite 玩家"
-      ],
-      "keywords": [
-        "day of the shell guide",
-        "day of the shell tips",
-        "day of the shell boss guide",
-        "day of the shell best upgrades"
-      ],
-      "content_opportunities": [
-        "神明契约与升级路线",
-        "各岛屿 BOSS 打法",
-        "一回合一步的机制图解"
-      ],
-      "monetization_level": "低中",
-      "monetization": "低竞争占位，AdSense 长尾",
-      "risks": [
-        "评测不足 400，热度低，投入产出比一般"
-      ],
-      "watch": {
-        "steam_appid": 3008340,
-        "official": null
-      },
-      "last_checked": "2026-10-22T04:13:45Z",
-      "steam_listed": true,
-      "steam_release_date": "Jul 29, 2025",
-      "official_signal": null,
-      "changes": [],
-      "sources": [
-        "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
-        "https://store.steampowered.com/app/3008340/"
-      ]
-    },
-    {
-      "id": "big-helmet-heroes",
-      "name_cn": "大头盔英雄",
-      "name_en": "Big Helmet Heroes",
-      "developer": "Exalted Studio",
-      "genre": "动作 / 横版闯关（3D beat'em up）",
-      "priority": 18,
-      "cn_status": "2026-04-28 获国服版号（国新出审〔2026〕977号），运营：上海果趣信息技术服务有限公司",
-      "global_status": "Steam 美区 2025-02-06 发售（早于国服版号 446 天），评测口径见 overseas_heat",
-      "overseas_heat": "低中 · 评测 695 条，双人合作向，攻略以关卡收集为主",
-      "overseas_heat_checked": "2026-10-22",
-      "gap_window": "国服版号刚获批，窗口在国服上线时的合作关卡与收集品清单",
-      "target_markets": [
-        "欧美休闲动作受众",
-        "本地合作玩家"
-      ],
-      "keywords": [
-        "big helmet heroes walkthrough",
-        "big helmet heroes coop guide",
-        "big helmet heroes hidden levels",
-        "big helmet heroes all characters"
-      ],
-      "content_opportunities": [
-        "全关卡收集品清单",
-        "双人合作角色组合",
-        "隐藏关卡解锁条件"
-      ],
-      "monetization_level": "低中",
-      "monetization": "收集品清单型页面，长尾稳定",
-      "risks": [
-        "玩法偏休闲，深度攻略需求弱"
-      ],
-      "watch": {
-        "steam_appid": 2397250,
-        "official": null
-      },
-      "last_checked": "2026-10-22T04:13:47Z",
-      "steam_listed": true,
-      "steam_release_date": "Feb 6, 2025",
-      "official_signal": null,
-      "changes": [],
-      "sources": [
-        "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
-        "https://store.steampowered.com/app/2397250/"
-      ]
-    },
-    {
-      "id": "spirit-of-the-island",
-      "name_cn": "海岛之魂",
-      "name_en": "Spirit of the Island",
-      "developer": "1M Bits Horde",
-      "genre": "模拟经营 / 沙盒 RPG",
-      "priority": 19,
-      "cn_status": "2026-06-29 获国服版号（国新出审〔2026〕1502号），运营：上海果趣信息技术服务有限公司",
-      "global_status": "Steam 美区 2022-08-17 发售（早于国服版号 1412 天），评测口径见 overseas_heat",
-      "overseas_heat": "低中 · 评测 1,194 条，常打折至 $1.79，靠低价拉新",
-      "overseas_heat_checked": "2026-10-22",
-      "gap_window": "国服版号刚获批，窗口在国服上线时的种田/博物馆流程；同质化严重",
-      "target_markets": [
-        "欧美模拟经营受众",
-        "休闲玩家"
-      ],
-      "keywords": [
-        "spirit of the island beginner guide",
-        "spirit of the island farming tips",
-        "spirit of the island museum guide",
-        "spirit of the island coop guide"
-      ],
-      "content_opportunities": [
-        "博物馆收集清单",
-        "农场布局规划",
-        "联机合作分工"
-      ],
-      "monetization_level": "低",
-      "monetization": "低价游戏广告价值有限，仅适合长尾占位",
-      "risks": [
-        "与星露谷类攻略站高度同质，难拿到排名"
-      ],
-      "watch": {
-        "steam_appid": 1592110,
-        "official": null
-      },
-      "last_checked": "2026-10-22T04:13:49Z",
-      "steam_listed": true,
-      "steam_release_date": "Aug 17, 2022",
-      "official_signal": null,
-      "changes": [],
-      "sources": [
-        "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
-        "https://store.steampowered.com/app/1592110/"
-      ]
-    },
-    {
-      "id": "smash-it-wild",
-      "name_cn": "动物排球社",
-      "name_en": "Smash it Wild: Tactical Volleyball Roguelike",
-      "developer": "Goblinz Studio",
-      "genre": "RPG / 体育 / 策略（回合制排球）",
-      "priority": 20,
-      "cn_status": "2026-06-29 获国服版号（国新出审〔2026〕1499号），运营：重庆烽行网络科技有限公司",
-      "global_status": "Steam 美区 2026-04-16 发售（早于国服版号 74 天），评测口径见 overseas_heat",
-      "overseas_heat": "低 · 评测仅 109 条，2026-04 发售，几乎无成熟攻略供给",
-      "overseas_heat_checked": "2026-10-22",
-      "gap_window": "国服版号刚获批，窗口在国服上线时做首批系统教学；体量最小但空白最大",
-      "target_markets": [
-        "欧美体育/策略小众",
-        "roguelite 玩家"
-      ],
-      "keywords": [
-        "smash it wild guide",
-        "smash it wild tips",
-        "smash it wild best team",
-        "smash it wild characters"
-      ],
-      "content_opportunities": [
-        "队员培养与阵容搭配",
-        "回合制排球规则图解",
-        "全角色解锁"
-      ],
-      "monetization_level": "低",
-      "monetization": "低流量占位，主要价值是抢占空白关键词",
-      "risks": [
-        "评测百条级，玩家基数小"
-      ],
-      "watch": {
-        "steam_appid": 2432240,
-        "official": null
-      },
-      "last_checked": "2026-10-22T04:13:51Z",
-      "steam_listed": true,
-      "steam_release_date": "Apr 16, 2026",
-      "official_signal": null,
-      "changes": [],
-      "sources": [
-        "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
-        "https://store.steampowered.com/app/2432240/"
-      ]
     }
   ],
-  "last_run_at": "2026-10-22T04:13:51Z"
+  "last_run_at": "2026-10-22T05:07:14Z"
 }

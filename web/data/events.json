@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T04:13:51Z",
+  "generated_at": "2026-10-22T05:07:14Z",
   "note": "只汇总「上线」事件（来源：Steam 发售日）；解析不出具体日期的条目不列，不做版本更新。",
   "events": [
     {
@@ -10,7 +10,7 @@
       "date": "2015-12-01",
       "date_text": "Dec 1, 2015",
       "store_url": "https://store.steampowered.com/app/359550/",
-      "origin": "current",
+      "origin": "history",
       "first_seen": "2026-10-22"
     },
     {
@@ -21,7 +21,7 @@
       "date": "2021-03-04",
       "date_text": "Mar 4, 2021",
       "store_url": "https://store.steampowered.com/app/1282730/",
-      "origin": "current",
+      "origin": "history",
       "first_seen": "2026-10-22"
     },
     {
@@ -32,7 +32,7 @@
       "date": "2022-08-17",
       "date_text": "Aug 17, 2022",
       "store_url": "https://store.steampowered.com/app/1592110/",
-      "origin": "current",
+      "origin": "history",
       "first_seen": "2026-10-22"
     },
     {
@@ -43,7 +43,7 @@
       "date": "2023-06-23",
       "date_text": "Jun 23, 2023",
       "store_url": "https://store.steampowered.com/app/1942280/",
-      "origin": "current",
+      "origin": "history",
       "first_seen": "2026-10-22"
     },
     {
@@ -54,7 +54,7 @@
       "date": "2024-08-27",
       "date_text": "Aug 27, 2024",
       "store_url": "https://store.steampowered.com/app/1621690/",
-      "origin": "current",
+      "origin": "history",
       "first_seen": "2026-10-22"
     },
     {
@@ -65,7 +65,7 @@
       "date": "2025-02-06",
       "date_text": "Feb 6, 2025",
       "store_url": "https://store.steampowered.com/app/2397250/",
-      "origin": "current",
+      "origin": "history",
       "first_seen": "2026-10-22"
     },
     {
@@ -76,7 +76,7 @@
       "date": "2025-07-29",
       "date_text": "Jul 29, 2025",
       "store_url": "https://store.steampowered.com/app/3008340/",
-      "origin": "current",
+      "origin": "history",
       "first_seen": "2026-10-22"
     },
     {
@@ -87,7 +87,7 @@
       "date": "2025-08-21",
       "date_text": "Aug 21, 2025",
       "store_url": "https://store.steampowered.com/app/3093400/",
-      "origin": "current",
+      "origin": "history",
       "first_seen": "2026-10-22"
     },
     {
@@ -98,7 +98,7 @@
       "date": "2026-04-16",
       "date_text": "Apr 16, 2026",
       "store_url": "https://store.steampowered.com/app/2432240/",
-      "origin": "current",
+      "origin": "history",
       "first_seen": "2026-10-22"
     },
     {
@@ -120,7 +120,7 @@
       "date": "2026-08-19",
       "date_text": "Aug 19, 2026",
       "store_url": "https://store.steampowered.com/app/3337140/",
-      "origin": "current",
+      "origin": "history",
       "first_seen": "2026-10-22"
     },
     {

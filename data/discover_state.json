@@ -1,6 +1,106 @@
 {
-  "updated_at": "2026-10-22T04:15:52Z",
+  "updated_at": "2026-10-22T05:09:25Z",
   "items": {
+    "domestic:暗夜勇士": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:霸主征途": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:百变灵兽": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:被美食包围了": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:边境之歌": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:兵王之王": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:不良人幻想": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:不一样的修真": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:长歌霸业": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:超凡进击": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:潮玩三国": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:盛世武神": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:此田山海间": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:哒哒旅人": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:打工吧史莱姆": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:大王有旨": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:巅峰大玩家": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:动物旅行团": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:斗破苍穹帝炎": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:方寸之间": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
     "import:3对3街篮": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-09-29",
@@ -44,40 +144,7 @@
     "import:循环勇士": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-08-28",
-      "candidate": {
-        "origin": "import",
-        "name_cn": "循环勇士",
-        "name_en": "Loop Hero",
-        "appid": 1282730,
-        "gap_type": "overseas_first",
-        "gap_days": 2003,
-        "note": "Steam 美区已发售，早于国服版号批准",
-        "nppa": {
-          "approved_at": "2026-08-28",
-          "publisher": "江苏凤凰电子音像出版社有限公司",
-          "operator": "南京西木优洛网络文化有限公司",
-          "approval_no": "国新出审〔2026〕2131号",
-          "batch": "2026年进口网络游戏审批信息",
-          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html"
-        },
-        "steam": {
-          "store_url": "https://store.steampowered.com/app/1282730/",
-          "us_listed": true,
-          "us_release_date": "Mar 4, 2021",
-          "us_release_parsed": "2021-03-04",
-          "us_coming_soon": false,
-          "cn_listed": true,
-          "cn_release_date": "2021 年 3 月 4 日",
-          "cn_release_parsed": "2021-03-04",
-          "match_score": 1.0
-        },
-        "evidence": [
-          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
-          "https://store.steampowered.com/app/1282730/"
-        ],
-        "first_seen": "2026-10-22T03:04:54Z",
-        "last_checked": "2026-10-22"
-      }
+      "candidate": null
     },
     "import:高塔旅人": {
       "checked_at": "2026-10-22",
@@ -87,40 +154,7 @@
     "import:护核纪元": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-07-22",
-      "candidate": {
-        "origin": "import",
-        "name_cn": "护核纪元",
-        "name_en": "Core Keeper",
-        "appid": 1621690,
-        "gap_type": "overseas_first",
-        "gap_days": 694,
-        "note": "Steam 美区已发售，早于国服版号批准",
-        "nppa": {
-          "approved_at": "2026-07-22",
-          "publisher": "天津电子出版社有限公司",
-          "operator": "上海幻电信息科技有限公司",
-          "approval_no": "国新出审〔2026〕1784号",
-          "batch": "2026年进口网络游戏审批信息",
-          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html"
-        },
-        "steam": {
-          "store_url": "https://store.steampowered.com/app/1621690/",
-          "us_listed": true,
-          "us_release_date": "Aug 27, 2024",
-          "us_release_parsed": "2024-08-27",
-          "us_coming_soon": false,
-          "cn_listed": true,
-          "cn_release_date": "2024 年 8 月 27 日",
-          "cn_release_parsed": "2024-08-27",
-          "match_score": 1.0
-        },
-        "evidence": [
-          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
-          "https://store.steampowered.com/app/1621690/"
-        ],
-        "first_seen": "2026-10-22T03:05:02Z",
-        "last_checked": "2026-10-22"
-      }
+      "candidate": null
     },
     "import:仙境传说守护永恒的爱2": {
       "checked_at": "2026-10-22",
@@ -140,40 +174,7 @@
     "import:动物排球社": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-06-29",
-      "candidate": {
-        "origin": "import",
-        "name_cn": "动物排球社",
-        "name_en": "Smash it Wild: Tactical Volleyball Roguelike",
-        "appid": 2432240,
-        "gap_type": "overseas_first",
-        "gap_days": 74,
-        "note": "Steam 美区已发售，早于国服版号批准",
-        "nppa": {
-          "approved_at": "2026-06-29",
-          "publisher": "江苏凤凰数字传媒有限公司",
-          "operator": "重庆烽行网络科技有限公司",
-          "approval_no": "国新出审〔2026〕1499号",
-          "batch": "2026年进口网络游戏审批信息",
-          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html"
-        },
-        "steam": {
-          "store_url": "https://store.steampowered.com/app/2432240/",
-          "us_listed": true,
-          "us_release_date": "Apr 16, 2026",
-          "us_release_parsed": "2026-04-16",
-          "us_coming_soon": false,
-          "cn_listed": true,
-          "cn_release_date": "2026 年 4 月 16 日",
-          "cn_release_parsed": "2026-04-16",
-          "match_score": 1.0
-        },
-        "evidence": [
-          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
-          "https://store.steampowered.com/app/2432240/"
-        ],
-        "first_seen": "2026-10-22T03:05:14Z",
-        "last_checked": "2026-10-22"
-      }
+      "candidate": null
     },
     "import:对峙交锋时刻": {
       "checked_at": "2026-10-22",
@@ -183,78 +184,12 @@
     "import:孤岛猎神": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-06-29",
-      "candidate": {
-        "origin": "import",
-        "name_cn": "孤岛猎神",
-        "name_en": "Day of the Shell",
-        "appid": 3008340,
-        "gap_type": "overseas_first",
-        "gap_days": 335,
-        "note": "Steam 美区已发售，早于国服版号批准",
-        "nppa": {
-          "approved_at": "2026-06-29",
-          "publisher": "重庆华龙网集团股份有限公司",
-          "operator": "重庆破晓之时网络科技有限公司",
-          "approval_no": "国新出审〔2026〕1501号",
-          "batch": "2026年进口网络游戏审批信息",
-          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html"
-        },
-        "steam": {
-          "store_url": "https://store.steampowered.com/app/3008340/",
-          "us_listed": true,
-          "us_release_date": "Jul 29, 2025",
-          "us_release_parsed": "2025-07-29",
-          "us_coming_soon": false,
-          "cn_listed": true,
-          "cn_release_date": "2025 年 7 月 29 日",
-          "cn_release_parsed": "2025-07-29",
-          "match_score": 1.0
-        },
-        "evidence": [
-          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
-          "https://store.steampowered.com/app/3008340/"
-        ],
-        "first_seen": "2026-10-22T03:05:22Z",
-        "last_checked": "2026-10-22"
-      }
+      "candidate": null
     },
     "import:海岛之魂": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-06-29",
-      "candidate": {
-        "origin": "import",
-        "name_cn": "海岛之魂",
-        "name_en": "Spirit of the Island",
-        "appid": 1592110,
-        "gap_type": "overseas_first",
-        "gap_days": 1412,
-        "note": "Steam 美区已发售，早于国服版号批准",
-        "nppa": {
-          "approved_at": "2026-06-29",
-          "publisher": "江苏凤凰数字传媒有限公司",
-          "operator": "上海果趣信息技术服务有限公司",
-          "approval_no": "国新出审〔2026〕1502号",
-          "batch": "2026年进口网络游戏审批信息",
-          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html"
-        },
-        "steam": {
-          "store_url": "https://store.steampowered.com/app/1592110/",
-          "us_listed": true,
-          "us_release_date": "Aug 17, 2022",
-          "us_release_parsed": "2022-08-17",
-          "us_coming_soon": false,
-          "cn_listed": true,
-          "cn_release_date": "2022 年 8 月 17 日",
-          "cn_release_parsed": "2022-08-17",
-          "match_score": 1.0
-        },
-        "evidence": [
-          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
-          "https://store.steampowered.com/app/1592110/"
-        ],
-        "first_seen": "2026-10-22T03:05:28Z",
-        "last_checked": "2026-10-22"
-      }
+      "candidate": null
     },
     "import:桥梁工程师传送门": {
       "checked_at": "2026-10-22",
@@ -294,40 +229,7 @@
     "import:大头盔英雄": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-04-28",
-      "candidate": {
-        "origin": "import",
-        "name_cn": "大头盔英雄",
-        "name_en": "Big Helmet Heroes",
-        "appid": 2397250,
-        "gap_type": "overseas_first",
-        "gap_days": 446,
-        "note": "Steam 美区已发售，早于国服版号批准",
-        "nppa": {
-          "approved_at": "2026-04-28",
-          "publisher": "江苏凤凰数字传媒有限公司",
-          "operator": "上海果趣信息技术服务有限公司",
-          "approval_no": "国新出审〔2026〕977号",
-          "batch": "2026年进口网络游戏审批信息",
-          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html"
-        },
-        "steam": {
-          "store_url": "https://store.steampowered.com/app/2397250/",
-          "us_listed": true,
-          "us_release_date": "Feb 6, 2025",
-          "us_release_parsed": "2025-02-06",
-          "us_coming_soon": false,
-          "cn_listed": true,
-          "cn_release_date": "2025 年 2 月 6 日",
-          "cn_release_parsed": "2025-02-06",
-          "match_score": 1.0
-        },
-        "evidence": [
-          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
-          "https://store.steampowered.com/app/2397250/"
-        ],
-        "first_seen": "2026-10-22T03:31:32Z",
-        "last_checked": "2026-10-22"
-      }
+      "candidate": null
     },
     "import:大富翁全球首富": {
       "checked_at": "2026-10-22",
@@ -342,78 +244,12 @@
     "import:土豆兄弟": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-04-28",
-      "candidate": {
-        "origin": "import",
-        "name_cn": "土豆兄弟",
-        "name_en": "Brotato",
-        "appid": 1942280,
-        "gap_type": "overseas_first",
-        "gap_days": 1040,
-        "note": "Steam 美区已发售，早于国服版号批准",
-        "nppa": {
-          "approved_at": "2026-04-28",
-          "publisher": "上海科学技术文献出版社有限公司",
-          "operator": "上海游一卡网络技术有限公司",
-          "approval_no": "国新出审〔2026〕980号",
-          "batch": "2026年进口网络游戏审批信息",
-          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html"
-        },
-        "steam": {
-          "store_url": "https://store.steampowered.com/app/1942280/",
-          "us_listed": true,
-          "us_release_date": "Jun 23, 2023",
-          "us_release_parsed": "2023-06-23",
-          "us_coming_soon": false,
-          "cn_listed": true,
-          "cn_release_date": "2023 年 6 月 23 日",
-          "cn_release_parsed": "2023-06-23",
-          "match_score": 0.53
-        },
-        "evidence": [
-          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
-          "https://store.steampowered.com/app/1942280/"
-        ],
-        "first_seen": "2026-10-22T03:31:42Z",
-        "last_checked": "2026-10-22"
-      }
+      "candidate": null
     },
     "import:围攻": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-04-28",
-      "candidate": {
-        "origin": "import",
-        "name_cn": "围攻",
-        "name_en": "Tom Clancy's Rainbow Six Siege",
-        "appid": 359550,
-        "gap_type": "overseas_first",
-        "gap_days": 3801,
-        "note": "Steam 美区已发售，早于国服版号批准",
-        "nppa": {
-          "approved_at": "2026-04-28",
-          "publisher": "江苏凤凰电子音像出版社有限公司",
-          "operator": "南京市玩趣互动科技有限公司",
-          "approval_no": "国新出审〔2026〕981号",
-          "batch": "2026年进口网络游戏审批信息",
-          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html"
-        },
-        "steam": {
-          "store_url": "https://store.steampowered.com/app/359550/",
-          "us_listed": true,
-          "us_release_date": "Dec 1, 2015",
-          "us_release_parsed": "2015-12-01",
-          "us_coming_soon": false,
-          "cn_listed": true,
-          "cn_release_date": "2015 年 12 月 1 日",
-          "cn_release_parsed": "2015-12-01",
-          "match_score": 0.5
-        },
-        "evidence": [
-          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
-          "https://store.steampowered.com/app/359550/"
-        ],
-        "first_seen": "2026-10-22T03:31:48Z",
-        "last_checked": "2026-10-22"
-      }
+      "candidate": null
     },
     "import:仙境传说诸神战场": {
       "checked_at": "2026-10-22",
@@ -425,73 +261,10 @@
       "approved_at": "2026-04-28",
       "candidate": null
     },
-    "domestic:暗夜勇士": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-09-29",
-      "candidate": null
-    },
-    "domestic:霸主征途": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-09-29",
-      "candidate": null
-    },
-    "domestic:百变灵兽": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-09-29",
-      "candidate": null
-    },
-    "domestic:被美食包围了": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-09-29",
-      "candidate": null
-    },
-    "domestic:边境之歌": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-09-29",
-      "candidate": null
-    },
-    "domestic:兵王之王": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-09-29",
-      "candidate": null
-    },
     "import:斗阵骑士": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-03-24",
-      "candidate": {
-        "origin": "import",
-        "name_cn": "斗阵骑士",
-        "name_en": "Knightica",
-        "appid": 3093400,
-        "gap_type": "overseas_first",
-        "gap_days": 215,
-        "note": "Steam 美区已发售，早于国服版号批准",
-        "nppa": {
-          "approved_at": "2026-03-24",
-          "publisher": "江苏凤凰数字传媒有限公司",
-          "operator": "厦门宽娱网络科技有限公司",
-          "approval_no": "国新出审〔2026〕743号",
-          "batch": "2026年进口网络游戏审批信息",
-          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html"
-        },
-        "steam": {
-          "store_url": "https://store.steampowered.com/app/3093400/",
-          "us_listed": true,
-          "us_release_date": "Aug 21, 2025",
-          "us_release_parsed": "2025-08-21",
-          "us_coming_soon": false,
-          "cn_listed": true,
-          "cn_release_date": "2025 年 8 月 21 日",
-          "cn_release_parsed": "2025-08-21",
-          "match_score": 0.47
-        },
-        "evidence": [
-          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
-          "https://store.steampowered.com/app/3093400/"
-        ],
-        "first_seen": "2026-10-22T04:15:02Z",
-        "last_checked": "2026-10-22"
-      }
+      "candidate": null
     },
     "import:劫后公司": {
       "checked_at": "2026-10-22",
@@ -501,9 +274,9 @@
         "name_cn": "劫后公司",
         "name_en": "After Inc: Revival",
         "appid": 3337140,
-        "gap_type": "overseas_first",
-        "gap_days": null,
-        "note": "Steam 美区已发售，国服版号刚获批",
+        "gap_type": "cn_first",
+        "gap_days": 148,
+        "note": "国服版号早于 Steam 美区发售",
         "nppa": {
           "approved_at": "2026-03-24",
           "publisher": "广州谷得网络科技有限公司",
@@ -527,132 +300,9 @@
           "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
           "https://store.steampowered.com/app/3337140/"
         ],
-        "first_seen": "2026-10-22T04:15:08Z",
+        "first_seen": "2026-10-22T05:09:25Z",
         "last_checked": "2026-10-22"
       }
-    },
-    "import:神泣纷争": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-03-24",
-      "candidate": null
-    },
-    "import:宝石战争": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-02-26",
-      "candidate": null
-    },
-    "import:基地银河纵横": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-02-26",
-      "candidate": null
-    },
-    "import:飘流幻境新世界": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-02-26",
-      "candidate": null
-    },
-    "import:神泣光与暗": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-02-26",
-      "candidate": null
-    },
-    "import:小浣熊百将传2": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-02-26",
-      "candidate": null
-    },
-    "import:辛特堡传说": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-02-26",
-      "candidate": {
-        "origin": "import",
-        "name_cn": "辛特堡传说",
-        "name_en": "Dungeons of Hinterberg",
-        "appid": 1983260,
-        "gap_type": "overseas_first",
-        "gap_days": 588,
-        "note": "Steam 美区已发售，早于国服版号批准",
-        "nppa": {
-          "approved_at": "2026-02-26",
-          "publisher": "北京联合出版有限责任公司",
-          "operator": "北京龙威互动科技有限公司",
-          "approval_no": "国新出审〔2026〕529号",
-          "batch": "2026年进口网络游戏审批信息",
-          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html"
-        },
-        "steam": {
-          "store_url": "https://store.steampowered.com/app/1983260/",
-          "us_listed": true,
-          "us_release_date": "Jul 18, 2024",
-          "us_release_parsed": "2024-07-18",
-          "us_coming_soon": false,
-          "cn_listed": true,
-          "cn_release_date": "2024 年 7 月 18 日",
-          "cn_release_parsed": "2024-07-18",
-          "match_score": 0.33
-        },
-        "evidence": [
-          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
-          "https://store.steampowered.com/app/1983260/"
-        ],
-        "first_seen": "2026-10-22T04:15:31Z",
-        "last_checked": "2026-10-22"
-      }
-    },
-    "import:彩虹六号攻势": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-01-23",
-      "candidate": null
-    },
-    "import:彩虹岛爱丽丝之境": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-01-23",
-      "candidate": null
-    },
-    "import:愤怒的小鸟经典归来": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-01-23",
-      "candidate": null
-    },
-    "import:愤怒的小鸟梦幻爆破": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-01-23",
-      "candidate": null
-    },
-    "import:秘境夺金": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-01-23",
-      "candidate": null
-    },
-    "domestic:不良人幻想": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-09-29",
-      "candidate": null
-    },
-    "domestic:不一样的修真": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-09-29",
-      "candidate": null
-    },
-    "domestic:长歌霸业": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-09-29",
-      "candidate": null
-    },
-    "domestic:超凡进击": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-09-29",
-      "candidate": null
-    },
-    "domestic:潮玩三国": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-09-29",
-      "candidate": null
-    },
-    "domestic:盛世武神": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-09-29",
-      "candidate": null
     }
   }
 }
