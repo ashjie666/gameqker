@@ -34,8 +34,6 @@ DEFAULT_CURL_HOSTS = {
     "api.steampowered.com", "store.steampowered.com", "steamcommunity.com",
     "www.gematsu.com", "gematsu.com",
     "blog.playstation.com",
-    "news.xbox.com",
-    "news.google.com",
     "www.ign.com",
 }
 
@@ -114,10 +112,11 @@ class Fetcher:
         return host in self.curl_hosts
 
     # -- main entry --------------------------------------------------------
-    def get(self, url, use_cache=None):
+    def get(self, url, use_cache=None, timeout=None):
         use_cache = self.use_cache if use_cache is None else use_cache
+        timeout = self.timeout if timeout is None else timeout
         if self._use_curl(url):
-            return self._get_via_curl(url, use_cache)
+            return self._get_via_curl(url, use_cache, timeout)
 
         body_path, meta_path = self._paths(url)
         meta = self._read_meta(meta_path) if use_cache else {}
@@ -138,7 +137,7 @@ class Fetcher:
             self._wait_for_host(url)
             request = urllib.request.Request(url, headers=headers)
             try:
-                with urllib.request.urlopen(request, timeout=self.timeout) as response:
+                with urllib.request.urlopen(request, timeout=timeout) as response:
                     raw = self._decode(response.read(), response.headers.get("Content-Encoding"))
                     if use_cache:
                         self._write_cache(body_path, meta_path, raw, response.headers)
@@ -163,7 +162,7 @@ class Fetcher:
                 pass
         return FetchResult(url, error=last_error or "unknown error")
 
-    def _get_via_curl(self, url, use_cache):
+    def _get_via_curl(self, url, use_cache, timeout):
         """用 curl 子进程取页面。代理模式或命中 curl_hosts 时都走这条路径：
         - proxy 显式设置 → --proxy <proxy>
         - proxy 未设置 → curl 继承系统代理 / 全局加速
@@ -180,7 +179,7 @@ class Fetcher:
         os.close(handle)
         error = None
         try:
-            args = [curl, "-sS", "-L", "--compressed", "--max-time", str(self.timeout),
+            args = [curl, "-sS", "-L", "--compressed", "--max-time", str(timeout),
                     "-A", USER_AGENT,
                     "-H", "Accept: application/rss+xml, application/atom+xml, "
                           "application/xml, text/xml, application/json, */*"]
@@ -188,7 +187,7 @@ class Fetcher:
                 args += ["--proxy", self.proxy]
             args += ["-o", tmp, "-w", "%{http_code}", url]
 
-            result = subprocess.run(args, capture_output=True, timeout=self.timeout + 10)
+            result = subprocess.run(args, capture_output=True, timeout=timeout + 10)
             code = (result.stdout or b"").decode("ascii", "replace").strip()
             if result.returncode == 0 and code.startswith("2"):
                 with open(tmp, "rb") as stream:

@@ -11,21 +11,24 @@ import json
 import re
 import xml.etree.ElementTree as ET
 from datetime import date, timedelta
+from email.utils import parsedate_to_datetime
 from html import unescape
-from urllib.parse import quote
 
-# 每天抓一次，单个源失败只跳过它自己，不影响其它源
+# 新闻源以国内为主：国内源用默认超时，海外源只给短超时，超时直接跳过不拖累整轮。
+# overseas=True 的源失败是常态（跨境网络不稳），静默 skip，不算错误。
 RSS_SOURCES = (
-    {"id": "gematsu", "name": "Gematsu", "url": "https://www.gematsu.com/feed"},
-    {"id": "ps_blog", "name": "PlayStation Blog", "url": "https://blog.playstation.com/feed/"},
-    {"id": "xbox_wire", "name": "Xbox Wire", "url": "https://news.xbox.com/en-us/feed/"},
+    # 国内游戏门户
     {"id": "gcores", "name": "机核", "url": "https://www.gcores.com/rss"},
-    {"id": "steam_news", "name": "Steam 新闻", "url": "https://store.steampowered.com/feeds/news.xml"},
+    {"id": "yystv", "name": "游研社", "url": "https://www.yystv.cn/rss/feed"},
+    {"id": "youxituoluo", "name": "游戏陀螺", "url": "https://www.youxituoluo.com/feed"},
+    # 海外源：连得上就用，连不上就算了
+    {"id": "gematsu", "name": "Gematsu", "url": "https://www.gematsu.com/feed", "overseas": True},
+    {"id": "ps_blog", "name": "PlayStation Blog", "url": "https://blog.playstation.com/feed/", "overseas": True},
 )
 
-GOOGLE_NEWS_URL = (
-    "https://news.google.com/rss/search?q={query}&hl={hl}&gl={gl}&ceid={ceid}"
-)
+# 海外源单请求上限（秒）。跨境链路常年抖动，长超时只会把整轮巡检拖到几分钟。
+OVERSEAS_TIMEOUT = 8
+
 STEAM_NEWS_API = (
     "https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/"
     "?appid={appid}&count=10&maxlength=400"
@@ -54,6 +57,8 @@ _MONTH_FIRST_RE = re.compile(r"([A-Za-z]{3,9})\.?\s+(\d{1,2})(?:st|nd|rd|th)?,?\
 _DAY_FIRST_RE = re.compile(r"(\d{1,2})\s+([A-Za-z]{3,9})\.?,?\s+(\d{4})")
 
 MAX_ITEMS_PER_SOURCE = 40
+# 从「10月29日」+ 发文日期补年份时，允许的最大前瞻天数
+INFER_WINDOW_DAYS = 120
 MIN_NAME_LEN_EN = 4   # 英文名太短容易误命中（如 "Void"）
 MIN_NAME_LEN_CN = 2
 
@@ -80,6 +85,92 @@ def find_date(text):
                 return date(int(year), month, int(day)), match.group(0)
             except ValueError:
                 continue
+    return None, None
+
+
+# 「10月29日」/「29 号」这类没写年份的日期；新闻正文里绝大多数都是这种写法
+_MD_CN_RE = re.compile(r"(\d{1,2})\s*月\s*(\d{1,2})\s*[日号]")
+# 英文的 "October 29" / "Oct 29th"，后面不能直接跟年份（那种 find_date 已经处理）
+_MD_EN_RE = re.compile(r"([A-Za-z]{3,9})\.?\s+(\d{1,2})(?:st|nd|rd|th)?\b(?!\s*,?\s*\d{4})")
+
+
+def find_undated(text):
+    """找没写年份的「X 月 X 日」，返回 (month, day, 原文片段) 或 None。
+
+    同一段里常同时出现两个日期（"10月27日开启预下载，10月29日解锁上线"），
+    所以取离上线关键词最近的那一个，而不是第一个。
+    """
+    anchors = [match.start() for match in LAUNCH_RE.finditer(text)]
+    if not anchors:
+        return None
+    best = None
+    for match in _MD_CN_RE.finditer(text):
+        month, day = int(match.group(1)), int(match.group(2))
+        gap = min(abs(match.start() - anchor) for anchor in anchors)
+        if best is None or gap < best[0]:
+            best = (gap, month, day, match.group(0))
+    for match in _MD_EN_RE.finditer(text):
+        month = _MONTHS.get(match.group(1)[:3].lower())
+        if not month:
+            continue
+        gap = min(abs(match.start() - anchor) for anchor in anchors)
+        if best is None or gap < best[0]:
+            best = (gap, month, int(match.group(2)), match.group(0))
+    if best is None:
+        return None
+    return best[1], best[2], best[3]
+
+
+def _published_date(item):
+    """把 RSS pubDate / Atom published 解析成日期；解析不出返回 None。"""
+    raw = (item.get("published") or "").strip()
+    if not raw:
+        return None
+    try:
+        return parsedate_to_datetime(raw).date()
+    except (TypeError, ValueError, OverflowError):
+        pass
+    match = re.match(r"(\d{4})-(\d{2})-(\d{2})", raw)
+    if not match:
+        return None
+    try:
+        return date(int(match.group(1)), int(match.group(2)), int(match.group(3)))
+    except ValueError:
+        return None
+
+
+def resolve_date(item):
+    """优先用正文里的完整年月日；没有年份就读发文日期补年份。
+
+    中文游戏媒体报道发售日时几乎都只写「10月29日」，不写年份。完全丢掉这些
+    新闻等于国内源一条都用不上，所以按发文年份补全；补出来的日期早于发文日期
+    就顺延一年（12 月报道次年 1 月的事）。仍然补不出来就返回 (None, None)，
+    绝不硬猜。
+
+    补全出来的日期必须离发文日期不超过 INFER_WINDOW_DAYS：行业分析稿里顺口提
+    到的游戏名旁边常挂着某个日期，靠年份顺延能凑出一年后的假发售日，这个窗口
+    就是用来挡掉这种的。
+    """
+    text = item["title"] + " " + item["summary"]
+    found, raw = find_date(text)
+    if found:
+        return found, raw
+    published = _published_date(item)
+    if not published:
+        return None, None
+    guess = find_undated(text)
+    if not guess:
+        return None, None
+    month, day, raw = guess
+    for year in (published.year, published.year + 1):
+        try:
+            candidate = date(year, month, day)
+        except ValueError:
+            return None, None
+        if candidate >= published:
+            if (candidate - published).days > INFER_WINDOW_DAYS:
+                return None, None
+            return candidate, raw
     return None, None
 
 
@@ -137,12 +228,12 @@ def _parse_feed(body):
     return items
 
 
-def _fetch(fetcher, fallback, url):
+def _fetch(fetcher, fallback, url, timeout=None):
     """先直连，失败再走代理兜底；两者都失败返回最后一次结果。"""
-    response = fetcher.get(url)
+    response = fetcher.get(url, timeout=timeout)
     if response.body or not fallback:
         return response
-    return fallback.get(url)
+    return fallback.get(url, timeout=timeout)
 
 
 def _in_window(found, today):
@@ -168,9 +259,10 @@ def _event(game, found, raw, source):
 def _rss_events(fetcher, fallback, games, today, seen):
     events = []
     for source in RSS_SOURCES:
-        response = _fetch(fetcher, fallback, source["url"])
+        timeout = OVERSEAS_TIMEOUT if source.get("overseas") else None
+        response = _fetch(fetcher, fallback, source["url"], timeout)
         if not response.body:
-            continue
+            continue  # 海外源超时/403 是常态，直接跳过这一条源
         for item in _parse_feed(response.body.decode("utf-8", "replace")):
             text = item["title"] + " " + item["summary"]
             if not LAUNCH_RE.search(text) or PATCH_RE.search(text):
@@ -178,7 +270,7 @@ def _rss_events(fetcher, fallback, games, today, seen):
             game = _match_game(text, games)
             if not game:
                 continue
-            found, raw = find_date(text)
+            found, raw = resolve_date(item)
             if not found or not _in_window(found, today):
                 continue
             key = (game.get("id"), found.isoformat())
@@ -194,50 +286,6 @@ def _rss_events(fetcher, fallback, games, today, seen):
     return events
 
 
-def _google_news_events(fetcher, fallback, games, today, seen):
-    """按游戏名查 Google News RSS：比全站最新流命中率高得多。"""
-    events = []
-    for game in games:
-        specs = []
-        name_en = (game.get("name_en") or "").strip()
-        name_cn = (game.get("name_cn") or "").strip()
-        if len(name_en) >= MIN_NAME_LEN_EN:
-            specs.append((name_en, "en-US", "US", "US:en", name_en))
-        if len(name_cn) >= MIN_NAME_LEN_CN:
-            specs.append((name_cn, "zh-CN", "CN", "CN:zh-Hans", name_cn))
-
-        for name, hl, gl, ceid, needle in specs:
-            url = GOOGLE_NEWS_URL.format(
-                query=quote('"' + name + '"'), hl=hl, gl=gl, ceid=ceid)
-            response = _fetch(fetcher, fallback, url)
-            if not response.body:
-                continue
-            hits = 0
-            for item in _parse_feed(response.body.decode("utf-8", "replace")):
-                text = item["title"] + " " + item["summary"]
-                if needle.lower() not in text.lower():
-                    continue
-                if not LAUNCH_RE.search(text) or PATCH_RE.search(text):
-                    continue
-                found, raw = find_date(text)
-                if not found or not _in_window(found, today):
-                    continue
-                key = (game.get("id"), found.isoformat())
-                if key in seen:
-                    continue
-                seen.add(key)
-                events.append(_event(game, found, raw, {
-                    "type": "news",
-                    "name": "Google 新闻",
-                    "url": item["link"],
-                    "title": item["title"].strip()[:120],
-                }))
-                hits += 1
-            if hits:
-                break  # 英文名已经命中就不再查中文名，省请求
-    return events
-
-
 def _steam_news_events(fetcher, fallback, games, today, seen):
     """Steam 官方公告里找「launch / release + 日期」，只查配置了 appid 的游戏。"""
     events = []
@@ -245,7 +293,8 @@ def _steam_news_events(fetcher, fallback, games, today, seen):
         appid = (game.get("watch") or {}).get("steam_appid")
         if not appid:
             continue
-        response = _fetch(fetcher, fallback, STEAM_NEWS_API.format(appid=appid))
+        response = _fetch(fetcher, fallback, STEAM_NEWS_API.format(appid=appid),
+                          OVERSEAS_TIMEOUT)
         if not response.body:
             continue
         try:
@@ -286,6 +335,5 @@ def collect(fetcher, payload, today=None, fallback=None):
     seen = set()
     events = []
     events += _rss_events(fetcher, fallback, games, today, seen)
-    events += _google_news_events(fetcher, fallback, games, today, seen)
     events += _steam_news_events(fetcher, fallback, games, today, seen)
     return events
