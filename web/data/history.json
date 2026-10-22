@@ -33,7 +33,7 @@
       {
         "date": "2026-10-22",
         "source": "trends",
-        "value": 0
+        "value": 86
       }
     ],
     "world-of-jade-dynasty": [
@@ -44,8 +44,8 @@
       },
       {
         "date": "2026-10-22",
-        "source": "trends",
-        "value": 0
+        "source": "signal",
+        "value": 2
       }
     ],
     "neverness-to-everness": [
@@ -68,8 +68,8 @@
       },
       {
         "date": "2026-10-22",
-        "source": "reviews",
-        "value": 70463
+        "source": "trends",
+        "value": 0
       }
     ],
     "legend-of-mortal-cultivation": [
@@ -93,7 +93,7 @@
       {
         "date": "2026-10-22",
         "source": "trends",
-        "value": 45
+        "value": 49
       }
     ],
     "wang-yue": [

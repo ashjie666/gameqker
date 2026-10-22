@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-22T09:14:35Z",
+  "updated_at": "2026-10-22T09:45:03Z",
   "items": {
     "domestic:暗夜勇士": {
       "checked_at": "2026-10-22",
@@ -2374,7 +2374,7 @@
           "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
           "https://store.steampowered.com/app/3337140/"
         ],
-        "first_seen": "2026-10-22T09:14:04Z",
+        "first_seen": "2026-10-22T09:44:31Z",
         "last_checked": "2026-10-22"
       }
     },
@@ -2391,40 +2391,7 @@
     "import:基地银河纵横": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-02-26",
-      "candidate": {
-        "origin": "import",
-        "name_cn": "基地：银河纵横",
-        "name_en": "Foundation: Galactic Frontier",
-        "appid": 4223760,
-        "gap_type": "cn_first",
-        "gap_days": null,
-        "note": "国服已获批版号，Steam 美区尚未发售",
-        "nppa": {
-          "approved_at": "2026-02-26",
-          "publisher": "天津电子出版社有限公司",
-          "operator": "北京能量盒科技有限公司",
-          "approval_no": "国新出审〔2026〕525号",
-          "batch": "2026年进口网络游戏审批信息",
-          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html"
-        },
-        "steam": {
-          "store_url": "https://store.steampowered.com/app/4223760/",
-          "us_listed": true,
-          "us_release_date": "Coming soon",
-          "us_release_parsed": null,
-          "us_coming_soon": true,
-          "cn_listed": true,
-          "cn_release_date": "即将推出",
-          "cn_release_parsed": null,
-          "match_score": 1.0
-        },
-        "evidence": [
-          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
-          "https://store.steampowered.com/app/4223760/"
-        ],
-        "first_seen": "2026-10-22T05:24:54Z",
-        "last_checked": "2026-10-22"
-      }
+      "candidate": null
     },
     "import:飘流幻境新世界": {
       "checked_at": "2026-10-22",
