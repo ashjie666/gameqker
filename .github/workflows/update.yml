@@ -28,6 +28,10 @@ on:
     branches: [main]
     paths:
       - 'collector/**'
+      # 人工改主表数据或前端时也要部署。CI 自身的提交用 GITHUB_TOKEN 推送，
+      # GitHub 默认不会再触发新的 workflow，因此不会形成循环。
+      - 'data/**'
+      - 'web/**'
       - '.github/workflows/update.yml'
 
 permissions:
