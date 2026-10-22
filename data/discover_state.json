@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-22T05:25:28Z",
+  "updated_at": "2026-10-22T08:39:44Z",
   "items": {
     "domestic:暗夜勇士": {
       "checked_at": "2026-10-22",
@@ -291,6 +291,2039 @@
       "approved_at": "2026-09-29",
       "candidate": null
     },
+    "domestic:疯狂领地": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:风暴突围队": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:怪物文明": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:诡道封仙": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:诡秘之主愚者": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:滚动的世界": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:海岛合合消": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:海底世界": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:合合合防线": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:洪荒仙凡传": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:画境迷宫": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:欢乐消消大闯关": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:幻灵御剑": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:幻想仙途": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:幻域冒险": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:荒域霸业": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:绘梦街区": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:火线精英突围": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:家园特快": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:家族养成计划": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:假日合合": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:剑与王冠": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:建造模拟器": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:浆果小镇": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:锦绣合合": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:精灵对战大师": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:鲸上城堡": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:九霄争锋录": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:绝世苍穹": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:菌临城下": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:开天神将": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:篮球经理2": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:浪漫旅途": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:雷霆霸域": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:烈火奇刃": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:灵剑山之旅": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:灵霄降魔": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:灵域归境": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:领地大冲刺": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:龙城烈歌": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:龙城战神": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:龙烬归墟": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:龙之谷觉醒": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:龙之秘宝": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:乱斗大师": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:冒险争霸": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:美味小厨神": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:萌将刷刷乐": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:萌趣合合": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:萌新生存之路": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:萌星历险记": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:猛宠冲锋": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:梦幻岛之诗": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:梦幻合宠": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:梦幻寻宝": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:梦境清理团": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:迷失岛5洪流": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:名将快跑": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:魔力宝贝境界线上的轮回": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:魔灵大陆": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:农场萌小院": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:暖暖餐厅": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:暖暖小港湾": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:破碎王国": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:破晓之锋": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:噗噗探险团": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:奇迹曙光": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:奇迹武神": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:奇妙大作战": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:千次初见": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:俏游三国": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:球球小时光": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:群星战场": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:热血剑灵": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:热血烈刀": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:热血骑兵": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:荣耀守护": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:三国卧龙归来": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:三国角逐天下": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:三国杀天命棋局": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:三界奇遇": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:山海大业": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:山海纪元": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:少侠别冲动": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:深海两万里": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:深空七号": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:神话守卫战": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:神将快打": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:生存手册": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:失落岛民": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:拾光暖暖": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:石器进化史": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:史诗台球": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:守护地下城": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:梳理大师": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:水晶大师": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:水排序": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:踏云归": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:太初仙劫": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:太古封仙": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:太空天梯": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:糖豆大挑战": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:桃园将帅录": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:逃出重围": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:天赐的声音": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:天临混元": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:天穹霸业": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:天人决命": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:天天爱冲锋": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:天天斗群英": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:铁血武将": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:通关算你秀": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:同盟战纪": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:万里争锋": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:王城战神": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:王牌排球": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:王者序列": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:望月屋": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:蔚蓝禁区": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:文字达人": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:我的欢乐传奇": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:我的幻想世界": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:我的山海日记": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:我叫mt荣耀之战": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:我在精灵村种田这件事": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:我在灵界修大仙": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:无界冒险": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:无用之人登神长阶": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": {
+        "origin": "domestic",
+        "name_cn": "无用之人：登神长阶",
+        "name_en": "无用之人：登神长阶",
+        "appid": 3081280,
+        "gap_type": "cn_first",
+        "gap_days": null,
+        "note": "国服已获批版号，Steam 美区无页面或未上架",
+        "stage": {
+          "cn": "launch",
+          "os": "none",
+          "cn_release": "2025-11-19",
+          "os_release": null
+        },
+        "version": {
+          "steam": null,
+          "source": null
+        },
+        "playtest_os": false,
+        "nppa": {
+          "approved_at": "2026-09-29",
+          "publisher": "华中科技大学电子音像出版社",
+          "operator": "深圳市奥古布古网络科技有限公司",
+          "approval_no": "国新出审〔2026〕2371号",
+          "batch": "2026年9月份国产网络游戏审批信息",
+          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202609/t20260930_1011281.html"
+        },
+        "steam": {
+          "store_url": "https://store.steampowered.com/app/3081280/",
+          "us_listed": null,
+          "us_release_date": null,
+          "us_release_parsed": null,
+          "us_coming_soon": null,
+          "cn_listed": true,
+          "cn_release_date": "2025 年 11 月 19 日",
+          "cn_release_parsed": "2025-11-19",
+          "match_score": 1.0
+        },
+        "evidence": [
+          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202609/t20260930_1011281.html",
+          "https://store.steampowered.com/app/3081280/"
+        ],
+        "first_seen": "2026-10-22T06:17:04Z",
+        "last_checked": "2026-10-22"
+      }
+    },
+    "domestic:武道龙途": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:西游平魔录": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:侠客行不行": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:仙逆破境": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:仙武三国": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:小兵向前冲": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:小道城池": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:小侠客闯江湖": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:心动奇遇": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:心动时刻": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:星际战澜": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:星粒派对": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:星梦奇迹": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:妖灵进化史": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:一剑平妖归途": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:一念无双": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:一念修仙": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:一起打通关": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:移阵破围": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:英雄别停手": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:英雄秘域": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:英雄闹翻天": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:英雄突围": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:英雄阵线": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:英雄至上": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:勇士不后退": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:勇者巅峰路": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:永恒战刃": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:御剑巡天": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:源初之结": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:云端小仙宗": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:战魂骑士": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:战龙神将": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:战团传奇": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:赵云与阿斗": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:遮天荒古圣体": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:遮天天骄帝路": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:真仙录": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:争锋时刻": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:征将传奇": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:征途骑士团": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:指尖攻防": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:指尖剑仙": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:指尖之战": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:秩序霸业": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:终律链接": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:终末余烬": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:逐梦之路": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:主公别慌啊": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:筑梦之旅": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:捉妖奇缘": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:足球明星杯射门挑战赛": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-09-29",
+      "candidate": null
+    },
+    "domestic:33号避难所": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:百变消到底": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:百兽家园": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:百妖行记": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:百战狂刀": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:爆胎蘑菇云": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:碧影迷踪": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:别推我的塔": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:不良人8": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:彩虹国度": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:长生天机无限": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:冲出包围圈": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:冲阵勇士": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:出发吧猫大厨": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:大鹅花园": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:大鹅手账": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:单挑足球": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:第九境界": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:巅峰之路": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:点点名将": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:斗魔传奇": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:凡人修仙传大道": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:方块之境": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:绯色幻境": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:飞行棋派对": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:飞行人生": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:飞剑连诀": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:分秒必争": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:疯狂大寻宝": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:疯狂的卡片": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:疯狂生存派对": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:疯狂玩具屋": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:风语森境": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:富翁派对": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:古城客栈": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:归藏现": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:国王消消奇遇": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:海岛乐消消": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:合合旅程": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:合合骑士团": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:黑暗料理王2": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:洪荒修行路": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:花花世界": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:花间筑梦": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:幻斗西游": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:幻灵奇旅": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:幻星守卫": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:荒古战歌": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:火柴人英雄模拟战": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:机甲奇兵": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:激斗无双": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:假日节拍": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:剑瞳": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:剑舞霜华": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:剑之传说": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:江山云起": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:节奏旅社": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:精灵萌斗记": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:精英使命": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:竞钓大师": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:镜里灯": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:九霄仙宗": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:九州伏魔录": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:绝境探险": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:绝世龙城": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:开间糖水铺": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:开局自创武学的掌门模拟器": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:开心美食街": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:恐龙新世纪": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:口袋欢乐派": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:狂飙勇者": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:拉尼亚": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:雷霆霸主": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:炼宝登仙": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:列国史诗问鼎九州": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:烈焰横世": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:烈焰仙侠": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:烈焰雄风": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:灵符师": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:灵瑞集": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:灵仙记": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:灵霄之路": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:领主霸业": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:领主冒险团": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:龙骨秘境": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:龙纹传说": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:龙之传说": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:龙之谷经典": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:毛仔别打啦": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:冒险吧": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:冒险之魂大闯关": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:冒险之剑": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:谜境神探": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:猛将传说": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:梦宝大作战": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:梦幻叠叠乐": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:梦境超市": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:秘法矩阵": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:明月剑": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:魔法门之英雄无敌iii重制": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:魔灵启程": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:谋定赤壁": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:奶茶小掌柜": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:破界之召": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:破碎奇迹": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:奇霸三国": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:奇兵之力觉醒": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:阡陌寻踪": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:青云录": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:球王荣耀": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:趣味爱烧脑": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:全境防线": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:全面冲击": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:群星漫卡": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:热血兵城": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:绒绒星语": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:荣耀三国志": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:三国棋逢对手": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:山海有花田": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:烧脑消一消": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:射覆志": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:神魔烬战": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:失落的神之塔": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:十万个冷笑话之异世界大冒险": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:时空冒险团": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:曙光突围": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:水果消一消": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:溯光拾忆": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:随机世界": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:弹球守护": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:弹丸小队": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:天龙八部经典永恒": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:天命神将": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:田园小筑": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:突破难关": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:外星人防线": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:万象归一": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:王城勇士": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:王的庆典": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:王牌对王牌": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:我的末日基地": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:我的晚风小镇": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:我的妖灵": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:我的宗门故事": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:我家有座茶山": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:无界激战": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:无界英雄": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:无尽进击": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:无尽探险": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:无尽征途": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:无畏勇士": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:无畏征途": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:仙境觅缘": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:仙临九界": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:仙灵绘卷": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:仙途西游": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:仙源秘境": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:逍遥大作战": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:小巷时光": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:小仙不要跑": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:小小剑仙": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:小镇繁华记": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:心动小岛": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:星际防线": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:星落小筑": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:休闲小乐园": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:玄霸天下": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:寻梦花园": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:妖怪崛起": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:妖神将": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:一竿江湖": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:弈决三国": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:逸剑传说": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:勇士起源": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:勇者传说": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": {
+        "origin": "domestic",
+        "name_cn": "勇者传说",
+        "name_en": "Tensei Brave",
+        "appid": 2445430,
+        "gap_type": "cn_first",
+        "gap_days": 56,
+        "note": "国服版号早于 Steam 美区定档",
+        "stage": {
+          "cn": "preorder",
+          "os": "preorder",
+          "cn_release": "2026-10-23",
+          "os_release": "2026-10-23"
+        },
+        "version": {
+          "steam": null,
+          "source": null
+        },
+        "playtest_os": false,
+        "nppa": {
+          "approved_at": "2026-08-28",
+          "publisher": "重庆天健电子音像出版有限公司",
+          "operator": "重庆贰伍八八网络科技有限公司",
+          "approval_no": "国新出审〔2026〕2091号",
+          "batch": "2026年8月份国产网络游戏审批信息",
+          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202608/t20260831_1005702.html"
+        },
+        "steam": {
+          "store_url": "https://store.steampowered.com/app/2445430/",
+          "us_listed": true,
+          "us_release_date": "Oct 23, 2026",
+          "us_release_parsed": "2026-10-23",
+          "us_coming_soon": true,
+          "cn_listed": true,
+          "cn_release_date": "2026 年 10 月 23 日",
+          "cn_release_parsed": "2026-10-23",
+          "match_score": 0.8
+        },
+        "evidence": [
+          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202608/t20260831_1005702.html",
+          "https://store.steampowered.com/app/2445430/"
+        ],
+        "first_seen": "2026-10-22T07:09:06Z",
+        "last_checked": "2026-10-22"
+      }
+    },
+    "domestic:勇者工坊": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:永夜传说": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:悠闲生活": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:有家小店": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:驭龙之契": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:元素之潮": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:云朵合合": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:战斗王者": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:战斗细胞": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:战魂御天": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:战将大乱斗": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:战神无双": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:掌中大冒险": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:爪爪小当家": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:这差事不对劲": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:这城有妖怪": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:甄嬛传归来": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:征战烈焰": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:指尖守卫": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:指尖特工": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:指尖突围": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:纸片大混战": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:炙热传说": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:重返地心之下": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:猪猪农场": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:逐梦之光": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:筑界防线": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:筑梦乐园": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:桌面联萌": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:纵横山海": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:最强防线": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:最强剑仙": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:最强小队": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
+    "domestic:最强勇士传说": {
+      "checked_at": "2026-10-22",
+      "approved_at": "2026-08-28",
+      "candidate": null
+    },
     "import:斗阵骑士": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-03-24",
@@ -341,7 +2374,7 @@
           "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
           "https://store.steampowered.com/app/3337140/"
         ],
-        "first_seen": "2026-10-22T05:24:44Z",
+        "first_seen": "2026-10-22T08:39:07Z",
         "last_checked": "2026-10-22"
       }
     },
@@ -436,36 +2469,6 @@
     "import:秘境夺金": {
       "checked_at": "2026-10-22",
       "approved_at": "2026-01-23",
-      "candidate": null
-    },
-    "domestic:疯狂领地": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-09-29",
-      "candidate": null
-    },
-    "domestic:风暴突围队": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-09-29",
-      "candidate": null
-    },
-    "domestic:怪物文明": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-09-29",
-      "candidate": null
-    },
-    "domestic:诡道封仙": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-09-29",
-      "candidate": null
-    },
-    "domestic:诡秘之主愚者": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-09-29",
-      "candidate": null
-    },
-    "domestic:滚动的世界": {
-      "checked_at": "2026-10-22",
-      "approved_at": "2026-09-29",
       "candidate": null
     }
   }

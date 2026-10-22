@@ -27,15 +27,15 @@
     {
       "id": "phantom-blade-zero",
       "name": "影之刃零",
-      "status": "partial",
+      "status": "failed",
       "steam": {
         "appid": 4115450,
-        "listed": true,
-        "release_date": "Oct 28, 2026",
-        "coming_soon": true,
-        "name": "Phantom Blade Zero",
+        "listed": null,
+        "release_date": null,
+        "coming_soon": null,
+        "name": null,
         "url": "https://store.steampowered.com/app/4115450/",
-        "error": null,
+        "error": "curl exit 28 http 000 curl: (28) Connection timed out after 20003 milliseconds",
         "stale": false
       },
       "official": {
@@ -55,8 +55,8 @@
         "stale": false
       },
       "skipped": [],
-      "error": "官网: https://www.phantombladezero.com/: URLError: <urlopen error timed out>",
-      "duration_ms": 42151
+      "error": "steam: curl exit 28 http 000 curl: (28) Connection timed out after 20003 milliseconds | 官网: https://www.phantombladezero.com/: URLError: <urlopen error timed out>",
+      "duration_ms": 62030
     },
     {
       "id": "where-winds-meet",
@@ -90,7 +90,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2026
+      "duration_ms": 4530
     },
     {
       "id": "lord-of-mysteries",
@@ -124,20 +124,20 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2123
+      "duration_ms": 3375
     },
     {
       "id": "world-of-jade-dynasty",
       "name": "诛仙世界",
-      "status": "ok",
+      "status": "partial",
       "steam": {
         "appid": 3384260,
-        "listed": false,
+        "listed": null,
         "release_date": null,
         "coming_soon": null,
         "name": null,
         "url": "https://store.steampowered.com/app/3384260/",
-        "error": null,
+        "error": "curl exit 28 http 000 curl: (28) Connection timed out after 20000 milliseconds",
         "stale": false
       },
       "official": {
@@ -164,8 +164,8 @@
         "stale": false
       },
       "skipped": [],
-      "error": null,
-      "duration_ms": 3148
+      "error": "steam: curl exit 28 http 000 curl: (28) Connection timed out after 20000 milliseconds",
+      "duration_ms": 22157
     },
     {
       "id": "neverness-to-everness",
@@ -197,20 +197,20 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2096
+      "duration_ms": 2577
     },
     {
       "id": "scroll-of-taiwu",
       "name": "太吾绘卷",
-      "status": "ok",
+      "status": "partial",
       "steam": {
         "appid": 838350,
-        "listed": true,
-        "release_date": "Jun 16, 2026",
-        "coming_soon": false,
-        "name": "The Scroll of Taiwu : Beyond The Dome",
+        "listed": null,
+        "release_date": null,
+        "coming_soon": null,
+        "name": null,
         "url": "https://store.steampowered.com/app/838350/",
-        "error": null,
+        "error": "curl exit 28 http 000 curl: (28) Connection timed out after 20001 milliseconds",
         "stale": false
       },
       "official": {
@@ -237,8 +237,8 @@
         "stale": false
       },
       "skipped": [],
-      "error": null,
-      "duration_ms": 2288
+      "error": "steam: curl exit 28 http 000 curl: (28) Connection timed out after 20001 milliseconds",
+      "duration_ms": 23639
     },
     {
       "id": "legend-of-mortal-cultivation",
@@ -256,15 +256,15 @@
     {
       "id": "ananta",
       "name": "无限大",
-      "status": "ok",
+      "status": "partial",
       "steam": {
         "appid": 4814120,
-        "listed": true,
-        "release_date": "Jan 15, 2027",
-        "coming_soon": true,
-        "name": "ANANTA",
+        "listed": null,
+        "release_date": null,
+        "coming_soon": null,
+        "name": null,
         "url": "https://store.steampowered.com/app/4814120/",
-        "error": null,
+        "error": "curl exit 28 http 000 curl: (28) Connection timed out after 20002 milliseconds",
         "stale": false
       },
       "official": {
@@ -291,8 +291,8 @@
         "stale": false
       },
       "skipped": [],
-      "error": null,
-      "duration_ms": 3205
+      "error": "steam: curl exit 28 http 000 curl: (28) Connection timed out after 20002 milliseconds",
+      "duration_ms": 22125
     },
     {
       "id": "wang-yue",
@@ -324,7 +324,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 4264
+      "duration_ms": 2219
     },
     {
       "id": "sanguo-mou-ding-tianxia",
@@ -353,7 +353,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2071
+      "duration_ms": 688
     }
   ],
   "games": [
@@ -467,7 +467,7 @@
         "steam_appid": null,
         "official": "https://www.wherewindsmeetgame.com/"
       },
-      "last_checked": "2026-10-22T05:23:37Z",
+      "last_checked": "2026-10-22T08:29:32Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -545,7 +545,7 @@
         "steam_appid": null,
         "official": "https://lordofthemysteriesgame.com/"
       },
-      "last_checked": "2026-10-22T05:23:39Z",
+      "last_checked": "2026-10-22T08:29:36Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -615,7 +615,7 @@
         "steam_appid": 3384260,
         "official": "https://zx.wanmei.com/"
       },
-      "last_checked": "2026-10-22T05:23:42Z",
+      "last_checked": "2026-10-22T08:29:58Z",
       "steam_listed": false,
       "steam_release_date": null,
       "official_signal": {
@@ -692,7 +692,7 @@
         "steam_appid": null,
         "official": "https://nte.perfectworld.com/"
       },
-      "last_checked": "2026-10-22T05:23:44Z",
+      "last_checked": "2026-10-22T08:30:00Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -748,7 +748,7 @@
         "steam_appid": 838350,
         "official": "https://scrolloftaiwu.com/"
       },
-      "last_checked": "2026-10-22T05:23:46Z",
+      "last_checked": "2026-10-22T08:30:24Z",
       "steam_listed": true,
       "steam_release_date": "Jun 16, 2026",
       "official_signal": {
@@ -881,7 +881,7 @@
         "steam_appid": 4814120,
         "official": "https://ananta.163.com/"
       },
-      "last_checked": "2026-10-22T05:23:49Z",
+      "last_checked": "2026-10-22T08:30:46Z",
       "steam_listed": true,
       "steam_release_date": "Jan 15, 2027",
       "official_signal": {
@@ -968,7 +968,7 @@
         "steam_appid": null,
         "official": "https://wy.shiyue.com/"
       },
-      "last_checked": "2026-10-22T05:23:54Z",
+      "last_checked": "2026-10-22T08:30:48Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1026,7 +1026,7 @@
         "steam_appid": null,
         "official": "https://store.steamchina.com/app/4542640/"
       },
-      "last_checked": "2026-10-22T05:23:56Z",
+      "last_checked": "2026-10-22T08:30:49Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1057,5 +1057,5 @@
       ]
     }
   ],
-  "last_run_at": "2026-10-22T05:23:56Z"
+  "last_run_at": "2026-10-22T08:30:49Z"
 }
