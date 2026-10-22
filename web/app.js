@@ -527,6 +527,7 @@ function renderCountdown() {
     const origin = event.origin === 'history'
       ? `历史名单中的游戏${event.first_seen ? ' · 首次记录于 ' + formatDay(event.first_seen) : ''}`
       : (event.first_seen ? `首次记录于 ${formatDay(event.first_seen)}` : null);
+    const alt = (event.alt_dates || []).map((item) => formatDay(item.date)).join(' / ');
 
     return el('div', { class: 'countdown-card' + (event.days <= NEAR_DAYS ? ' is-near' : '') }, [
       el('div', { class: 'countdown-days' }, [parts[0], el('small', { text: parts[1] })]),
@@ -536,11 +537,15 @@ function renderCountdown() {
       ]),
       el('div', { class: 'countdown-meta' }, [
         el('span', { class: 'countdown-date', text: formatDay(event.date) }),
+        ...(event.sources || []).map((source) => (source.url
+          ? el('a', { href: source.url, target: '_blank', rel: 'noopener noreferrer', title: source.title || '' }, [source.name])
+          : el('span', { text: source.name }))),
         event.store_url
           ? el('a', { href: event.store_url, target: '_blank', rel: 'noopener noreferrer' }, ['商店页'])
           : null,
       ]),
       origin ? el('div', { class: 'countdown-origin', text: origin }) : null,
+      alt ? el('div', { class: 'countdown-origin', text: `另有来源标注 ${alt}` }) : null,
     ]);
   }));
 }

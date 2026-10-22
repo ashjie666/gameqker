@@ -46,6 +46,8 @@ WEB_HISTORY_PATH = os.path.join(WEB_DIR, "data", "history.json")
 CANDIDATES_PATH = os.path.join(ROOT, "data", "candidates.json")
 WEB_CANDIDATES_PATH = os.path.join(WEB_DIR, "data", "candidates.json")
 DISCOVER_STATE_PATH = os.path.join(ROOT, "data", "discover_state.json")
+# 海外新闻源直连失败时的代理兜底（本机 SOCKS5；CI 上没有代理会快速失败，不影响主流程）
+PROXY_URL = os.environ.get("GAMEQKER_PROXY", "socks5h://127.0.0.1:1080")
 
 # 脚本唯一有权改写的字段；其余一律视为人工维护。
 DYNAMIC_KEYS = ("last_checked", "steam_listed", "steam_release_date", "official_signal")
@@ -222,7 +224,7 @@ def snapshot_git():
         return False
 
 
-def export_events(payload):
+def export_events(payload, fetcher=None):
     """导出上线倒计时数据（data/events.json + web 副本）。
 
     合并当前快照与 git 历史快照里的 Steam 发售日。倒计时只是页面上的一块附加面板，
@@ -230,7 +232,16 @@ def export_events(payload):
     """
     try:
         git = resolve_git() if os.path.isdir(os.path.join(ROOT, ".git")) else None
-        events_payload = events.build_payload(payload, git, utc_now_iso())
+        news_events = []
+        if fetcher:
+            from . import feeds
+            try:
+                news_events = feeds.collect(fetcher, payload)
+                print("新闻/RSS 源匹配到 {0} 条上线事件".format(len(news_events)))
+            except Exception as exc:
+                print("新闻/RSS 抓取失败：{0}: {1}".format(type(exc).__name__, exc),
+                      file=sys.stderr)
+        events_payload = events.build_payload(payload, git, utc_now_iso(), news_events)
         write_json(EVENTS_PATH, events_payload)
         write_json(WEB_EVENTS_PATH, events_payload)
         items = events_payload["events"]
@@ -550,7 +561,7 @@ def main(argv=None):
     write_json(WEB_EXPORT_PATH, payload)
     print("已写入 {0}".format(DATA_PATH))
     print("已导出 {0}".format(WEB_EXPORT_PATH))
-    export_events(payload)
+    export_events(payload, fetcher)
     export_trends(payload, fetcher)
     # 候选发现用独立预算：版号批次每月才变一次，且 Steam 有节流，
     # 与巡检/趋势共用一个 deadline 会让它几乎必被跳过。

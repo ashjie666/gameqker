@@ -15,8 +15,15 @@ import re
 import subprocess
 from datetime import date
 
+from .feeds import find_date
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HISTORY_PATH = "data/games.json"
+
+# 和上线相关的官网信号标签；只有命中这些才尝试从证据片段里取日期
+OFFICIAL_LAUNCH_TAGS = ("global_launch", "release_date", "coming_soon")
+# 同一游戏多源日期冲突时的优先级：数值越小越可信
+SOURCE_PRIORITY = {"steam": 0, "official": 1, "rss": 2}
 
 MONTHS = {
     "jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6,
@@ -60,23 +67,55 @@ def parse_steam_date(text):
         return None
 
 
-def events_from_payload(payload):
-    """从一个 games.json 快照里抽出所有「上线」事件。"""
+def _store_url(game):
+    appid = (game.get("watch") or {}).get("steam_appid")
+    return ("https://store.steampowered.com/app/{0}/".format(appid) if appid else None)
+
+
+def events_from_payload(payload, with_official=False):
+    """从一个 games.json 快照里抽出所有「上线」事件。
+
+    with_official=True 时额外从官网信号证据片段里取日期（只在当前快照启用，
+    历史快照不取，避免同一个官网文案在多个历史版本里反复生成事件）。
+    """
     found = []
     for game in (payload or {}).get("games") or []:
+        store_url = _store_url(game)
         iso = parse_steam_date(game.get("steam_release_date"))
-        if not iso:
+        if iso:
+            found.append({
+                "game_id": game.get("id"),
+                "name_cn": game.get("name_cn"),
+                "name_en": game.get("name_en"),
+                "type": "launch",
+                "date": iso,
+                "date_text": game.get("steam_release_date"),
+                "store_url": store_url,
+                "sources": [{"type": "steam", "name": "Steam 商店",
+                             "url": store_url}],
+            })
+
+        if not with_official:
             continue
-        appid = (game.get("watch") or {}).get("steam_appid")
+        signal = game.get("official_signal") or {}
+        if not signal.get("matched"):
+            continue
+        if not set(signal.get("signals") or []) & set(OFFICIAL_LAUNCH_TAGS):
+            continue
+        found_date, raw = find_date(str(signal.get("snippet") or ""))
+        if not found_date:
+            continue
         found.append({
             "game_id": game.get("id"),
             "name_cn": game.get("name_cn"),
             "name_en": game.get("name_en"),
             "type": "launch",
-            "date": iso,
-            "date_text": game.get("steam_release_date"),
-            "store_url": ("https://store.steampowered.com/app/{0}/".format(appid)
-                          if appid else None),
+            "date": found_date.isoformat(),
+            "date_text": raw,
+            "store_url": store_url,
+            "sources": [{"type": "official",
+                         "name": signal.get("site") or "官网",
+                         "url": signal.get("url")}],
         })
     return found
 
@@ -119,28 +158,88 @@ def history_events(git):
     return [(event, first_seen) for event, first_seen in seen.values()]
 
 
-def build_payload(current_payload, git, now_iso):
-    """合并「当前快照」与「历史快照」里的上线事件，按日期升序输出。
+def _priority(event):
+    types = [source.get("type") for source in event.get("sources") or []]
+    return min([SOURCE_PRIORITY.get(kind, 9) for kind in types] or [9])
 
-    origin 标出这条是从当前名单来的、还是只在历史里出现过，前端据此提示
-    「历史名单中的游戏」。
+
+def _merge_sources(entry, event):
+    existing = {(source.get("name"), source.get("url")) for source in entry["sources"]}
+    for source in event.get("sources") or []:
+        key = (source.get("name"), source.get("url"))
+        if key not in existing:
+            entry["sources"].append(source)
+            existing.add(key)
+
+
+def build_payload(current_payload, git, now_iso, news_events=None):
+    """合并多源上线事件，按日期升序输出。
+
+    来源优先级 Steam 商店 > 官网 > 新闻/RSS。同一游戏出现多个不同日期时，
+    主日期取优先级最高的那个，其余日期记进 alt_dates 供前端提示，不丢弃来源。
+    origin 标出这条主要来自当前名单（current）、历史快照（history）、
+    官网（official）还是新闻（news）。
     """
     merged = {}
-    for event in events_from_payload(current_payload):
-        merged[(event["game_id"], event["date"])] = dict(
-            event, origin="current", first_seen=None)
+
+    def add(event, origin, first_seen=None):
+        game_id = event.get("game_id") or event.get("name_cn")
+        if not game_id:
+            return
+        entry = merged.get(game_id)
+        if entry is None:
+            merged[game_id] = {
+                "game_id": game_id,
+                "name_cn": event.get("name_cn"),
+                "name_en": event.get("name_en"),
+                "type": "launch",
+                "date": event["date"],
+                "date_text": event.get("date_text"),
+                "store_url": event.get("store_url"),
+                "sources": list(event.get("sources") or []),
+                "origin": origin,
+                "first_seen": first_seen,
+                "alt_dates": [],
+                "_priority": _priority(event),
+            }
+            return
+
+        _merge_sources(entry, event)
+        if origin == "current" and entry["origin"] == "history":
+            entry["origin"] = "current"
+            entry["first_seen"] = first_seen
+        priority = _priority(event)
+        if event["date"] != entry["date"]:
+            if priority < entry["_priority"]:
+                entry["alt_dates"].append({
+                    "date": entry["date"], "date_text": entry.get("date_text")})
+                entry["date"] = event["date"]
+                entry["date_text"] = event.get("date_text")
+                entry["_priority"] = priority
+            else:
+                entry["alt_dates"].append({
+                    "date": event["date"], "date_text": event.get("date_text")})
+        elif priority < entry["_priority"]:
+            entry["_priority"] = priority
+
+    for event in events_from_payload(current_payload, with_official=True):
+        origin = "current" if _priority(event) == 0 else (
+            "official" if _priority(event) == 1 else "news")
+        add(event, origin)
 
     if git:
         for event, first_seen in history_events(git):
-            key = (event["game_id"], event["date"])
-            if key in merged:
-                merged[key]["first_seen"] = first_seen
-            else:
-                merged[key] = dict(event, origin="history", first_seen=first_seen)
+            add(event, "history", first_seen)
+
+    for event in news_events or []:
+        add(event, "news")
 
     ordered = sorted(merged.values(), key=lambda item: (item["date"], item["game_id"] or ""))
+    for item in ordered:
+        item.pop("_priority", None)
     return {
         "generated_at": now_iso,
-        "note": "只汇总「上线」事件（来源：Steam 发售日）；解析不出具体日期的条目不列，不做版本更新。",
+        "note": ("汇总多源上线事件（Steam 商店 > 官网 > 新闻/RSS），每条标注来源；"
+                 "解析不出具体日期的条目不列，不做版本更新。"),
         "events": ordered,
     }
