@@ -70,6 +70,8 @@ jobs:
           git add data/games.json web/data/games.json data/events.json web/data/events.json
           # 热度趋势序列每轮也会追加，一并暂存：留下的未暂存改动会让下面的 pull --rebase 直接失败
           git add data/history.json web/data/history.json
+          # 候选池（版号 × Steam 区服对照）与去重状态，缺失时用 --ignore-unmatch 跳过
+          git add --ignore-unmatch data/candidates.json web/data/candidates.json data/discover_state.json
           if git diff --cached --quiet; then
             echo "本轮无数据变更，跳过提交"
           else

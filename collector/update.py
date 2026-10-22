@@ -30,7 +30,7 @@ import sys
 import time
 from datetime import date, datetime, timezone
 
-from . import __version__, events, official, steam, trends
+from . import __version__, discover, events, official, steam, trends
 from .http import Fetcher
 from .official import signal_key
 
@@ -43,6 +43,9 @@ EVENTS_PATH = os.path.join(ROOT, "data", "events.json")
 WEB_EVENTS_PATH = os.path.join(WEB_DIR, "data", "events.json")
 HISTORY_PATH = os.path.join(ROOT, "data", "history.json")
 WEB_HISTORY_PATH = os.path.join(WEB_DIR, "data", "history.json")
+CANDIDATES_PATH = os.path.join(ROOT, "data", "candidates.json")
+WEB_CANDIDATES_PATH = os.path.join(WEB_DIR, "data", "candidates.json")
+DISCOVER_STATE_PATH = os.path.join(ROOT, "data", "discover_state.json")
 
 # 脚本唯一有权改写的字段；其余一律视为人工维护。
 DYNAMIC_KEYS = ("last_checked", "steam_listed", "steam_release_date", "official_signal")
@@ -86,7 +89,9 @@ def write_json(path, payload):
 # --------------------------------------------------------------------------
 SNAPSHOT_PATHS = ("data/games.json", "web/data/games.json",
                   "data/events.json", "web/data/events.json",
-                  "data/history.json", "web/data/history.json")
+                  "data/history.json", "web/data/history.json",
+                  "data/candidates.json", "web/data/candidates.json",
+                  "data/discover_state.json")
 GIT_NAME = "gameqker-bot"
 GIT_EMAIL = "gameqker-bot@users.noreply.github.com"
 
@@ -248,6 +253,37 @@ def export_trends(payload, fetcher, deadline=None):
             WEB_HISTORY_PATH, stats["trends"], stats["reviews"], stats["signal"]))
     except Exception as exc:  # noqa: BLE001 - 趋势导出失败不影响巡检结果
         print("热度趋势导出失败：{0}: {1}".format(type(exc).__name__, exc), file=sys.stderr)
+
+
+def _load_json(path, default):
+    try:
+        with open(path, "r", encoding="utf-8") as handle:
+            return json.load(handle)
+    except (OSError, ValueError):
+        return default
+
+
+def export_discovery(fetcher, deadline=None):
+    """导出「国服 / 海外服不同步」候选池（data/candidates.json + web 副本）。
+
+    数据源：国家新闻出版署国产版号公示 × Steam 美区/国区对照。
+    只写候选池，**不改 games 清单**（定性字段人工维护）。
+    任何失败都只提示，绝不影响巡检结果。
+    """
+    try:
+        state = _load_json(DISCOVER_STATE_PATH, {})
+        candidates, new_state, batches, stats = discover.run(
+            fetcher, state, deadline=deadline)
+        payload = discover.build_payload(candidates, batches, stats)
+        write_json(CANDIDATES_PATH, payload)
+        write_json(WEB_CANDIDATES_PATH, payload)
+        # 只在判定结果真的变化时落盘状态，避免每天产生无意义的 diff
+        if new_state.get("items") != state.get("items"):
+            write_json(DISCOVER_STATE_PATH, new_state)
+        print("已导出 {0}（候选 {1} 条 / 本轮评估 {2} 款 / 匹配 {3} 款）".format(
+            WEB_CANDIDATES_PATH, len(candidates), stats["evaluated"], stats["matched"]))
+    except Exception as exc:  # noqa: BLE001 - 发现失败不影响巡检结果
+        print("候选发现失败：{0}: {1}".format(type(exc).__name__, exc), file=sys.stderr)
 
 
 # --------------------------------------------------------------------------
@@ -516,6 +552,9 @@ def main(argv=None):
     print("已导出 {0}".format(WEB_EXPORT_PATH))
     export_events(payload)
     export_trends(payload, fetcher)
+    # 候选发现用独立预算：版号批次每月才变一次，且 Steam 有节流，
+    # 与巡检/趋势共用一个 deadline 会让它几乎必被跳过。
+    export_discovery(fetcher, deadline=(time.monotonic() + 100))
 
     if not args.no_git:
         snapshot_git()

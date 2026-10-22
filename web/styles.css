@@ -590,6 +590,69 @@ tr.row-changed td.col-first { box-shadow: inset 3px 0 0 var(--brand); }
 .countdown-empty { margin: 0; color: var(--text-faint); font-size: 12px; }
 
 /* ==========================================================================
+   新发现 · 国服 / 海外服不同步（候选池）
+   ========================================================================== */
+
+.discover-panel { padding: 14px 18px 16px; }
+.discover-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.discover-title { margin: 0; font-size: 14px; letter-spacing: 0.3px; }
+.discover-note { margin-left: auto; color: var(--text-faint); font-size: 12px; }
+.discover-hint { margin: 6px 0 0; color: var(--text-faint); font-size: 12px; }
+
+.discover-list {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 10px;
+}
+
+.d-card {
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--blue);
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.d-card-head { display: flex; align-items: flex-start; gap: 10px; }
+.d-card-head > div:first-child { min-width: 0; }
+.d-title { margin: 0; font-size: 14px; font-weight: 600; }
+.d-en { color: var(--text-faint); font-size: 11px; }
+.d-note { margin: 4px 0 0; color: var(--text-dim); font-size: 11px; line-height: 1.5; }
+
+.d-tags { margin-left: auto; display: flex; flex-wrap: wrap; gap: 5px; justify-content: flex-end; }
+.d-tag {
+  padding: 1px 7px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-strong);
+  color: var(--text-dim);
+  font-size: 11px;
+  white-space: nowrap;
+}
+.d-tag.d-origin { border-color: var(--border-strong); color: var(--text-faint); }
+.d-tag.gap-overseas { border-color: var(--amber); color: var(--amber); }
+.d-tag.gap-cn { border-color: var(--brand); color: var(--brand); }
+.d-tag.gap-region { border-color: var(--violet); color: var(--violet); }
+.d-tag.d-days { border-color: var(--blue); color: var(--blue); }
+
+.d-meta {
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 3px 10px;
+  font-size: 11px;
+}
+.d-meta dt { color: var(--text-faint); white-space: nowrap; }
+.d-meta dd { margin: 0; color: var(--text-dim); font-family: var(--font-mono); }
+
+.d-links { display: flex; gap: 12px; font-size: 11px; }
+.d-links a { color: var(--blue); text-decoration: none; }
+.d-links a:hover { text-decoration: underline; }
+
+/* ==========================================================================
    Empty state & footer
    ========================================================================== */
 

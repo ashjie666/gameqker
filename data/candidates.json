@@ -1,0 +1,200 @@
+{
+  "generated_at": "2026-10-22",
+  "generated_at_utc": "2026-10-22T03:05:32Z",
+  "source": {
+    "name": "国家新闻出版署 · 国产网络游戏审批信息",
+    "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/",
+    "steam": "Steam appdetails（cc=us / cc=cn）"
+  },
+  "batches": [
+    {
+      "origin": "import",
+      "title": "进口网络游戏审批信息（当年累计）",
+      "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/"
+    },
+    {
+      "origin": "domestic",
+      "title": "国产网络游戏审批信息（近两月）",
+      "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/"
+    }
+  ],
+  "stats": {
+    "nppa_games": 461,
+    "evaluated": 20,
+    "matched": 5,
+    "skipped_budget": 441
+  },
+  "candidates": [
+    {
+      "origin": "import",
+      "name_cn": "循环勇士",
+      "name_en": "Loop Hero",
+      "appid": 1282730,
+      "gap_type": "overseas_first",
+      "gap_days": 2003,
+      "note": "Steam 美区已发售，早于国服版号批准",
+      "nppa": {
+        "approved_at": "2026-08-28",
+        "publisher": "江苏凤凰电子音像出版社有限公司",
+        "operator": "南京西木优洛网络文化有限公司",
+        "approval_no": "国新出审〔2026〕2131号",
+        "batch": "2026年进口网络游戏审批信息",
+        "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html"
+      },
+      "steam": {
+        "store_url": "https://store.steampowered.com/app/1282730/",
+        "us_listed": true,
+        "us_release_date": "Mar 4, 2021",
+        "us_release_parsed": "2021-03-04",
+        "us_coming_soon": false,
+        "cn_listed": true,
+        "cn_release_date": "2021 年 3 月 4 日",
+        "cn_release_parsed": "2021-03-04",
+        "match_score": 1.0
+      },
+      "evidence": [
+        "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
+        "https://store.steampowered.com/app/1282730/"
+      ],
+      "first_seen": "2026-10-22T03:04:54Z",
+      "last_checked": "2026-10-22"
+    },
+    {
+      "origin": "import",
+      "name_cn": "海岛之魂",
+      "name_en": "Spirit of the Island",
+      "appid": 1592110,
+      "gap_type": "overseas_first",
+      "gap_days": 1412,
+      "note": "Steam 美区已发售，早于国服版号批准",
+      "nppa": {
+        "approved_at": "2026-06-29",
+        "publisher": "江苏凤凰数字传媒有限公司",
+        "operator": "上海果趣信息技术服务有限公司",
+        "approval_no": "国新出审〔2026〕1502号",
+        "batch": "2026年进口网络游戏审批信息",
+        "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html"
+      },
+      "steam": {
+        "store_url": "https://store.steampowered.com/app/1592110/",
+        "us_listed": true,
+        "us_release_date": "Aug 17, 2022",
+        "us_release_parsed": "2022-08-17",
+        "us_coming_soon": false,
+        "cn_listed": true,
+        "cn_release_date": "2022 年 8 月 17 日",
+        "cn_release_parsed": "2022-08-17",
+        "match_score": 1.0
+      },
+      "evidence": [
+        "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
+        "https://store.steampowered.com/app/1592110/"
+      ],
+      "first_seen": "2026-10-22T03:05:28Z",
+      "last_checked": "2026-10-22"
+    },
+    {
+      "origin": "import",
+      "name_cn": "护核纪元",
+      "name_en": "Core Keeper",
+      "appid": 1621690,
+      "gap_type": "overseas_first",
+      "gap_days": 694,
+      "note": "Steam 美区已发售，早于国服版号批准",
+      "nppa": {
+        "approved_at": "2026-07-22",
+        "publisher": "天津电子出版社有限公司",
+        "operator": "上海幻电信息科技有限公司",
+        "approval_no": "国新出审〔2026〕1784号",
+        "batch": "2026年进口网络游戏审批信息",
+        "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html"
+      },
+      "steam": {
+        "store_url": "https://store.steampowered.com/app/1621690/",
+        "us_listed": true,
+        "us_release_date": "Aug 27, 2024",
+        "us_release_parsed": "2024-08-27",
+        "us_coming_soon": false,
+        "cn_listed": true,
+        "cn_release_date": "2024 年 8 月 27 日",
+        "cn_release_parsed": "2024-08-27",
+        "match_score": 1.0
+      },
+      "evidence": [
+        "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
+        "https://store.steampowered.com/app/1621690/"
+      ],
+      "first_seen": "2026-10-22T03:05:02Z",
+      "last_checked": "2026-10-22"
+    },
+    {
+      "origin": "import",
+      "name_cn": "孤岛猎神",
+      "name_en": "Day of the Shell",
+      "appid": 3008340,
+      "gap_type": "overseas_first",
+      "gap_days": 335,
+      "note": "Steam 美区已发售，早于国服版号批准",
+      "nppa": {
+        "approved_at": "2026-06-29",
+        "publisher": "重庆华龙网集团股份有限公司",
+        "operator": "重庆破晓之时网络科技有限公司",
+        "approval_no": "国新出审〔2026〕1501号",
+        "batch": "2026年进口网络游戏审批信息",
+        "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html"
+      },
+      "steam": {
+        "store_url": "https://store.steampowered.com/app/3008340/",
+        "us_listed": true,
+        "us_release_date": "Jul 29, 2025",
+        "us_release_parsed": "2025-07-29",
+        "us_coming_soon": false,
+        "cn_listed": true,
+        "cn_release_date": "2025 年 7 月 29 日",
+        "cn_release_parsed": "2025-07-29",
+        "match_score": 1.0
+      },
+      "evidence": [
+        "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
+        "https://store.steampowered.com/app/3008340/"
+      ],
+      "first_seen": "2026-10-22T03:05:22Z",
+      "last_checked": "2026-10-22"
+    },
+    {
+      "origin": "import",
+      "name_cn": "动物排球社",
+      "name_en": "Smash it Wild: Tactical Volleyball Roguelike",
+      "appid": 2432240,
+      "gap_type": "overseas_first",
+      "gap_days": 74,
+      "note": "Steam 美区已发售，早于国服版号批准",
+      "nppa": {
+        "approved_at": "2026-06-29",
+        "publisher": "江苏凤凰数字传媒有限公司",
+        "operator": "重庆烽行网络科技有限公司",
+        "approval_no": "国新出审〔2026〕1499号",
+        "batch": "2026年进口网络游戏审批信息",
+        "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html"
+      },
+      "steam": {
+        "store_url": "https://store.steampowered.com/app/2432240/",
+        "us_listed": true,
+        "us_release_date": "Apr 16, 2026",
+        "us_release_parsed": "2026-04-16",
+        "us_coming_soon": false,
+        "cn_listed": true,
+        "cn_release_date": "2026 年 4 月 16 日",
+        "cn_release_parsed": "2026-04-16",
+        "match_score": 1.0
+      },
+      "evidence": [
+        "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
+        "https://store.steampowered.com/app/2432240/"
+      ],
+      "first_seen": "2026-10-22T03:05:14Z",
+      "last_checked": "2026-10-22"
+    }
+  ],
+  "note": "候选池仅供确认；确认后再人工并入 data/games.json 的 games 清单。"
+}

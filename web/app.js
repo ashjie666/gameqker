@@ -33,6 +33,7 @@ const state = {
 let DATA = null;
 let EVENTS = null;
 let HISTORY = null;
+let CANDIDATES = null;
 
 /* -------------------------------------------------------------------------
    DOM / 时间 helpers
@@ -543,6 +544,77 @@ function renderCountdown() {
 }
 
 /* -------------------------------------------------------------------------
+   新发现 · 国服 / 海外服不同步
+   ------------------------------------------------------------------------- */
+
+const GAP_META = {
+  overseas_first: { label: '海外先发', cls: 'gap-overseas' },
+  cn_first: { label: '国服先行', cls: 'gap-cn' },
+  region_gap: { label: '国区受限', cls: 'gap-region' },
+};
+
+function renderDiscover() {
+  const panel = $('discover-panel');
+  const list = $('discover-list');
+  const note = $('discover-note');
+  const items = (CANDIDATES && CANDIDATES.candidates) || [];
+
+  if (!items.length) { panel.hidden = true; return; }
+  panel.hidden = false;
+
+  const batches = (CANDIDATES.batches || []).map((batch) => batch.title).join(' / ');
+  note.textContent = `候选 ${items.length} 条 · ${CANDIDATES.generated_at || '—'}` +
+    (batches ? ` · ${batches}` : '');
+
+  list.replaceChildren(...items.slice(0, 12).map(renderCandidate));
+}
+
+function renderCandidate(candidate) {
+  const meta = GAP_META[candidate.gap_type] || { label: candidate.gap_type || '待判定', cls: '' };
+  const steam = candidate.steam || {};
+  const nppa = candidate.nppa || {};
+
+  const tags = [
+    el('span', { class: 'd-tag d-origin', text: candidate.origin === 'import' ? '进口' : '国产' }),
+    el('span', { class: 'd-tag ' + meta.cls, text: meta.label }),
+  ];
+  if (candidate.gap_days) {
+    tags.push(el('span', { class: 'd-tag d-days', text: `相差 ${candidate.gap_days} 天` }));
+  }
+
+  const rows = [
+    ['版号批准', formatDay(nppa.approved_at)],
+    ['审批文号', nppa.approval_no || '—'],
+    ['Steam 美区', steam.us_release_parsed ? formatDay(steam.us_release_parsed) : (steam.us_release_date || '未上架')],
+    ['Steam 国区', steam.cn_listed === false ? '不可购买' : (steam.cn_release_parsed ? formatDay(steam.cn_release_parsed) : '可购买')],
+    ['运营单位', nppa.operator || '—'],
+  ];
+
+  return el('article', { class: 'd-card' }, [
+    el('div', { class: 'd-card-head' }, [
+      el('div', {}, [
+        el('h3', { class: 'd-title', text: candidate.name_cn }),
+        candidate.name_en ? el('span', { class: 'd-en', text: candidate.name_en }) : null,
+        candidate.note ? el('p', { class: 'd-note', text: candidate.note }) : null,
+      ]),
+      el('div', { class: 'd-tags' }, tags),
+    ]),
+    el('dl', { class: 'd-meta' }, rows.flatMap(([key, value]) => [
+      el('dt', { text: key }),
+      el('dd', { text: value }),
+    ])),
+    el('div', { class: 'd-links' }, [
+      nppa.batch_url
+        ? el('a', { href: nppa.batch_url, target: '_blank', rel: 'noopener noreferrer' }, ['版号公示'])
+        : null,
+      steam.store_url
+        ? el('a', { href: steam.store_url, target: '_blank', rel: 'noopener noreferrer' }, ['Steam 商店'])
+        : null,
+    ]),
+  ]);
+}
+
+/* -------------------------------------------------------------------------
    顶栏 / 概览
    ------------------------------------------------------------------------- */
 
@@ -662,6 +734,14 @@ async function boot() {
     HISTORY = null;
   }
 
+  // 候选池：读不到就隐藏整个「新发现」区块
+  try {
+    const candidatesResponse = await fetch('data/candidates.json', { cache: 'no-store' });
+    if (candidatesResponse.ok) CANDIDATES = await candidatesResponse.json();
+  } catch (error) {
+    CANDIDATES = null;
+  }
+
   try {
     const response = await fetch('data/games.json', { cache: 'no-store' });
     if (!response.ok) throw new Error('HTTP ' + response.status);
@@ -678,6 +758,7 @@ async function boot() {
   render();
   renderChangesPanel();
   renderCountdown();
+  renderDiscover();
 }
 
 document.addEventListener('DOMContentLoaded', boot);
