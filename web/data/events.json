@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T22:17:55Z",
+  "generated_at": "2026-10-23T22:17:56Z",
   "note": "汇总多源上线事件（Steam 商店 > 官网 > 新闻/RSS），每条标注来源；解析不出具体日期的条目不列，不做版本更新。",
   "events": [
     {
@@ -243,22 +243,11 @@
           "type": "steam",
           "name": "Steam 商店",
           "url": "https://store.steampowered.com/app/4115450/"
-        },
-        {
-          "type": "rss",
-          "name": "机核",
-          "url": "https://www.gcores.com/articles/221321",
-          "title": "发售倒计时7天！黄海为《影之刃零》绘制收藏铁盒封绘，红线牵引的表里武林！"
         }
       ],
       "origin": "current",
       "first_seen": null,
-      "alt_dates": [
-        {
-          "date": "2026-10-29",
-          "date_text": "10月29日"
-        }
-      ]
+      "alt_dates": []
     },
     {
       "game_id": "ananta",
