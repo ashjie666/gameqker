@@ -15,6 +15,11 @@
         "date": "2026-10-23",
         "source": "trends",
         "value": 80
+      },
+      {
+        "date": "2026-10-24",
+        "source": "trends",
+        "value": 62
       }
     ],
     "where-winds-meet": [
@@ -30,6 +35,11 @@
       },
       {
         "date": "2026-10-23",
+        "source": "signal",
+        "value": 2
+      },
+      {
+        "date": "2026-10-24",
         "source": "signal",
         "value": 2
       }
@@ -49,6 +59,11 @@
         "date": "2026-10-23",
         "source": "trends",
         "value": 0
+      },
+      {
+        "date": "2026-10-24",
+        "source": "trends",
+        "value": 0
       }
     ],
     "world-of-jade-dynasty": [
@@ -64,6 +79,11 @@
       },
       {
         "date": "2026-10-23",
+        "source": "signal",
+        "value": 2
+      },
+      {
+        "date": "2026-10-24",
         "source": "signal",
         "value": 2
       }
@@ -83,6 +103,11 @@
         "date": "2026-10-23",
         "source": "signal",
         "value": 0
+      },
+      {
+        "date": "2026-10-24",
+        "source": "trends",
+        "value": 0
       }
     ],
     "scroll-of-taiwu": [
@@ -98,6 +123,11 @@
       },
       {
         "date": "2026-10-23",
+        "source": "signal",
+        "value": 3
+      },
+      {
+        "date": "2026-10-24",
         "source": "signal",
         "value": 3
       }
@@ -117,6 +147,11 @@
         "date": "2026-10-23",
         "source": "signal",
         "value": 0
+      },
+      {
+        "date": "2026-10-24",
+        "source": "signal",
+        "value": 0
       }
     ],
     "ananta": [
@@ -134,6 +169,11 @@
         "date": "2026-10-23",
         "source": "trends",
         "value": 37
+      },
+      {
+        "date": "2026-10-24",
+        "source": "trends",
+        "value": 27
       }
     ],
     "wang-yue": [
@@ -151,6 +191,11 @@
         "date": "2026-10-23",
         "source": "signal",
         "value": 0
+      },
+      {
+        "date": "2026-10-24",
+        "source": "signal",
+        "value": 0
       }
     ],
     "sanguo-mou-ding-tianxia": [
@@ -166,6 +211,11 @@
       },
       {
         "date": "2026-10-23",
+        "source": "signal",
+        "value": 2
+      },
+      {
+        "date": "2026-10-24",
         "source": "signal",
         "value": 2
       }
@@ -241,7 +291,7 @@
       }
     ]
   },
-  "generated_at": "2026-10-23",
+  "generated_at": "2026-10-24",
   "note": "每款游戏按天的热度序列；取值优先级 A→B→C：Google Trends 关键词热度 → Steam 评测总数 → 自建信号活跃度。",
   "days": 90,
   "sources": {
