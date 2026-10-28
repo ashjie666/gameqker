@@ -2,21 +2,23 @@
 
 数据源（全部公开、免 Key，仅用标准库）：
 - 国家新闻出版署「国产网络游戏审批信息」月度公示（近三月）
-- 国家新闻出版署「进口网络游戏审批信息」年度累计（当年）
 - Steam storesearch：按游戏名找 appid
 - Steam appdetails：分别查 cc=us / cc=cn 的区服状态
+- 新闻 / RSS / 百度资讯公告：补充国内定档日期
 
-进口批次排在前面优先处理：判断「国服是否领先」必须先在 Steam 找到页面，
-进口批次几乎都有页面；国产批次以手游为主，Steam 命中率极低，只作补充。
+圈子先定范围：只看国产游戏（进口批次是外国厂商的产品，不属目标），
+且海外（Steam 美区）必须有商店页——没页面就无从谈「海外上线」，直接不算。
+在这个范围里再筛「国服先于海外」的信息差。
 
-判定口径（2026-10-22 与用户确认，当日修正方向）：
-只找「国服领先」——国服已获版号，而海外（Steam 美区）尚未上架、尚未发售，
-或发售日不早于国服版号批准日：
-- cn_first：国服版号早于美区发售 / 美区尚未定档 / 美区没有页面
-海外先发（美区已发售且早于国服版号）不是目标，直接丢弃。
+判定口径（2026-10-28 与用户确认）：
+在「国产 + 海外有页面」的范围里，只留「国服先于海外」——
+- 国服已获版号，海外还在预约中，且美区定档日不早于版号批准日
+- 国服已上线，海外还在预约
+- 两边都已上线，国服上线日早于美区
+海外先发（美区已发售且早于国服版号，或与国服同日上线）不是目标，直接丢弃。
 
-「领先」同时看四个维度（2026-10-22 用户补充）：
-- 阶段：无页面 < 已获版号 < 预约中 < 已上线，国服阶段高于美区即领先
+「领先」的观察维度：
+- 阶段：已获版号 < 预约中 < 已上线，国服阶段高于美区即领先
 - 发售 / 上线日期：国服早于美区
 - 版本号：取 Steam 最新公告里的版本号（Steam 公告按 appid 共享，无国区单独源）
 - 测试：美区仍在 Playtest，国服已上线或已定档，同样算领先
@@ -39,7 +41,6 @@ from . import feeds
 from .textutil import clip
 
 NPPA_LIST_URL = "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/"
-NPPA_IMPORT_LIST_URL = "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/"
 STEAM_SEARCH_URL = (
     "https://store.steampowered.com/api/storesearch/?term={term}&cc=cn&l=schinese"
 )
@@ -53,7 +54,7 @@ STEAM_NEWS_URL = (
 )
 STEAM_PAGE_URL = "https://store.steampowered.com/app/{appid}/?l=english&cc=us"
 
-MAX_BATCHES = 3          # 只处理最新的三个国产月度批次（进口是当年累计，单独按 1 个批次数）
+MAX_BATCHES = 3          # 国产月度批次取最新三个月（当月批次未公示时也有新条目可评）
 MIN_SIMILARITY = 0.72    # 中文名匹配阈值，低于此值视为不同游戏
 REFRESH_DAYS = 7         # 同一游戏多少天后重新对照 Steam
 MAX_NEW_PER_RUN = 20     # 每轮最多新评估多少款，控制请求量与耗时
@@ -454,14 +455,16 @@ def enrich_from_news(fetcher, candidate, timeline, today=None):
 
 
 def classify(nppa_item, us, cn, cn_stage=None, os_stage=None):
-    """只输出「国服领先」的候选，返回 (gap_type, gap_days, note) 或 None。
+    """只输出「国服先于海外」的候选，返回 (gap_type, gap_days, note) 或 None。
 
-    领先的四种情形（按阶段优先级）：
-    1. 海外还没页面（none），国服已获版号 → 国服先行
-    2. 海外在预约（preorder），国服已上线（launch） → 国服上线领先
-    3. 海外定档日不早于国服版号批准日 → 版号领先（算出提前天数）
-    4. 两边都已上线，国服上线日早于海外 → 上线领先
-    海外先发（美区已发售且早于国服版号）不是目标，一律丢弃。
+    前提：美区必须有商店页（listed=True，含 coming soon）。没页面说明海外还
+    没动静，不属于「海外上线的国产游戏」，不评。
+
+    领先的三种情形：
+    1. 海外在预约，国服已上线 → 国服上线领先
+    2. 海外在预约且定档日不早于国服版号批准日 → 版号领先（算出提前天数）
+    3. 两边都已上线，国服上线日早于海外 → 上线领先
+    海外先发（美区已发售且早于国服版号）或与国服同日上线，一律丢弃。
     """
     approved = parse_cn_date(nppa_item.get("approved_at") or "")
     us_release = parse_steam_date(us.get("release_date"))
@@ -470,7 +473,7 @@ def classify(nppa_item, us, cn, cn_stage=None, os_stage=None):
     os_stage = os_stage or stage_of(us)
 
     if us.get("listed") is not True:
-        return "cn_first", None, "国服已获批版号，Steam 美区无页面或未上架"
+        return None  # 海外没有商店页，不在目标范围
 
     if us.get("coming_soon") is True:
         if cn_stage == "launch":
@@ -480,13 +483,13 @@ def classify(nppa_item, us, cn, cn_stage=None, os_stage=None):
             return "cn_first", (us_release - approved).days, "国服版号早于 Steam 美区定档"
         return None  # 两边都还没上线，谈不上领先
 
-    if cn_stage == "launch" and cn_release and us_release and cn_release < us_release:
-        return "cn_first", (us_release - cn_release).days, "国服上线早于 Steam 美区发售"
+    if cn_stage == "launch":
+        if cn_release and us_release and cn_release < us_release:
+            return "cn_first", (us_release - cn_release).days, "国服上线早于 Steam 美区发售"
+        return None  # 国服同日或更晚上线，不构成国服领先
 
-    if us_release and approved:
-        if us_release >= approved:
-            return "cn_first", (us_release - approved).days, "国服版号早于 Steam 美区发售"
-        return None  # 美区已发售且早于国服版号 → 海外先发，不是目标
+    if us_release and approved and us_release >= approved:
+        return "cn_first", (us_release - approved).days, "国服版号早于 Steam 美区发售"
     return None
 
 
@@ -594,27 +597,19 @@ def _is_stale(entry, today):
 
 
 def collect_games(fetcher):
-    """抓进口（当年累计）+ 国产（近三月）两个审批来源，进口排前面。
+    """抓国产审批列表的最新三个月批次。
 
-    判断「国服是否领先」必须先在 Steam 找到页面：进口批次几乎都有 Steam 页面，
-    国产批次以手游为主、Steam 命中率极低（实测近两月名单前 20 款 0 命中），
-    所以先用预算把进口批次跑完，国产批次作为补充。国产多取一月是为了在版号
-    空窗期（当月批次还没公示）也有新条目可评，新条目每轮最多评 MAX_NEW_PER_RUN 款，
-    会按批准时间从新到旧逐步铺开，不会一次性打满请求。
+    只取国产：进口批次是外国厂商的产品，不在「国产游戏出海」的目标范围内。
+    国产批次以手游为主、Steam 命中率极低，所以多取一月，确保版号空窗期
+    也有新条目可评；新条目每轮最多评 MAX_NEW_PER_RUN 款，按批准时间从新到旧
+    逐步铺开，不会一次性打满请求。
     """
     games = []
-    specs = (
-        (NPPA_IMPORT_LIST_URL, "进口网络游戏审批信息", "import", 1),
-        (NPPA_LIST_URL, "国产网络游戏审批信息", "domestic", MAX_BATCHES),
-    )
-    for list_url, keyword, origin, limit in specs:
-        for batch in fetch_batches(fetcher, list_url, keyword, limit):
-            for game in parse_batch(fetcher, batch):
-                game["origin"] = origin
-                games.append(game)
-    # 先按批准时间倒序，再按来源分组（稳定排序），实现「进口优先、组内最新优先」
+    for batch in fetch_batches(fetcher, NPPA_LIST_URL, "国产网络游戏审批信息", MAX_BATCHES):
+        for game in parse_batch(fetcher, batch):
+            game["origin"] = "domestic"
+            games.append(game)
     games.sort(key=lambda g: g.get("approved_at") or "", reverse=True)
-    games.sort(key=lambda g: 0 if g.get("origin") == "import" else 1)
     return games
 
 
@@ -635,11 +630,15 @@ def run(fetcher, state, max_new=MAX_NEW_PER_RUN, deadline=None, today=None):
             latest[key] = game
     games = list(latest.values())
 
-    # 清理超过半年的旧状态
+    # 与状态清理用同一条 cutoff：获批超过半年的游戏不再进评估队列。
+    # 否则每天都会被重新抓回来当「新条目」，把 MAX_NEW_PER_RUN 的名额吃光。
     if today.month <= STATE_MAX_MONTHS:
         cutoff = "{0}-{1:02d}".format(today.year - 1, today.month - STATE_MAX_MONTHS + 12)
     else:
         cutoff = "{0}-{1:02d}".format(today.year, today.month - STATE_MAX_MONTHS)
+    games = [g for g in games if (g.get("approved_at") or "")[:7] >= cutoff]
+
+    # 清理超过半年的旧状态
     items = {k: v for k, v in items.items()
              if (v.get("approved_at") or "")[:7] >= cutoff}
 
@@ -688,7 +687,6 @@ def run(fetcher, state, max_new=MAX_NEW_PER_RUN, deadline=None, today=None):
 
     state = {"updated_at": utc_now_iso(), "items": items}
     sources = [
-        {"origin": "import", "title": "进口网络游戏审批信息（当年累计）", "url": NPPA_IMPORT_LIST_URL},
         {"origin": "domestic", "title": "国产网络游戏审批信息（近三月）", "url": NPPA_LIST_URL},
     ]
     return candidates, state, sources, stats

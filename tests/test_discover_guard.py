@@ -83,9 +83,16 @@ class EvaluateGuardTest(unittest.TestCase):
                 mock.patch.object(discover, "check_app", return_value=us):
             self.assertIsNone(discover.evaluate(None, NP_PA, probe_news=False))
 
-    def test_confirmed_leading_still_returns_candidate(self):
-        us = _side(False)  # 美区查得到、但确实没有页面 → 国服先行
+    def test_no_overseas_page_is_not_in_scope(self):
+        us = _side(False)  # 美区查得到、但确实没有页面 → 不在「海外上线」范围内
         with mock.patch.object(discover, "match_appid", return_value=_matched()), \
+                mock.patch.object(discover, "check_app", return_value=us):
+            self.assertIsNone(discover.evaluate(None, NP_PA, probe_news=False))
+
+    def test_cn_launched_before_overseas_is_a_candidate(self):
+        us = _side(True, False, "Dec 1, 2026")
+        cn = _side(True, False, "Sep 1, 2026")
+        with mock.patch.object(discover, "match_appid", return_value=_matched(cn)), \
                 mock.patch.object(discover, "check_app", return_value=us), \
                 mock.patch.object(discover, "fetch_latest_version", return_value=None), \
                 mock.patch.object(discover, "detect_playtest", return_value=None):
@@ -94,11 +101,18 @@ class EvaluateGuardTest(unittest.TestCase):
         self.assertEqual(candidate["gap_type"], "cn_first")
         self.assertEqual(candidate["appid"], 1001)
 
+    def test_same_day_launch_is_not_leading(self):
+        us = _side(True, False, "Sep 1, 2026")
+        cn = _side(True, False, "Sep 1, 2026")
+        with mock.patch.object(discover, "match_appid", return_value=_matched(cn)), \
+                mock.patch.object(discover, "check_app", return_value=us):
+            self.assertIsNone(discover.evaluate(None, NP_PA, probe_news=False))
+
 
 class CollectGamesWindowTest(unittest.TestCase):
-    """国产批次窗口锁在 3 个月，进口仍只取当年累计的那 1 个批次。"""
+    """只取国产批次，窗口锁在 3 个月。"""
 
-    def test_window_and_ordering(self):
+    def test_only_domestic_batches(self):
         calls = []
 
         def fake_batches(fetcher, url, keyword, limit):
@@ -106,16 +120,14 @@ class CollectGamesWindowTest(unittest.TestCase):
             return [{"title": keyword, "url": url + "#batch"}]
 
         def fake_parse(fetcher, batch):
-            origin = "import" if "进口" in batch["title"] else "domestic"
-            return [{"name": "甲" if origin == "import" else "乙",
-                     "approved_at": "2026-09-29"}]
+            return [{"name": "乙", "approved_at": "2026-09-29"}]
 
         with mock.patch.object(discover, "fetch_batches", side_effect=fake_batches), \
                 mock.patch.object(discover, "parse_batch", side_effect=fake_parse):
             games = discover.collect_games(mock.Mock())
 
-        self.assertEqual(calls, [("进口网络游戏审批信息", 1), ("国产网络游戏审批信息", 3)])
-        self.assertEqual([game["origin"] for game in games], ["import", "domestic"])
+        self.assertEqual(calls, [("国产网络游戏审批信息", 3)])
+        self.assertEqual({game["origin"] for game in games}, {"domestic"})
 
 
 class StaleTest(unittest.TestCase):
