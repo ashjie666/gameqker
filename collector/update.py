@@ -293,8 +293,9 @@ def export_discovery(fetcher, deadline=None):
         # 只在判定结果真的变化时落盘状态，避免每天产生无意义的 diff
         if new_state.get("items") != state.get("items"):
             write_json(DISCOVER_STATE_PATH, new_state)
-        print("已导出 {0}（候选 {1} 条 / 本轮评估 {2} 款 / 匹配 {3} 款）".format(
-            WEB_CANDIDATES_PATH, len(candidates), stats["evaluated"], stats["matched"]))
+        print("已导出 {0}（候选 {1} 条 / 本轮评估 {2} 款 / 匹配 {3} 款 / 网络失败延后 {4} 款）".format(
+            WEB_CANDIDATES_PATH, len(candidates), stats["evaluated"], stats["matched"],
+            stats.get("deferred", 0)))
         return candidates
     except Exception as exc:  # noqa: BLE001 - 发现失败不影响巡检结果
         print("候选发现失败：{0}: {1}".format(type(exc).__name__, exc), file=sys.stderr)

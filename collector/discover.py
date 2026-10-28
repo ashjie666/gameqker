@@ -61,6 +61,11 @@ STATE_MAX_MONTHS = 6     # 状态文件只保留最近半年的版号游戏
 
 _PUNCT_RE = re.compile(r"[\s\u3000·・:：\-—_()（）\[\]【】《》<>\"'!！?？,，.。、/\\|]+")
 
+# 「查询失败」和「判定不领先」必须分开：前者不代表任何结论。
+# 遇到网络错误时 evaluate 返回这个哨兵，调用方保留上次结果并下轮重试，
+# 否则一次网络抖动就会把候选池当成「全部不领先」清空。
+KEEP = object()
+
 
 def utc_now_iso():
     return datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
@@ -212,14 +217,17 @@ def parse_batch(fetcher, batch):
 # Steam 对照
 # --------------------------------------------------------------------------
 def steam_search(fetcher, term):
+    """返回搜索结果列表；请求失败返回 None（与「搜到了但没匹配」区分开）。"""
     url = STEAM_SEARCH_URL.format(term=quote(term.encode("utf-8")))
     response = fetcher.get(url)
     if not response.body:
-        return []
+        return None
     try:
         payload = json.loads(response.body.decode("utf-8", "replace"))
     except (ValueError, AttributeError):
-        return []
+        return None
+    if not isinstance(payload, dict):
+        return None
     items = payload.get("items")
     return items if isinstance(items, list) else []
 
@@ -258,15 +266,25 @@ def check_app(fetcher, appid, cc, lang):
 
 
 def match_appid(fetcher, nppa_item):
-    """按中文名搜索 Steam，并用国区详情页的中文名复核，避免同名误配。"""
+    """按中文名搜索 Steam，并用国区详情页的中文名复核，避免同名误配。
+
+    返回 dict（命中）/ None（确认为没找到）/ KEEP（请求失败，结论未知）。
+    """
     target = normalize_name(nppa_item["name"])
     if not target:
         return None
-    for item in steam_search(fetcher, nppa_item["name"])[:3]:
+    items = steam_search(fetcher, nppa_item["name"])
+    if items is None:
+        return KEEP
+    failed = False
+    for item in items[:3]:
         appid = item.get("id")
         if not isinstance(appid, int):
             continue
         cn = check_app(fetcher, appid, "cn", "schinese")
+        if cn.get("listed") is None:  # 详情页没取到，可能是这款，也可能不是
+            failed = True
+            continue
         if cn.get("listed") is not True:
             continue
         steam_name = normalize_name(cn.get("name") or "")
@@ -275,7 +293,7 @@ def match_appid(fetcher, nppa_item):
         score = SequenceMatcher(None, target, steam_name).ratio()
         if score >= MIN_SIMILARITY or target in steam_name or steam_name in target:
             return {"appid": appid, "name": cn.get("name"), "cn": cn, "score": round(score, 2)}
-    return None
+    return KEEP if failed else None
 
 
 def stage_of(entry, approved_at=None):
@@ -452,12 +470,22 @@ def classify(nppa_item, us, cn, cn_stage=None, os_stage=None):
 
 
 def evaluate(fetcher, nppa_item, probe_news=True):
+    """返回候选 dict / None（确认不领先）/ KEEP（查询失败，结论未知）。
+
+    只有「Steam 搜索与详情页都正常返回」时才敢下结论：请求失败时不返回 None，
+    否则网络一断就会被当成「这款不领先」，把候选池清空。
+    """
     matched = match_appid(fetcher, nppa_item)
+    if matched is KEEP:
+        return KEEP
     if not matched:
         return None
     appid = matched["appid"]
     cn = matched["cn"]
     us = check_app(fetcher, appid, "us", "english")
+    if us.get("listed") is None:
+        # 美区详情没取到：既不能确认领先，也不能确认不领先
+        return KEEP
     cn_stage = stage_of(cn, nppa_item.get("approved_at"))
     os_stage = stage_of(us)
     verdict = classify(nppa_item, us, cn, cn_stage, os_stage)
@@ -534,9 +562,12 @@ def _is_stale(entry, today):
         checked = date.fromisoformat(raw[:10])
     except ValueError:
         return True
-    # 判定结构升级过（例如新增 timeline）的旧记录要重评一次，
-    # 否则旧候选会一直缺新字段，直到自然过期 7 天才补上
-    if "timeline" not in ((entry or {}).get("candidate") or {}):
+    # 判定结构升级过（例如新增 timeline）的旧候选要重评一次，
+    # 否则旧候选会一直缺新字段，直到自然过期 7 天才补上。
+    # 只针对「已有候选」：candidate 为空的条目本来就没有 timeline，
+    # 若无条件重评，确认过不领先的游戏会每轮都占用评估预算。
+    candidate = (entry or {}).get("candidate")
+    if candidate and "timeline" not in candidate:
         return True
     return (today - checked).days >= REFRESH_DAYS
 
@@ -589,7 +620,8 @@ def run(fetcher, state, max_new=MAX_NEW_PER_RUN, deadline=None, today=None):
     items = {k: v for k, v in items.items()
              if (v.get("approved_at") or "")[:7] >= cutoff}
 
-    stats = {"nppa_games": len(games), "evaluated": 0, "matched": 0, "skipped_budget": 0}
+    stats = {"nppa_games": len(games), "evaluated": 0, "matched": 0,
+             "skipped_budget": 0, "deferred": 0}
     for game in games:
         key = "{0}:{1}".format(game.get("origin"), normalize_name(game["name"]))
         entry = items.get(key)
@@ -602,12 +634,16 @@ def run(fetcher, state, max_new=MAX_NEW_PER_RUN, deadline=None, today=None):
             stats["skipped_budget"] += 1
             continue
         stats["evaluated"] += 1
-        candidate = None
         try:
             candidate = evaluate(fetcher, game)
         except Exception as exc:  # 单款失败不影响整轮
-            candidate = None
             stats.setdefault("errors", []).append("{0}: {1}".format(game["name"], type(exc).__name__))
+            stats["deferred"] += 1
+            continue
+        if candidate is KEEP:
+            # 查询失败：保留上次结果，不更新 checked_at，下轮自然会重试
+            stats["deferred"] += 1
+            continue
         if candidate:
             stats["matched"] += 1
         items[key] = {
