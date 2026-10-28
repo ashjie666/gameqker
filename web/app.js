@@ -17,7 +17,7 @@ const LEVEL_CLASS = { '高': 'lv-high', '中高': 'lv-midhigh', '中': 'lv-mid',
 const LEVEL_VALUES = ['高', '中高', '中', '低中', '低'];
 
 const CHANGED_WINDOW_MS = 24 * 60 * 60 * 1000; // 巡检每天一次，24 小时内的变更即「今日变更」
-const COUNTDOWN_DAYS = 30; // 上线倒计时只展示未来 30 天内发售 / 上线的游戏
+const COUNTDOWN_DAYS = 90; // 上线倒计时只展示未来 90 天内发售 / 上线的游戏
 const NEAR_DAYS = 2; // 其中 2 天内进入高亮提醒
 const UNRANKED = 99; // 自动并入条目的占位优先级（人工是 1..10），显示为「未定级」
 
