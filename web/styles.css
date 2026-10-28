@@ -484,6 +484,25 @@ tr.row-changed td.col-first { box-shadow: inset 3px 0 0 var(--brand); }
   font-size: 11px;
 }
 
+/* 机器自动并入主表的条目，与人工录入的在视觉上区分开 */
+.tag-auto {
+  display: inline-block;
+  margin-top: 4px;
+  margin-left: 4px;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  background: var(--panel-3);
+  color: var(--text-faint);
+  border: 1px dashed var(--border);
+  font-size: 11px;
+}
+
+/* 候选并入时读不出来的定性字段，浅色显示，提示还没人补 */
+.ph {
+  color: var(--text-faint);
+  font-style: italic;
+}
+
 /* ==========================================================================
    变更历史面板
    ========================================================================== */

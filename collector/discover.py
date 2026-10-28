@@ -21,9 +21,10 @@
 - 版本号：取 Steam 最新公告里的版本号（Steam 公告按 appid 共享，无国区单独源）
 - 测试：美区仍在 Playtest，国服已上线或已定档，同样算领先
 
-结果写入候选池 data/candidates.json，由前端「新发现 · 待确认」区展示。
-**不直接写入 games 清单**：关键词、变现建议等定性字段是人工维护的，
-自动追加会污染报表质量。确认后由人工并入 data/games.json。
+结果写入候选池 data/candidates.json，由前端「新发现」区展示。
+命中的候选随后由 collector/update.py 的 promote_candidates 自动并入 games 清单：
+能从版号 / Steam 读出来的字段自动填，读不出来的定性字段留「待补」占位，
+由人工复核时补，所以自动并入不会掩盖「这条还没人看过」。
 """
 
 import json
@@ -548,5 +549,5 @@ def build_payload(candidates, batches, stats, today=None):
         "batches": batches,
         "stats": stats,
         "candidates": candidates,
-        "note": "候选池仅供确认；确认后再人工并入 data/games.json 的 games 清单。",
+        "note": "命中候选由 collector/update.py 自动并入 data/games.json，定性字段留「待补」待人复核。",
     }

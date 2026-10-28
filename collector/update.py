@@ -22,8 +22,10 @@ steam_release_date / official_signal），cn_status、keywords 等人工定性�
 """
 
 import argparse
+import hashlib
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -278,7 +280,7 @@ def export_discovery(fetcher, deadline=None):
     """导出「国服 / 海外服不同步」候选池（data/candidates.json + web 副本）。
 
     数据源：国家新闻出版署国产版号公示 × Steam 美区/国区对照。
-    只写候选池，**不改 games 清单**（定性字段人工维护）。
+    返回本轮候选列表，交给 promote_candidates 并入主表；失败返回空列表。
     任何失败都只提示，绝不影响巡检结果。
     """
     try:
@@ -293,8 +295,128 @@ def export_discovery(fetcher, deadline=None):
             write_json(DISCOVER_STATE_PATH, new_state)
         print("已导出 {0}（候选 {1} 条 / 本轮评估 {2} 款 / 匹配 {3} 款）".format(
             WEB_CANDIDATES_PATH, len(candidates), stats["evaluated"], stats["matched"]))
+        return candidates
     except Exception as exc:  # noqa: BLE001 - 发现失败不影响巡检结果
         print("候选发现失败：{0}: {1}".format(type(exc).__name__, exc), file=sys.stderr)
+        return []
+
+
+# 定性字段自动并入时填这个，前端会显示成浅色占位，提醒还没人看过
+PLACEHOLDER = "待补"
+# 自动并入的条目默认排最低优先级，人工复核时再往上调
+AUTO_PRIORITY = 3
+# 版号游戏 ↔ Steam 页面的模糊匹配下限：低于这个分数不自动并入，
+# 只留在候选池等人工确认，免得错配的 appid 直接把脏数据写进主表
+MIN_MATCH_SCORE = 0.6
+STAGE_TEXT = {"none": "无页面", "approved": "已获版号", "preorder": "预约中", "launch": "已上线"}
+
+
+def _candidate_slug(candidate):
+    """给候选生成稳定的 games.id：英文名转 slug → appid → 中文名哈希。"""
+    name_en = (candidate.get("name_en") or "").strip()
+    if name_en:
+        slug = re.sub(r"[^a-z0-9]+", "-", name_en.lower()).strip("-")
+        if slug:
+            return slug
+    if candidate.get("appid"):
+        return "steam-{0}".format(candidate["appid"])
+    digest = hashlib.md5((candidate.get("name_cn") or "").encode("utf-8")).hexdigest()
+    return "cand-{0}".format(digest[:8])
+
+
+def _english_name(candidate):
+    """候选的 name_en 可能是原样照抄的中文名，这种没信息量，置空。"""
+    name_en = (candidate.get("name_en") or "").strip()
+    return name_en if re.search(r"[A-Za-z]", name_en) else ""
+
+
+def _stage_text(stage, release):
+    return STAGE_TEXT.get(stage, "未知") + (" · {0}".format(release) if release else "")
+
+
+def game_from_candidate(candidate, imported_at):
+    """把一条候选折成 games 里的一条记录。
+
+    能直接从版号 / Steam 读出来的事实（厂商、国服与海外阶段、上架状态）自动填，
+    读不出来的定性字段（类型、关键词、内容机会、变现、风险）留 PLACEHOLDER，
+    由人在复核时补。绝不为了填满而编造内容。
+    """
+    steam = candidate.get("steam") or {}
+    nppa = candidate.get("nppa") or {}
+    stage = candidate.get("stage") or {}
+
+    watch = {}
+    if candidate.get("appid"):
+        watch["steam_appid"] = candidate["appid"]
+
+    sources = []
+    if nppa.get("batch_url"):
+        sources.append({"label": "版号公示", "url": nppa["batch_url"]})
+    if steam.get("store_url"):
+        sources.append({"label": "Steam 商店", "url": steam["store_url"]})
+
+    return {
+        "id": _candidate_slug(candidate),
+        "name_cn": candidate.get("name_cn") or "",
+        "name_en": _english_name(candidate),
+        "developer": nppa.get("operator") or nppa.get("publisher") or PLACEHOLDER,
+        "genre": PLACEHOLDER,
+        "priority": AUTO_PRIORITY,
+        "cn_status": _stage_text(stage.get("cn"), stage.get("cn_release")),
+        "global_status": _stage_text(stage.get("os"), stage.get("os_release")),
+        "overseas_heat": PLACEHOLDER,
+        "overseas_heat_checked": None,
+        "gap_window": candidate.get("note") or PLACEHOLDER,
+        "target_markets": [],
+        "keywords": [],
+        "content_opportunities": [],
+        "monetization_level": PLACEHOLDER,
+        "monetization": PLACEHOLDER,
+        "risks": [],
+        "watch": watch,
+        "last_checked": None,
+        "steam_listed": steam.get("us_listed"),
+        "steam_release_date": steam.get("us_release_date"),
+        "official_signal": None,
+        "changes": [],
+        "sources": sources,
+        # 这两个字段让前端和后续维护能一眼认出「机器自己加进来的」
+        "auto_imported": True,
+        "auto_imported_at": imported_at,
+    }
+
+
+def promote_candidates(payload, candidates, imported_at=None):
+    """把候选自动并入主表 games 清单，返回本次新增的条数。
+
+    已存在的 id 一律跳过，所以每天重复跑不会产生重复条目。返回 0 时调用方
+    不该重写 games.json，避免每天一份无意义 diff。
+    """
+    games = payload.get("games")
+    if not isinstance(games, list):
+        games = payload["games"] = []
+    known = {game.get("id") for game in games}
+    imported_at = imported_at or today_str()
+
+    added = []
+    for candidate in candidates or []:
+        # 匹配分太低说明版号名和 Steam 页面可能对不上，宁可留在候选区等人工
+        score = (candidate.get("steam") or {}).get("match_score")
+        if isinstance(score, (int, float)) and score < MIN_MATCH_SCORE:
+            continue
+        game = game_from_candidate(candidate, imported_at)
+        if game["id"] in known:          # 已经在表里（人工录入或此前自动并入）
+            continue
+        if not game["name_cn"] and not game["name_en"]:
+            continue
+        known.add(game["id"])
+        games.append(game)
+        added.append(game)
+
+    if added:
+        print("自动并入 {0} 款候选到主表：{1}".format(
+            len(added), "、".join(game["name_cn"] for game in added)))
+    return len(added)
 
 
 # --------------------------------------------------------------------------
@@ -557,15 +679,18 @@ def main(argv=None):
         print("（{0} 模式，未写入任何文件）".format("probe" if args.probe else "dry-run"))
         return 0
 
+    # 候选发现用独立预算：版号批次每月才变一次，且 Steam 有节流，
+    # 与巡检/趋势共用一个 deadline 会让它几乎必被跳过。
+    # 放在写盘之前跑，发现结果要能并入主表一起落盘。
+    candidates = export_discovery(fetcher, deadline=(time.monotonic() + 100))
+    promote_candidates(payload, candidates)
+
     write_json(DATA_PATH, payload)
     write_json(WEB_EXPORT_PATH, payload)
     print("已写入 {0}".format(DATA_PATH))
     print("已导出 {0}".format(WEB_EXPORT_PATH))
     export_events(payload, fetcher)
     export_trends(payload, fetcher)
-    # 候选发现用独立预算：版号批次每月才变一次，且 Steam 有节流，
-    # 与巡检/趋势共用一个 deadline 会让它几乎必被跳过。
-    export_discovery(fetcher, deadline=(time.monotonic() + 100))
 
     if not args.no_git:
         snapshot_git()

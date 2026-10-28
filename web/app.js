@@ -110,7 +110,10 @@ function marketsOf(game) {
 
 function hasRecentChange(game) {
   const cutoff = Date.now() - CHANGED_WINDOW_MS;
-  return (game.changes || []).some((change) => parseMoment(change.at) >= cutoff);
+  if ((game.changes || []).some((change) => parseMoment(change.at) >= cutoff)) return true;
+  // 刚被自动并入主表的条目，出现本身就是当天的新变化
+  if (!game.auto_imported) return false;
+  return parseMoment(game.auto_imported_at) >= cutoff;
 }
 
 function matches(game) {
@@ -374,28 +377,39 @@ function trendBlock(game) {
   return el('div', { class: 'heat-block trend-block' }, [head, body]);
 }
 
+// 候选自动并入主表时，读不出来的定性字段填这个（见 collector/update.py 的 PLACEHOLDER）
+const PLACEHOLDER = '待补';
+
+function textCell(value) {
+  const text = value === null || value === undefined || value === '' ? '—' : String(value);
+  return el('span', { class: value === PLACEHOLDER ? 'ph' : null, text });
+}
+
 function buildRow(game) {
   const changed = hasRecentChange(game);
   const level = game.monetization_level || '';
   const nameCell = el('div', {}, [
     el('div', { class: 'game-name', text: game.name_cn }),
-    el('div', { class: 'game-name-en', text: game.name_en }),
-    changed ? el('span', { class: 'tag-changed', text: '今日变更' }) : null,
+    game.name_en ? el('div', { class: 'game-name-en', text: game.name_en }) : null,
+    game.auto_imported ? el('span', { class: 'tag-auto', text: '机器并入' })
+      : (changed ? el('span', { class: 'tag-changed', text: '今日变更' }) : null),
   ]);
 
   const row = el('tr', { class: changed ? 'row-changed' : '', id: 'row-' + game.id }, [
     cell('col-first col-name', '游戏', [nameCell]),
-    cell('col-developer', '厂商', [game.developer]),
-    cell('col-genre', '类型', [el('span', { class: 'tag', text: game.genre })]),
-    cell('col-priority', '优先级', [el('span', { class: 'prio', text: 'P' + game.priority })]),
-    cell('col-cn_status', '国内状态', [game.cn_status]),
+    cell('col-developer', '厂商', [textCell(game.developer)]),
+    cell('col-genre', '类型', [
+      el('span', { class: 'tag' + (game.genre === PLACEHOLDER ? ' ph' : ''), text: game.genre || '—' }),
+    ]),
+    cell('col-priority', '优先级', [el('span', { class: 'prio', text: 'P' + (game.priority ?? 3) })]),
+    cell('col-cn_status', '国内状态', [textCell(game.cn_status)]),
     cell('col-global_status', '海外状态', [
-      el('div', {}, [game.global_status]),
+      textCell(game.global_status),
       trendBlock(game),
       heatBlock(game),
       buildAutoBlock(game),
     ]),
-    cell('col-gap_window', '信息差窗口', [game.gap_window]),
+    cell('col-gap_window', '信息差窗口', [textCell(game.gap_window)]),
     cell('col-markets', '目标市场', [tagList(game.target_markets)]),
     cell('col-keywords', '潜在英文关键词', [bulletList(game.keywords)]),
     cell('col-opportunities', '内容机会', [bulletList(game.content_opportunities)]),
@@ -574,7 +588,10 @@ function renderDiscover() {
   const panel = $('discover-panel');
   const list = $('discover-list');
   const note = $('discover-note');
-  const items = (CANDIDATES && CANDIDATES.candidates) || [];
+  const all = (CANDIDATES && CANDIDATES.candidates) || [];
+  // 已自动并入主表的候选不再出现在这里，否则同一款游戏会在页面上出现两次
+  const merged = new Set((DATA.games || []).filter((g) => g.auto_imported).map((g) => g.id));
+  const items = all.filter((candidate) => !merged.has(candidateSlug(candidate)));
 
   if (!items.length) { panel.hidden = true; return; }
   panel.hidden = false;
@@ -584,6 +601,17 @@ function renderDiscover() {
     (batches ? ` · ${batches}` : '');
 
   list.replaceChildren(...items.slice(0, 12).map(renderCandidate));
+}
+
+// 与 collector/update.py 的 _candidate_slug 保持一致，用来判断候选是否已并入主表
+function candidateSlug(candidate) {
+  const nameEn = (candidate.name_en || '').trim();
+  if (nameEn) {
+    const slug = nameEn.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    if (slug) return slug;
+  }
+  if (candidate.appid) return 'steam-' + candidate.appid;
+  return null;
 }
 
 function renderCandidate(candidate) {
