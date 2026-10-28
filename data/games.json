@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-10-27",
   "data_cutoff": "2026-10-15",
-  "note": "关键词搜索量为定性判断，未经关键词工具实测。cn_status / global_status / overseas_heat / overseas_heat_checked / gap_window / target_markets / keywords / content_opportunities / monetization / monetization_level / risks 为人工维护字段；last_checked / steam_listed / steam_release_date / official_signal / changes 由 collector/update.py 自动写入。data_cutoff 记录人工字段最后一次整体复核日期，脚本不会推进它。",
+  "note": "关键词搜索量为定性判断，未经关键词工具实测。cn_status / global_status / overseas_heat / overseas_heat_checked / gap_window / target_markets / keywords / content_opportunities / monetization / monetization_level / risks 为人工维护字段；last_checked / steam_listed / steam_release_date / official_signal / changes 由 collector/update.py 自动写入。data_cutoff 记录人工字段最后一次整体复核日期，脚本不会推进它。 auto_imported / auto_imported_at 标记由版号公示自动发现的条目：这类条目并入时脚本会额外写入 developer / cn_status / global_status / gap_window / priority(99=未定级) / watch / sources，其余定性字段填「待补」待人复核，人工条目的这些字段脚本仍不改写。",
   "field_origin": {
     "auto": [
       "last_checked",
@@ -21,6 +21,17 @@
       "monetization",
       "monetization_level",
       "risks"
+    ],
+    "auto_import": [
+      "developer",
+      "cn_status",
+      "global_status",
+      "gap_window",
+      "priority",
+      "watch",
+      "sources",
+      "auto_imported",
+      "auto_imported_at"
     ]
   },
   "reports": [
