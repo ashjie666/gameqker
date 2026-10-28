@@ -95,6 +95,29 @@ class EvaluateGuardTest(unittest.TestCase):
         self.assertEqual(candidate["appid"], 1001)
 
 
+class CollectGamesWindowTest(unittest.TestCase):
+    """国产批次窗口锁在 3 个月，进口仍只取当年累计的那 1 个批次。"""
+
+    def test_window_and_ordering(self):
+        calls = []
+
+        def fake_batches(fetcher, url, keyword, limit):
+            calls.append((keyword, limit))
+            return [{"title": keyword, "url": url + "#batch"}]
+
+        def fake_parse(fetcher, batch):
+            origin = "import" if "进口" in batch["title"] else "domestic"
+            return [{"name": "甲" if origin == "import" else "乙",
+                     "approved_at": "2026-09-29"}]
+
+        with mock.patch.object(discover, "fetch_batches", side_effect=fake_batches), \
+                mock.patch.object(discover, "parse_batch", side_effect=fake_parse):
+            games = discover.collect_games(mock.Mock())
+
+        self.assertEqual(calls, [("进口网络游戏审批信息", 1), ("国产网络游戏审批信息", 3)])
+        self.assertEqual([game["origin"] for game in games], ["import", "domestic"])
+
+
 class StaleTest(unittest.TestCase):
     """已确认不领先的条目不该每轮都重评，白占评估预算。"""
 

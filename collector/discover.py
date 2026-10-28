@@ -1,7 +1,7 @@
 """国服 / 海外服不同步游戏发现：NPPA 版号公示 × Steam 区服对照。
 
 数据源（全部公开、免 Key，仅用标准库）：
-- 国家新闻出版署「国产网络游戏审批信息」月度公示（近两月）
+- 国家新闻出版署「国产网络游戏审批信息」月度公示（近三月）
 - 国家新闻出版署「进口网络游戏审批信息」年度累计（当年）
 - Steam storesearch：按游戏名找 appid
 - Steam appdetails：分别查 cc=us / cc=cn 的区服状态
@@ -53,7 +53,7 @@ STEAM_NEWS_URL = (
 )
 STEAM_PAGE_URL = "https://store.steampowered.com/app/{appid}/?l=english&cc=us"
 
-MAX_BATCHES = 2          # 只处理最新的两个月度批次
+MAX_BATCHES = 3          # 只处理最新的三个国产月度批次（进口是当年累计，单独按 1 个批次数）
 MIN_SIMILARITY = 0.72    # 中文名匹配阈值，低于此值视为不同游戏
 REFRESH_DAYS = 7         # 同一游戏多少天后重新对照 Steam
 MAX_NEW_PER_RUN = 20     # 每轮最多新评估多少款，控制请求量与耗时
@@ -594,11 +594,13 @@ def _is_stale(entry, today):
 
 
 def collect_games(fetcher):
-    """抓进口（当年累计）+ 国产（近两月）两个审批来源，进口排前面。
+    """抓进口（当年累计）+ 国产（近三月）两个审批来源，进口排前面。
 
     判断「国服是否领先」必须先在 Steam 找到页面：进口批次几乎都有 Steam 页面，
     国产批次以手游为主、Steam 命中率极低（实测近两月名单前 20 款 0 命中），
-    所以先用预算把进口批次跑完，国产批次作为补充。
+    所以先用预算把进口批次跑完，国产批次作为补充。国产多取一月是为了在版号
+    空窗期（当月批次还没公示）也有新条目可评，新条目每轮最多评 MAX_NEW_PER_RUN 款，
+    会按批准时间从新到旧逐步铺开，不会一次性打满请求。
     """
     games = []
     specs = (
@@ -687,7 +689,7 @@ def run(fetcher, state, max_new=MAX_NEW_PER_RUN, deadline=None, today=None):
     state = {"updated_at": utc_now_iso(), "items": items}
     sources = [
         {"origin": "import", "title": "进口网络游戏审批信息（当年累计）", "url": NPPA_IMPORT_LIST_URL},
-        {"origin": "domestic", "title": "国产网络游戏审批信息（近两月）", "url": NPPA_LIST_URL},
+        {"origin": "domestic", "title": "国产网络游戏审批信息（近三月）", "url": NPPA_LIST_URL},
     ]
     return candidates, state, sources, stats
 
