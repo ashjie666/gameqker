@@ -335,6 +335,11 @@ def _stage_text(stage, release):
     return STAGE_TEXT.get(stage, "未知") + (" · {0}".format(release) if release else "")
 
 
+def _as_dict(value):
+    """候选里任何一段都可能是错的类型（人工改过 / 上游异常），统一兜成空 dict。"""
+    return value if isinstance(value, dict) else {}
+
+
 def game_from_candidate(candidate, imported_at):
     """把一条候选折成 games 里的一条记录。
 
@@ -342,9 +347,10 @@ def game_from_candidate(candidate, imported_at):
     读不出来的定性字段（类型、关键词、内容机会、变现、风险）留 PLACEHOLDER，
     由人在复核时补。绝不为了填满而编造内容。
     """
-    steam = candidate.get("steam") or {}
-    nppa = candidate.get("nppa") or {}
-    stage = candidate.get("stage") or {}
+    candidate = candidate if isinstance(candidate, dict) else {}
+    steam = _as_dict(candidate.get("steam"))
+    nppa = _as_dict(candidate.get("nppa"))
+    stage = _as_dict(candidate.get("stage"))
 
     watch = {}
     if candidate.get("appid"):
@@ -395,15 +401,32 @@ def promote_candidates(payload, candidates, imported_at=None):
     """
     games = payload.get("games")
     if not isinstance(games, list):
-        games = payload["games"] = []
+        games = []
+    # games.json 是人工也会改的文件，混进 None / 字符串时清掉，
+    # 否则下面按 id 去重会直接抛 AttributeError，整轮巡检的写盘都白做
+    games = [item for item in games if isinstance(item, dict)]
+    payload["games"] = games
     known = {game.get("id") for game in games}
+    # appid 比名字稳：Steam 上游戏改名很常见，改一次 id 就变一次，
+    # 只按 id 去重会让同一款游戏每天多出一条。这里把已用过的 appid 也记上。
+    known_appids = set()
+    for game in games:
+        appid = _as_dict(game.get("watch")).get("steam_appid")
+        if appid not in (None, ""):
+            known_appids.add(str(appid))
     imported_at = imported_at or today_str()
 
     added = []
     for candidate in candidates or []:
+        if not isinstance(candidate, dict):
+            continue
+        appid = candidate.get("appid")
+        if appid not in (None, "") and str(appid) in known_appids:
+            continue
         # 匹配分太低说明版号名和 Steam 页面可能对不上，宁可留在候选区等人工
-        score = (candidate.get("steam") or {}).get("match_score")
-        if isinstance(score, (int, float)) and score < MIN_MATCH_SCORE:
+        score = _as_dict(candidate.get("steam")).get("match_score")
+        if isinstance(score, (int, float)) and not isinstance(score, bool) \
+                and score < MIN_MATCH_SCORE:
             continue
         game = game_from_candidate(candidate, imported_at)
         if game["id"] in known:          # 已经在表里（人工录入或此前自动并入）
@@ -411,6 +434,8 @@ def promote_candidates(payload, candidates, imported_at=None):
         if not game["name_cn"] and not game["name_en"]:
             continue
         known.add(game["id"])
+        if appid not in (None, ""):
+            known_appids.add(str(appid))
         games.append(game)
         added.append(game)
 

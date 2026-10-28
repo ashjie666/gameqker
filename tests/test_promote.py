@@ -259,5 +259,220 @@ class PromoteCandidatesTest(unittest.TestCase):
         self.assertEqual(update.promote_candidates(payload, [no_score], "2026-10-22"), 1)
 
 
+class MalformedInputTest(unittest.TestCase):
+    """候选和 games 都可能被人工改坏，任何类型错都不该让整轮写盘崩掉。"""
+
+    def test_non_dict_candidates_are_skipped(self):
+        payload = _payload()
+        added = update.promote_candidates(
+            payload, [None, "Tensei Brave", ["nested"], 42], "2026-10-22")
+
+        self.assertEqual(added, 0)
+        self.assertEqual(payload["games"], [])
+
+    def test_good_candidate_still_imported_beside_broken_ones(self):
+        payload = _payload()
+        added = update.promote_candidates(
+            payload, [None, CANDIDATE, "junk"], "2026-10-22")
+
+        self.assertEqual(added, 1)
+        self.assertEqual(payload["games"][0]["id"], "tensei-brave")
+
+    def test_game_from_candidate_tolerates_non_dict(self):
+        game = update.game_from_candidate(None, "2026-10-22")
+
+        self.assertEqual(game["name_cn"], "")
+        self.assertEqual(game["name_en"], "")
+        self.assertEqual(game["watch"], {})
+        self.assertEqual(game["sources"], [])
+
+    def test_sections_with_wrong_type_are_treated_as_missing(self):
+        game = update.game_from_candidate({
+            "name_cn": "甲", "name_en": "Jia",
+            "steam": ["should be a dict"],
+            "nppa": "should be a dict",
+            "stage": 123,
+        }, "2026-10-22")
+
+        self.assertEqual(game["developer"], update.PLACEHOLDER)
+        self.assertIsNone(game["steam_listed"])
+        self.assertEqual(game["cn_status"], "未知")
+        self.assertEqual(game["sources"], [])
+
+    def test_non_dict_score_does_not_block(self):
+        # 分数是字符串 / 布尔时无法判断优劣，按可并入处理，不要静默丢候选
+        for score in ("0.1", False, None):
+            payload = _payload()
+            candidate = dict(CANDIDATE, steam={"us_listed": True, "match_score": score})
+            self.assertEqual(
+                update.promote_candidates(payload, [candidate], "2026-10-22"), 1, score)
+
+    def test_junk_entries_in_games_are_dropped(self):
+        payload = {"games": [None, {"id": "keep-me", "name_cn": "留着"},
+                             "junk", 42, {"id": "tensei-brave", "name_cn": "勇者传说"}]}
+        added = update.promote_candidates(payload, [CANDIDATE], "2026-10-22")
+
+        self.assertEqual(added, 0)  # tensei-brave 已在表里
+        self.assertEqual([g.get("id") for g in payload["games"]], ["keep-me", "tensei-brave"])
+
+    def test_game_without_id_in_games_does_not_block_others(self):
+        payload = _payload([{"name_cn": "没有 id 的历史条目"}])
+        added = update.promote_candidates(payload, [CANDIDATE], "2026-10-22")
+
+        self.assertEqual(added, 1)
+        self.assertEqual(len(payload["games"]), 2)
+
+    def test_unknown_stage_label(self):
+        game = update.game_from_candidate(
+            {"name_cn": "甲", "name_en": "Jia",
+             "stage": {"cn": "weird_stage", "os": "another"}}, "2026-10-22")
+
+        self.assertEqual(game["cn_status"], "未知")
+        self.assertEqual(game["global_status"], "未知")
+
+    def test_empty_release_does_not_add_separator(self):
+        game = update.game_from_candidate(
+            {"name_cn": "甲", "name_en": "Jia", "stage": {"cn": "preorder", "cn_release": ""}},
+            "2026-10-22")
+
+        self.assertEqual(game["cn_status"], "预约中")
+        self.assertNotIn("·", game["cn_status"])
+
+    def test_candidate_block_without_names_uses_appid(self):
+        game = update.game_from_candidate(
+            {"name_en": "", "name_cn": "", "appid": 999}, "2026-10-22")
+        self.assertEqual(game["id"], "steam-999")
+
+
+class SlugCollisionTest(unittest.TestCase):
+    """不同游戏算出同一个 slug 时，后来者会被当成重复而丢弃。"""
+
+    def test_two_names_slugging_alike_only_keep_the_first(self):
+        first = {"name_cn": "劫后公司", "name_en": "After Inc: Revival", "appid": 1}
+        second = {"name_cn": "另一个游戏", "name_en": "After Inc Revival", "appid": 2}
+        payload = _payload()
+        added = update.promote_candidates(payload, [first, second], "2026-10-22")
+
+        self.assertEqual(added, 1)
+        self.assertEqual(payload["games"][0]["watch"]["steam_appid"], 1)
+
+    def test_different_appids_without_names_do_not_collide(self):
+        payload = _payload()
+        added = update.promote_candidates(
+            payload, [{"appid": 11}, {"appid": 22}], "2026-10-22")
+
+        # 两条都没有名字，都被跳过；但 id 生成本身不能互相覆盖
+        self.assertEqual(added, 0)
+        self.assertNotEqual(update._candidate_slug({"appid": 11}),
+                            update._candidate_slug({"appid": 22}))
+
+
+class PromoteSideEffectTest(unittest.TestCase):
+    """并入只能往 games 里追加，不能动别的键，也不能改调用方传进来的列表。"""
+
+    def test_other_payload_keys_survive(self):
+        payload = {
+            "generated_at": "2026-10-22T09:00:00Z",
+            "data_cutoff": "2026-10-15",
+            "note": "人工维护说明",
+            "field_origin": {"auto": ["a"], "manual": ["b"]},
+            "reports": [{"id": "x"}],
+            "games": [],
+        }
+        update.promote_candidates(payload, [CANDIDATE], "2026-10-22")
+
+        self.assertEqual(payload["generated_at"], "2026-10-22T09:00:00Z")
+        self.assertEqual(payload["data_cutoff"], "2026-10-15")
+        self.assertEqual(payload["note"], "人工维护说明")
+        self.assertEqual(payload["field_origin"], {"auto": ["a"], "manual": ["b"]})
+        self.assertEqual(payload["reports"], [{"id": "x"}])
+        self.assertEqual(len(payload["games"]), 1)
+
+    def test_candidate_list_is_not_mutated(self):
+        candidates = [dict(CANDIDATE)]
+        snapshot = repr(candidates)
+        update.promote_candidates(_payload(), candidates, "2026-10-22")
+
+        self.assertEqual(repr(candidates), snapshot)
+
+    def test_append_order_follows_input_order(self):
+        batch = [
+            {"name_cn": "甲", "name_en": "Alpha"},
+            {"name_cn": "乙", "name_en": "Beta"},
+            {"name_cn": "丙", "name_en": "Gamma"},
+        ]
+        payload = _payload()
+        update.promote_candidates(payload, batch, "2026-10-22")
+
+        self.assertEqual([g["id"] for g in payload["games"]],
+                         ["alpha", "beta", "gamma"])
+
+    def test_large_batch_is_handled(self):
+        batch = [{"name_cn": "游戏{0}".format(i), "name_en": "Game {0}".format(i)}
+                 for i in range(100)]
+        payload = _payload()
+        added = update.promote_candidates(payload, batch, "2026-10-22")
+
+        self.assertEqual(added, 100)
+        self.assertEqual(len({g["id"] for g in payload["games"]}), 100)
+
+    def test_imported_games_share_the_same_timestamp(self):
+        payload = _payload()
+        update.promote_candidates(payload, [CANDIDATE, dict(CANDIDATE, name_en="Other")],
+                                  "2026-10-22")
+        stamps = {g["auto_imported_at"] for g in payload["games"]}
+        self.assertEqual(stamps, {"2026-10-22"})
+
+
+class IdempotencyTest(unittest.TestCase):
+    """同一款游戏换名字、换 appid 类型，都不该在主表里多出一条。"""
+
+    def test_same_appid_renamed_is_not_added_again(self):
+        renamed = dict(CANDIDATE, name_en="Tensei Brave - Official", name_cn="勇者传说 官方版")
+        payload = _payload()
+        update.promote_candidates(payload, [CANDIDATE], "2026-10-22")
+        added = update.promote_candidates(payload, [renamed], "2026-10-23")
+
+        self.assertEqual(added, 0)
+        self.assertEqual(len(payload["games"]), 1)
+
+    def test_appid_as_string_and_int_are_the_same_game(self):
+        as_text = dict(CANDIDATE, appid="2445430")
+        payload = _payload()
+        update.promote_candidates(payload, [CANDIDATE], "2026-10-22")
+        added = update.promote_candidates(payload, [as_text], "2026-10-23")
+
+        self.assertEqual(added, 0)
+        self.assertEqual(len(payload["games"]), 1)
+
+    def test_manual_game_with_same_appid_blocks_import(self):
+        manual = {"id": "tensei-brave-manual", "name_cn": "勇者传说",
+                  "watch": {"steam_appid": 2445430}}
+        payload = _payload([manual])
+        added = update.promote_candidates(payload, [CANDIDATE], "2026-10-22")
+
+        self.assertEqual(added, 0)
+        self.assertEqual(payload["games"], [manual])
+
+    def test_candidate_without_appid_still_dedupes_by_id(self):
+        no_appid = dict(CANDIDATE, appid=None)
+        payload = _payload()
+        update.promote_candidates(payload, [no_appid], "2026-10-22")
+        added = update.promote_candidates(payload, [no_appid], "2026-10-23")
+
+        self.assertEqual(added, 0)
+        self.assertEqual(len(payload["games"]), 1)
+
+    def test_reimport_keeps_original_record_untouched(self):
+        payload = _payload()
+        update.promote_candidates(payload, [CANDIDATE], "2026-10-22")
+        original = dict(payload["games"][0])
+        # 次日候选带着新日期和更新的 Steam 状态回来
+        refreshed = dict(CANDIDATE, last_checked="2026-10-23")
+        update.promote_candidates(payload, [refreshed], "2026-10-23")
+
+        self.assertEqual(payload["games"][0], original)
+
+
 if __name__ == "__main__":
     unittest.main()
