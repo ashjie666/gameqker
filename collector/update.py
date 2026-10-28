@@ -335,6 +335,23 @@ def _stage_text(stage, release):
     return STAGE_TEXT.get(stage, "未知") + (" · {0}".format(release) if release else "")
 
 
+def timeline_text(point):
+    """把时间轴上的一个点写成「阶段 · 日期」，来源来自哪个源由前端另标。
+
+    版号获批日只是国服能上线的下界，不是上线日，这里额外标「下界」，
+    避免它被当成已确定的上线时间读。
+    """
+    if not isinstance(point, dict) or not point:
+        return None
+    text = discover.BASIS_TEXT.get(point.get("basis"), "未知")
+    date = point.get("date")
+    if date:
+        text = "{0} · {1}".format(text, date)
+        if point.get("estimated"):
+            text += "（下界）"
+    return text
+
+
 def _as_dict(value):
     """候选里任何一段都可能是错的类型（人工改过 / 上游异常），统一兜成空 dict。"""
     return value if isinstance(value, dict) else {}
@@ -362,6 +379,8 @@ def game_from_candidate(candidate, imported_at):
     if steam.get("store_url"):
         sources.append({"label": "Steam 商店", "url": steam["store_url"]})
 
+    timeline = _as_dict(candidate.get("timeline"))
+
     return {
         "id": _candidate_slug(candidate),
         "name_cn": candidate.get("name_cn") or "",
@@ -369,8 +388,13 @@ def game_from_candidate(candidate, imported_at):
         "developer": nppa.get("operator") or nppa.get("publisher") or PLACEHOLDER,
         "genre": PLACEHOLDER,
         "priority": AUTO_PRIORITY,
-        "cn_status": _stage_text(stage.get("cn"), stage.get("cn_release")),
-        "global_status": _stage_text(stage.get("os"), stage.get("os_release")),
+        "cn_status": (timeline_text(timeline.get("cn"))
+                      or _stage_text(stage.get("cn"), stage.get("cn_release"))),
+        "global_status": (timeline_text(timeline.get("intl"))
+                          or _stage_text(stage.get("os"), stage.get("os_release"))),
+        # 双市场上市时间轴：国服 / 国际服各自的阶段、日期、来源，
+        # 国际服查不到时间是常态，这里保留 basis 说明当前阶段而不是编日期
+        "timeline": timeline,
         "overseas_heat": PLACEHOLDER,
         "overseas_heat_checked": None,
         "gap_window": candidate.get("note") or PLACEHOLDER,

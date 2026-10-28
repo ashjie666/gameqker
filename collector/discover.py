@@ -35,6 +35,7 @@ from difflib import SequenceMatcher
 from html import unescape
 from urllib.parse import quote, urljoin
 
+from . import feeds
 from .textutil import clip
 
 NPPA_LIST_URL = "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/"
@@ -330,6 +331,89 @@ def detect_playtest(fetcher, appid):
     return "playtest" in html and ("join playtest" in html or "sign up" in html)
 
 
+STAGE_TEXT = {"none": "无页面", "approved": "已获版号", "preorder": "预约中", "launch": "已上线"}
+# 时间轴里每个时间点的性质：已上线 / 预约定档 / 仅版号获批（不是上线日）
+BASIS_TEXT = {"released": "已上线", "preorder": "预约中", "approved": "版号获批", "unknown": "无公开时间"}
+STORE_URL = "https://store.steampowered.com/app/{0}/"
+
+
+def _point(when, basis, source=None, url=None, estimated=False):
+    """时间轴上的一个点。date 缺失时保留 basis，用来说明「处于阶段但没有日期」。"""
+    return {
+        "date": when.isoformat() if when else None,
+        "basis": basis,
+        "estimated": estimated,
+        "source": source,
+        "url": url,
+    }
+
+
+def build_timeline(nppa_item, us, cn, appid=None):
+    """把国服 / 国际服两边的上市时间折成可比较的时间轴。
+
+    来源与优先级：
+    - 国际服：Steam 美区（页面缺失 → unknown）
+    - 国服：Steam 国区优先；没有国区页面时退回版号批准日，
+      但版号只代表「有上线资格」，不是上线日，标 estimated，
+      前端显示成「版号获批 · 日期」，不会被当成已上线时间。
+    两边都拿不到日期时保留 basis 说明当前阶段，不猜日期。
+    """
+    approved = parse_cn_date(nppa_item.get("approved_at") or "")
+    us_release = parse_steam_date(us.get("release_date"))
+    cn_release = parse_steam_date(cn.get("release_date"))
+    store = STORE_URL.format(appid) if appid else None
+
+    if us.get("listed") is not True:
+        intl = _point(None, "unknown")
+    elif us.get("coming_soon") is True:
+        intl = _point(us_release, "preorder", "Steam 商店（国际服）", store)
+    else:
+        intl = _point(us_release, "released", "Steam 商店（国际服）", store)
+
+    if cn.get("listed") is True:
+        basis = "preorder" if cn.get("coming_soon") is True else "released"
+        domestic = _point(cn_release, basis, "Steam 商店（国服）", store)
+    elif approved:
+        domestic = _point(approved, "approved", "版号公示",
+                          nppa_item.get("batch_url"), estimated=True)
+    else:
+        domestic = _point(None, "unknown")
+
+    return {"cn": domestic, "intl": intl}
+
+
+def enrich_intl_from_news(fetcher, candidate, timeline, today=None):
+    """国际服在 Steam 上查不到上市时间时，再去 Steam 公告 / 国内媒体找一次。
+
+    只在 timeline.intl 没有日期时才调用，命中率不高（冷门新作基本搜不到），
+    但一旦找到，就能把「无公开时间」换成可比较的日期，避免只靠 Steam 下判断。
+    找到的日期早于国服时间时返回 None，表示「海外先发」，该候选应被淘汰。
+    """
+    if timeline["intl"].get("date") or timeline["cn"].get("basis") == "unknown":
+        return timeline
+    found = feeds.probe_release_date(fetcher, {
+        "id": candidate.get("name_cn"),
+        "name_cn": candidate.get("name_cn"),
+        "name_en": candidate.get("name_en"),
+        "watch": {"steam_appid": candidate.get("appid")},
+    }, today)
+    if not found:
+        return timeline
+
+    cn_date = timeline["cn"].get("date")
+    if cn_date and found["date"] < cn_date:
+        return None  # 公告显示国际服更早，不算国服领先
+
+    timeline["intl"] = {
+        "date": found["date"],
+        "basis": "announced",
+        "estimated": False,
+        "source": found.get("source") or "新闻公告",
+        "url": found.get("url"),
+    }
+    return timeline
+
+
 def classify(nppa_item, us, cn, cn_stage=None, os_stage=None):
     """只输出「国服领先」的候选，返回 (gap_type, gap_days, note) 或 None。
 
@@ -367,7 +451,7 @@ def classify(nppa_item, us, cn, cn_stage=None, os_stage=None):
     return None
 
 
-def evaluate(fetcher, nppa_item):
+def evaluate(fetcher, nppa_item, probe_news=True):
     matched = match_appid(fetcher, nppa_item)
     if not matched:
         return None
@@ -380,6 +464,16 @@ def evaluate(fetcher, nppa_item):
     if not verdict:
         return None
     gap_type, gap_days, note = verdict
+
+    timeline = build_timeline(nppa_item, us, cn, appid)
+    if probe_news:
+        timeline = enrich_intl_from_news(fetcher, {
+            "name_cn": nppa_item.get("name"),
+            "name_en": clip(us.get("name") or matched.get("name"), 120),
+            "appid": appid,
+        }, timeline)
+        if timeline is None:
+            return None  # 公告显示国际服更早，不是国服领先
 
     # 阶段与版本只在确认是候选后再抓，避免对全部游戏额外发请求
     version = fetch_latest_version(fetcher, appid)
@@ -395,6 +489,7 @@ def evaluate(fetcher, nppa_item):
         "gap_type": gap_type,
         "gap_days": gap_days,
         "note": note,
+        "timeline": timeline,
         "stage": {
             "cn": cn_stage,
             "os": os_stage,
@@ -438,6 +533,10 @@ def _is_stale(entry, today):
     try:
         checked = date.fromisoformat(raw[:10])
     except ValueError:
+        return True
+    # 判定结构升级过（例如新增 timeline）的旧记录要重评一次，
+    # 否则旧候选会一直缺新字段，直到自然过期 7 天才补上
+    if "timeline" not in ((entry or {}).get("candidate") or {}):
         return True
     return (today - checked).days >= REFRESH_DAYS
 

@@ -322,6 +322,28 @@ def _steam_news_events(fetcher, fallback, games, today, seen):
     return events
 
 
+def probe_release_date(fetcher, game, today=None):
+    """查单款游戏在公告 / 国内媒体里有没有明确的上线日期。
+
+    只用于「Steam 给不出上市时间」的候选补时间轴。命中率不高（冷门新作
+    基本搜不到），所以调用方必须限制次数并容忍超时，拿不到就返回 None。
+    """
+    today = today or date.today()
+    seen = set()
+    events = _steam_news_events(fetcher, None, [game], today, seen)
+    events += _rss_events(fetcher, None, [game], today, seen)
+    if not events:
+        return None
+    earliest = min(events, key=lambda event: event["date"])
+    source = (earliest.get("sources") or [{}])[0]
+    return {
+        "date": earliest["date"],
+        "date_text": earliest.get("date_text"),
+        "source": source.get("name"),
+        "url": source.get("url"),
+    }
+
+
 def collect(fetcher, payload, today=None, fallback=None):
     """抓取 RSS / 新闻 / Steam 公告，返回与 games.json 对得上的上线事件列表。
 

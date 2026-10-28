@@ -592,6 +592,28 @@ const STAGE_LABEL = {
   launch: '已上线',
 };
 
+// 双市场时间轴文案：阶段 + 日期，版号日标下界；没有 timeline 的旧候选退回阶段文案
+const BASIS_TEXT = {
+  released: '已上线', preorder: '预约中', approved: '版号获批',
+  announced: '公告定档', unknown: '无公开时间',
+};
+
+function timelinePoint(point, fallback) {
+  if (!point || typeof point !== 'object' || !point.basis) return fallback;
+  const label = BASIS_TEXT[point.basis] || '未知';
+  if (!point.date) return label;
+  return label + ' · ' + formatDay(point.date) + (point.estimated ? '（下界）' : '');
+}
+
+function timelineLine(candidate) {
+  const timeline = candidate.timeline || {};
+  const cn = timelinePoint(timeline.cn, stageText(candidate.stage && candidate.stage.cn,
+    candidate.stage && candidate.stage.cn_release));
+  const intl = timelinePoint(timeline.intl, stageText(candidate.stage && candidate.stage.os,
+    candidate.stage && candidate.stage.os_release));
+  return `国服 ${cn} / 国际服 ${intl}`;
+}
+
 function stageText(stage, release) {
   const label = STAGE_LABEL[stage] || '未知';
   return release ? `${label} · ${formatDay(release)}` : label;
@@ -661,7 +683,7 @@ function renderCandidate(candidate) {
   const rows = [
     ['版号批准', formatDay(nppa.approved_at)],
     ['审批文号', nppa.approval_no || '—'],
-    ['阶段对照', `国服 ${stageText(stage.cn, stage.cn_release)} / 美区 ${stageText(stage.os, stage.os_release)}` +
+    ['阶段对照', timelineLine(candidate) +
       (candidate.playtest_os ? '（美区 Playtest 中）' : '')],
     ['最新版本', version.steam ? `v${version.steam}（Steam 公告）` : '未取得'],
     ['Steam 美区', usCell],
