@@ -35,6 +35,11 @@
         "date": "2026-10-27",
         "source": "trends",
         "value": 100
+      },
+      {
+        "date": "2026-10-28",
+        "source": "signal",
+        "value": 1
       }
     ],
     "where-winds-meet": [
@@ -72,6 +77,11 @@
         "date": "2026-10-27",
         "source": "trends",
         "value": 0
+      },
+      {
+        "date": "2026-10-28",
+        "source": "signal",
+        "value": 2
       }
     ],
     "lord-of-mysteries": [
@@ -109,6 +119,11 @@
         "date": "2026-10-27",
         "source": "trends",
         "value": 67
+      },
+      {
+        "date": "2026-10-28",
+        "source": "signal",
+        "value": 2
       }
     ],
     "world-of-jade-dynasty": [
@@ -144,6 +159,11 @@
       },
       {
         "date": "2026-10-27",
+        "source": "signal",
+        "value": 2
+      },
+      {
+        "date": "2026-10-28",
         "source": "signal",
         "value": 2
       }
@@ -183,6 +203,11 @@
         "date": "2026-10-27",
         "source": "signal",
         "value": 0
+      },
+      {
+        "date": "2026-10-28",
+        "source": "signal",
+        "value": 0
       }
     ],
     "scroll-of-taiwu": [
@@ -218,6 +243,11 @@
       },
       {
         "date": "2026-10-27",
+        "source": "signal",
+        "value": 3
+      },
+      {
+        "date": "2026-10-28",
         "source": "signal",
         "value": 3
       }
@@ -257,6 +287,11 @@
         "date": "2026-10-27",
         "source": "signal",
         "value": 0
+      },
+      {
+        "date": "2026-10-28",
+        "source": "signal",
+        "value": 0
       }
     ],
     "ananta": [
@@ -292,6 +327,11 @@
       },
       {
         "date": "2026-10-27",
+        "source": "signal",
+        "value": 3
+      },
+      {
+        "date": "2026-10-28",
         "source": "signal",
         "value": 3
       }
@@ -331,6 +371,11 @@
         "date": "2026-10-27",
         "source": "signal",
         "value": 0
+      },
+      {
+        "date": "2026-10-28",
+        "source": "signal",
+        "value": 0
       }
     ],
     "sanguo-mou-ding-tianxia": [
@@ -368,6 +413,11 @@
         "date": "2026-10-27",
         "source": "signal",
         "value": 2
+      },
+      {
+        "date": "2026-10-28",
+        "source": "signal",
+        "value": 2
       }
     ],
     "rainbow-six-siege": [
@@ -403,6 +453,11 @@
         "date": "2026-10-22",
         "source": "trends",
         "value": 0
+      },
+      {
+        "date": "2026-10-28",
+        "source": "signal",
+        "value": 1
       }
     ],
     "knightica": [
@@ -439,9 +494,23 @@
         "source": "reviews",
         "value": 157
       }
+    ],
+    "tensei-brave": [
+      {
+        "date": "2026-10-28",
+        "source": "signal",
+        "value": 1
+      }
+    ],
+    "steam-3081280": [
+      {
+        "date": "2026-10-28",
+        "source": "signal",
+        "value": 5
+      }
     ]
   },
-  "generated_at": "2026-10-27",
+  "generated_at": "2026-10-28",
   "note": "每款游戏按天的热度序列；取值优先级 A→B→C：Google Trends 关键词热度 → Steam 评测总数 → 自建信号活跃度。",
   "days": 90,
   "sources": {

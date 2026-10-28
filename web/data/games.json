@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27",
+  "generated_at": "2026-10-28",
   "data_cutoff": "2026-10-15",
   "note": "关键词搜索量为定性判断，未经关键词工具实测。cn_status / global_status / overseas_heat / overseas_heat_checked / gap_window / target_markets / keywords / content_opportunities / monetization / monetization_level / risks 为人工维护字段；last_checked / steam_listed / steam_release_date / official_signal / changes 由 collector/update.py 自动写入。data_cutoff 记录人工字段最后一次整体复核日期，脚本不会推进它。 auto_imported / auto_imported_at 标记由版号公示自动发现的条目：这类条目并入时脚本会额外写入 developer / cn_status / global_status / gap_window / priority(99=未定级) / watch / sources，其余定性字段填「待补」待人复核，人工条目的这些字段脚本仍不改写。",
   "field_origin": {
@@ -67,7 +67,7 @@
       },
       "skipped": [],
       "error": "官网: https://www.phantombladezero.com/: URLError: <urlopen error timed out>",
-      "duration_ms": 42074
+      "duration_ms": 44593
     },
     {
       "id": "where-winds-meet",
@@ -101,7 +101,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2368
+      "duration_ms": 4484
     },
     {
       "id": "lord-of-mysteries",
@@ -135,7 +135,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2213
+      "duration_ms": 2703
     },
     {
       "id": "world-of-jade-dynasty",
@@ -176,7 +176,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 3312
+      "duration_ms": 3077
     },
     {
       "id": "neverness-to-everness",
@@ -208,7 +208,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2107
+      "duration_ms": 2734
     },
     {
       "id": "scroll-of-taiwu",
@@ -235,7 +235,7 @@
         "pages": [
           {
             "url": "https://scrolloftaiwu.com/",
-            "status": 200,
+            "status": 304,
             "ok": true
           },
           {
@@ -249,7 +249,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 2469
+      "duration_ms": 4327
     },
     {
       "id": "legend-of-mortal-cultivation",
@@ -303,7 +303,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 3021
+      "duration_ms": 3203
     },
     {
       "id": "wang-yue",
@@ -335,7 +335,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 3708
+      "duration_ms": 2234
     },
     {
       "id": "sanguo-mou-ding-tianxia",
@@ -364,7 +364,70 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 1522
+      "duration_ms": 561
+    },
+    {
+      "id": "after-inc-revival",
+      "name": "劫后公司",
+      "status": "ok",
+      "steam": {
+        "appid": 3337140,
+        "listed": true,
+        "release_date": "Aug 19, 2026",
+        "coming_soon": false,
+        "name": "After Inc: Revival",
+        "url": "https://store.steampowered.com/app/3337140/",
+        "error": null,
+        "stale": false
+      },
+      "official": null,
+      "skipped": [
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 1375
+    },
+    {
+      "id": "tensei-brave",
+      "name": "勇者传说",
+      "status": "ok",
+      "steam": {
+        "appid": 2445430,
+        "listed": true,
+        "release_date": "Oct 23, 2026",
+        "coming_soon": false,
+        "name": "Tensei Brave",
+        "url": "https://store.steampowered.com/app/2445430/",
+        "error": null,
+        "stale": false
+      },
+      "official": null,
+      "skipped": [
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 1781
+    },
+    {
+      "id": "steam-3081280",
+      "name": "无用之人：登神长阶",
+      "status": "ok",
+      "steam": {
+        "appid": 3081280,
+        "listed": true,
+        "release_date": "Nov 19, 2025",
+        "coming_soon": false,
+        "name": "Wretch: Divine Ascent",
+        "url": "https://store.steampowered.com/app/3081280/",
+        "error": null,
+        "stale": false
+      },
+      "official": null,
+      "skipped": [
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 1968
     }
   ],
   "games": [
@@ -410,7 +473,7 @@
         "steam_appid": 4115450,
         "official": "https://www.phantombladezero.com/"
       },
-      "last_checked": "2026-10-27T22:23:52Z",
+      "last_checked": "2026-10-28T03:41:23Z",
       "steam_listed": true,
       "steam_release_date": "Oct 28, 2026",
       "official_signal": null,
@@ -478,7 +541,7 @@
         "steam_appid": null,
         "official": "https://www.wherewindsmeetgame.com/"
       },
-      "last_checked": "2026-10-27T22:23:55Z",
+      "last_checked": "2026-10-28T03:41:27Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -556,7 +619,7 @@
         "steam_appid": null,
         "official": "https://lordofthemysteriesgame.com/"
       },
-      "last_checked": "2026-10-27T22:23:57Z",
+      "last_checked": "2026-10-28T03:41:30Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -626,7 +689,7 @@
         "steam_appid": 3384260,
         "official": "https://zx.wanmei.com/"
       },
-      "last_checked": "2026-10-27T22:24:00Z",
+      "last_checked": "2026-10-28T03:41:33Z",
       "steam_listed": false,
       "steam_release_date": null,
       "official_signal": {
@@ -703,7 +766,7 @@
         "steam_appid": null,
         "official": "https://nte.perfectworld.com/"
       },
-      "last_checked": "2026-10-27T22:24:02Z",
+      "last_checked": "2026-10-28T03:41:36Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -759,7 +822,7 @@
         "steam_appid": 838350,
         "official": "https://scrolloftaiwu.com/"
       },
-      "last_checked": "2026-10-27T22:24:05Z",
+      "last_checked": "2026-10-28T03:41:40Z",
       "steam_listed": true,
       "steam_release_date": "Jun 16, 2026",
       "official_signal": {
@@ -892,7 +955,7 @@
         "steam_appid": 4814120,
         "official": "https://ananta.163.com/"
       },
-      "last_checked": "2026-10-27T22:24:08Z",
+      "last_checked": "2026-10-28T03:41:43Z",
       "steam_listed": true,
       "steam_release_date": "Jan 15, 2027",
       "official_signal": {
@@ -979,7 +1042,7 @@
         "steam_appid": null,
         "official": "https://wy.shiyue.com/"
       },
-      "last_checked": "2026-10-27T22:24:12Z",
+      "last_checked": "2026-10-28T03:41:45Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1037,7 +1100,7 @@
         "steam_appid": null,
         "official": "https://store.steamchina.com/app/4542640/"
       },
-      "last_checked": "2026-10-27T22:24:13Z",
+      "last_checked": "2026-10-28T03:41:46Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1088,7 +1151,7 @@
       "watch": {
         "steam_appid": 3337140
       },
-      "last_checked": null,
+      "last_checked": "2026-10-28T03:41:47Z",
       "steam_listed": true,
       "steam_release_date": "Aug 19, 2026",
       "official_signal": null,
@@ -1127,7 +1190,7 @@
       "watch": {
         "steam_appid": 2445430
       },
-      "last_checked": null,
+      "last_checked": "2026-10-28T03:41:49Z",
       "steam_listed": true,
       "steam_release_date": "Oct 23, 2026",
       "official_signal": null,
@@ -1166,11 +1229,30 @@
       "watch": {
         "steam_appid": 3081280
       },
-      "last_checked": null,
-      "steam_listed": null,
-      "steam_release_date": null,
+      "last_checked": "2026-10-28T03:41:51Z",
+      "steam_listed": true,
+      "steam_release_date": "Nov 19, 2025",
       "official_signal": null,
-      "changes": [],
+      "changes": [
+        {
+          "at": "2026-10-28T03:41:51Z",
+          "game_id": "steam-3081280",
+          "field": "steam_release_date",
+          "old": null,
+          "new": "Nov 19, 2025",
+          "url": "https://store.steampowered.com/app/3081280/",
+          "evidence": "release_date.date=Nov 19, 2025；coming_soon=False"
+        },
+        {
+          "at": "2026-10-28T03:41:51Z",
+          "game_id": "steam-3081280",
+          "field": "steam_listed",
+          "old": null,
+          "new": true,
+          "url": "https://store.steampowered.com/app/3081280/",
+          "evidence": "Steam cc=us 商店 success=true；name=Wretch: Divine Ascent"
+        }
+      ],
       "sources": [
         {
           "label": "版号公示",
@@ -1185,5 +1267,5 @@
       "auto_imported_at": "2026-10-28"
     }
   ],
-  "last_run_at": "2026-10-27T22:24:13Z"
+  "last_run_at": "2026-10-28T03:41:51Z"
 }
