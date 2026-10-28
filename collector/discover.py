@@ -400,35 +400,56 @@ def build_timeline(nppa_item, us, cn, appid=None):
     return {"cn": domestic, "intl": intl}
 
 
-def enrich_intl_from_news(fetcher, candidate, timeline, today=None):
-    """国际服在 Steam 上查不到上市时间时，再去 Steam 公告 / 国内媒体找一次。
+def enrich_from_news(fetcher, candidate, timeline, today=None):
+    """Steam 给不出上市时间时，用公告把国服 / 国际服的时间补成真实日期。
 
-    只在 timeline.intl 没有日期时才调用，命中率不高（冷门新作基本搜不到），
-    但一旦找到，就能把「无公开时间」换成可比较的日期，避免只靠 Steam 下判断。
-    找到的日期早于国服时间时返回 None，表示「海外先发」，该候选应被淘汰。
+    - 国服：目前只有版号批准日（下界）时，改用国内媒体的定档 / 上线公告；
+      公告日期早于版号日的不可能是国服，忽略。
+    - 国际服：Steam 没有日期时用 Steam 公告补；公告日期早于国服时间说明海外先发，
+      该候选直接淘汰（返回 None）。
+
+    两边的消息严格按市场分流，不拿一篇中文首发稿同时充当国服和国际服的时间。
+    命中率不高（冷门新作基本没有报道），拿不到就保持原时间轴。
     """
-    if timeline["intl"].get("date") or timeline["cn"].get("basis") == "unknown":
+    cn_basis = timeline["cn"].get("basis")
+    if cn_basis == "unknown":
         return timeline
-    found = feeds.probe_release_date(fetcher, {
+    needs_cn = cn_basis == "approved"
+    needs_intl = not timeline["intl"].get("date")
+    if not needs_cn and not needs_intl:
+        return timeline
+
+    found = feeds.probe_release_dates(fetcher, {
         "id": candidate.get("name_cn"),
         "name_cn": candidate.get("name_cn"),
         "name_en": candidate.get("name_en"),
         "watch": {"steam_appid": candidate.get("appid")},
     }, today)
-    if not found:
-        return timeline
 
-    cn_date = timeline["cn"].get("date")
-    if cn_date and found["date"] < cn_date:
-        return None  # 公告显示国际服更早，不算国服领先
+    approved = timeline["cn"].get("date")
+    if needs_cn and found.get("cn"):
+        point = found["cn"]
+        if not approved or point["date"] >= approved:
+            timeline["cn"] = {
+                "date": point["date"],
+                "basis": "announced",
+                "estimated": False,
+                "source": point.get("source") or "国内媒体公告",
+                "url": point.get("url"),
+            }
 
-    timeline["intl"] = {
-        "date": found["date"],
-        "basis": "announced",
-        "estimated": False,
-        "source": found.get("source") or "新闻公告",
-        "url": found.get("url"),
-    }
+    if needs_intl and found.get("intl"):
+        point = found["intl"]
+        cn_date = timeline["cn"].get("date")
+        if cn_date and point["date"] < cn_date:
+            return None  # 公告显示国际服更早，不算国服领先
+        timeline["intl"] = {
+            "date": point["date"],
+            "basis": "announced",
+            "estimated": False,
+            "source": point.get("source") or "Steam 公告",
+            "url": point.get("url"),
+        }
     return timeline
 
 
@@ -495,7 +516,7 @@ def evaluate(fetcher, nppa_item, probe_news=True):
 
     timeline = build_timeline(nppa_item, us, cn, appid)
     if probe_news:
-        timeline = enrich_intl_from_news(fetcher, {
+        timeline = enrich_from_news(fetcher, {
             "name_cn": nppa_item.get("name"),
             "name_en": clip(us.get("name") or matched.get("name"), 120),
             "appid": appid,

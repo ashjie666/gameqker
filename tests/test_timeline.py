@@ -101,8 +101,8 @@ class BuildTimelineTest(unittest.TestCase):
         self.assertIsNone(timeline["intl"]["url"])
 
 
-class EnrichIntlFromNewsTest(unittest.TestCase):
-    """Steam 给不出国际服时间时，才去公告 / 国内媒体补一次。"""
+class EnrichFromNewsTest(unittest.TestCase):
+    """Steam 给不出时间时，才去公告 / 国内媒体补一次，且两边分开算。"""
 
     def _timeline(self, intl_date=None, cn_basis="approved", cn_date="2026-08-28"):
         return {
@@ -112,64 +112,103 @@ class EnrichIntlFromNewsTest(unittest.TestCase):
                      "estimated": False, "source": None, "url": None},
         }
 
-    def test_skips_probe_when_steam_already_has_a_date(self):
-        timeline = self._timeline(intl_date="2026-10-23")
-        with mock.patch.object(discover.feeds, "probe_release_date") as probe:
-            result = discover.enrich_intl_from_news(mock.Mock(), {}, timeline)
+    def test_skips_probe_when_both_sides_have_answers(self):
+        timeline = self._timeline(intl_date="2026-10-23", cn_basis="released")
+        with mock.patch.object(discover.feeds, "probe_release_dates") as probe:
+            result = discover.enrich_from_news(mock.Mock(), {}, timeline)
 
         probe.assert_not_called()
         self.assertEqual(result["intl"]["date"], "2026-10-23")
 
     def test_skips_probe_when_domestic_side_unknown(self):
         timeline = self._timeline(cn_basis="unknown", cn_date=None)
-        with mock.patch.object(discover.feeds, "probe_release_date") as probe:
-            discover.enrich_intl_from_news(mock.Mock(), {}, timeline)
+        with mock.patch.object(discover.feeds, "probe_release_dates") as probe:
+            discover.enrich_from_news(mock.Mock(), {}, timeline)
 
         probe.assert_not_called()
 
     def test_no_hit_leaves_timeline_untouched(self):
         timeline = self._timeline()
-        with mock.patch.object(discover.feeds, "probe_release_date", return_value=None):
-            result = discover.enrich_intl_from_news(mock.Mock(), {}, timeline)
+        with mock.patch.object(discover.feeds, "probe_release_dates", return_value={}):
+            result = discover.enrich_from_news(mock.Mock(), {}, timeline)
 
         self.assertEqual(result["intl"]["basis"], "unknown")
         self.assertIsNone(result["intl"]["date"])
+        self.assertEqual(result["cn"]["basis"], "approved")
 
     def test_later_announced_date_fills_intl_side(self):
         timeline = self._timeline()
-        found = {"date": "2026-12-01", "source": "机核", "url": "https://gcores.com/x"}
-        with mock.patch.object(discover.feeds, "probe_release_date", return_value=found):
-            result = discover.enrich_intl_from_news(mock.Mock(), {}, timeline)
+        found = {"intl": {"date": "2026-12-01", "source": "Steam 公告",
+                          "url": "https://store.steampowered.com/news/1"}}
+        with mock.patch.object(discover.feeds, "probe_release_dates", return_value=found):
+            result = discover.enrich_from_news(mock.Mock(), {}, timeline)
 
         self.assertEqual(result["intl"]["date"], "2026-12-01")
         self.assertEqual(result["intl"]["basis"], "announced")
-        self.assertEqual(result["intl"]["source"], "机核")
+        self.assertEqual(result["intl"]["source"], "Steam 公告")
         self.assertFalse(result["intl"]["estimated"])
 
     def test_earlier_announced_date_disqualifies_candidate(self):
         # 公告显示国际服比国服还早，就不是「国服领先」，返回 None 让上层淘汰
-        timeline = self._timeline()
-        found = {"date": "2026-07-01", "source": "机核", "url": None}
-        with mock.patch.object(discover.feeds, "probe_release_date", return_value=found):
-            result = discover.enrich_intl_from_news(mock.Mock(), {}, timeline)
+        timeline = self._timeline(cn_basis="released", cn_date="2026-08-28")
+        found = {"intl": {"date": "2026-07-01", "source": "Steam 公告", "url": None}}
+        with mock.patch.object(discover.feeds, "probe_release_dates", return_value=found):
+            result = discover.enrich_from_news(mock.Mock(), {}, timeline)
 
         self.assertIsNone(result)
 
     def test_same_day_announcement_is_kept(self):
-        timeline = self._timeline()
-        found = {"date": "2026-08-28", "source": "机核", "url": None}
-        with mock.patch.object(discover.feeds, "probe_release_date", return_value=found):
-            result = discover.enrich_intl_from_news(mock.Mock(), {}, timeline)
+        timeline = self._timeline(cn_basis="released", cn_date="2026-08-28")
+        found = {"intl": {"date": "2026-08-28", "source": "Steam 公告", "url": None}}
+        with mock.patch.object(discover.feeds, "probe_release_dates", return_value=found):
+            result = discover.enrich_from_news(mock.Mock(), {}, timeline)
 
         self.assertEqual(result["intl"]["date"], "2026-08-28")
 
     def test_missing_source_falls_back_to_generic_label(self):
         timeline = self._timeline()
-        found = {"date": "2026-12-01", "source": None, "url": None}
-        with mock.patch.object(discover.feeds, "probe_release_date", return_value=found):
-            result = discover.enrich_intl_from_news(mock.Mock(), {}, timeline)
+        found = {"intl": {"date": "2026-12-01", "source": None, "url": None}}
+        with mock.patch.object(discover.feeds, "probe_release_dates", return_value=found):
+            result = discover.enrich_from_news(mock.Mock(), {}, timeline)
 
-        self.assertEqual(result["intl"]["source"], "新闻公告")
+        self.assertEqual(result["intl"]["source"], "Steam 公告")
+
+    def test_domestic_announcement_replaces_lower_bound(self):
+        # 版号日只是「有资格上线」，国内媒体的定档公告才是真实上市时间
+        timeline = self._timeline()
+        found = {"cn": {"date": "2026-09-29", "source": "游侠网",
+                        "url": "https://www.ali213.net/news/1"}}
+        with mock.patch.object(discover.feeds, "probe_release_dates", return_value=found):
+            result = discover.enrich_from_news(mock.Mock(), {}, timeline)
+
+        self.assertEqual(result["cn"]["date"], "2026-09-29")
+        self.assertEqual(result["cn"]["basis"], "announced")
+        self.assertFalse(result["cn"]["estimated"])
+        self.assertEqual(result["cn"]["source"], "游侠网")
+
+    def test_domestic_announcement_earlier_than_approval_is_ignored(self):
+        # 早于版号批准日的「上线」不可能是国服，保持版号下界
+        timeline = self._timeline()
+        found = {"cn": {"date": "2026-05-01", "source": "游侠网", "url": None}}
+        with mock.patch.object(discover.feeds, "probe_release_dates", return_value=found):
+            result = discover.enrich_from_news(mock.Mock(), {}, timeline)
+
+        self.assertEqual(result["cn"]["basis"], "approved")
+        self.assertEqual(result["cn"]["date"], "2026-08-28")
+
+    def test_both_sides_filled_with_a_single_probe(self):
+        timeline = self._timeline()
+        found = {
+            "cn": {"date": "2026-09-30", "source": "游侠网", "url": None},
+            "intl": {"date": "2026-12-01", "source": "Steam 公告", "url": None},
+        }
+        with mock.patch.object(discover.feeds, "probe_release_dates",
+                               return_value=found) as probe:
+            result = discover.enrich_from_news(mock.Mock(), {}, timeline)
+
+        probe.assert_called_once()
+        self.assertEqual(result["cn"]["date"], "2026-09-30")
+        self.assertEqual(result["intl"]["date"], "2026-12-01")
 
 
 class TimelineTextTest(unittest.TestCase):

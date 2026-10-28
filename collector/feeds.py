@@ -1,10 +1,12 @@
-"""新闻 / RSS 源：为上线倒计时补充 Steam 之外的发售与上线日期。
+"""新闻 / RSS / 资讯搜索：为上线倒计时补充 Steam 之外的发售与上线日期。
 
-原则与官网巡检一致：只输出「能对上 games.json 里某款游戏」且「正文给出明确
-年月日」的事件；匹配不到游戏、只有「即将上线」这类模糊措辞、或明显是版本
-更新公告的，一律丢弃，绝不猜日期。
+三条路：订阅源 RSS、按游戏名搜资讯（百度资讯，摘要没日期就抓原文正文）、
+Steam 官方公告。原则与官网巡检一致：只输出「能对上 games.json 里某款游戏」
+且「正文给出明确年月日」的事件；匹配不到游戏、只有「即将上线」这类模糊措辞、
+或明显是版本更新公告的，一律丢弃，绝不猜日期。
 
-每条事件都带 sources（来源名称 + 原文链接），前端据此标注信息源。
+每条事件都带 sources（来源名称 + 原文链接）和 market（cn / intl，标明消息属于
+国服还是国际服），前端据此标注信息源，判定时两个市场分开算。
 """
 
 import json
@@ -13,6 +15,7 @@ import xml.etree.ElementTree as ET
 from datetime import date, timedelta
 from email.utils import parsedate_to_datetime
 from html import unescape
+from urllib.parse import quote, urlparse
 
 # 新闻源以国内为主：国内源用默认超时，海外源只给短超时，超时直接跳过不拖累整轮。
 # overseas=True 的源失败是常态（跨境网络不稳），静默 skip，不算错误。
@@ -32,6 +35,19 @@ OVERSEAS_TIMEOUT = 8
 STEAM_NEWS_API = (
     "https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/"
     "?appid={appid}&count=10&maxlength=400"
+)
+
+# RSS 只覆盖最近几十条，冷门新作必须按游戏名主动去搜。
+# 百度资讯的结果页是服务端渲染的，每条结果都带标题、摘要、发布日期和原文链接，
+# 摘要里没有日期时再抓原文正文补一次——这是「拿到正文」的关键一步。
+SEARCH_URL = "https://news.baidu.com/ns?word={term}&tn=news&rn=10&cl=2&ct=1"
+MAX_SEARCH_RESULTS = 10   # 一次搜索最多看多少条结果
+MAX_ARTICLE_FETCHES = 3   # 每款游戏最多抓几篇原文（摘要没日期时才抓）
+ARTICLE_MAX_CHARS = 6000  # 正文只留前 6000 字符，够找日期就够了
+# 这些站点没有可读的新闻正文（百科 / 问答 / 视频页），抓了也没用
+SKIP_ARTICLE_HOSTS = (
+    "baike.baidu.com", "zhihu.com", "bilibili.com", "weibo.com",
+    "douyin.com", "xiaohongshu.com", "tieba.baidu.com",
 )
 
 # 多语言「上线 / 发售」关键词：新闻源覆盖中文、英文、俄语、西语、日语
@@ -174,9 +190,19 @@ def resolve_date(item):
     return None, None
 
 
+_SQUASH_RE = re.compile(
+    r"[\s\u3000·・:：\-—_()（）\[\]【】《》<>\"'!！?？,，.。、/\\|]+")
+
+
+def _squash(text):
+    """去掉标点空格再比较：媒体写法常是《无用之人:登神长阶》，版号名没有冒号。"""
+    return _SQUASH_RE.sub("", (text or "").lower())
+
+
 def _match_game(text, games):
     """按中文名 / 英文名在一段文本里找对应的游戏；找不到返回 None。"""
     lower = text.lower()
+    squashed = _squash(text)
     for game in games:
         names = []
         name_cn = (game.get("name_cn") or "").strip()
@@ -189,7 +215,7 @@ def _match_game(text, games):
             if is_en:
                 if re.search(r"(?<![a-z0-9])" + re.escape(name.lower()) + r"(?![a-z0-9])", lower):
                     return game
-            elif name in text:
+            elif name in text or _squash(name) in squashed:
                 return game
     return None
 
@@ -234,6 +260,108 @@ def _fetch(fetcher, fallback, url, timeout=None):
     if response.body or not fallback:
         return response
     return fallback.get(url, timeout=timeout)
+
+
+# --------------------------------------------------------------------------
+# 资讯搜索 + 原文正文
+# --------------------------------------------------------------------------
+_TAG_RE = re.compile(r"<[^>]+>")
+_BLOCK_RE = re.compile(r"<(script|style|noscript)[^>]*>.*?</\1>", re.S | re.I)
+# 百度资讯把每条结果的结构化数据放在 <!--s-data:{...}--> 里，
+# 比解析 DOM 稳得多：标题、摘要、发布日期、来源一次拿全。
+_S_DATA_RE = re.compile(r"<!--s-data:(\{.*?\})-->", re.S)
+_REL_DAY_RE = re.compile(r"(\d+)\s*天前")
+
+
+def _strip_tags(text):
+    """去掉强调/高亮这类行内标签并反转义。
+
+    不能把标签换成空格：百度资讯的标题是「《<em>影之刃零</em>》29日发售」，
+    换成空格会变成「《 影之刃零 》」，游戏名就匹配不上了。
+    """
+    return re.sub(r"\s+", " ", unescape(_TAG_RE.sub("", text or ""))).strip()
+
+
+_BLOCK_TAGS_RE = re.compile(
+    r"</?(?:p|div|br|h[1-6]|li|tr|td|section|article|main|nav|header|footer)[^>]*>",
+    re.I)
+
+
+def _html_to_text(html):
+    """正文 HTML 转纯文本：块级标签留空格断句，行内标签直接去掉。"""
+    html = _BLOCK_RE.sub(" ", html or "")
+    html = _BLOCK_TAGS_RE.sub(" ", html)
+    return re.sub(r"\s+", " ", unescape(_TAG_RE.sub("", html))).strip()
+
+
+def disp_time_iso(text, today=None):
+    """把搜索结果的展示时间（2025年11月20日 / 3天前 / 昨天）折成 ISO 日期。"""
+    raw = (text or "").strip()
+    if not raw:
+        return ""
+    match = (re.match(r"(\d{4})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日", raw)
+             or re.match(r"(\d{4})-(\d{1,2})-(\d{1,2})", raw))
+    if match:
+        try:
+            return date(int(match.group(1)), int(match.group(2)),
+                        int(match.group(3))).isoformat()
+        except ValueError:
+            return ""
+    today = today or date.today()
+    if "前天" in raw:
+        return (today - timedelta(days=2)).isoformat()
+    if "昨天" in raw:
+        return (today - timedelta(days=1)).isoformat()
+    if "今天" in raw or "刚刚" in raw:
+        return today.isoformat()
+    match = _REL_DAY_RE.search(raw)
+    if match:
+        return (today - timedelta(days=int(match.group(1)))).isoformat()
+    return ""
+
+
+def parse_search_items(body):
+    """解析百度资讯结果页，返回 [{title, link, summary, published, source}]。"""
+    html = body.decode("utf-8", "replace") if isinstance(body, (bytes, bytearray)) else (body or "")
+    items = []
+    for match in _S_DATA_RE.finditer(html):
+        try:
+            data = json.loads(match.group(1))
+        except ValueError:
+            continue
+        if not isinstance(data, dict):
+            continue
+        title = _strip_tags(str(data.get("title") or ""))
+        link = str(data.get("titleUrl") or "").strip()
+        if not title or not link.startswith("http"):
+            continue
+        items.append({
+            "title": title,
+            "link": link,
+            "summary": _strip_tags(str(data.get("summary") or "")),
+            "published": disp_time_iso(data.get("dispTime")),
+            "source": str(data.get("sourceName") or "").strip() or "百度资讯",
+        })
+        if len(items) >= MAX_SEARCH_RESULTS:
+            break
+    return items
+
+
+def article_text(fetcher, url):
+    """抓原文并把 HTML 剥成纯文本；拿不到正文返回 None。
+
+    摘要里只写「定档 10 月 29 日」这种半句时，完整年月日往往在正文第一段，
+    所以这一步是搜索路径能真正产出日期的前提。
+    """
+    if not url or not url.startswith("http"):
+        return None
+    host = urlparse(url).netloc.lower()
+    if any(host == skip or host.endswith("." + skip) for skip in SKIP_ARTICLE_HOSTS):
+        return None
+    response = fetcher.get(url)
+    if not response.body:
+        return None
+    return _html_to_text(response.body.decode("utf-8", "replace"))[:ARTICLE_MAX_CHARS] or None
 
 
 def _in_window(found, today):
@@ -282,6 +410,54 @@ def _rss_events(fetcher, fallback, games, today, seen):
                 "name": source["name"],
                 "url": item["link"] or source["url"],
                 "title": item["title"].strip()[:120],
+                "market": "intl" if source.get("overseas") else "cn",
+            }))
+    return events
+
+
+def _search_events(fetcher, games, today, seen):
+    """按游戏名搜资讯：先看摘要里有没有日期，没有就抓原文正文再找。
+
+    只处理「标题/摘要里既有上线关键词、又确实提到这款游戏」的结果：
+    搜索对中文的分词很粗，同名页游、汉字解释都会被带出来，不收紧就会误报。
+    """
+    events = []
+    for game in games:
+        term = (game.get("name_cn") or "").strip()
+        if len(term) < MIN_NAME_LEN_CN:
+            continue
+        response = fetcher.get(SEARCH_URL.format(term=quote(term.encode("utf-8"))))
+        if not response.body:
+            continue
+        fetched = 0
+        for item in parse_search_items(response.body):
+            text = item["title"] + " " + item["summary"]
+            if not LAUNCH_RE.search(text) or PATCH_RE.search(text):
+                continue
+            if not _match_game(text, [game]):
+                continue
+            found, raw = resolve_date(item)
+            if not found and fetched < MAX_ARTICLE_FETCHES:
+                fetched += 1
+                body = article_text(fetcher, item["link"])
+                if body:
+                    found, raw = resolve_date({
+                        "title": item["title"],
+                        "summary": body,
+                        "published": item["published"],
+                    })
+            if not found or not _in_window(found, today):
+                continue
+            key = (game.get("id"), found.isoformat())
+            if key in seen:
+                continue
+            seen.add(key)
+            events.append(_event(game, found, raw, {
+                "type": "search",
+                "name": item.get("source") or "百度资讯",
+                "url": item["link"],
+                "title": item["title"][:120],
+                "market": "cn",
             }))
     return events
 
@@ -318,30 +494,52 @@ def _steam_news_events(fetcher, fallback, games, today, seen):
                 "name": "Steam 公告",
                 "url": item.get("url"),
                 "title": title[:120],
+                "market": "intl",
             }))
     return events
 
 
-def probe_release_date(fetcher, game, today=None):
-    """查单款游戏在公告 / 国内媒体里有没有明确的上线日期。
+def probe_release_dates(fetcher, game, today=None):
+    """一次抓齐国服 / 国际服两边的公告日期，返回 {"cn": point, "intl": point}。
 
-    只用于「Steam 给不出上市时间」的候选补时间轴。命中率不高（冷门新作
-    基本搜不到），所以调用方必须限制次数并容忍超时，拿不到就返回 None。
+    Steam 公告算国际服，国内媒体（RSS、资讯搜索）算国服——两边分别取最近的一条。
+    只抓一轮就分流，避免同一款游戏把 RSS 和搜索重复跑两遍。
     """
     today = today or date.today()
     seen = set()
     events = _steam_news_events(fetcher, None, [game], today, seen)
     events += _rss_events(fetcher, None, [game], today, seen)
-    if not events:
+    events += _search_events(fetcher, [game], today, seen)
+    found = {}
+    for market in ("cn", "intl"):
+        subset = [event for event in events
+                  if (event["sources"][0] or {}).get("market") == market]
+        if not subset:
+            continue
+        earliest = min(subset, key=lambda event: event["date"])
+        source = (earliest.get("sources") or [{}])[0]
+        found[market] = {
+            "date": earliest["date"],
+            "date_text": earliest.get("date_text"),
+            "source": source.get("name"),
+            "url": source.get("url"),
+            "market": market,
+        }
+    return found
+
+
+def probe_release_date(fetcher, game, today=None, market=None):
+    """查单款游戏在公告 / 国内媒体里有没有明确的上线日期。
+
+    market 限定市场（cn / intl）；不传则返回两个市场里最早的一条。
+    拿不到日期就返回 None，绝不猜。
+    """
+    dates = probe_release_dates(fetcher, game, today)
+    if market:
+        return dates.get(market)
+    if not dates:
         return None
-    earliest = min(events, key=lambda event: event["date"])
-    source = (earliest.get("sources") or [{}])[0]
-    return {
-        "date": earliest["date"],
-        "date_text": earliest.get("date_text"),
-        "source": source.get("name"),
-        "url": source.get("url"),
-    }
+    return min(dates.values(), key=lambda point: point["date"])
 
 
 def collect(fetcher, payload, today=None, fallback=None):
@@ -357,5 +555,6 @@ def collect(fetcher, payload, today=None, fallback=None):
     seen = set()
     events = []
     events += _rss_events(fetcher, fallback, games, today, seen)
+    events += _search_events(fetcher, games, today, seen)
     events += _steam_news_events(fetcher, fallback, games, today, seen)
     return events

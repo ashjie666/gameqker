@@ -293,5 +293,169 @@ class CollectTest(unittest.TestCase):
         self.assertEqual(feeds.collect(FakeFetcher({}), None), [])
 
 
+SEARCH_HTML = (
+    '<div><!--s-data:{"title":"电子斗蛐蛐《<em>无用之人</em>:<em>登神长阶</em>》正式发售",'
+    '"titleUrl":"https://www.ali213.net/news/1.html",'
+    '"summary":"今天(11月20日)《<em>无用之人</em>:<em>登神长阶</em>》正式发售",'
+    '"dispTime":"2025年11月20日","sourceName":"游侠网"}--></div>'
+    '<div><!--s-data:{"title":"纯广告",'
+    '"titleUrl":"https://example.com/ad",'
+    '"summary":"加速器推荐","dispTime":"昨天12:00","sourceName":"某站"}--></div>'
+)
+
+ARTICLE_URL = "https://www.ali213.net/news/2.html"
+ARTICLE_HTML = (
+    "<html><head><script>var x = '2020年1月1日';</script></head>"
+    "<body><h1>《影之刃零》定档公告</h1>"
+    "<p>官方今日宣布，本作将于 2026年10月29日 正式上线。</p></body></html>"
+)
+
+
+class ParseSearchItemsTest(unittest.TestCase):
+    """百度资讯的边说边搜（s-data）要能稳定解析出标题、链接、日期、来源。"""
+
+    def test_parses_embedded_structured_data(self):
+        items = feeds.parse_search_items(SEARCH_HTML.encode("utf-8"))
+
+        self.assertEqual(len(items), 2)
+        self.assertEqual(items[0]["title"], "电子斗蛐蛐《无用之人:登神长阶》正式发售")
+        self.assertEqual(items[0]["link"], "https://www.ali213.net/news/1.html")
+        self.assertEqual(items[0]["published"], "2025-11-20")
+        self.assertEqual(items[0]["source"], "游侠网")
+        self.assertNotIn("<em>", items[0]["summary"])
+
+    def test_garbage_html_yields_nothing(self):
+        self.assertEqual(feeds.parse_search_items(b"<html>no data</html>"), [])
+        self.assertEqual(feeds.parse_search_items(b"<!--s-data:{broken json}-->"), [])
+
+
+class DispTimeTest(unittest.TestCase):
+    """搜索结果的时间展示有绝对日期也有相对说法，都要折成 ISO。"""
+
+    def test_absolute_date(self):
+        self.assertEqual(feeds.disp_time_iso("2026年10月29日"), "2026-10-29")
+        self.assertEqual(feeds.disp_time_iso("2026-10-29 10:23"), "2026-10-29")
+
+    def test_relative_dates(self):
+        today = date(2026, 10, 28)
+        self.assertEqual(feeds.disp_time_iso("今天08:10", today), "2026-10-28")
+        self.assertEqual(feeds.disp_time_iso("昨天11:34", today), "2026-10-27")
+        self.assertEqual(feeds.disp_time_iso("前天15:59", today), "2026-10-26")
+        self.assertEqual(feeds.disp_time_iso("3天前", today), "2026-10-25")
+
+    def test_unknown_format_is_empty(self):
+        self.assertEqual(feeds.disp_time_iso("上周"), "")
+        self.assertEqual(feeds.disp_time_iso(None), "")
+
+
+class ArticleTextTest(unittest.TestCase):
+    """摘要没日期时要靠原文正文，正文抓取必须去掉脚本和标签。"""
+
+    def test_strips_scripts_and_tags(self):
+        fetcher = FakeFetcher({ARTICLE_URL: FakeResponse(ARTICLE_HTML.encode("utf-8"))})
+
+        text = feeds.article_text(fetcher, ARTICLE_URL)
+
+        self.assertIn("2026年10月29日", text)
+        self.assertNotIn("2020年1月1日", text)  # script 里的日期不能当新闻内容
+        self.assertNotIn("<p>", text)
+
+    def test_blocked_hosts_are_not_fetched(self):
+        fetcher = FakeFetcher({})
+
+        self.assertIsNone(feeds.article_text(fetcher, "https://baike.baidu.com/item/x"))
+        self.assertEqual(fetcher.calls, [])
+
+    def test_fetch_failure_returns_none(self):
+        self.assertIsNone(feeds.article_text(FakeFetcher({}), ARTICLE_URL))
+
+
+class MatchGameSquashTest(unittest.TestCase):
+    """媒体写法带冒号书名号，版号名不带，必须能对上。"""
+
+    def test_colon_in_media_title_matches_registry_name(self):
+        game = {"id": "wu", "name_cn": "无用之人登神长阶"}
+
+        self.assertIs(feeds._match_game("《无用之人:登神长阶》正式发售", [game]), game)
+
+    def test_unrelated_text_does_not_match(self):
+        game = {"id": "wu", "name_cn": "无用之人登神长阶"}
+
+        self.assertIsNone(feeds._match_game("汉字解释：无的意思", [game]))
+
+
+class SearchEventsTest(unittest.TestCase):
+    """搜索路径：摘要能给出日期就直接用，给不出就抓正文补。"""
+
+    GAME = {"id": "wu", "name_cn": "无用之人登神长阶", "watch": {}}
+
+    def _fetcher(self, search_html=SEARCH_HTML, article=None):
+        responses = {feeds.SEARCH_URL.format(term=feeds.quote(self.GAME["name_cn"].encode("utf-8"))):
+                     FakeResponse(search_html.encode("utf-8"))}
+        if article:
+            responses[ARTICLE_URL] = FakeResponse(article.encode("utf-8"))
+        return FakeFetcher(responses)
+
+    def test_date_from_snippet(self):
+        # 摘要里有完整年月日，不必抓正文
+        html = ('<div><!--s-data:{"title":"《无用之人登神长阶》正式发售",'
+                '"titleUrl":"https://example.com/a",'
+                '"summary":"将于 2026年10月29日 上线","dispTime":"2026年10月27日",'
+                '"sourceName":"游侠网"}--></div>')
+        events = feeds._search_events(self._fetcher(html), [self.GAME], TODAY, set())
+
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]["date"], "2026-10-29")
+        self.assertEqual(events[0]["sources"][0]["type"], "search")
+        self.assertEqual(events[0]["sources"][0]["market"], "cn")
+
+    def test_date_from_article_body_when_snippet_has_none(self):
+        html = ('<div><!--s-data:{"title":"《无用之人登神长阶》定档",'
+                '"titleUrl":"' + ARTICLE_URL + '",'
+                '"summary":"官方公布上线时间","dispTime":"2026年10月27日",'
+                '"sourceName":"游侠网"}--></div>')
+        events = feeds._search_events(
+            self._fetcher(html, ARTICLE_HTML), [self.GAME], TODAY, set())
+
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0]["date"], "2026-10-29")
+        self.assertEqual(events[0]["sources"][0]["url"], ARTICLE_URL)
+
+    def test_stale_news_is_dropped(self):
+        # 2025 年的发售稿不再进倒计时
+        events = feeds._search_events(self._fetcher(), [self.GAME], TODAY, set())
+
+        self.assertEqual(events, [])
+
+
+class ProbeReleaseDatesTest(unittest.TestCase):
+    """一次抓取要把国服 / 国际服的消息分开，不能混算。"""
+
+    def test_events_are_split_by_market(self):
+        cn_event = {"date": "2026-11-01", "date_text": "11月1日",
+                    "sources": [{"name": "游侠网", "url": "u1", "market": "cn"}]}
+        intl_event = {"date": "2026-12-01", "date_text": "Dec 1, 2026",
+                      "sources": [{"name": "Steam 公告", "url": "u2", "market": "intl"}]}
+        with mock.patch.object(feeds, "_steam_news_events", return_value=[intl_event]), \
+                mock.patch.object(feeds, "_rss_events", return_value=[]), \
+                mock.patch.object(feeds, "_search_events", return_value=[cn_event]):
+            found = feeds.probe_release_dates(FakeFetcher({}), {"name_cn": "甲"}, TODAY)
+
+        self.assertEqual(found["cn"]["date"], "2026-11-01")
+        self.assertEqual(found["intl"]["date"], "2026-12-01")
+
+    def test_market_filter_on_probe_release_date(self):
+        intl_event = {"date": "2026-12-01", "date_text": "Dec 1, 2026",
+                      "sources": [{"name": "Steam 公告", "url": "u2", "market": "intl"}]}
+        with mock.patch.object(feeds, "_steam_news_events", return_value=[intl_event]), \
+                mock.patch.object(feeds, "_rss_events", return_value=[]), \
+                mock.patch.object(feeds, "_search_events", return_value=[]):
+            self.assertIsNone(feeds.probe_release_date(
+                FakeFetcher({}), {"name_cn": "甲"}, TODAY, market="cn"))
+            self.assertEqual(feeds.probe_release_date(
+                FakeFetcher({}), {"name_cn": "甲"}, TODAY, market="intl")["date"],
+                "2026-12-01")
+
+
 if __name__ == "__main__":
     unittest.main()
