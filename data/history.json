@@ -39,7 +39,7 @@
       {
         "date": "2026-10-28",
         "source": "trends",
-        "value": 57
+        "value": 62
       }
     ],
     "where-winds-meet": [
@@ -164,8 +164,8 @@
       },
       {
         "date": "2026-10-28",
-        "source": "signal",
-        "value": 2
+        "source": "trends",
+        "value": 0
       }
     ],
     "neverness-to-everness": [

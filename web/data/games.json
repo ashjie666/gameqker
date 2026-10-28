@@ -67,7 +67,7 @@
       },
       "skipped": [],
       "error": "官网: https://www.phantombladezero.com/: URLError: <urlopen error timed out>",
-      "duration_ms": 42791
+      "duration_ms": 42512
     },
     {
       "id": "where-winds-meet",
@@ -101,7 +101,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 7024
+      "duration_ms": 2347
     },
     {
       "id": "lord-of-mysteries",
@@ -135,7 +135,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2103
+      "duration_ms": 2160
     },
     {
       "id": "world-of-jade-dynasty",
@@ -158,7 +158,7 @@
           "release_date"
         ],
         "url": "https://zx.wanmei.com/news/",
-        "snippet": "WS 您的位置： 首页 >新闻中心 最新 新闻 公告 活动 媒体 --> 《诛仙》手游官方桌面版使用说明 2020-03-12 焕新436区朱雀焚天10月26日开服公告 2026-10-26 【经典服】2026年10月29日数据互通公告 2026-10-23 【焕新服】2026年10月29日数据互通公告 2026-10-2",
+        "snippet": "8 【焕新体验服】10月29日更新维护公告 2026-10-28 【经典体验服】10月29日更新维护公告 2026-10-28 焕新436区朱雀焚天10月26日开服公告 2026-10-26 【经典服】2026年10月29日数据互通公告 2026-10-23 【焕新服】2026年10月29日数据互通公告 2026-10-2",
         "pages": [
           {
             "url": "https://zx.wanmei.com/",
@@ -176,7 +176,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 3094
+      "duration_ms": 3165
     },
     {
       "id": "neverness-to-everness",
@@ -208,7 +208,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2084
+      "duration_ms": 2211
     },
     {
       "id": "scroll-of-taiwu",
@@ -249,7 +249,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 2298
+      "duration_ms": 2431
     },
     {
       "id": "legend-of-mortal-cultivation",
@@ -303,7 +303,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 2936
+      "duration_ms": 3143
     },
     {
       "id": "wang-yue",
@@ -335,7 +335,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 4165
+      "duration_ms": 2852
     },
     {
       "id": "sanguo-mou-ding-tianxia",
@@ -364,7 +364,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 1288
+      "duration_ms": 1419
     },
     {
       "id": "after-inc-revival",
@@ -385,7 +385,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 218
+      "duration_ms": 186
     },
     {
       "id": "tensei-brave",
@@ -406,7 +406,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 1915
+      "duration_ms": 2023
     },
     {
       "id": "steam-3081280",
@@ -427,7 +427,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 1990
+      "duration_ms": 2023
     }
   ],
   "games": [
@@ -473,7 +473,7 @@
         "steam_appid": 4115450,
         "official": "https://www.phantombladezero.com/"
       },
-      "last_checked": "2026-10-28T03:47:30Z",
+      "last_checked": "2026-10-28T22:25:47Z",
       "steam_listed": true,
       "steam_release_date": "Oct 28, 2026",
       "official_signal": null,
@@ -541,7 +541,7 @@
         "steam_appid": null,
         "official": "https://www.wherewindsmeetgame.com/"
       },
-      "last_checked": "2026-10-28T03:47:37Z",
+      "last_checked": "2026-10-28T22:25:49Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -619,7 +619,7 @@
         "steam_appid": null,
         "official": "https://lordofthemysteriesgame.com/"
       },
-      "last_checked": "2026-10-28T03:47:39Z",
+      "last_checked": "2026-10-28T22:25:51Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -689,7 +689,7 @@
         "steam_appid": 3384260,
         "official": "https://zx.wanmei.com/"
       },
-      "last_checked": "2026-10-28T03:47:42Z",
+      "last_checked": "2026-10-28T22:25:55Z",
       "steam_listed": false,
       "steam_release_date": null,
       "official_signal": {
@@ -699,7 +699,7 @@
         ],
         "label": "发售日期",
         "pattern": "release\\s+date|(?:launch|release)(?:es|ed|ing)?\\s+(?:on|in)\\b|上线日期|发行日期|正式上线|开服",
-        "snippet": "WS 您的位置： 首页 >新闻中心 最新 新闻 公告 活动 媒体 --> 《诛仙》手游官方桌面版使用说明 2020-03-12 焕新436区朱雀焚天10月26日开服公告 2026-10-26 【经典服】2026年10月29日数据互通公告 2026-10-23 【焕新服】2026年10月29日数据互通公告 2026-10-2",
+        "snippet": "8 【焕新体验服】10月29日更新维护公告 2026-10-28 【经典体验服】10月29日更新维护公告 2026-10-28 焕新436区朱雀焚天10月26日开服公告 2026-10-26 【经典服】2026年10月29日数据互通公告 2026-10-23 【焕新服】2026年10月29日数据互通公告 2026-10-2",
         "url": "https://zx.wanmei.com/news/",
         "site": "诛仙世界官网"
       },
@@ -766,7 +766,7 @@
         "steam_appid": null,
         "official": "https://nte.perfectworld.com/"
       },
-      "last_checked": "2026-10-28T03:47:44Z",
+      "last_checked": "2026-10-28T22:25:57Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -822,7 +822,7 @@
         "steam_appid": 838350,
         "official": "https://scrolloftaiwu.com/"
       },
-      "last_checked": "2026-10-28T03:47:46Z",
+      "last_checked": "2026-10-28T22:25:59Z",
       "steam_listed": true,
       "steam_release_date": "Jun 16, 2026",
       "official_signal": {
@@ -955,7 +955,7 @@
         "steam_appid": 4814120,
         "official": "https://ananta.163.com/"
       },
-      "last_checked": "2026-10-28T03:47:49Z",
+      "last_checked": "2026-10-28T22:26:02Z",
       "steam_listed": true,
       "steam_release_date": "Jan 15, 2027",
       "official_signal": {
@@ -1042,7 +1042,7 @@
         "steam_appid": null,
         "official": "https://wy.shiyue.com/"
       },
-      "last_checked": "2026-10-28T03:47:53Z",
+      "last_checked": "2026-10-28T22:26:05Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1100,7 +1100,7 @@
         "steam_appid": null,
         "official": "https://store.steamchina.com/app/4542640/"
       },
-      "last_checked": "2026-10-28T03:47:55Z",
+      "last_checked": "2026-10-28T22:26:07Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1151,7 +1151,7 @@
       "watch": {
         "steam_appid": 3337140
       },
-      "last_checked": "2026-10-28T03:47:55Z",
+      "last_checked": "2026-10-28T22:26:07Z",
       "steam_listed": true,
       "steam_release_date": "Aug 19, 2026",
       "official_signal": null,
@@ -1190,7 +1190,7 @@
       "watch": {
         "steam_appid": 2445430
       },
-      "last_checked": "2026-10-28T03:47:57Z",
+      "last_checked": "2026-10-28T22:26:09Z",
       "steam_listed": true,
       "steam_release_date": "Oct 23, 2026",
       "official_signal": null,
@@ -1229,7 +1229,7 @@
       "watch": {
         "steam_appid": 3081280
       },
-      "last_checked": "2026-10-28T03:47:59Z",
+      "last_checked": "2026-10-28T22:26:11Z",
       "steam_listed": true,
       "steam_release_date": "Nov 19, 2025",
       "official_signal": null,
@@ -1267,5 +1267,5 @@
       "auto_imported_at": "2026-10-28"
     }
   ],
-  "last_run_at": "2026-10-28T03:47:59Z"
+  "last_run_at": "2026-10-28T22:26:11Z"
 }
