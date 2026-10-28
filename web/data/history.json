@@ -38,8 +38,8 @@
       },
       {
         "date": "2026-10-28",
-        "source": "signal",
-        "value": 1
+        "source": "trends",
+        "value": 57
       }
     ],
     "where-winds-meet": [
@@ -122,8 +122,8 @@
       },
       {
         "date": "2026-10-28",
-        "source": "signal",
-        "value": 2
+        "source": "trends",
+        "value": 0
       }
     ],
     "world-of-jade-dynasty": [
@@ -332,8 +332,8 @@
       },
       {
         "date": "2026-10-28",
-        "source": "signal",
-        "value": 3
+        "source": "trends",
+        "value": 51
       }
     ],
     "wang-yue": [
@@ -416,8 +416,8 @@
       },
       {
         "date": "2026-10-28",
-        "source": "signal",
-        "value": 2
+        "source": "trends",
+        "value": 0
       }
     ],
     "rainbow-six-siege": [

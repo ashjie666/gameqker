@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28T03:43:07Z",
+  "updated_at": "2026-10-28T03:49:12Z",
   "items": {
     "domestic:暗夜勇士": {
       "checked_at": "2026-10-22",
@@ -2236,6 +2236,26 @@
       "approved_at": "2026-08-28",
       "candidate": null
     },
+    "domestic:暗影世界": {
+      "checked_at": "2026-10-28",
+      "approved_at": "2026-07-22",
+      "candidate": null
+    },
+    "domestic:霸刀逐日": {
+      "checked_at": "2026-10-28",
+      "approved_at": "2026-07-22",
+      "candidate": null
+    },
+    "domestic:爆爆战车": {
+      "checked_at": "2026-10-28",
+      "approved_at": "2026-07-22",
+      "candidate": null
+    },
+    "domestic:爆裂防线": {
+      "checked_at": "2026-10-28",
+      "approved_at": "2026-07-22",
+      "candidate": null
+    },
     "import:斗阵骑士": {
       "checked_at": "2026-10-28",
       "approved_at": "2026-03-24",
@@ -2302,7 +2322,7 @@
           "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
           "https://store.steampowered.com/app/3337140/"
         ],
-        "first_seen": "2026-10-28T03:42:15Z",
+        "first_seen": "2026-10-28T03:48:24Z",
         "last_checked": "2026-10-28"
       }
     },
@@ -2366,22 +2386,32 @@
       "approved_at": "2026-01-23",
       "candidate": null
     },
-    "domestic:暗影世界": {
+    "domestic:奔跑吧": {
       "checked_at": "2026-10-28",
       "approved_at": "2026-07-22",
       "candidate": null
     },
-    "domestic:霸刀逐日": {
+    "domestic:变形闯关": {
       "checked_at": "2026-10-28",
       "approved_at": "2026-07-22",
       "candidate": null
     },
-    "domestic:爆爆战车": {
+    "domestic:冰块砰砰乐": {
       "checked_at": "2026-10-28",
       "approved_at": "2026-07-22",
       "candidate": null
     },
-    "domestic:爆裂防线": {
+    "domestic:不朽战神": {
+      "checked_at": "2026-10-28",
+      "approved_at": "2026-07-22",
+      "candidate": null
+    },
+    "domestic:苍穹神域": {
+      "checked_at": "2026-10-28",
+      "approved_at": "2026-07-22",
+      "candidate": null
+    },
+    "domestic:策定江山": {
       "checked_at": "2026-10-28",
       "approved_at": "2026-07-22",
       "candidate": null

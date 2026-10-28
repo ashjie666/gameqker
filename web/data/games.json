@@ -67,7 +67,7 @@
       },
       "skipped": [],
       "error": "官网: https://www.phantombladezero.com/: URLError: <urlopen error timed out>",
-      "duration_ms": 44593
+      "duration_ms": 42791
     },
     {
       "id": "where-winds-meet",
@@ -101,7 +101,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 4484
+      "duration_ms": 7024
     },
     {
       "id": "lord-of-mysteries",
@@ -135,7 +135,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2703
+      "duration_ms": 2103
     },
     {
       "id": "world-of-jade-dynasty",
@@ -176,7 +176,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 3077
+      "duration_ms": 3094
     },
     {
       "id": "neverness-to-everness",
@@ -208,7 +208,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2734
+      "duration_ms": 2084
     },
     {
       "id": "scroll-of-taiwu",
@@ -235,7 +235,7 @@
         "pages": [
           {
             "url": "https://scrolloftaiwu.com/",
-            "status": 304,
+            "status": 200,
             "ok": true
           },
           {
@@ -249,7 +249,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 4327
+      "duration_ms": 2298
     },
     {
       "id": "legend-of-mortal-cultivation",
@@ -303,7 +303,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 3203
+      "duration_ms": 2936
     },
     {
       "id": "wang-yue",
@@ -335,7 +335,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2234
+      "duration_ms": 4165
     },
     {
       "id": "sanguo-mou-ding-tianxia",
@@ -364,7 +364,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 561
+      "duration_ms": 1288
     },
     {
       "id": "after-inc-revival",
@@ -385,7 +385,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 1375
+      "duration_ms": 218
     },
     {
       "id": "tensei-brave",
@@ -406,7 +406,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 1781
+      "duration_ms": 1915
     },
     {
       "id": "steam-3081280",
@@ -427,7 +427,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 1968
+      "duration_ms": 1990
     }
   ],
   "games": [
@@ -473,7 +473,7 @@
         "steam_appid": 4115450,
         "official": "https://www.phantombladezero.com/"
       },
-      "last_checked": "2026-10-28T03:41:23Z",
+      "last_checked": "2026-10-28T03:47:30Z",
       "steam_listed": true,
       "steam_release_date": "Oct 28, 2026",
       "official_signal": null,
@@ -541,7 +541,7 @@
         "steam_appid": null,
         "official": "https://www.wherewindsmeetgame.com/"
       },
-      "last_checked": "2026-10-28T03:41:27Z",
+      "last_checked": "2026-10-28T03:47:37Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -619,7 +619,7 @@
         "steam_appid": null,
         "official": "https://lordofthemysteriesgame.com/"
       },
-      "last_checked": "2026-10-28T03:41:30Z",
+      "last_checked": "2026-10-28T03:47:39Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -689,7 +689,7 @@
         "steam_appid": 3384260,
         "official": "https://zx.wanmei.com/"
       },
-      "last_checked": "2026-10-28T03:41:33Z",
+      "last_checked": "2026-10-28T03:47:42Z",
       "steam_listed": false,
       "steam_release_date": null,
       "official_signal": {
@@ -766,7 +766,7 @@
         "steam_appid": null,
         "official": "https://nte.perfectworld.com/"
       },
-      "last_checked": "2026-10-28T03:41:36Z",
+      "last_checked": "2026-10-28T03:47:44Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -822,7 +822,7 @@
         "steam_appid": 838350,
         "official": "https://scrolloftaiwu.com/"
       },
-      "last_checked": "2026-10-28T03:41:40Z",
+      "last_checked": "2026-10-28T03:47:46Z",
       "steam_listed": true,
       "steam_release_date": "Jun 16, 2026",
       "official_signal": {
@@ -955,7 +955,7 @@
         "steam_appid": 4814120,
         "official": "https://ananta.163.com/"
       },
-      "last_checked": "2026-10-28T03:41:43Z",
+      "last_checked": "2026-10-28T03:47:49Z",
       "steam_listed": true,
       "steam_release_date": "Jan 15, 2027",
       "official_signal": {
@@ -1042,7 +1042,7 @@
         "steam_appid": null,
         "official": "https://wy.shiyue.com/"
       },
-      "last_checked": "2026-10-28T03:41:45Z",
+      "last_checked": "2026-10-28T03:47:53Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1100,7 +1100,7 @@
         "steam_appid": null,
         "official": "https://store.steamchina.com/app/4542640/"
       },
-      "last_checked": "2026-10-28T03:41:46Z",
+      "last_checked": "2026-10-28T03:47:55Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1151,7 +1151,7 @@
       "watch": {
         "steam_appid": 3337140
       },
-      "last_checked": "2026-10-28T03:41:47Z",
+      "last_checked": "2026-10-28T03:47:55Z",
       "steam_listed": true,
       "steam_release_date": "Aug 19, 2026",
       "official_signal": null,
@@ -1190,7 +1190,7 @@
       "watch": {
         "steam_appid": 2445430
       },
-      "last_checked": "2026-10-28T03:41:49Z",
+      "last_checked": "2026-10-28T03:47:57Z",
       "steam_listed": true,
       "steam_release_date": "Oct 23, 2026",
       "official_signal": null,
@@ -1229,7 +1229,7 @@
       "watch": {
         "steam_appid": 3081280
       },
-      "last_checked": "2026-10-28T03:41:51Z",
+      "last_checked": "2026-10-28T03:47:59Z",
       "steam_listed": true,
       "steam_release_date": "Nov 19, 2025",
       "official_signal": null,
@@ -1267,5 +1267,5 @@
       "auto_imported_at": "2026-10-28"
     }
   ],
-  "last_run_at": "2026-10-28T03:41:51Z"
+  "last_run_at": "2026-10-28T03:47:59Z"
 }
