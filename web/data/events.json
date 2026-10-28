@@ -1,197 +1,7 @@
 {
-  "generated_at": "2026-10-28T22:28:39Z",
+  "generated_at": "2026-10-28T04:22:32Z",
   "note": "汇总多源上线事件（Steam 商店 > 官网 > 新闻/RSS），每条标注来源；解析不出具体日期的条目不列，不做版本更新。",
   "events": [
-    {
-      "game_id": "rainbow-six-siege",
-      "name_cn": "围攻",
-      "name_en": "Tom Clancy's Rainbow Six Siege",
-      "type": "launch",
-      "date": "2015-12-01",
-      "date_text": "Dec 1, 2015",
-      "store_url": "https://store.steampowered.com/app/359550/",
-      "sources": [
-        {
-          "type": "steam",
-          "name": "Steam 商店",
-          "url": "https://store.steampowered.com/app/359550/"
-        }
-      ],
-      "origin": "history",
-      "first_seen": "2026-10-22",
-      "alt_dates": []
-    },
-    {
-      "game_id": "loop-hero",
-      "name_cn": "循环勇士",
-      "name_en": "Loop Hero",
-      "type": "launch",
-      "date": "2021-03-04",
-      "date_text": "Mar 4, 2021",
-      "store_url": "https://store.steampowered.com/app/1282730/",
-      "sources": [
-        {
-          "type": "steam",
-          "name": "Steam 商店",
-          "url": "https://store.steampowered.com/app/1282730/"
-        }
-      ],
-      "origin": "history",
-      "first_seen": "2026-10-22",
-      "alt_dates": []
-    },
-    {
-      "game_id": "spirit-of-the-island",
-      "name_cn": "海岛之魂",
-      "name_en": "Spirit of the Island",
-      "type": "launch",
-      "date": "2022-08-17",
-      "date_text": "Aug 17, 2022",
-      "store_url": "https://store.steampowered.com/app/1592110/",
-      "sources": [
-        {
-          "type": "steam",
-          "name": "Steam 商店",
-          "url": "https://store.steampowered.com/app/1592110/"
-        }
-      ],
-      "origin": "history",
-      "first_seen": "2026-10-22",
-      "alt_dates": []
-    },
-    {
-      "game_id": "brotato",
-      "name_cn": "土豆兄弟",
-      "name_en": "Brotato",
-      "type": "launch",
-      "date": "2023-06-23",
-      "date_text": "Jun 23, 2023",
-      "store_url": "https://store.steampowered.com/app/1942280/",
-      "sources": [
-        {
-          "type": "steam",
-          "name": "Steam 商店",
-          "url": "https://store.steampowered.com/app/1942280/"
-        }
-      ],
-      "origin": "history",
-      "first_seen": "2026-10-22",
-      "alt_dates": []
-    },
-    {
-      "game_id": "core-keeper",
-      "name_cn": "护核纪元",
-      "name_en": "Core Keeper",
-      "type": "launch",
-      "date": "2024-08-27",
-      "date_text": "Aug 27, 2024",
-      "store_url": "https://store.steampowered.com/app/1621690/",
-      "sources": [
-        {
-          "type": "steam",
-          "name": "Steam 商店",
-          "url": "https://store.steampowered.com/app/1621690/"
-        }
-      ],
-      "origin": "history",
-      "first_seen": "2026-10-22",
-      "alt_dates": []
-    },
-    {
-      "game_id": "big-helmet-heroes",
-      "name_cn": "大头盔英雄",
-      "name_en": "Big Helmet Heroes",
-      "type": "launch",
-      "date": "2025-02-06",
-      "date_text": "Feb 6, 2025",
-      "store_url": "https://store.steampowered.com/app/2397250/",
-      "sources": [
-        {
-          "type": "steam",
-          "name": "Steam 商店",
-          "url": "https://store.steampowered.com/app/2397250/"
-        }
-      ],
-      "origin": "history",
-      "first_seen": "2026-10-22",
-      "alt_dates": []
-    },
-    {
-      "game_id": "day-of-the-shell",
-      "name_cn": "孤岛猎神",
-      "name_en": "Day of the Shell",
-      "type": "launch",
-      "date": "2025-07-29",
-      "date_text": "Jul 29, 2025",
-      "store_url": "https://store.steampowered.com/app/3008340/",
-      "sources": [
-        {
-          "type": "steam",
-          "name": "Steam 商店",
-          "url": "https://store.steampowered.com/app/3008340/"
-        }
-      ],
-      "origin": "history",
-      "first_seen": "2026-10-22",
-      "alt_dates": []
-    },
-    {
-      "game_id": "knightica",
-      "name_cn": "斗阵骑士",
-      "name_en": "Knightica",
-      "type": "launch",
-      "date": "2025-08-21",
-      "date_text": "Aug 21, 2025",
-      "store_url": "https://store.steampowered.com/app/3093400/",
-      "sources": [
-        {
-          "type": "steam",
-          "name": "Steam 商店",
-          "url": "https://store.steampowered.com/app/3093400/"
-        }
-      ],
-      "origin": "history",
-      "first_seen": "2026-10-22",
-      "alt_dates": []
-    },
-    {
-      "game_id": "steam-3081280",
-      "name_cn": "无用之人：登神长阶",
-      "name_en": "",
-      "type": "launch",
-      "date": "2025-11-19",
-      "date_text": "Nov 19, 2025",
-      "store_url": "https://store.steampowered.com/app/3081280/",
-      "sources": [
-        {
-          "type": "steam",
-          "name": "Steam 商店",
-          "url": "https://store.steampowered.com/app/3081280/"
-        }
-      ],
-      "origin": "current",
-      "first_seen": null,
-      "alt_dates": []
-    },
-    {
-      "game_id": "smash-it-wild",
-      "name_cn": "动物排球社",
-      "name_en": "Smash it Wild: Tactical Volleyball Roguelike",
-      "type": "launch",
-      "date": "2026-04-16",
-      "date_text": "Apr 16, 2026",
-      "store_url": "https://store.steampowered.com/app/2432240/",
-      "sources": [
-        {
-          "type": "steam",
-          "name": "Steam 商店",
-          "url": "https://store.steampowered.com/app/2432240/"
-        }
-      ],
-      "origin": "history",
-      "first_seen": "2026-10-22",
-      "alt_dates": []
-    },
     {
       "game_id": "sanguo-mou-ding-tianxia",
       "name_cn": "三国：谋定天下",
@@ -224,25 +34,6 @@
           "type": "steam",
           "name": "Steam 商店",
           "url": "https://store.steampowered.com/app/838350/"
-        }
-      ],
-      "origin": "current",
-      "first_seen": null,
-      "alt_dates": []
-    },
-    {
-      "game_id": "after-inc-revival",
-      "name_cn": "劫后公司",
-      "name_en": "After Inc: Revival",
-      "type": "launch",
-      "date": "2026-08-19",
-      "date_text": "Aug 19, 2026",
-      "store_url": "https://store.steampowered.com/app/3337140/",
-      "sources": [
-        {
-          "type": "steam",
-          "name": "Steam 商店",
-          "url": "https://store.steampowered.com/app/3337140/"
         }
       ],
       "origin": "current",
@@ -361,13 +152,6 @@
           "url": "https://baijiahao.baidu.com/s?id=1879728086023040171&wfr=spider&for=pc",
           "title": "网易云音乐独家首发DOUDOU《燕云十六声》未央城宣传曲《宝船》",
           "market": "cn"
-        },
-        {
-          "type": "search",
-          "name": "ZAKER",
-          "url": "https://app.myzaker.com/news/article.php?pk=6ae1d8fcb15ec02e4e6e050c",
-          "title": "网易《燕云十六声》销量突破1000万份",
-          "market": "cn"
         }
       ],
       "origin": "news",
@@ -376,10 +160,6 @@
         {
           "date": "2026-10-23",
           "date_text": "10月23日"
-        },
-        {
-          "date": "2026-10-28",
-          "date_text": "2026 年 10 月 28 日"
         }
       ]
     },
