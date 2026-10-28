@@ -19,6 +19,7 @@ const LEVEL_VALUES = ['高', '中高', '中', '低中', '低'];
 const CHANGED_WINDOW_MS = 24 * 60 * 60 * 1000; // 巡检每天一次，24 小时内的变更即「今日变更」
 const COUNTDOWN_DAYS = 30; // 上线倒计时只展示未来 30 天内发售 / 上线的游戏
 const NEAR_DAYS = 2; // 其中 2 天内进入高亮提醒
+const UNRANKED = 99; // 自动并入条目的占位优先级（人工是 1..10），显示为「未定级」
 
 const state = {
   genre: 'all',
@@ -195,7 +196,11 @@ function renderFilters() {
 
   const priorityOptions = withAll([...new Set(games.map((g) => g.priority))]
     .sort((a, b) => a - b)
-    .map((priority) => ({ label: 'P' + priority, value: String(priority), count: countBy((g) => g.priority === priority) })));
+    .map((priority) => ({
+      label: priority >= UNRANKED ? '未定级' : 'P' + priority,
+      value: String(priority),
+      count: countBy((g) => g.priority === priority),
+    })));
 
   const changedOptions = [
     { label: '全部', value: 'all' },
@@ -385,6 +390,12 @@ function textCell(value) {
   return el('span', { class: value === PLACEHOLDER ? 'ph' : null, text });
 }
 
+// 自动并入的条目用 99 占位排到末尾，显示成「未定级」而不是 P99
+function priorityLabel(game) {
+  const value = game.priority ?? UNRANKED;
+  return value >= UNRANKED ? '未定级' : 'P' + value;
+}
+
 function buildRow(game) {
   const changed = hasRecentChange(game);
   const level = game.monetization_level || '';
@@ -401,7 +412,9 @@ function buildRow(game) {
     cell('col-genre', '类型', [
       el('span', { class: 'tag' + (game.genre === PLACEHOLDER ? ' ph' : ''), text: game.genre || '—' }),
     ]),
-    cell('col-priority', '优先级', [el('span', { class: 'prio', text: 'P' + (game.priority ?? 3) })]),
+    cell('col-priority', '优先级', [
+      el('span', { class: 'prio', text: priorityLabel(game) }),
+    ]),
     cell('col-cn_status', '国内状态', [textCell(game.cn_status)]),
     cell('col-global_status', '海外状态', [
       textCell(game.global_status),
@@ -589,17 +602,26 @@ function renderDiscover() {
   const list = $('discover-list');
   const note = $('discover-note');
   const all = (CANDIDATES && CANDIDATES.candidates) || [];
-  // 已自动并入主表的候选不再出现在这里，否则同一款游戏会在页面上出现两次
+  // 已自动并入主表的候选不再列出来，否则同一款游戏会在页面上出现两次
   const merged = new Set((DATA.games || []).filter((g) => g.auto_imported).map((g) => g.id));
   const items = all.filter((candidate) => !merged.has(candidateSlug(candidate)));
 
-  if (!items.length) { panel.hidden = true; return; }
+  if (!all.length) { panel.hidden = true; return; }
   panel.hidden = false;
 
   const batches = (CANDIDATES.batches || []).map((batch) => batch.title).join(' / ');
-  note.textContent = `候选 ${items.length} 条 · ${CANDIDATES.generated_at || '—'}` +
-    (batches ? ` · ${batches}` : '');
+  const mergedCount = all.length - items.length;
+  note.textContent = `本轮候选 ${all.length} 条` +
+    (mergedCount ? ` · 已并入 ${mergedCount} 款` : '') +
+    ` · ${CANDIDATES.generated_at || '—'}` + (batches ? ` · ${batches}` : '');
 
+  if (!items.length) {
+    list.replaceChildren(el('p', {
+      class: 'cell-sub',
+      text: '本轮命中的候选已全部自动并入上方主表，行首标「机器并入」；定性字段补完后可把优先级从「未定级」往上调。',
+    }));
+    return;
+  }
   list.replaceChildren(...items.slice(0, 12).map(renderCandidate));
 }
 

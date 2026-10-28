@@ -139,10 +139,11 @@ class GameFromCandidateTest(unittest.TestCase):
         self.assertFalse(game["steam_listed"])
         self.assertIsNone(game["steam_release_date"])
 
-    def test_lowest_priority_by_default(self):
+    def test_priority_sits_below_every_manual_rank(self):
         game = update.game_from_candidate(CANDIDATE, "2026-10-22")
         self.assertEqual(game["priority"], update.AUTO_PRIORITY)
-        self.assertEqual(game["priority"], 3)
+        # 人工优先级是 1..10，自动条目必须排在全部人工条目之后
+        self.assertGreater(game["priority"], 10)
 
     def test_chinese_name_en_is_blanked(self):
         # 候选的 name_en 有时是原样照抄的中文名，填进「英文名」栏没意义

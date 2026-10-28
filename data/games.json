@@ -1055,6 +1055,123 @@
         "https://store.steamchina.com/app/4542640/_/",
         "https://m.ourplay.net/rank/detail/316888"
       ]
+    },
+    {
+      "id": "after-inc-revival",
+      "name_cn": "劫后公司",
+      "name_en": "After Inc: Revival",
+      "developer": "上海青禹游信息技术有限公司",
+      "genre": "待补",
+      "priority": 99,
+      "cn_status": "已上线 · 2026-08-19",
+      "global_status": "已上线 · 2026-08-19",
+      "overseas_heat": "待补",
+      "overseas_heat_checked": null,
+      "gap_window": "国服版号早于 Steam 美区发售",
+      "target_markets": [],
+      "keywords": [],
+      "content_opportunities": [],
+      "monetization_level": "待补",
+      "monetization": "待补",
+      "risks": [],
+      "watch": {
+        "steam_appid": 3337140
+      },
+      "last_checked": null,
+      "steam_listed": true,
+      "steam_release_date": "Aug 19, 2026",
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        {
+          "label": "版号公示",
+          "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html"
+        },
+        {
+          "label": "Steam 商店",
+          "url": "https://store.steampowered.com/app/3337140/"
+        }
+      ],
+      "auto_imported": true,
+      "auto_imported_at": "2026-10-28"
+    },
+    {
+      "id": "tensei-brave",
+      "name_cn": "勇者传说",
+      "name_en": "Tensei Brave",
+      "developer": "重庆贰伍八八网络科技有限公司",
+      "genre": "待补",
+      "priority": 99,
+      "cn_status": "预约中 · 2026-10-23",
+      "global_status": "预约中 · 2026-10-23",
+      "overseas_heat": "待补",
+      "overseas_heat_checked": null,
+      "gap_window": "国服版号早于 Steam 美区定档",
+      "target_markets": [],
+      "keywords": [],
+      "content_opportunities": [],
+      "monetization_level": "待补",
+      "monetization": "待补",
+      "risks": [],
+      "watch": {
+        "steam_appid": 2445430
+      },
+      "last_checked": null,
+      "steam_listed": true,
+      "steam_release_date": "Oct 23, 2026",
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        {
+          "label": "版号公示",
+          "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202608/t20260831_1005702.html"
+        },
+        {
+          "label": "Steam 商店",
+          "url": "https://store.steampowered.com/app/2445430/"
+        }
+      ],
+      "auto_imported": true,
+      "auto_imported_at": "2026-10-28"
+    },
+    {
+      "id": "steam-3081280",
+      "name_cn": "无用之人：登神长阶",
+      "name_en": "",
+      "developer": "深圳市奥古布古网络科技有限公司",
+      "genre": "待补",
+      "priority": 99,
+      "cn_status": "已上线 · 2025-11-19",
+      "global_status": "无页面",
+      "overseas_heat": "待补",
+      "overseas_heat_checked": null,
+      "gap_window": "国服已获批版号，Steam 美区无页面或未上架",
+      "target_markets": [],
+      "keywords": [],
+      "content_opportunities": [],
+      "monetization_level": "待补",
+      "monetization": "待补",
+      "risks": [],
+      "watch": {
+        "steam_appid": 3081280
+      },
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        {
+          "label": "版号公示",
+          "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202609/t20260930_1011281.html"
+        },
+        {
+          "label": "Steam 商店",
+          "url": "https://store.steampowered.com/app/3081280/"
+        }
+      ],
+      "auto_imported": true,
+      "auto_imported_at": "2026-10-28"
     }
   ],
   "last_run_at": "2026-10-27T22:24:13Z"
