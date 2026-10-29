@@ -67,7 +67,7 @@
       },
       "skipped": [],
       "error": "官网: https://www.phantombladezero.com/: URLError: <urlopen error timed out>",
-      "duration_ms": 43703
+      "duration_ms": 43500
     },
     {
       "id": "where-winds-meet",
@@ -101,7 +101,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 3375
+      "duration_ms": 3389
     },
     {
       "id": "lord-of-mysteries",
@@ -135,7 +135,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 3030
+      "duration_ms": 2985
     },
     {
       "id": "world-of-jade-dynasty",
@@ -176,7 +176,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 4063
+      "duration_ms": 3547
     },
     {
       "id": "neverness-to-everness",
@@ -208,7 +208,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2702
+      "duration_ms": 2546
     },
     {
       "id": "scroll-of-taiwu",
@@ -249,20 +249,28 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 8218
+      "duration_ms": 5968
     },
     {
       "id": "legend-of-mortal-cultivation",
       "name": "凡人修仙传奇",
-      "status": "skipped",
-      "steam": null,
+      "status": "ok",
+      "steam": {
+        "appid": 3814570,
+        "listed": true,
+        "release_date": "Jan 29, 2026",
+        "coming_soon": false,
+        "name": "凡人修仙传奇",
+        "url": "https://store.steampowered.com/app/3814570/",
+        "error": null,
+        "stale": false
+      },
       "official": null,
       "skipped": [
-        "steam(未配置 appid)",
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 0
+      "duration_ms": 1796
     },
     {
       "id": "ananta",
@@ -303,7 +311,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 3140
+      "duration_ms": 3813
     },
     {
       "id": "wang-yue",
@@ -335,7 +343,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2852
+      "duration_ms": 2186
     },
     {
       "id": "sanguo-mou-ding-tianxia",
@@ -364,28 +372,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 547
-    },
-    {
-      "id": "after-inc-revival",
-      "name": "劫后公司",
-      "status": "ok",
-      "steam": {
-        "appid": 3337140,
-        "listed": true,
-        "release_date": "Aug 19, 2026",
-        "coming_soon": false,
-        "name": "After Inc: Revival",
-        "url": "https://store.steampowered.com/app/3337140/",
-        "error": null,
-        "stale": false
-      },
-      "official": null,
-      "skipped": [
-        "official(未配置官网)"
-      ],
-      "error": null,
-      "duration_ms": 843
+      "duration_ms": 594
     },
     {
       "id": "tensei-brave",
@@ -406,28 +393,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 1952
-    },
-    {
-      "id": "steam-3081280",
-      "name": "无用之人：登神长阶",
-      "status": "ok",
-      "steam": {
-        "appid": 3081280,
-        "listed": true,
-        "release_date": "Nov 19, 2025",
-        "coming_soon": false,
-        "name": "Wretch: Divine Ascent",
-        "url": "https://store.steampowered.com/app/3081280/",
-        "error": null,
-        "stale": false
-      },
-      "official": null,
-      "skipped": [
-        "official(未配置官网)"
-      ],
-      "error": null,
-      "duration_ms": 2063
+      "duration_ms": 1390
     }
   ],
   "games": [
@@ -473,7 +439,7 @@
         "steam_appid": 4115450,
         "official": "https://www.phantombladezero.com/"
       },
-      "last_checked": "2026-10-28T04:19:33Z",
+      "last_checked": "2026-10-28T09:16:21Z",
       "steam_listed": true,
       "steam_release_date": "Oct 28, 2026",
       "official_signal": null,
@@ -500,7 +466,18 @@
       "sources": [
         "https://blog.playstation.com/2026/08/17/phantom-blade-zero-state-of-play-dives-deep-into-combat-and-the-wulin-world",
         "https://store.steampowered.com/app/4115450/Phantom_Blade_Zero"
-      ]
+      ],
+      "guide_cn": "中 · 预售期，中文试玩/前瞻密集，成型攻略待发售",
+      "guide_intl": "中低 · 英文硬核动作社区已抢跑，攻略站提前占位但不成体系",
+      "version_compare": "同步",
+      "version_note": "PS5 限时独占，PC/PS5 与国服同步 2026-10-29",
+      "platforms": [
+        "PC",
+        "主机"
+      ],
+      "global_launch_at": "2026-10-28",
+      "content_parity": "same",
+      "content_note": "同版本单机内容一致，无区域删改"
     },
     {
       "id": "where-winds-meet",
@@ -538,12 +515,12 @@
         "需靠体系化与更新速度差异化"
       ],
       "watch": {
-        "steam_appid": null,
+        "steam_appid": 3564740,
         "official": "https://www.wherewindsmeetgame.com/"
       },
-      "last_checked": "2026-10-28T04:19:36Z",
-      "steam_listed": null,
-      "steam_release_date": null,
+      "last_checked": "2026-10-28T09:16:25Z",
+      "steam_listed": true,
+      "steam_release_date": "Nov 14, 2025",
       "official_signal": {
         "matched": true,
         "signals": [
@@ -578,7 +555,19 @@
       "sources": [
         "https://www.neteasegames.com/m/news/20260618/37000_1304836.html",
         "https://www.switchbladegaming.com/where-winds-meet/beginners-guide-24/"
-      ]
+      ],
+      "guide_cn": "高 · 国内上线近两年，Wiki 与攻略站体系完整",
+      "guide_intl": "中低 · 英文攻略碎片化，多靠零散视频与 Reddit 帖",
+      "version_compare": "领先",
+      "version_note": "国服版本持续领先国际服",
+      "platforms": [
+        "PC",
+        "移动端",
+        "主机"
+      ],
+      "global_launch_at": "2025-11-14",
+      "content_parity": "partial",
+      "content_note": "「黑市」属交易系统不计入，剩余差异仅为角色创建等本地化表述；核心玩法、数值、副本未见公开差异"
     },
     {
       "id": "lord-of-mysteries",
@@ -619,7 +608,7 @@
         "steam_appid": null,
         "official": "https://lordofthemysteriesgame.com/"
       },
-      "last_checked": "2026-10-28T04:19:39Z",
+      "last_checked": "2026-10-28T09:16:27Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -647,7 +636,16 @@
       "sources": [
         "https://mmoculture.com/tips-guides/lord-of-mysteries-global-launch/",
         "https://lordofthemysteriesgame.com/faq/"
-      ]
+      ],
+      "guide_cn": "中 · 公测两个月，中文攻略开始起量",
+      "guide_intl": "极低 · 英文侧几乎为零，讨论仍集中在 IP 本身",
+      "version_compare": "领先",
+      "version_note": "国服已公测，海外未上线",
+      "platforms": [
+        "移动端",
+        "PC"
+      ],
+      "global_launch_at": null
     },
     {
       "id": "world-of-jade-dynasty",
@@ -689,7 +687,7 @@
         "steam_appid": 3384260,
         "official": "https://zx.wanmei.com/"
       },
-      "last_checked": "2026-10-28T04:19:43Z",
+      "last_checked": "2026-10-28T09:16:31Z",
       "steam_listed": false,
       "steam_release_date": null,
       "official_signal": {
@@ -727,7 +725,20 @@
         "https://www.bladerpg.com/en/cultivation-mmo/",
         "https://store.steampowered.com/app/3384260/",
         "https://www.goha.ru/mmorpg-world-of-jade-dynasty-stanet-dostupnoj-dlya-vseh-blagodarya-fanatskomu-perevodu-na-anglijskij-dm7XMB"
-      ]
+      ],
+      "guide_cn": "高 · 运营 22 个月，中文 Wiki 与副本攻略成熟",
+      "guide_intl": "极低 · 无官方英文，仅民间英化补丁与小众社区",
+      "version_compare": "领先",
+      "version_note": "国服运营 22 个月，欧美未开服",
+      "overseas_verified": true,
+      "overseas_channels": [
+        "港澳台",
+        "新马"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "global_launch_at": "2025-06-05"
     },
     {
       "id": "neverness-to-everness",
@@ -763,12 +774,12 @@
         "前瞻稿需要卡时效，滞后即失效"
       ],
       "watch": {
-        "steam_appid": null,
+        "steam_appid": 4508340,
         "official": "https://nte.perfectworld.com/"
       },
-      "last_checked": "2026-10-28T04:19:46Z",
-      "steam_listed": null,
-      "steam_release_date": null,
+      "last_checked": "2026-10-28T09:16:34Z",
+      "steam_listed": true,
+      "steam_release_date": "Jul 7, 2026",
       "official_signal": {
         "matched": false,
         "signals": [],
@@ -782,7 +793,19 @@
       "sources": [
         "https://nte.global/nte-neverness-to-everness-official-launch-april-29/",
         "https://nteguide.com/en/faq/cn-vs-global/"
-      ]
+      ],
+      "guide_cn": "高 · 国服早 1-2 个版本，中文配队/攻略站完整",
+      "guide_intl": "中 · Prydwen、Game8 有覆盖，但随版本落后而滞后",
+      "version_compare": "领先",
+      "version_note": "国际服落后国服 1-2 个版本",
+      "platforms": [
+        "PC",
+        "移动端",
+        "主机"
+      ],
+      "global_launch_at": "2026-07-07",
+      "content_parity": "same",
+      "content_note": "国服 1.2 的 Shinku 时装修正不计入，核心玩法、数值与副本与国际服一致"
     },
     {
       "id": "scroll-of-taiwu",
@@ -792,7 +815,7 @@
       "genre": "武侠 / 沙盒模拟",
       "priority": 6,
       "cn_status": "8 年 EA、国服 340 万+ 玩家，攻略体系极成熟",
-      "global_status": "2026-06-17 全球 1.0，首发即含首次官方英化（基础 UI/教程/百科可用，深度条目仍可能缺失）",
+      "global_status": "2018-09-21 Steam 抢先体验；2026-06-16 1.0 正式版全球同步",
       "overseas_heat": "中 · 1.0 官方英化刚开放，单机长尾搜索稳定，热度平缓、缺少爆发点",
       "overseas_heat_checked": "2026-10-15",
       "gap_window": "中：英文刚开放，深度内容仍空白",
@@ -822,7 +845,7 @@
         "steam_appid": 838350,
         "official": "https://scrolloftaiwu.com/"
       },
-      "last_checked": "2026-10-28T04:19:54Z",
+      "last_checked": "2026-10-28T09:16:40Z",
       "steam_listed": true,
       "steam_release_date": "Jun 16, 2026",
       "official_signal": {
@@ -868,7 +891,17 @@
       "sources": [
         "https://everygamemade.com/hub/scroll-of-taiwu/index.html",
         "https://scrolloftaiwu.com/guides/official-english-translation"
-      ]
+      ],
+      "guide_cn": "极高 · 8 年 EA、340 万玩家沉淀，攻略体系极成熟",
+      "guide_intl": "低 · 官方英化刚开放，深度条目仍空白",
+      "version_compare": "同步",
+      "version_note": "国区与全球同版本，正式版同日上线",
+      "platforms": [
+        "PC"
+      ],
+      "global_launch_at": "2026-06-16",
+      "content_parity": "same",
+      "content_note": "Steam 单版本，同版本内容一致"
     },
     {
       "id": "legend-of-mortal-cultivation",
@@ -905,18 +938,47 @@
         "放置品类留存差、生命周期不确定"
       ],
       "watch": {
-        "steam_appid": null,
+        "steam_appid": 3814570,
         "official": null
       },
-      "last_checked": null,
-      "steam_listed": null,
-      "steam_release_date": null,
+      "last_checked": "2026-10-28T09:16:41Z",
+      "steam_listed": true,
+      "steam_release_date": "Jan 29, 2026",
       "official_signal": null,
-      "changes": [],
+      "changes": [
+        {
+          "at": "2026-10-28T09:16:49Z",
+          "game_id": "legend-of-mortal-cultivation",
+          "field": "steam_release_date",
+          "old": null,
+          "new": "Jan 29, 2026",
+          "url": "https://store.steampowered.com/app/3814570/",
+          "evidence": "release_date.date=Jan 29, 2026；coming_soon=False"
+        },
+        {
+          "at": "2026-10-28T09:16:49Z",
+          "game_id": "legend-of-mortal-cultivation",
+          "field": "steam_listed",
+          "old": null,
+          "new": true,
+          "url": "https://store.steampowered.com/app/3814570/",
+          "evidence": "Steam cc=us 商店 success=true；name=凡人修仙传奇"
+        }
+      ],
       "sources": [
         "https://www.notebookcheck.net/New-free-to-play-MMORPG-launches-on-Steam-with-promising-reviews-but-with-a-major-caveat.1216274.0.html",
         "https://www.bladerpg.com/en/cultivation-mmo/"
-      ]
+      ],
+      "guide_cn": "中高 · 中文修仙/放置玩家自建攻略与问答较多",
+      "guide_intl": "极低 · 仅简中，英文侧几乎无人公开讨论",
+      "version_compare": "同步",
+      "version_note": "Steam 1.0 与国服同日",
+      "platforms": [
+        "PC"
+      ],
+      "global_launch_at": "2026-01-29",
+      "content_parity": "same",
+      "content_note": "全球单一简体中文客户端，无独立海外版本，海外玩家直接用同一包体"
     },
     {
       "id": "ananta",
@@ -926,7 +988,7 @@
       "genre": "二次元 / 都市开放世界",
       "priority": 8,
       "cn_status": "至今未开放首次对外测试（官方口径：对齐全球同步发行）",
-      "global_status": "2027-01-15 全球上线（gamescom 2026 公布）",
+      "global_status": "2027-01-15 全球上线（官方定档，尚未开服）",
       "overseas_heat": "中高 · 网易量级 + 全球同步日期已定，预热期关注度上行；距上线约 3 个月，仍属潜伏期热度",
       "overseas_heat_checked": "2026-10-15",
       "gap_window": "上线前约 3 个月的 SEO 卡位期",
@@ -955,7 +1017,7 @@
         "steam_appid": 4814120,
         "official": "https://ananta.163.com/"
       },
-      "last_checked": "2026-10-28T04:19:57Z",
+      "last_checked": "2026-10-28T09:16:45Z",
       "steam_listed": true,
       "steam_release_date": "Jan 15, 2027",
       "official_signal": {
@@ -1002,7 +1064,19 @@
         "https://anantadex.com/guides/release-date/",
         "https://anantadb.com/",
         "https://www.guancha.cn/economy/2026_05_21_817939.shtml"
-      ]
+      ],
+      "guide_cn": "低 · 尚未对外测试，无实战攻略可沉淀",
+      "guide_intl": "低 · 全球同步发行，英文前瞻零星",
+      "version_compare": "未知",
+      "version_note": "国服尚未测试，官方称全球同步发行",
+      "platforms": [
+        "PC",
+        "移动端",
+        "主机"
+      ],
+      "global_launch_at": "2027-01-15",
+      "content_parity": "unknown",
+      "content_note": "海外未上线，尚无同版本可比"
     },
     {
       "id": "wang-yue",
@@ -1042,7 +1116,7 @@
         "steam_appid": null,
         "official": "https://wy.shiyue.com/"
       },
-      "last_checked": "2026-10-28T04:20:00Z",
+      "last_checked": "2026-10-28T09:16:47Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1059,7 +1133,16 @@
         "https://a.9game.cn/wangyue/11956785.html",
         "https://www.taptap.cn/app/735263/strategy",
         "https://www.icy-veins.com/other-games/news/wang-yues-new-beta-shows-why-this-might-be-the-most-unusual-gacha-rpg/"
-      ]
+      ],
+      "guide_cn": "低 · 仅国服测试，攻略限于测试期零散整理",
+      "guide_intl": "极低 · 英文侧只有零星媒体报道",
+      "version_compare": "领先",
+      "version_note": "仅国服测试，海外无发行计划",
+      "platforms": [
+        "移动端",
+        "PC"
+      ],
+      "global_launch_at": null
     },
     {
       "id": "sanguo-mou-ding-tianxia",
@@ -1100,7 +1183,7 @@
         "steam_appid": null,
         "official": "https://store.steamchina.com/app/4542640/"
       },
-      "last_checked": "2026-10-28T04:20:00Z",
+      "last_checked": "2026-10-28T09:16:48Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1128,17 +1211,32 @@
       "sources": [
         "https://store.steamchina.com/app/4542640/_/",
         "https://m.ourplay.net/rank/detail/316888"
-      ]
+      ],
+      "guide_cn": "极高 · 中文 SLG 配将/开荒体系极成熟",
+      "guide_intl": "极低 · 英文近乎为零",
+      "version_compare": "领先",
+      "version_note": "国服成熟运营，欧美无英文服",
+      "overseas_verified": true,
+      "overseas_channels": [
+        "港澳台",
+        "新马"
+      ],
+      "platforms": [
+        "移动端"
+      ],
+      "global_launch_at": "2026-01-22",
+      "content_parity": "partial",
+      "content_note": "同套职业与赛季剧本框架，进度错位（台服 W3 晚国服约 7 个月，韩服 10 月才进 W1）；韩服按测试反馈缩短夜战时段并加便利功能，未见玩法删减或数值重做"
     },
     {
       "id": "tensei-brave",
       "name_cn": "勇者传说",
       "name_en": "Tensei Brave",
-      "developer": "重庆贰伍八八网络科技有限公司",
-      "genre": "待补",
+      "developer": "重庆贰伍八八网络科技（运营）· 重庆天健电子音像（出版）",
+      "genre": "移动端游戏（品类待补）",
       "priority": 99,
       "cn_status": "预约中 · 2026-10-23",
-      "global_status": "预约中 · 2026-10-23",
+      "global_status": "未发现海外发行版本（同名 Steam 作品属日本 OTAKU Plan，非本作）",
       "overseas_heat": "待补",
       "overseas_heat_checked": null,
       "gap_window": "国服版号早于 Steam 美区定档",
@@ -1149,11 +1247,12 @@
       "monetization": "待补",
       "risks": [],
       "watch": {
-        "steam_appid": 2445430
+        "steam_appid": null,
+        "official": null
       },
-      "last_checked": "2026-10-28T04:20:03Z",
-      "steam_listed": true,
-      "steam_release_date": "Oct 23, 2026",
+      "last_checked": "2026-10-28T09:16:49Z",
+      "steam_listed": false,
+      "steam_release_date": null,
       "official_signal": null,
       "changes": [],
       "sources": [
@@ -1167,8 +1266,2138 @@
         }
       ],
       "auto_imported": true,
-      "auto_imported_at": "2026-10-28"
+      "auto_imported_at": "2026-10-28",
+      "guide_cn": "待补 · 预约阶段，暂无攻略",
+      "guide_intl": "待补 · 预约阶段，暂无攻略",
+      "version_compare": "同步",
+      "version_note": "国服与 Steam 美区同日期",
+      "platforms": [
+        "PC"
+      ],
+      "global_launch_at": null,
+      "content_parity": "unknown",
+      "content_note": "无海外版本，暂无同版本可比",
+      "overseas_verified": false,
+      "overseas_channels": []
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "strinova",
+      "name_cn": "卡拉彼丘",
+      "name_en": "Strinova",
+      "developer": "创梦天地 Day1 Studio",
+      "genre": "二次元 / 战术射击",
+      "priority": 10,
+      "platforms": [
+        "PC",
+        "移动端"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "Steam 全球",
+        "Epic"
+      ],
+      "cn_status": "2023-08-03 PC 不删档上线，2024-02-01 转正式公测",
+      "global_status": "2024-11-21 Steam/Epic 全球公测（北美、日韩、欧洲、东南亚、南美）",
+      "overseas_heat": "中低 · 国际服开服热度已过峰，Steam 在线中等偏低",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "约 476 天：国服 2023-08 上线，国际服 2024-11 才公测",
+      "target_markets": [
+        "欧美战术射击玩家",
+        "日韩二次元射击玩家"
+      ],
+      "keywords": [
+        "strinova guide",
+        "strinova character tier list",
+        "卡拉彼丘 攻略"
+      ],
+      "content_opportunities": [
+        "角色强度榜",
+        "弦化操作教学",
+        "地图点位"
+      ],
+      "monetization_level": "中",
+      "monetization": "双端射击，付费集中在皮肤；英文攻略需求真实但受众窄",
+      "risks": [
+        "国际服热度已过峰，长尾收益有限",
+        "英文 wiki 已占位但缺深度，需靠国服版本前瞻差异化",
+        "国服与国际服活动节奏错位，易写错数据"
+      ],
+      "guide_cn": "高 · B站/贴吧/官方社区体系完整，弦化与角色教学齐全",
+      "guide_intl": "低 · 仅 Miraheze Wiki 与 zilliongamer 词条，条目薄且更新滞后",
+      "version_compare": "领先",
+      "version_note": "国服早 476 天，角色与活动节奏领先",
+      "watch": {
+        "steam_appid": 1282270,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://www.idreamsky.com/6638.html",
+        "https://store.steampowered.com/app/1282270/"
+      ],
+      "global_launch_at": "2024-11-21"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "arena-breakout",
+      "name_cn": "暗区突围",
+      "name_en": "Arena Breakout",
+      "developer": "腾讯魔方工作室 MoreFun",
+      "genre": "硬核 / 战术射击（撤离）",
+      "priority": 10,
+      "platforms": [
+        "移动端",
+        "PC"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "全球手游",
+        "Steam / Epic"
+      ],
+      "cn_status": "2022-07-13 全平台正式公测",
+      "global_status": "2023-07-13 iOS/Google Play 全球上线；PC 海外版 Arena Breakout: Infinite 2024-08-13 不删档",
+      "overseas_heat": "中 · 海外手游受众稳定，PC 版上线后搜索回升",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "约 365 天：国服 2022-07 公测，海外手游 2023-07 上线；PC 版晚 762 天",
+      "target_markets": [
+        "欧美撤离类射击玩家",
+        "东南亚硬核 FPS"
+      ],
+      "keywords": [
+        "arena breakout guide",
+        "arena breakout loot routes",
+        "arena breakout infinite map"
+      ],
+      "content_opportunities": [
+        "出金路线",
+        "地图点位",
+        "装备与经济"
+      ],
+      "monetization_level": "中高",
+      "monetization": "皮肤与战令付费稳定，英文攻略需求长期存在",
+      "risks": [
+        "国服与国际服经济/爆率数值不同，套用易错",
+        "硬核 FPS 英文受众分散",
+        "端游与手游内容不可混写"
+      ],
+      "guide_cn": "高 · 出金路线、地图点位、装备搭配积累两年以上",
+      "guide_intl": "中低 · 以 YouTube/Reddit 零散内容为主，系统性 wiki 未成型",
+      "version_compare": "领先",
+      "version_note": "国服领先海外手游 365 天、领先 PC 版 762 天",
+      "watch": {
+        "steam_appid": null,
+        "official": "https://www.arenabreakoutinfinite.com/"
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://press.levelinfinite.com/en-US/THE-NEXT-GENERATION-OF-TACTICAL-FPS-ARRIVES---ARENA-BREAKOUT-LAUNCHES-",
+        "https://www.arenabreakoutinfinite.com/zh-Hant/news.html"
+      ],
+      "global_launch_at": "2023-07-13"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "girls-frontline-2",
+      "name_cn": "少女前线2：追放",
+      "name_en": "Girls' Frontline 2: Exilium",
+      "developer": "散爆网络 Sunborn",
+      "genre": "二次元 / 战棋 SRPG",
+      "priority": 10,
+      "platforms": [
+        "移动端",
+        "PC"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "北美",
+        "日韩",
+        "Steam"
+      ],
+      "cn_status": "2023-12-21 公测",
+      "global_status": "2024-12-03 北美先开，12-05 日韩等地区接续（Haoplay 发行）",
+      "overseas_heat": "中 · 英文社区稳定，规模小于国服",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "约 348 天：国服 2023-12 公测，海外 2024-12 才上线",
+      "target_markets": [
+        "欧美二次元战棋玩家",
+        "日韩 SRPG 玩家"
+      ],
+      "keywords": [
+        "gfl2 exilium tier list",
+        "girls frontline 2 guide",
+        "少前2 配队"
+      ],
+      "content_opportunities": [
+        "角色强度榜",
+        "养成路线",
+        "关卡作业"
+      ],
+      "monetization_level": "中",
+      "monetization": "二次元抽卡，英文付费意愿中；攻略站竞争已经存在",
+      "risks": [
+        "英文攻略站已成型，需靠国服版本前瞻差异化",
+        "角色强度随版本变动大",
+        "国际服卡池排期与国服错位"
+      ],
+      "guide_cn": "高 · NGA/贴吧/B站配队与养成体系成熟",
+      "guide_intl": "中 · girlsfrontline2.wiki、Prydwen、IOP Wiki 已成型但落后国服近一年",
+      "version_compare": "领先",
+      "version_note": "国服版本领先约一年",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://www.gamespress.com/en-US/Multimedia-sensation-Girls-Frontline-series-brings-sequel-to-PC-and-mo",
+        "https://otahub.asia/en/profile/girls-frontline-2-exilium"
+      ],
+      "global_launch_at": "2024-12-03"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "reverse-1999",
+      "name_cn": "重返未来：1999",
+      "name_en": "Reverse: 1999",
+      "developer": "深蓝互动 Bluepoch",
+      "genre": "二次元 / 回合制卡牌",
+      "priority": 10,
+      "platforms": [
+        "移动端",
+        "PC"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "全球",
+        "Steam"
+      ],
+      "cn_status": "2023-05-31 全平台公测",
+      "global_status": "2023-10-26 全球上线（PC / App Store / Google Play）",
+      "overseas_heat": "中高 · 英文社区活跃，周年活动带动搜索",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "约 148 天：国服 2023-05 公测，国际服 2023-10 才上线",
+      "target_markets": [
+        "欧美二次元卡牌玩家",
+        "东南亚英文二游受众"
+      ],
+      "keywords": [
+        "reverse 1999 tier list",
+        "reverse 1999 guide",
+        "重返未来1999 配队"
+      ],
+      "content_opportunities": [
+        "角色强度榜",
+        "剧情解析",
+        "资源规划"
+      ],
+      "monetization_level": "中高",
+      "monetization": "二次元卡牌付费成熟，英文攻略站竞争激烈但版本滞后",
+      "risks": [
+        "英文二游攻略站竞争激烈",
+        "剧情/角色译名不统一",
+        "版本差随追平收窄"
+      ],
+      "guide_cn": "高 · 中文 wiki、剧情解析、配队表长期领先数个版本",
+      "guide_intl": "中 · 英文攻略站有覆盖但随国际服版本滞后",
+      "version_compare": "领先",
+      "version_note": "国服版本长期领先国际服数月",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://www.pocketgamer.biz/reverse-1999-celebrates-first-anniversary-in-the-west-with-100m-on-the-horizon/",
+        "https://www.taptap.cn/app/221062"
+      ],
+      "global_launch_at": "2023-10-26"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "delta-force",
+      "name_cn": "三角洲行动",
+      "name_en": "Delta Force",
+      "developer": "腾讯天美 J3 / 琳琅天上",
+      "genre": "射击 / 撤离 + 大战场",
+      "priority": 10,
+      "platforms": [
+        "PC",
+        "移动端",
+        "主机"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "Steam 全球",
+        "Epic",
+        "港澳台"
+      ],
+      "cn_status": "2024-09-26 PC 与移动端正式上线",
+      "global_status": "2024-12-05 全球 PC 不删档公测（Steam/Epic，含港澳台 Garena 版），主机版后续上线",
+      "overseas_heat": "高 · 海外 PC 射击热度高，赛季更新带量",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "约 70 天：国服 2024-09 上线，海外 PC 2024-12 才开服",
+      "target_markets": [
+        "欧美 FPS 玩家",
+        "东南亚射击受众"
+      ],
+      "keywords": [
+        "delta force guide",
+        "delta force best loadout",
+        "三角洲行动 改枪码"
+      ],
+      "content_opportunities": [
+        "改枪码",
+        "地图点位",
+        "干员强度"
+      ],
+      "monetization_level": "高",
+      "monetization": "免费射击 + 皮肤战令，英文流量大且更新频繁",
+      "risks": [
+        "差距仅 70 天，易被官方英文内容追平",
+        "改枪码跨服不通用",
+        "赛季更新频繁，稿件寿命短"
+      ],
+      "guide_cn": "高 · 改枪码、地图点位、干员强度表更新极快",
+      "guide_intl": "中低 · 依赖 YouTube 与 Reddit，成体系站点少",
+      "version_compare": "领先",
+      "version_note": "国服领先 70 天，赛季进度略前",
+      "watch": {
+        "steam_appid": null,
+        "official": "https://www.playdeltaforce.com/"
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://www.playdeltaforce.com/zh-tw/detail/news-notice-i-global-pc-announcement-of-not-deleting-files-and-opening-servers.html",
+        "https://m.3dmgame.com/ol/news/202409/40008.html"
+      ],
+      "global_launch_at": "2024-12-05"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "tower-of-fantasy",
+      "name_cn": "幻塔",
+      "name_en": "Tower of Fantasy",
+      "developer": "完美世界 Hotta Studio",
+      "genre": "二次元 / 开放世界 ARPG",
+      "priority": 10,
+      "platforms": [
+        "移动端",
+        "PC"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "全球",
+        "日服",
+        "Steam"
+      ],
+      "cn_status": "2021-12-16 全平台公测",
+      "global_status": "2022-08-10 国际版上线，08-11 日服运营",
+      "overseas_heat": "低 · 长尾阶段，搜索量下滑",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "约 237 天：国服 2021-12 公测，国际服 2022-08 才上线",
+      "target_markets": [
+        "欧美二次元 ARPG 玩家"
+      ],
+      "keywords": [
+        "tower of fantasy guide",
+        "tower of fantasy tier list",
+        "幻塔 拟态"
+      ],
+      "content_opportunities": [
+        "拟态强度",
+        "养成路线",
+        "探索点位"
+      ],
+      "monetization_level": "低中",
+      "monetization": "长尾期付费下滑，英文攻略存量仍有搜索",
+      "risks": [
+        "游戏已进入长尾，搜索量下滑",
+        "英文站已占位",
+        "国际服版本差在缩小"
+      ],
+      "guide_cn": "高 · 中文 wiki、配队、拟态养成体系完整",
+      "guide_intl": "中 · Fandom、Prydwen 有覆盖但版本长期落后",
+      "version_compare": "领先",
+      "version_note": "国服版本领先国际服",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://ht.wanmei.com/news/gamebroad/20211214/234868.html",
+        "https://m.baike.com/wiki/%E5%B9%BB%E5%A1%94/6910177847542306055"
+      ],
+      "global_launch_at": "2022-08-10"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "zenless-zone-zero",
+      "name_cn": "绝区零",
+      "name_en": "Zenless Zone Zero",
+      "developer": "米哈游 miHoYo",
+      "genre": "二次元 / 动作 ARPG",
+      "priority": 10,
+      "platforms": [
+        "移动端",
+        "PC",
+        "主机"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "全球",
+        "PS5"
+      ],
+      "cn_status": "2024-07-04 国服全球同步公测",
+      "global_status": "2024-07-04 全球同步上线（PC / PS5 / iOS / Android）",
+      "overseas_heat": "高 · 英文社区与攻略站成熟，新版本带量明显",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "无先发差：2024-07-04 全球同步上线，靠攻略深度做差",
+      "target_markets": [
+        "欧美二次元动作玩家",
+        "日韩 ARPG 玩家"
+      ],
+      "keywords": [
+        "zenless zone zero tier list",
+        "zzz build guide",
+        "绝区零 配队"
+      ],
+      "content_opportunities": [
+        "角色配队",
+        "驱动盘搭配",
+        "版本活动速通"
+      ],
+      "monetization_level": "高",
+      "monetization": "头部二次元抽卡，英文流量大但攻略竞争极激烈",
+      "risks": [
+        "无先发优势，只能拼攻略速度与深度",
+        "英文攻略站（Prydwen/Game8）已成熟",
+        "版本更新密集，稿件寿命短"
+      ],
+      "guide_cn": "极高 · 米游社/B站/NGA 资料与配队极其完整",
+      "guide_intl": "高 · Prydwen、Game8 等英文站覆盖完整且同步更新",
+      "version_compare": "同步",
+      "version_note": "全球同日上线，版本进度一致",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://zenless.hoyoverse.com/",
+        "https://zzz.hoyoverse.com/"
+      ],
+      "global_launch_at": "2024-07-04"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "wuthering-waves",
+      "name_cn": "鸣潮",
+      "name_en": "Wuthering Waves",
+      "developer": "库洛游戏 Kuro Games",
+      "genre": "二次元 / 开放世界 ARPG",
+      "priority": 10,
+      "platforms": [
+        "移动端",
+        "PC",
+        "主机"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "全球",
+        "PS5"
+      ],
+      "cn_status": "2024-05-23 国服全球同步公测",
+      "global_status": "2024-05-23 全球同步上线（PC / iOS / Android），PS5 版后追加",
+      "overseas_heat": "高 · 英文社区活跃，声骸与配队讨论量大",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "无先发差：2024-05-23 全球同步上线，靠攻略深度做差",
+      "target_markets": [
+        "欧美二次元开放世界玩家",
+        "日韩 ARPG 玩家"
+      ],
+      "keywords": [
+        "wuthering waves tier list",
+        "wuwa build guide",
+        "鸣潮 声骸"
+      ],
+      "content_opportunities": [
+        "角色配队",
+        "声骸搭配",
+        "探索路线"
+      ],
+      "monetization_level": "高",
+      "monetization": "头部二次元抽卡，英文攻略存量已很密",
+      "risks": [
+        "无先发优势，英文攻略站已饱和",
+        "强度表随版本波动大",
+        "与绝区零/原神受众高度重叠"
+      ],
+      "guide_cn": "极高 · 米游社/B站/NGA 配队与声骸资料完整",
+      "guide_intl": "高 · Prydwen、Game8、Fandom 均已成型",
+      "version_compare": "同步",
+      "version_note": "全球同日上线，版本进度一致",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://wutheringwaves.kurogames.com/",
+        "https://mc.kurogames.com/"
+      ],
+      "global_launch_at": "2024-05-23"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "infinity-nikki",
+      "name_cn": "无限暖暖",
+      "name_en": "Infinity Nikki",
+      "developer": "叠纸游戏 Infold Games",
+      "genre": "换装 / 开放世界",
+      "priority": 10,
+      "platforms": [
+        "移动端",
+        "PC",
+        "主机"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "全球",
+        "PS5"
+      ],
+      "cn_status": "2024-12-05 全球同步上线",
+      "global_status": "2024-12-05 全球同步上线（PC / PS5 / iOS / Android）",
+      "overseas_heat": "中高 · 欧美换装与休闲受众稳定，英文攻略偏零散",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "无先发差：2024-12-05 全球同步，中文换装攻略更成体系",
+      "target_markets": [
+        "欧美女性向休闲玩家",
+        "东南亚换装受众"
+      ],
+      "keywords": [
+        "infinity nikki guide",
+        "infinity nikki outfit locations",
+        "无限暖暖 攻略"
+      ],
+      "content_opportunities": [
+        "服装图鉴",
+        "解谜路线",
+        "材料刷取"
+      ],
+      "monetization_level": "中高",
+      "monetization": "换装付费稳定，英文攻略供给弱于中文",
+      "risks": [
+        "无先发优势，差距在攻略体系而非版本",
+        "英文内容以短视频为主，长文稀缺",
+        "玩法轻量，攻略天花板低"
+      ],
+      "guide_cn": "高 · 中文服装图鉴、解谜路线整理完整",
+      "guide_intl": "中高 · 英文有零散图鉴与视频，缺系统整理",
+      "version_compare": "同步",
+      "version_note": "全球同日上线，版本进度一致",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://infinitynikki.infoldgames.com/",
+        "https://www.infoldgames.com/"
+      ],
+      "global_launch_at": "2024-12-05"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "mecha-break",
+      "name_cn": "解限机",
+      "name_en": "Mecha BREAK",
+      "developer": "西山居 Seasun Games",
+      "genre": "机甲 / 动作射击",
+      "priority": 10,
+      "platforms": [
+        "PC",
+        "主机"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "Steam 全球",
+        "Xbox"
+      ],
+      "cn_status": "2025-07-02 国服全球同步公测",
+      "global_status": "2025-07-02 全球同步上线（Steam / Xbox Series）",
+      "overseas_heat": "中 · 英文机甲社区有热度，攻略以视频为主",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "无先发差：2025-07-02 全球同步上线，靠攻略深度做差",
+      "target_markets": [
+        "欧美机甲射击玩家",
+        "日韩机甲受众"
+      ],
+      "keywords": [
+        "mecha break guide",
+        "mecha break tier list",
+        "解限机 机体"
+      ],
+      "content_opportunities": [
+        "机体强度榜",
+        "配装与改装",
+        "地图战术"
+      ],
+      "monetization_level": "中",
+      "monetization": "机甲射击受众垂直，英文长文攻略供给少",
+      "risks": [
+        "无先发优势",
+        "英文内容以 YouTube 为主，长文少但也意味着竞争小",
+        "机甲品类受众窄"
+      ],
+      "guide_cn": "高 · 中文机体强度与配装攻略成型",
+      "guide_intl": "中低 · 英文以视频与零散帖为主，缺系统 wiki",
+      "version_compare": "同步",
+      "version_note": "全球同日上线，版本进度一致",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://mechabreak.seasungames.com/",
+        "https://store.steampowered.com/"
+      ],
+      "global_launch_at": "2025-07-02"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "duet-night-abyss",
+      "name_cn": "二重螺旋",
+      "name_en": "Duet Night Abyss",
+      "developer": "英雄游戏 Hero Games",
+      "genre": "二次元 / 动作 RPG",
+      "priority": 10,
+      "platforms": [
+        "移动端",
+        "PC",
+        "主机"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "全球",
+        "Steam / Epic"
+      ],
+      "cn_status": "2025-10-28 全球同步上线",
+      "global_status": "2025-10-28 全球同步上线（PC / iOS / Android / Epic）",
+      "overseas_heat": "中低 · 新游，英文攻略尚未成型",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "无先发差：2025-10-28 全球同步，但英文攻略几乎空白",
+      "target_markets": [
+        "欧美二次元动作玩家",
+        "日韩 ARPG 玩家"
+      ],
+      "keywords": [
+        "duet night abyss guide",
+        "duet night abyss tier list",
+        "二重螺旋 攻略"
+      ],
+      "content_opportunities": [
+        "角色强度榜",
+        "养成路线",
+        "关卡作业"
+      ],
+      "monetization_level": "中",
+      "monetization": "新游窗口期，英文攻略供给少，占位成本低",
+      "risks": [
+        "新游数据不稳定，强度表易过期",
+        "官方英文内容可能快速补位",
+        "题材与绝区零/鸣潮重叠"
+      ],
+      "guide_cn": "中高 · 上线后中文攻略快速铺开",
+      "guide_intl": "低 · 英文仅有零星视频与 Reddit 讨论",
+      "version_compare": "同步",
+      "version_note": "全球同日上线，版本进度一致",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://duetnightabyss.herogames.com/",
+        "https://www.herogames.com/"
+      ],
+      "global_launch_at": "2025-10-28",
+      "content_parity": "same",
+      "content_note": "全球单版本发行，同版本内容一致"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "arknights",
+      "name_cn": "明日方舟",
+      "name_en": "Arknights",
+      "developer": "鹰角网络 Hypergryph",
+      "genre": "塔防 / RPG",
+      "priority": 10,
+      "platforms": [
+        "移动端"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "国际服",
+        "日服",
+        "台服"
+      ],
+      "cn_status": "2019-05-01 国服全平台公测",
+      "global_status": "2020-01-16 国际服（美/欧/东南亚）与日服同日上线；台服 2020-06-29",
+      "overseas_heat": "高 · 英文社区长期活跃，攻略站与同人生态成熟",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "约 260 天：国服 2019-05 公测，国际服 2020-01 才上线",
+      "target_markets": [
+        "欧美塔防与二游玩家",
+        "东南亚英文受众"
+      ],
+      "keywords": [
+        "arknights tier list",
+        "arknights guide",
+        "明日方舟 作业"
+      ],
+      "content_opportunities": [
+        "关卡低配作业",
+        "干员强度榜",
+        "活动速通"
+      ],
+      "monetization_level": "中高",
+      "monetization": "抽卡付费稳定，英文攻略存量厚但版本落后",
+      "risks": [
+        "国际服版本落后约半年",
+        "日/台/国际三服进度不一",
+        "术语与译名不统一"
+      ],
+      "guide_cn": "极高 · PRTS Wiki、NGA、B站低配作业链完整",
+      "guide_intl": "高 · Terra Wiki、GamePress 齐全，但卡池与活动落后约半年",
+      "version_compare": "领先",
+      "version_note": "国服早 260 天，活动与卡池领先约半年",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://ak.hypergryph.com/",
+        "https://en.wikipedia.org/wiki/Arknights"
+      ],
+      "global_launch_at": "2020-01-16"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "punishing-gray-raven",
+      "name_cn": "战双帕弥什",
+      "name_en": "Punishing: Gray Raven",
+      "developer": "库洛游戏 Kuro Games",
+      "genre": "3D 动作 / ARPG",
+      "priority": 10,
+      "platforms": [
+        "移动端",
+        "PC"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "国际服",
+        "日服",
+        "Steam"
+      ],
+      "cn_status": "2019-12-05 全平台公测",
+      "global_status": "2021-07-16 国际服（美/欧/东南亚/澳洲）；日服 2020-12；Steam 版 2026-02 上线",
+      "overseas_heat": "中 · 硬核动作受众稳定，英文站已成体系",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "约 589 天：国服 2019-12 公测，国际服 2021-07 才上线",
+      "target_markets": [
+        "欧美硬核动作玩家",
+        "日韩 ARPG 玩家"
+      ],
+      "keywords": [
+        "pgr tier list",
+        "punishing gray raven guide",
+        "战双 零式"
+      ],
+      "content_opportunities": [
+        "构造体强度榜",
+        "零式作业",
+        "配队与意识"
+      ],
+      "monetization_level": "中高",
+      "monetization": "抽卡付费稳定，英文攻略落后国服约一年",
+      "risks": [
+        "国际服进度差约一年",
+        "国际服卡池曾调整，数据需分服核对",
+        "Steam 版新开，内容与移动端不同步"
+      ],
+      "guide_cn": "极高 · 战双 Wiki、NGA、B站零式与低配作业成熟",
+      "guide_intl": "中高 · grayravens.com 体系完整，但版本落后约一年",
+      "version_compare": "领先",
+      "version_note": "国服早 589 天，版本领先约一年",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://www.gamespress.com/Punishing-Gray-Raven-launches-on-Android-and-iOS---join-the-battle-for",
+        "https://news.17173.com/content/12052019/104158243.shtml"
+      ],
+      "global_launch_at": "2021-07-16"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "azur-lane",
+      "name_cn": "碧蓝航线",
+      "name_en": "Azur Lane",
+      "developer": "蛮啾网络 / 勇仕网络",
+      "genre": "弹幕射击 / 养成",
+      "priority": 10,
+      "platforms": [
+        "移动端"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "日服",
+        "韩服",
+        "英文国际服"
+      ],
+      "cn_status": "2017-05-25 国服上线",
+      "global_status": "日服 2017-09-13、韩服 2018-03-27、英文国际服 2018-08-16",
+      "overseas_heat": "中高 · 英文社区稳定，但攻略已高度成熟",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "约 448 天：国服 2017-05 上线，英文国际服 2018-08 才上线",
+      "target_markets": [
+        "欧美舰船题材受众",
+        "东南亚英文玩家"
+      ],
+      "keywords": [
+        "azur lane tier list",
+        "azur lane farming guide",
+        "碧蓝航线 低耗"
+      ],
+      "content_opportunities": [
+        "低耗队配置",
+        "活动队作业",
+        "装备表"
+      ],
+      "monetization_level": "中",
+      "monetization": "皮肤付费为主，英文攻略存量已接近追平",
+      "risks": [
+        "英文攻略基本追平，信息差有限",
+        "各服复刻节奏不同",
+        "皮肤与联动分区运营"
+      ],
+      "guide_cn": "极高 · 碧蓝航线 Wiki 数据最全，低耗与活动队作业多",
+      "guide_intl": "高 · 英文 Wiki 已高度成熟，现存信息差有限",
+      "version_compare": "领先",
+      "version_note": "国服早 448 天，但英文攻略已基本追平",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://www.azurlane.jp/",
+        "https://en.wikipedia.org/wiki/Azur_Lane"
+      ],
+      "global_launch_at": "2018-08-16"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "sword-of-convallaria",
+      "name_cn": "铃兰之剑",
+      "name_en": "Sword of Convallaria",
+      "developer": "XD 心动网络",
+      "genre": "战棋 / SRPG",
+      "priority": 10,
+      "platforms": [
+        "PC",
+        "移动端"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "Steam 全球",
+        "全球手游"
+      ],
+      "cn_status": "2023-11-23 国服公测",
+      "global_status": "2024-08-01 全球 Steam + 移动端同步上线",
+      "overseas_heat": "中 · 英文战棋小圈稳定，攻略深度不足",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "约 252 天：国服 2023-11 公测，全球服 2024-08 才上线",
+      "target_markets": [
+        "欧美战棋玩家",
+        "日韩 SRPG 受众"
+      ],
+      "keywords": [
+        "sword of convallaria tier list",
+        "soc guide",
+        "铃兰之剑 低练"
+      ],
+      "content_opportunities": [
+        "角色强度榜",
+        "低练通关",
+        "阵营路线"
+      ],
+      "monetization_level": "中",
+      "monetization": "买断+内购混合，英文攻略深度明显不足",
+      "risks": [
+        "版本差约 8 个月",
+        "国际服排期独立",
+        "联动版权分区"
+      ],
+      "guide_cn": "高 · TapTap、NGA 有路线、角色、低练作业",
+      "guide_intl": "中 · Game8、Reddit 有基础攻略，深度不及中文",
+      "version_compare": "领先",
+      "version_note": "国服早 252 天，版本领先约 8 个月",
+      "watch": {
+        "steam_appid": 2526380,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://store.steampowered.com/app/2526380/",
+        "https://www.xd.com/games/single/13418"
+      ],
+      "global_launch_at": "2024-08-01"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "justice-online-mobile",
+      "name_cn": "逆水寒手游",
+      "name_en": "Sword of Justice",
+      "developer": "网易雷火",
+      "genre": "武侠 / 开放世界 MMORPG",
+      "priority": 10,
+      "platforms": [
+        "移动端",
+        "PC"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "全球",
+        "Steam"
+      ],
+      "cn_status": "2023-06-30 全平台公测",
+      "global_status": "2025-11-07 全球 PC/移动上线（Steam 页标 11-05）",
+      "overseas_heat": "中 · 英文攻略刚起步，检索量随开服上升",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "约 861 天：国服 2023-06 公测，全球服 2025-11 才上线",
+      "target_markets": [
+        "欧美武侠题材受众",
+        "东南亚 MMO 玩家"
+      ],
+      "keywords": [
+        "sword of justice guide",
+        "justice online mobile guide",
+        "逆水寒 副本"
+      ],
+      "content_opportunities": [
+        "副本攻略",
+        "身份玩法",
+        "奇遇点位"
+      ],
+      "monetization_level": "中高",
+      "monetization": "MMO 付费成熟，英文攻略几乎空白",
+      "risks": [
+        "国际服晚 2 年 4 个月，内容落差大",
+        "中外版本与付费差异明显",
+        "Steam 与移动开服差 2 天"
+      ],
+      "guide_cn": "极高 · 网易大神、NGA、B站副本/身份/奇遇攻略极成熟",
+      "guide_intl": "低 · 英文攻略刚起步，以入门向内容为主",
+      "version_compare": "领先",
+      "version_note": "国服早 861 天，领先超过两年",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://www.neteasegames.com/m/news/20251107/37000_1269599.html",
+        "http://game.163.com/news/2023/06/30/18455_1096047.html"
+      ],
+      "global_launch_at": "2025-11-07",
+      "content_parity": "diff",
+      "content_note": "同版本部分玩法中外不同（付费与定价差异不计入）"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "honkai-impact-3rd",
+      "name_cn": "崩坏3",
+      "name_en": "Honkai Impact 3rd",
+      "developer": "米哈游 miHoYo",
+      "genre": "3D 动作 / ARPG",
+      "priority": 10,
+      "platforms": [
+        "移动端",
+        "PC"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "欧美服",
+        "日服",
+        "台服",
+        "韩服",
+        "东南亚服"
+      ],
+      "cn_status": "2016-10-01 iOS 首发，10-14 全平台公测",
+      "global_status": "日服 2017-02-22、台服 2017-05-18、韩服 2017-10-17、东南亚 2017-11-01、欧美 2018-03-28",
+      "overseas_heat": "中低 · 老游戏长尾，英文站成熟但版本落后",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "约 530 天：国服 2016-10 首发，欧美服 2018-03 才上线",
+      "target_markets": [
+        "欧美二次元动作玩家"
+      ],
+      "keywords": [
+        "honkai impact 3rd guide",
+        "hi3 tier list",
+        "崩坏3 战场"
+      ],
+      "content_opportunities": [
+        "女武神强度榜",
+        "战场作业",
+        "装备搭配"
+      ],
+      "monetization_level": "低中",
+      "monetization": "老游戏长尾，攻略存量仍有搜索但竞争激烈",
+      "risks": [
+        "“显著领先”只对欧美服成立，日服仅晚 4 个月",
+        "老游戏攻略时效性差",
+        "英文站已高度成熟"
+      ],
+      "guide_cn": "高 · 米游社、通讯中心有前瞻、测评与战场作业",
+      "guide_intl": "高 · Fandom、Marisa Honkai 成熟，但版本落后",
+      "version_compare": "领先",
+      "version_note": "国服早 530 天（欧美服口径）",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://bh3.mihoyo.com/m/news/693/119590",
+        "https://en.wikipedia.org/wiki/Honkai_Impact_3rd"
+      ],
+      "global_launch_at": "2018-03-28"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "genshin-impact",
+      "name_cn": "原神",
+      "name_en": "Genshin Impact",
+      "developer": "米哈游 miHoYo",
+      "genre": "二次元 / 开放世界 ARPG",
+      "priority": 10,
+      "platforms": [
+        "移动端",
+        "PC",
+        "主机"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "全球",
+        "PS"
+      ],
+      "cn_status": "2020-09-28 全球同步上线",
+      "global_status": "2020-09-28 全球同步上线（PC / PS4 / iOS / Android）",
+      "overseas_heat": "极高 · 全球头部二次元，英文攻略站极其完备",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "无先发差：全球同步上线，英文攻略深度同样成熟",
+      "target_markets": [
+        "欧美二次元玩家",
+        "日韩与东南亚受众"
+      ],
+      "keywords": [
+        "genshin impact guide",
+        "genshin tier list",
+        "原神 攻略"
+      ],
+      "content_opportunities": [
+        "角色配队",
+        "地图解谜",
+        "材料路线"
+      ],
+      "monetization_level": "高",
+      "monetization": "头部抽卡付费，但英文攻略竞争极其激烈",
+      "risks": [
+        "无先发优势，仅英文攻略已饱和",
+        "英文站点（Fandom/Game8）更新同步",
+        "内容更新密集，稿件寿命短"
+      ],
+      "guide_cn": "极高 · 米游社/B站/NGA 资料极完整",
+      "guide_intl": "极高 · Fandom、Game8、KQM 覆盖完整且同步更新",
+      "version_compare": "同步",
+      "version_note": "全球同日上线，版本进度一致",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://genshin.hoyoverse.com/",
+        "https://ys.mihoyo.com/"
+      ],
+      "global_launch_at": "2020-09-28"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "honkai-star-rail",
+      "name_cn": "崩坏：星穹铁道",
+      "name_en": "Honkai: Star Rail",
+      "developer": "米哈游 miHoYo",
+      "genre": "二次元 / 回合制 RPG",
+      "priority": 10,
+      "platforms": [
+        "移动端",
+        "PC",
+        "主机"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "全球",
+        "PS5"
+      ],
+      "cn_status": "2023-04-26 全球同步上线",
+      "global_status": "2023-04-26 全球同步上线（PC / iOS / Android），PS5 版后续追加",
+      "overseas_heat": "高 · 英文攻略站与社区成熟，版本更新带量",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "无先发差：全球同步上线，靠攻略深度做差",
+      "target_markets": [
+        "欧美二次元回合制玩家",
+        "日韩 RPG 受众"
+      ],
+      "keywords": [
+        "hsr tier list",
+        "honkai star rail build",
+        "星穹铁道 配队"
+      ],
+      "content_opportunities": [
+        "角色强度榜",
+        "遗器搭配",
+        "混沌回忆作业"
+      ],
+      "monetization_level": "高",
+      "monetization": "头部抽卡付费，英文攻略竞争激烈但仍有长尾",
+      "risks": [
+        "无先发优势，英文站同步更新",
+        "强度表随版本波动大",
+        "与绝区零/原神受众重叠"
+      ],
+      "guide_cn": "极高 · 米游社/NGA/B站配队与遗器资料完整",
+      "guide_intl": "高 · Prydwen、Game8、Fandom 均已成型",
+      "version_compare": "同步",
+      "version_note": "全球同日上线，版本进度一致",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://sr.mihoyo.com/",
+        "https://hsr.hoyoverse.com/"
+      ],
+      "global_launch_at": "2023-04-26"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "snowbreak",
+      "name_cn": "尘白禁区",
+      "name_en": "Snowbreak: Containment Zone",
+      "developer": "西山居互动娱乐 Amazing Seasun",
+      "genre": "二次元 / 第三人称射击",
+      "priority": 10,
+      "platforms": [
+        "移动端",
+        "PC"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "全球手游",
+        "Steam"
+      ],
+      "cn_status": "2023-07-20 全平台公测（PC 与安卓同期）",
+      "global_status": "2023-07-20 移动端全球同步上线；Steam 国际版 2023-12-24 才上线",
+      "overseas_heat": "中 · 英文社区小而稳定，攻略以视频为主",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "移动端无先发差；PC 端国服早 157 天（Steam 版 2023-12-24）",
+      "target_markets": [
+        "欧美二次元射击玩家",
+        "日韩射击受众"
+      ],
+      "keywords": [
+        "snowbreak guide",
+        "snowbreak tier list",
+        "尘白禁区 后勤"
+      ],
+      "content_opportunities": [
+        "角色强度榜",
+        "后勤搭配",
+        "关卡作业"
+      ],
+      "monetization_level": "中",
+      "monetization": "皮肤与抽卡付费稳定，英文长文攻略偏少",
+      "risks": [
+        "英文攻略以视频为主，长文竞争小但也意味着检索量有限",
+        "Steam 国际版晚 5 个月，版本需分服核对",
+        "硬核射击受众窄"
+      ],
+      "guide_cn": "高 · B站/贴吧/官方社区后勤与作业体系完整",
+      "guide_intl": "中低 · 英文以 YouTube 与 Reddit 零散内容为主",
+      "version_compare": "同步",
+      "version_note": "移动端同日上线；PC 端国服领先 157 天",
+      "watch": {
+        "steam_appid": 2668080,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://store.steampowered.com/app/2668080/Snowbreak_Containment_Zone/",
+        "https://www.cbjq.com/p/m/2023/04/13/index/news.html?catid=7130&infoid=53"
+      ],
+      "global_launch_at": "2023-07-20"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "beyond-the-world",
+      "name_cn": "世界之外",
+      "name_en": "Beyond the World",
+      "developer": "网易雷火",
+      "genre": "无限流言情卡牌（乙女）",
+      "priority": 10,
+      "platforms": [
+        "移动端"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "台港澳",
+        "新马"
+      ],
+      "global_launch_at": "2026-07-08",
+      "cn_status": "2024-01-26 全平台公测",
+      "global_status": "2026-07-08 台港澳及新马上线（EnvoyGames 恩奕代理，App Store / Google Play）",
+      "overseas_heat": "低 · 区域服开服不足 4 个月，讨论集中在巴哈与 Discord",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "约 894 天：国服 2024-01 公测，台港澳/新马 2026-07 才上线",
+      "target_markets": [
+        "台港澳乙女玩家",
+        "新马中文受众"
+      ],
+      "keywords": [
+        "beyond the world otome guide",
+        "世界之外 男主线",
+        "世界之外 攒钻"
+      ],
+      "content_opportunities": [
+        "男主线攻略",
+        "攒钻与抽卡规划",
+        "剧情时间线"
+      ],
+      "monetization_level": "中",
+      "monetization": "乙女抽卡付费稳定，海外区域服刚开、内容缺口大",
+      "risks": [
+        "海外版本落后约 2.5 年，剧透与抽卡规划易错",
+        "港澳台与新马独立服人少、排期不同",
+        "剧情审查删改与国服不一致"
+      ],
+      "guide_cn": "高 · 国服运营两年半，B站与微博的男主线、攒钻攻略完整",
+      "guide_intl": "低 · 台服开服不足 4 个月，巴哈与 Discord 仅有开荒讨论串",
+      "version_compare": "领先",
+      "version_note": "领先约 2.5 年（按台港澳/新马服计）",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://www.heretoeverywhere.com/m/cn/news/official/20260708/43654_1306791.html",
+        "https://www.taptap.cn/app/364144"
+      ],
+      "content_parity": "diff",
+      "content_note": "同版本剧情有审查删改，与国服不一致"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "neo-artifacts",
+      "name_cn": "物华弥新",
+      "name_en": "Neo Artifacts",
+      "developer": "词牌社 / 龙渊网络",
+      "genre": "文物拟人 / 战棋 SRPG",
+      "priority": 10,
+      "platforms": [
+        "移动端"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "日服",
+        "全球英文服"
+      ],
+      "global_launch_at": "2026-03-05",
+      "cn_status": "2024-04-19 谷雨公测",
+      "global_status": "2026-03-05 日服首发（ネオ・アーティファクト）；2026-04-24 全球英文版上线",
+      "overseas_heat": "低 · 日服与英文服均在起步期，wiki 尚未建全",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "约 685 天：国服 2024-04 公测，日服 2026-03 才上线（英文版晚 735 天）",
+      "target_markets": [
+        "日韩战棋玩家",
+        "欧美文物题材受众"
+      ],
+      "keywords": [
+        "neo artifacts tier list",
+        "物华弥新 器者",
+        "物华弥新 阵容"
+      ],
+      "content_opportunities": [
+        "器者强度榜",
+        "关卡作业",
+        "活动攻略"
+      ],
+      "monetization_level": "中",
+      "monetization": "抽卡付费，海外 wiki 空白期适合抢词",
+      "risks": [
+        "日服与英文服版本、卡池顺序不同",
+        "海外调参可能让国服数值攻略失真",
+        "SRPG 海外社区较小，长线更新不确定"
+      ],
+      "guide_cn": "高 · 国服两年半，BWiki 的器者、关卡与活动资料齐全",
+      "guide_intl": "低 · 日服 GameWith、AppMedia 刚开始建页，英文资料更少",
+      "version_compare": "领先",
+      "version_note": "领先约 1 年 10 个月（按日服计）",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://www.joytify.com/en-sa/neo-artifacts",
+        "https://www.famitsu.com/article/202602/65033"
+      ],
+      "content_parity": "partial",
+      "content_note": "海外同版本存在调参，数值与国服不完全一致"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "new-three-kingdoms-cao-cao",
+      "name_cn": "新三国志曹操传",
+      "name_en": "New Three Kingdoms: Cao Cao Zhuan",
+      "developer": "深圳易帆互动（中手游发行）",
+      "genre": "战棋 / 策略 RPG",
+      "priority": 10,
+      "platforms": [
+        "移动端"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "台港澳",
+        "新马"
+      ],
+      "global_launch_at": "2026-03-20",
+      "cn_status": "2025-06-27 国服公测",
+      "global_status": "2026-03-20 台港澳及新马全平台上线",
+      "overseas_heat": "低 · 独立区域服，巴哈与 Facebook 有零散开荒",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "约 266 天：国服 2025-06 公测，台港澳/新马 2026-03 才上线",
+      "target_markets": [
+        "台港澳三国题材玩家",
+        "新马中文战棋受众"
+      ],
+      "keywords": [
+        "cao cao zhuan guide",
+        "新三国志曹操传 阵容",
+        "新三国志曹操传 首日"
+      ],
+      "content_opportunities": [
+        "阵容梯度",
+        "关卡通关",
+        "武将养成"
+      ],
+      "monetization_level": "中",
+      "monetization": "SLG 内购成熟，海外缺少系统 wiki",
+      "risks": [
+        "海外落后约 9 个月，活动与卡池错位",
+        "独立服人数少",
+        "光荣特库摩监修导致部分内容差异"
+      ],
+      "guide_cn": "中高 · TapTap 已有首日扫盲、半年心得与阵容梯度",
+      "guide_intl": "低 · 巴哈姆特与 Facebook 仅零散开荒，缺系统 wiki",
+      "version_compare": "领先",
+      "version_note": "领先约 9 个月",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://wap.cmge.com/#/news_detail?pid=20260331174851&type=1",
+        "https://www.taptap.cn/moment/687804115983535120"
+      ],
+      "content_parity": "diff",
+      "content_note": "同版本存在数值调参，战斗数值与国服不完全一致（属核心机制差异）"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "arknights-endfield",
+      "name_cn": "明日方舟：终末地",
+      "name_en": "Arknights: Endfield",
+      "developer": "鹰角网络 Hypergryph",
+      "genre": "3D 即时策略 RPG",
+      "priority": 10,
+      "platforms": [
+        "PC",
+        "移动端",
+        "主机"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "全球",
+        "Steam"
+      ],
+      "global_launch_at": "2026-01-22",
+      "cn_status": "2026-01-22 全球公测",
+      "global_status": "2026-01-22 全球同步上线（Gryphline）；2026-10-15 追加 Steam",
+      "overseas_heat": "高 · 全球同步开服，英文站跟进积极",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "无先发差：全球同步上线，靠攻略深度做差",
+      "target_markets": [
+        "欧美二次元策略玩家",
+        "日韩 RPG 受众"
+      ],
+      "keywords": [
+        "endfield guide",
+        "arknights endfield tier list",
+        "终末地 基建"
+      ],
+      "content_opportunities": [
+        "基建规划",
+        "速刷轴",
+        "干员强度榜"
+      ],
+      "monetization_level": "中高",
+      "monetization": "抽卡付费，英文攻略深度仍慢于中文社区",
+      "risks": [
+        "分区运营导致活动时差",
+        "长线资源规划门槛高",
+        "本地化与保底规则差异"
+      ],
+      "guide_cn": "高 · 开服 9 个月，BWiki、速刷轴与基建规划成熟",
+      "guide_intl": "中 · Game8、GameWith 同日跟进，但深度慢于中文",
+      "version_compare": "同步",
+      "version_note": "全球同日上线，版本进度一致",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://endfield.hypergryph.com/news/7231",
+        "https://endfield.gryphline.com/en-us/news/9574"
+      ],
+      "content_parity": "partial",
+      "content_note": "同版本仅本地化措辞差异，付费与抽卡规则不计入"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "aniimo",
+      "name_cn": "伊莫",
+      "name_en": "Aniimo",
+      "developer": "杭州爪印工作室（FunPlus 孵化）/ 上海趣乐糖发行",
+      "genre": "大世界 / 捉宠 RPG",
+      "priority": 10,
+      "platforms": [
+        "PC",
+        "主机",
+        "移动端"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "全球",
+        "主机"
+      ],
+      "global_launch_at": "2026-09-16",
+      "cn_status": "2026-09-16 PC 及云游戏公测，09-23 移动端上线",
+      "global_status": "2026-09-16 PC 与主机全球上线；09-23 iOS / Android 全球同步",
+      "overseas_heat": "中低 · 上线月余，英文资料薄但检索在涨",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "无先发差：PC 与主机全球同日，移动端同日跟进",
+      "target_markets": [
+        "欧美捉宠玩家",
+        "主机与移动跨端用户"
+      ],
+      "keywords": [
+        "aniimo guide",
+        "aniimo tier list",
+        "伊莫 精灵图鉴"
+      ],
+      "content_opportunities": [
+        "精灵图鉴",
+        "开荒路线",
+        "阵容搭配"
+      ],
+      "monetization_level": "中",
+      "monetization": "新游内购+外观，英文攻略几乎空白",
+      "risks": [
+        "平台分批上线导致进度与活动错位",
+        "捉宠数值与服务器稳定性未验",
+        "主机与移动跨端联机差异"
+      ],
+      "guide_cn": "中低 · 上线月余，B站与 NGA 的开荒、图鉴刚起步",
+      "guide_intl": "中低 · Game8 与 YouTube 同步跟进，系统资料仍薄",
+      "version_compare": "同步",
+      "version_note": "全球同日上线，版本基本一致",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://www.aniimo.com/zh-tw/m/newslist/detail/100052",
+        "https://www.aniimo.com/newslist/detail/100051"
+      ],
+      "content_parity": "same",
+      "content_note": "跨端同版本，内容一致"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "one-way-tickets",
+      "name_cn": "再再启程",
+      "name_en": "One Way Tickets",
+      "developer": "Future Tech.（王老菊团队）",
+      "genre": "横版动作 / 肉鸽",
+      "priority": 10,
+      "platforms": [
+        "PC"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "Steam 全球"
+      ],
+      "global_launch_at": "2026-10-22",
+      "cn_status": "2026-10-22 Steam 抢先体验，国区同步解锁并支持简中",
+      "global_status": "2026-10-22 Steam 全球单版本发行（无独立国际服）",
+      "overseas_heat": "低 · Steam 社区讨论为主，英文内容极少",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "无先发差：Steam 全球单版本同日发行",
+      "target_markets": [
+        "全球独立游戏玩家"
+      ],
+      "keywords": [
+        "one way tickets guide",
+        "one way tickets build",
+        "再再启程 攻略"
+      ],
+      "content_opportunities": [
+        "开荒指南",
+        "构筑思路",
+        "增量养成路线"
+      ],
+      "monetization_level": "低",
+      "monetization": "买断制，攻略内容以流量与长尾为主",
+      "risks": [
+        "抢先体验内容量与平衡频繁调整",
+        "小团队更新速度不确定",
+        "中外玩家对肉鸽/增量的接受度不同"
+      ],
+      "guide_cn": "低 · B站与 Steam 指南区以开荒帖为主，尚无成体系 wiki",
+      "guide_intl": "低 · Steam 社区加少量英文视频，资料更薄",
+      "version_compare": "同步",
+      "version_note": "全球单版本同日发行，版本一致",
+      "watch": {
+        "steam_appid": 4817620,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://store.steampowered.com/app/4817620/",
+        "https://www.taptap.cn/hashtag/%E5%86%8D%E5%86%8D%E5%90%AF%E7%A8%8B"
+      ],
+      "content_parity": "same",
+      "content_note": "Steam 单版本同日发行，内容一致"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "tomb-busters",
+      "name_cn": "超自然行动组",
+      "name_en": "Tomb Busters",
+      "developer": "巨人网络 NIGHT STUDIOS",
+      "genre": "多人合作 / 恐怖搜打撤",
+      "priority": 10,
+      "platforms": [
+        "移动端"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "台港澳",
+        "日韩美"
+      ],
+      "global_launch_at": "2025-11-27",
+      "cn_status": "2025-01-23 国服公测",
+      "global_status": "2025-11-27 台港澳开服；2026-05-27 扩展至美/日/韩三端",
+      "overseas_heat": "中 · 港澳台已起量，欧美仍在爬坡",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "约 308 天：国服 2025-01 公测，台港澳 2025-11 才开服（美日韩晚 489 天）",
+      "target_markets": [
+        "台港澳搜打撤玩家",
+        "欧美恐怖合作类受众"
+      ],
+      "keywords": [
+        "tomb busters guide",
+        "超自然行动组 撤离",
+        "超自然行动组 角色"
+      ],
+      "content_opportunities": [
+        "地图撤离路线",
+        "角色强度榜",
+        "组队打法"
+      ],
+      "monetization_level": "中高",
+      "monetization": "皮肤与抽卡付费，海外开服不足一年、攻略缺口明显",
+      "risks": [
+        "两波上线（港澳台 2025-11 / 美日韩 2026-05）需分口径",
+        "海外名 Tomb Busters 与同名作品易混",
+        "PC 与移动版本进度可能不同"
+      ],
+      "guide_cn": "中高 · 国服运营近两年，B站与抖音的撤离路线、角色评测成体系",
+      "guide_intl": "低 · 海外开服不足一年，英文以短视频与零散 Reddit 帖为主",
+      "version_compare": "领先",
+      "version_note": "领先 308 天（港澳台口径），美日韩晚 489 天",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://www.supernaturalsquad.com/zh",
+        "https://www.ztgame.com/news/000-1779-005a9-967434.html"
+      ],
+      "content_parity": "partial",
+      "content_note": "官方称海外版仅做版本适配与本地化调优，差异在语言、活动与赛季进度，未见剧情或玩法删改"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "behemoth-battlefield",
+      "name_cn": "巨兽战场",
+      "name_en": "巨獣戦線",
+      "developer": "上海游民网络科技（恺英网络 Kingnet 发行）",
+      "genre": "末日巨兽 / SLG",
+      "priority": 10,
+      "platforms": [
+        "移动端"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "日服",
+        "韩服",
+        "台港澳"
+      ],
+      "global_launch_at": "2026-04-08",
+      "cn_status": "2021-11-17 国服上线",
+      "global_status": "2026-04-08 日本、韩国、港澳台多平台同步上线",
+      "overseas_heat": "中低 · 首日登顶日/港/台免费榜，长线待观察",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "约 1603 天：国服 2021-11 上线，海外 2026-04 才开服",
+      "target_markets": [
+        "日韩 SLG 玩家",
+        "台港澳买量受众"
+      ],
+      "keywords": [
+        "巨獣戦線 攻略",
+        "behemoth slg guide",
+        "巨兽战场 阵容"
+      ],
+      "content_opportunities": [
+        "阵容搭配",
+        "资源规划",
+        "活动节奏"
+      ],
+      "monetization_level": "中",
+      "monetization": "买量型 SLG，海外攻略几乎空白但受众偏大R",
+      "risks": [
+        "老产品海外首服为 2026-04，若另有早期区域服则不成立",
+        "发行主体为香港公司，版本与国服有差异",
+        "区域首发不等于全球首发"
+      ],
+      "guide_cn": "中 · 国服运营四年，贴吧与攻略站有阵容与资源规划帖",
+      "guide_intl": "低 · 日服刚开服，GameWith 等站点仅建基础页",
+      "version_compare": "领先",
+      "version_note": "领先约 4 年 4 个月（按 2026-04 海外首服计）",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://finance.sina.com.cn/wm/2026-04-08/doc-inhtuupu2726148.shtml",
+        "https://www.4gamer.net/games/992/G099251/"
+      ],
+      "content_parity": "partial",
+      "content_note": "捉兽—机甲—基地—军团骨架相同，海外为新开进度（日服仅基础巨兽，国服已到十代）；适配集中在世界观与开服福利，未提数值重做"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "vanishing-starlight",
+      "name_cn": "星烬 烛耀山海",
+      "name_en": "Vanishing Starlight",
+      "developer": "上海心柒网络科技（GAMEPOCH 发行）",
+      "genre": "山海经 / 赛博朋克 2D 平台动作",
+      "priority": 10,
+      "platforms": [
+        "PC",
+        "主机"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "Steam 全球",
+        "PS5"
+      ],
+      "global_launch_at": "2026-03-25",
+      "cn_status": "2026-03-25 Steam 国区与 PS5 国行上线",
+      "global_status": "2026-03-25 全球 Steam 与 PS5 同步上线",
+      "overseas_heat": "低 · 独立体量，海外曝光有限",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "无先发差：国区与全球同日上线",
+      "target_markets": [
+        "全球独立动作游戏玩家"
+      ],
+      "keywords": [
+        "vanishing starlight guide",
+        "vanishing starlight walkthrough",
+        "星烬 攻略"
+      ],
+      "content_opportunities": [
+        "关卡攻略",
+        "Boss 打法",
+        "收集要素"
+      ],
+      "monetization_level": "低",
+      "monetization": "买断制，攻略以流量为主",
+      "risks": [
+        "同步上线，信息差为 0",
+        "独立体量海外曝光有限",
+        "国行与海外版本内容需核对"
+      ],
+      "guide_cn": "低 · 上线半年，B站与 Steam 指南区有零散流程帖",
+      "guide_intl": "低 · 英文攻略以 Steam 指南与少量视频为主",
+      "version_compare": "同步",
+      "version_note": "国区与全球同日上线",
+      "watch": {
+        "steam_appid": 2774370,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://store.steampowered.com/app/2774370/Vanishing_Starlight/",
+        "https://www.playstation.com/zh-hans-cn/games/vanishing-starlight/"
+      ],
+      "content_parity": "same",
+      "content_note": "国区与全球同版本，内容一致"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "piper-of-dawn",
+      "name_cn": "黎明门前的吹笛人",
+      "name_en": "The Piper of Dawn",
+      "developer": "骨钉工作室（2P Games 发行）",
+      "genre": "克苏鲁 / 种田开店 + 多结局剧情",
+      "priority": 10,
+      "platforms": [
+        "PC"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "Steam 全球"
+      ],
+      "global_launch_at": "2026-09-22",
+      "cn_status": "2026-09-22 Steam 国区发售",
+      "global_status": "2026-09-22 Steam 全球同版本发售（部分媒体记 9/23）",
+      "overseas_heat": "低 · 独立调性，英文讨论集中在 Steam 社区",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "无先发差：国区与全球同期发售",
+      "target_markets": [
+        "全球独立剧情游戏玩家"
+      ],
+      "keywords": [
+        "the piper of dawn guide",
+        "the piper of dawn ending",
+        "黎明门前的吹笛人 结局"
+      ],
+      "content_opportunities": [
+        "结局分支",
+        "经营规划",
+        "隐藏要素"
+      ],
+      "monetization_level": "低",
+      "monetization": "买断制，攻略以长尾流量为主",
+      "risks": [
+        "发售日有 9/22 与 9/23 两说",
+        "全球同步，信息差为 0",
+        "独立发行体量有限"
+      ],
+      "guide_cn": "低 · 发售一个月，B站与 Steam 指南以开荒与结局讨论为主",
+      "guide_intl": "低 · Steam 社区与少量英文视频，成体系内容尚未出现",
+      "version_compare": "同步",
+      "version_note": "国区与全球同期发售",
+      "watch": {
+        "steam_appid": 3804370,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://store.steampowered.com/app/3804370/The_Piper_Of_Dawn/?l=schinese",
+        "https://ldt.indienova.com/game/the-piper-of-dawn"
+      ],
+      "content_parity": "same",
+      "content_note": "Steam 单版本，内容一致"
+    },
+    {
+      "last_checked": null,
+      "steam_listed": null,
+      "steam_release_date": null,
+      "id": "roco-kingdom-world",
+      "name_cn": "洛克王国：世界",
+      "name_en": "Roco Kingdom: World",
+      "developer": "腾讯魔方工作室群",
+      "genre": "精灵收集养成 / 回合策略开放世界 RPG",
+      "priority": 10,
+      "platforms": [
+        "移动端",
+        "PC",
+        "主机"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "全球 CBT",
+        "PS5",
+        "Xbox",
+        "Steam"
+      ],
+      "global_launch_at": null,
+      "cn_status": "2026-03-26 国服公测（此前 2024-08 急急鸭测试、2025-10 同行测试）",
+      "global_status": "2026-10-27 首次全球 CBT「Quack Quack Test」（iOS / Google Play / PS5 / Xbox / Steam / Epic），正式上线未公布",
+      "overseas_heat": "低 · 仅开放首轮 CBT，英文攻略尚未成形",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "约 219 天：国服 2026-03 公测，海外 2026-10 才首测",
+      "target_markets": [
+        "欧美捉宠玩家",
+        "主机与移动跨端受众"
+      ],
+      "keywords": [
+        "roco kingdom world guide",
+        "roco kingdom tier list",
+        "洛克王国世界 图鉴"
+      ],
+      "content_opportunities": [
+        "精灵图鉴",
+        "开荒路线",
+        "强度榜"
+      ],
+      "monetization_level": "中高",
+      "monetization": "捉宠养成付费成熟，英文侧几乎没有成型内容",
+      "risks": [
+        "国服首月曾因水域捕捉等问题致歉，长线稳定性待观察",
+        "国际服首测晚国服约 7 个月，本地化质量未知",
+        "PS5/Xbox 多平台审核与跨端付费差异",
+        "与宝可梦类竞品正面竞争，买量成本高"
+      ],
+      "guide_cn": "高 · 国服公测半年，图鉴、开荒与强度榜齐全",
+      "guide_intl": "低 · 英文仅零散 wiki 与媒体试玩，无成型攻略",
+      "version_compare": "领先",
+      "version_note": "国服早 219 天，海外仍在首轮 CBT",
+      "content_parity": "unknown",
+      "content_note": "海外仅 CBT，尚无同版本内容可比",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://rocom.qq.com/act/a20260108draw/index.html",
+        "https://newgame.17173.com/game-newslist-1036717.html"
+      ]
+    },
+    {
+      "id": "azur-promilia",
+      "name_cn": "蓝色星原：旅谣",
+      "name_en": "Azur Promilia",
+      "developer": "上海蛮啾网络（Manjuu）",
+      "genre": "星宠结伴 / 幻想大世界 ARPG",
+      "priority": 8,
+      "platforms": [
+        "移动端",
+        "PC"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "日本",
+        "韩国",
+        "台港澳"
+      ],
+      "global_launch_at": "2026-11-26",
+      "cn_status": "2026-11-26 国服公测（2026-10-23 定档；此前 2026-04 恒序测试为删档）",
+      "global_status": "2026-11-26 亚洲区（日韩台港澳）PC/iOS/Android 公测；英文欧美版计划 2027 夏 OBT，PS5/Steam 全球版为 Summer 2027",
+      "overseas_heat": "中 · 日韩台港澳预约升温，英文侧仅测试服讨论",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "亚洲区同步；欧美英文版晚约 1 年（2027 夏）",
+      "target_markets": [
+        "日韩二次元",
+        "台港澳",
+        "欧美开放世界受众"
+      ],
+      "keywords": [
+        "azur promilia guide",
+        "azur promilia tier list",
+        "蓝色星原 旅谣 强度榜"
+      ],
+      "content_opportunities": [
+        "角色图鉴",
+        "强度榜",
+        "开荒路线"
+      ],
+      "monetization_level": "中高",
+      "monetization": "角色抽取、灵子与皮肤多付费点，中文侧已形成抽取规划内容",
+      "risks": [
+        "英文版晚约一年，欧美攻略空窗，四地发行商不同易出现版本节奏差",
+        "2026Q4–2027 同赛道二次元开放世界竞品密集，争抢创作者",
+        "五星基础概率 0.8%，付费点较多；皮肤尺度与未成年合规仍需关注"
+      ],
+      "guide_cn": "中高 · 测试期已有角色图鉴与强度榜，公测后需校订",
+      "guide_intl": "低 · 英文仅 Fandom 小条目与 CBT 数据库，无成型强度榜",
+      "version_compare": "同步",
+      "version_note": "亚洲区同日公测，欧美英文版晚约一年",
+      "content_parity": "unknown",
+      "content_note": "尚未公测，同版本内容暂无对照",
+      "watch": {
+        "steam_appid": null,
+        "official": "https://azurpromilia.manjuu.com/m"
+      },
+      "steam_listed": false,
+      "steam_release_date": null,
+      "last_checked": null,
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://azurpromilia.manjuu.com/m",
+        "https://www.taptap.cn/app/593829",
+        "https://www.gematsu.com/games/azur-promilia"
+      ]
+    },
+    {
+      "id": "daba-land-of-watermarks",
+      "name_cn": "达巴：水痕之地",
+      "name_en": "Daba: Land of Watermarks",
+      "developer": "上海暗星（DarkStar）",
+      "genre": "动作冒险 ARPG",
+      "priority": 7,
+      "platforms": [
+        "PC",
+        "主机"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "全球（SIE 发行）"
+      ],
+      "global_launch_at": null,
+      "cn_status": "国服 2027 春季发售（开发中，索尼中国之星项目）",
+      "global_status": "2027 春季全球同步发售（SIE 发行，PS5 / PC）",
+      "overseas_heat": "低 · 尚未发售，仅展会预告与媒体前瞻",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "全球同步定档 2027 春季，暂无时间差",
+      "target_markets": [
+        "主机动作玩家",
+        "类魂受众"
+      ],
+      "keywords": [
+        "daba land of watermarks guide",
+        "达巴 水痕之地 攻略"
+      ],
+      "content_opportunities": [
+        "开荒路线",
+        "Boss 攻略",
+        "武器流派"
+      ],
+      "monetization_level": "中",
+      "monetization": "单机买断，内容型收益依赖攻略与视频",
+      "risks": [
+        "尚未发售，品质与口碑未知",
+        "2027 春季窗口可能撞车大作",
+        "类魂赛道竞品密集，英文攻略站已被成熟 IP 占据",
+        "藏文化题材的海外接受度需验证"
+      ],
+      "guide_cn": "低 · 尚未发售，仅试玩与前瞻",
+      "guide_intl": "低 · 仅有展会预告与媒体前瞻",
+      "version_compare": "同步",
+      "version_note": "全球同步定档 2027 春季，暂无时间差",
+      "content_parity": "unknown",
+      "content_note": "尚未发售，无同版本可比",
+      "watch": {
+        "steam_appid": 4810160,
+        "official": null
+      },
+      "steam_listed": true,
+      "steam_release_date": "2027",
+      "last_checked": null,
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://store.steampowered.com/app/4810160/",
+        "https://www.donews.com/news/detail/8/6697237.html"
+      ]
+    },
+    {
+      "id": "wenjian-changsheng",
+      "name_cn": "问剑长生",
+      "name_en": "Wenjian Changsheng",
+      "developer": "厦门吉比特（雷霆游戏 / LTGAMES GLOBAL 发行）",
+      "genre": "修仙养成 RPG",
+      "priority": 7,
+      "platforms": [
+        "移动端",
+        "PC"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "台港澳",
+        "新马",
+        "韩国"
+      ],
+      "global_launch_at": "2025-11-27",
+      "cn_status": "2025-01-02 国服公测；2026-10-16 上线官方 PC 客户端（与手机端互通）",
+      "global_status": "2025-11-27 亚洲服上线，覆盖台港澳、新马、韩国（韩版名《검선귀환》），iOS / Android 双平台",
+      "overseas_heat": "中 · 亚洲服上线不足一年，韩服与繁中服榜单可见，英文侧无内容",
+      "overseas_heat_checked": "2026-10-28",
+      "gap_window": "约 330 天：国服 2025-01 公测，亚洲服 2025-11 才开服",
+      "target_markets": [
+        "韩系修仙/放置受众",
+        "台港澳新马华语玩家"
+      ],
+      "keywords": [
+        "wenjian changsheng guide",
+        "问剑长生 攻略",
+        "검선귀환 공략"
+      ],
+      "content_opportunities": [
+        "养成路线",
+        "资源规划",
+        "境界突破节奏"
+      ],
+      "monetization_level": "中高",
+      "monetization": "放置修仙付费习惯成熟，韩服与繁中服仍在开荒期",
+      "risks": [
+        "修仙放置赛道同质化严重，内容易被同题材淹没",
+        "亚洲服版本落后国服约一年，攻略需注明版本",
+        "韩服需与本地 MMO/放置产品竞争买量",
+        "官方 PC 端 10 月才上线，海外仍以移动端为主"
+      ],
+      "guide_cn": "中高 · 国服运营近两年，养成与资源规划内容成体系",
+      "guide_intl": "低 · 韩服与繁中服开荒帖零散，英文侧几乎空白",
+      "version_compare": "领先",
+      "version_note": "国服早约 330 天，亚洲服版本落后国服",
+      "content_parity": "unknown",
+      "content_note": "未见同版本核心机制对比；亚洲服为启动版本，进度落后国服",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "steam_listed": null,
+      "steam_release_date": null,
+      "last_checked": null,
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://game.ltgamesglobal.com/wjcsasia/news/181?lang=zh-tw",
+        "https://game.leiting.com/list/jian/news/19192",
+        "https://www.g-bits.com/zh/news/1029.html"
+      ]
     }
   ],
-  "last_run_at": "2026-10-28T04:20:05Z"
+  "last_run_at": "2026-10-28T09:16:49Z"
 }

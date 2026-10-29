@@ -169,7 +169,6 @@ class Fetcher:
         """
         body_path, meta_path = self._paths(url)
         had_cache = use_cache and os.path.exists(body_path)
-        self._wait_for_host(url)
 
         curl = shutil.which("curl.exe") or shutil.which("curl")
         if not curl:
@@ -187,16 +186,24 @@ class Fetcher:
                 args += ["--proxy", self.proxy]
             args += ["-o", tmp, "-w", "%{http_code}", url]
 
-            result = subprocess.run(args, capture_output=True, timeout=timeout + 10)
-            code = (result.stdout or b"").decode("ascii", "replace").strip()
-            if result.returncode == 0 and code.startswith("2"):
-                with open(tmp, "rb") as stream:
-                    raw = stream.read()
-                if use_cache:
-                    self._write_cache(body_path, meta_path, raw, {})
-                return FetchResult(url, status=int(code), body=raw)
-            detail = (result.stderr or b"").decode("utf-8", "replace").strip()[:160]
-            error = "curl exit {0} http {1} {2}".format(result.returncode, code, detail)
+            # 跨境链路常见「能建连、请求超时」（Steam 实测约四成），只有重试能兜住。
+            # 和 urllib 路径保持同一套语义：retries 是额外尝试次数，4xx 不重试。
+            for attempt in range(self.retries + 1):
+                self._wait_for_host(url)
+                result = subprocess.run(args, capture_output=True, timeout=timeout + 10)
+                code = (result.stdout or b"").decode("ascii", "replace").strip()
+                if result.returncode == 0 and code.startswith("2"):
+                    with open(tmp, "rb") as stream:
+                        raw = stream.read()
+                    if use_cache:
+                        self._write_cache(body_path, meta_path, raw, {})
+                    return FetchResult(url, status=int(code), body=raw)
+                detail = (result.stderr or b"").decode("utf-8", "replace").strip()[:160]
+                error = "curl exit {0} http {1} {2}".format(result.returncode, code, detail)
+                if code.startswith("4"):
+                    break  # 4xx 重试也不会变
+                if attempt < self.retries:
+                    time.sleep(1.5 * (attempt + 1))
         except Exception as exc:  # noqa: BLE001
             error = "{0}: {1}".format(type(exc).__name__, exc)
         finally:

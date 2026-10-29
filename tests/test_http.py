@@ -82,6 +82,45 @@ class TimeoutOverrideTest(unittest.TestCase):
         self.assertEqual(opener.call_args.kwargs["timeout"], 3)
 
 
+class CurlRetryTest(unittest.TestCase):
+    """curl 路径也要重试：Steam 常见「能建连、请求超时」，不重试约四成请求直接失败。"""
+
+    def setUp(self):
+        self._cache = tempfile.TemporaryDirectory()
+        self.addCleanup(self._cache.cleanup)
+
+    def _fetch(self, outcomes, retries=2):
+        fetcher = http.Fetcher(cache_dir=self._cache.name, host_interval=0, retries=retries)
+        results = [mock.Mock(returncode=code, stdout=http_code, stderr=b"curl: (28) timed out")
+                   for code, http_code in outcomes]
+        with mock.patch("collector.http.shutil.which", return_value="curl.exe"), \
+                mock.patch("collector.http.subprocess.run",
+                           side_effect=results) as runner, \
+                mock.patch("collector.http.time.sleep"):
+            result = fetcher.get("https://store.steampowered.com/x", use_cache=False)
+        return result, runner.call_count
+
+    def test_timeout_is_retried_until_success(self):
+        result, calls = self._fetch([(28, b"000"), (28, b"000"), (0, b"200")])
+
+        self.assertEqual(calls, 3)
+        self.assertEqual(result.status, 200)
+        self.assertIsNone(result.error)
+
+    def test_4xx_is_not_retried(self):
+        result, calls = self._fetch([(0, b"404"), (0, b"200")])
+
+        self.assertEqual(calls, 1)
+        self.assertIsNone(result.status)
+        self.assertIn("404", result.error)
+
+    def test_retries_are_capped(self):
+        result, calls = self._fetch([(28, b"000")] * 3)
+
+        self.assertEqual(calls, 3)
+        self.assertIsNone(result.status)
+
+
 class FetchResultTest(unittest.TestCase):
     def test_ok_requires_body_and_no_error(self):
         self.assertTrue(http.FetchResult("u", status=200, body=b"").ok)

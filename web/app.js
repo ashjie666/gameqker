@@ -12,10 +12,6 @@ const FIELD_LABELS = {
   last_checked: '巡检时间',
 };
 
-const LEVEL_ORDER = { '高': 4, '中高': 3, '中': 2, '低中': 1, '低': 0 };
-const LEVEL_CLASS = { '高': 'lv-high', '中高': 'lv-midhigh', '中': 'lv-mid', '低中': 'lv-midlow', '低': 'lv-low' };
-const LEVEL_VALUES = ['高', '中高', '中', '低中', '低'];
-
 const CHANGED_WINDOW_MS = 24 * 60 * 60 * 1000; // 巡检每天一次，24 小时内的变更即「今日变更」
 const COUNTDOWN_DAYS = 90; // 上线倒计时只展示未来 90 天内发售 / 上线的游戏
 const NEAR_DAYS = 2; // 其中 2 天内进入高亮提醒
@@ -28,8 +24,8 @@ const state = {
   priority: 'all',
   changed: 'all',
   query: '',
-  sortKey: 'priority',
-  sortDir: 'asc',
+  sortKey: 'money',
+  sortDir: 'desc',
 };
 
 let DATA = null;
@@ -120,7 +116,6 @@ function hasRecentChange(game) {
 function matches(game) {
   if (state.genre !== 'all' && game.genre !== state.genre) return false;
   if (state.market !== 'all' && !marketsOf(game).includes(state.market)) return false;
-  if (state.level !== 'all' && game.monetization_level !== state.level) return false;
   if (state.priority !== 'all' && String(game.priority) !== state.priority) return false;
   if (state.changed === 'today' && !hasRecentChange(game)) return false;
 
@@ -135,12 +130,13 @@ function matches(game) {
 
 function sortValue(game) {
   if (state.sortKey === 'priority') return game.priority ?? 999;
-  if (state.sortKey === 'monetization_level') return LEVEL_ORDER[game.monetization_level] ?? -1;
+  // 机会列按综合分排序，没有分数的（待补）排最后
+  if (state.sortKey === 'money') return moneyScore(game)?.total ?? -1;
   return game[state.sortKey] || '';
 }
 
 function visibleGames() {
-  return (DATA.games || []).filter(matches).sort((left, right) => {
+  return (DATA.games || []).filter(inMainTable).filter(matches).sort((left, right) => {
     const a = sortValue(left);
     const b = sortValue(right);
     let result;
@@ -175,12 +171,57 @@ function renderChips(container, options, current, onPick) {
 
 function countBy(predicate) {
   let total = 0;
-  for (const game of DATA.games || []) if (predicate(game)) total += 1;
+  for (const game of DATA.games || []) {
+    if (!inMainTable(game)) continue;
+    if (predicate(game)) total += 1;
+  }
   return total;
 }
 
+/* 主表收「已核实出海」的游戏：Steam 美区有页面，或已确认在海外（含港澳台/新马等
+   非英文市场、手游/主机渠道）正式发行。两者都算，不只看 Steam。 */
+function hasOverseasPresence(game) {
+  return game.steam_listed === true || game.overseas_verified === true;
+}
+
+function offshoreGames() {
+  return (DATA.games || []).filter((game) => !hasOverseasPresence(game));
+}
+
+/* 只收录有原生客户端的游戏（移动端 / PC 客户端 / 主机任一），纯网页游戏不收。
+   没有平台信息的（如自动并入的 Steam 候选）按 PC 端处理。 */
+const NATIVE_PLATFORMS = ['移动端', 'PC', '主机'];
+
+function hasNativeClient(game) {
+  const platforms = Array.isArray(game.platforms) ? game.platforms : [];
+  if (!platforms.length) return game.steam_listed === true;
+  return platforms.some((platform) => NATIVE_PLATFORMS.includes(platform));
+}
+
+// 主表收录条件：已核实出海 + 有原生客户端 + 海外正式上线未满 1 年
+// 「正式上线」= 公测 / 正式发售 / 正式开服：抢先体验（EA）与测试服（CBT/内测）都不算；
+// 已定档但尚未开服的（预估上线）照常收录
+const FRESH_DAYS = 365;
+
+function isFreshOverseas(game) {
+  const launched = Date.parse(game.global_launch_at || '');
+  if (!Number.isFinite(launched)) return true;          // 未上线或日期未知，先收录
+  // 按整天数比较，避免上线当天刚好满 1 年时被当成「已超 1 年」
+  return Math.floor((Date.now() - launched) / 86400000) <= FRESH_DAYS;
+}
+
+function inMainTable(game) {
+  return hasOverseasPresence(game) && hasNativeClient(game) && isFreshOverseas(game);
+}
+
+// 因「国际服上线超 1 年」被挡在主表外的数量，用于顶部说明
+function staleGames() {
+  return (DATA.games || []).filter(
+    (game) => hasOverseasPresence(game) && hasNativeClient(game) && !isFreshOverseas(game));
+}
+
 function renderFilters() {
-  const games = DATA.games || [];
+  const games = (DATA.games || []).filter(inMainTable);
   const withAll = (options) => [{ label: '全部', value: 'all' }].concat(options);
 
   const genreOptions = withAll([...new Set(games.map((g) => g.genre))]
@@ -189,10 +230,6 @@ function renderFilters() {
 
   const marketOptions = withAll(['欧美', '东南亚', '其他英文向']
     .map((bucket) => ({ label: bucket, value: bucket, count: countBy((g) => marketsOf(g).includes(bucket)) })));
-
-  const levelOptions = withAll(LEVEL_VALUES
-    .filter((level) => countBy((g) => g.monetization_level === level) > 0)
-    .map((level) => ({ label: level, value: level, count: countBy((g) => g.monetization_level === level) })));
 
   const priorityOptions = withAll([...new Set(games.map((g) => g.priority))]
     .sort((a, b) => a - b)
@@ -211,7 +248,6 @@ function renderFilters() {
 
   renderChips($('filter-genre'), genreOptions, state.genre, pick((v) => { state.genre = v; }));
   renderChips($('filter-market'), marketOptions, state.market, pick((v) => { state.market = v; }));
-  renderChips($('filter-level'), levelOptions, state.level, pick((v) => { state.level = v; }));
   renderChips($('filter-priority'), priorityOptions, state.priority, pick((v) => { state.priority = v; }));
   renderChips($('filter-changed'), changedOptions, state.changed, pick((v) => { state.changed = v; }));
 
@@ -229,10 +265,6 @@ function renderFilters() {
 
 function cell(className, label, children) {
   return el('td', { class: className, 'data-label': label }, children);
-}
-
-function tagList(items) {
-  return el('div', { class: 'tag-row' }, (items || []).map((item) => el('span', { class: 'tag', text: item })));
 }
 
 function bulletList(items) {
@@ -288,6 +320,11 @@ function formatDay(value) {
   const parts = /^(\d{4})-(\d{2})-(\d{2})$/.exec(text);
   if (!parts) return text || '—';
   return Number(parts[1]) === new Date().getFullYear() ? `${parts[2]}-${parts[3]}` : text;
+}
+
+// 检索量按千分位显示；拿不到时给破折号，避免出现 "NaN"
+function formatCount(value) {
+  return typeof value === 'number' && isFinite(value) ? value.toLocaleString('en-US') : '—';
 }
 
 function heatBlock(game) {
@@ -390,15 +427,121 @@ function textCell(value) {
   return el('span', { class: value === PLACEHOLDER ? 'ph' : null, text });
 }
 
-// 自动并入的条目用 99 占位排到末尾，显示成「未定级」而不是 P99
-function priorityLabel(game) {
-  const value = game.priority ?? UNRANKED;
-  return value >= UNRANKED ? '未定级' : 'P' + value;
+// 攻略成熟度按 0–10 分量化：文本前缀是等级词（如「中高 · 说明」），
+// 美国内 / 海外两列并排就能直接从条长和分数看出差距
+const GUIDE_SCORE = { 极高: 10, 高: 8, 中高: 6.5, 中: 5, 中低: 3.5, 低: 2, 极低: 1 };
+// 版本比分：国服相对国际服
+const VERSION_SCORE = { 领先: 10, 同步: 6, 落后: 3, 未知: 5 };
+const VERSION_META = {
+  领先: { label: '版本领先', cls: 'ver-ahead' },
+  同步: { label: '版本同步', cls: 'ver-sync' },
+  落后: { label: '版本落后', cls: 'ver-behind' },
+  未知: { label: '版本待定', cls: 'ver-unknown' },
+};
+
+// 同版本对比：只比核心机制——玩法、数值、副本、系统开放进度是否一致，
+// 与「版本领先/同步」无关；时装/皮肤、交易系统、付费与定价都不计入差异
+const PARITY_META = {
+  same: { label: '同版本一致', cls: 'parity-same' },
+  partial: { label: '同版本微调', cls: 'parity-partial' },
+  diff: { label: '同版本删改', cls: 'parity-diff' },
+  unknown: { label: '同版本待核', cls: 'parity-unknown' },
+};
+
+function parseGuide(value) {
+  const text = value === null || value === undefined ? '' : String(value).trim();
+  const mark = text.indexOf('·');
+  const level = (mark >= 0 ? text.slice(0, mark) : text).trim();
+  const desc = mark >= 0 ? text.slice(mark + 1).trim() : '';
+  const score = GUIDE_SCORE[level];
+  return { level, desc, score: score === undefined ? null : score };
 }
+
+function scoreText(score) {
+  return (Number.isInteger(score) ? String(score) : score.toFixed(1)) + '/10';
+}
+
+/* 进度条：攻略成熟度与变现综合分共用 */
+function meterRow(score, title) {
+  return el('div', {
+    class: 'guide-meter tone-' + (score >= 8 ? 'hi' : (score >= 5 ? 'mid' : 'lo')),
+    title,
+  }, [
+    el('span', { class: 'guide-track' }, [
+      el('i', { class: 'guide-fill', style: 'width:' + (score * 10) + '%' }),
+    ]),
+    el('span', { class: 'guide-score', text: scoreText(score) }),
+  ]);
+}
+
+function guideBlock(value) {
+  const guide = parseGuide(value);
+  // 「待补」或没写等级的条目不编分数，原样显示
+  if (guide.score === null) return textCell(value);
+  return el('div', { class: 'guide-block' }, [
+    meterRow(guide.score, guide.level + ' · ' + scoreText(guide.score)),
+    guide.desc ? el('span', { class: 'guide-desc', text: guide.desc }) : null,
+  ]);
+}
+
+function versionTag(game) {
+  const meta = VERSION_META[game.version_compare];
+  if (!meta) return null;
+  const tag = el('span', { class: 'ver-tag ' + meta.cls, text: meta.label });
+  if (game.version_note) tag.title = meta.label + ' · ' + game.version_note;
+  return tag;
+}
+
+function parityTag(game) {
+  const meta = PARITY_META[game.content_parity];
+  if (!meta) return null;
+  const tag = el('span', { class: 'parity-tag ' + meta.cls, text: meta.label });
+  if (game.content_note) {
+    tag.title = meta.label + ' · ' + game.content_note
+      + ' ｜ 判定口径：只比核心机制（玩法 / 数值 / 副本），时装、交易与付费不计';
+  }
+  return tag;
+}
+
+/* 热度趋势：近 7 天趋势值的峰值折算成 0–10；没有趋势数据就按中性 5 计 */
+function trendHeat(game) {
+  const points = trendPoints(game).filter((point) => point.source === 'trends');
+  if (!points.length) return null;
+  return Math.max(...points.map((point) => Number(point.value) || 0)) / 10;
+}
+
+/* 变现综合分 = 热度趋势 25% + 国内攻略成熟度 25% + 海外攻略空白度 30% + 版本优势 20% */
+function moneyScore(game) {
+  const cn = parseGuide(game.guide_cn).score;
+  const intl = parseGuide(game.guide_intl).score;
+  if (cn === null || intl === null) return null;
+  const heat = trendHeat(game);
+  const trend = heat === null ? 5 : heat;
+  const version = VERSION_SCORE[game.version_compare] ?? 5;
+  const total = trend * 0.25 + cn * 0.25 + (10 - intl) * 0.3 + version * 0.2;
+  return {
+    total: Math.round(total * 10) / 10,
+    trend: Math.round(trend * 10) / 10,
+    cn, intl, version,
+    hasTrend: heat !== null,
+  };
+}
+
+function moneyBlock(game) {
+  const score = moneyScore(game);
+  if (!score) return null;
+  const title = [
+    '热度趋势 ' + score.trend + (score.hasTrend ? '' : '（无趋势数据，按中性计）'),
+    '国内攻略 ' + score.cn,
+    '海外攻略 ' + score.intl,
+    '版本优势 ' + score.version,
+  ].join(' · ');
+  return el('div', { class: 'money-block' }, [meterRow(score.total, title)]);
+}
+
 
 function buildRow(game) {
   const changed = hasRecentChange(game);
-  const level = game.monetization_level || '';
   const nameCell = el('div', {}, [
     el('div', { class: 'game-name', text: game.name_cn }),
     game.name_en ? el('div', { class: 'game-name-en', text: game.name_en }) : null,
@@ -409,12 +552,6 @@ function buildRow(game) {
   const row = el('tr', { class: changed ? 'row-changed' : '', id: 'row-' + game.id }, [
     cell('col-first col-name', '游戏', [nameCell]),
     cell('col-developer', '厂商', [textCell(game.developer)]),
-    cell('col-genre', '类型', [
-      el('span', { class: 'tag' + (game.genre === PLACEHOLDER ? ' ph' : ''), text: game.genre || '—' }),
-    ]),
-    cell('col-priority', '优先级', [
-      el('span', { class: 'prio', text: priorityLabel(game) }),
-    ]),
     cell('col-cn_status', '国内状态', [textCell(game.cn_status)]),
     cell('col-global_status', '海外状态', [
       textCell(game.global_status),
@@ -422,12 +559,14 @@ function buildRow(game) {
       heatBlock(game),
       buildAutoBlock(game),
     ]),
-    cell('col-gap_window', '信息差窗口', [textCell(game.gap_window)]),
-    cell('col-markets', '目标市场', [tagList(game.target_markets)]),
-    cell('col-keywords', '潜在英文关键词', [bulletList(game.keywords)]),
-    cell('col-opportunities', '内容机会', [bulletList(game.content_opportunities)]),
-    cell('col-monetization', '变现可能性', [
-      el('span', { class: 'lv ' + (LEVEL_CLASS[level] || 'lv-low'), text: level || '—' }),
+    cell('col-gap_window', '信息差窗口', [
+      el('div', { class: 'gap-tags' }, [versionTag(game), parityTag(game)]),
+      textCell(game.gap_window),
+    ]),
+    cell('col-guide_cn', '国内攻略成熟度', [guideBlock(game.guide_cn)]),
+    cell('col-guide_intl', '海外攻略成熟度', [guideBlock(game.guide_intl)]),
+    cell('col-monetization', '机会', [
+      moneyBlock(game),
       el('div', { class: 'cell-sub', text: game.monetization }),
     ]),
     cell('col-risks', '风险点', [bulletList(game.risks)]),
@@ -583,6 +722,9 @@ function renderCountdown() {
 
 const GAP_META = {
   cn_first: { label: '国服先行', cls: 'gap-cn' },
+  cn_sync: { label: '国服国际服同步', cls: 'gap-sync' },
+  cn_version: { label: '国服版本领先', cls: 'gap-version' },
+  cn_guides: { label: '国内攻略更成熟', cls: 'gap-guides' },
 };
 
 const STAGE_LABEL = {
@@ -647,6 +789,32 @@ function renderDiscover() {
   list.replaceChildren(...items.slice(0, 12).map(renderCandidate));
 }
 
+// 未出海观察区：Steam 美区没有商店页的条目，不占主表名额
+function renderOffshore() {
+  const panel = $('offshore-panel');
+  const list = $('offshore-list');
+  if (!panel || !list) return;
+  const games = offshoreGames();
+  if (!games.length) { panel.hidden = true; return; }
+  panel.hidden = false;
+  $('offshore-note').textContent = `${games.length} 款 · 不计入主表`;
+  list.replaceChildren(...games.map((game) => el('article', { class: 'offshore-item' }, [
+    el('div', { class: 'offshore-name' }, [
+      el('span', { class: 'game-name', text: game.name_cn }),
+      game.name_en ? el('span', { class: 'game-name-en', text: game.name_en }) : null,
+      versionTag(game),
+    ]),
+    el('div', { class: 'offshore-row' }, [
+      el('span', { class: 'offshore-key', text: '国内' }),
+      el('span', { class: 'offshore-val', text: game.cn_status || '—' }),
+    ]),
+    el('div', { class: 'offshore-row' }, [
+      el('span', { class: 'offshore-key', text: '海外' }),
+      el('span', { class: 'offshore-val', text: game.global_status || '—' }),
+    ]),
+  ])));
+}
+
 // 与 collector/update.py 的 _candidate_slug 保持一致，用来判断候选是否已并入主表
 function candidateSlug(candidate) {
   const nameEn = (candidate.name_en || '').trim();
@@ -670,6 +838,13 @@ function renderCandidate(candidate) {
   if (candidate.gap_days) {
     tags.push(el('span', { class: 'd-tag d-days', text: `国服早 ${candidate.gap_days} 天` }));
   }
+  // 主判定之外同时成立的优势（例如既先发又版本领先）也要露出来，否则信息被主标签盖掉
+  (candidate.advantages || [])
+    .filter((key) => key !== candidate.gap_type)
+    .forEach((key) => {
+      const extra = GAP_META[key];
+      if (extra) tags.push(el('span', { class: 'd-tag ' + extra.cls, text: extra.label }));
+    });
 
   const usCell = steam.us_listed !== true
     ? '无页面 / 未上架'
@@ -679,13 +854,21 @@ function renderCandidate(candidate) {
 
   const stage = candidate.stage || {};
   const version = candidate.version || {};
+  const guides = candidate.guides || {};
+  const versionText = (version.cn || version.steam)
+    ? `国服 ${version.cn ? 'v' + version.cn : '未取得'} / 国际服 ${version.steam ? 'v' + version.steam : '未取得'}`
+    : '未取得';
+  const guidesText = (guides.cn != null || guides.intl != null)
+    ? `中文 ${formatCount(guides.cn)} / 英文 ${formatCount(guides.intl)}${guides.advantage ? '（中文更成熟）' : ''}`
+    : '未取得';
 
   const rows = [
     ['版号批准', formatDay(nppa.approved_at)],
     ['审批文号', nppa.approval_no || '—'],
     ['阶段对照', timelineLine(candidate) +
       (candidate.playtest_os ? '（美区 Playtest 中）' : '')],
-    ['最新版本', version.steam ? `v${version.steam}（Steam 公告）` : '未取得'],
+    ['最新版本', versionText],
+    ['攻略检索量', guidesText],
     ['Steam 美区', usCell],
     ['Steam 国区', steam.cn_listed === false ? '不可购买' : (steam.cn_release_parsed ? formatDay(steam.cn_release_parsed) : '可购买')],
     ['运营单位', nppa.operator || '—'],
@@ -737,7 +920,11 @@ function renderChrome() {
   }
 
   $('intro-text').textContent =
-    `共 ${games.length} 款国产游戏 · 定性复核截止 ${DATA.data_cutoff || '—'} · 自动巡检 ${relativeTime(DATA.last_run_at)} · 巡检每日一次`;
+    `共 ${(DATA.games || []).filter(inMainTable).length} 款已核实出海 · ` +
+    `${offshoreGames().length} 款未出海另列下方 · ` +
+    `${staleGames().length} 款海外正式上线超 1 年不再收录 · ` +
+    `纯网页游戏不收 · ` +
+    `定性复核截止 ${DATA.data_cutoff || '—'} · 自动巡检 ${relativeTime(DATA.last_run_at)} · 巡检每日一次`;
 
   const reports = DATA.reports || [];
   const ok = reports.filter((r) => r.status === 'ok' || r.status === 'partial').length;
@@ -757,7 +944,8 @@ function render() {
   const body = $('table-body');
   body.replaceChildren(...games.map(buildRow));
 
-  $('result-count').textContent = `显示 ${games.length} / ${(DATA.games || []).length} 款`;
+  $('result-count').textContent =
+    `显示 ${games.length} / ${(DATA.games || []).filter(inMainTable).length} 款`;
   const empty = $('empty-state');
   if (games.length) {
     empty.hidden = true;
@@ -774,7 +962,6 @@ function render() {
 function resetFilters() {
   state.genre = 'all';
   state.market = 'all';
-  state.level = 'all';
   state.priority = 'all';
   state.changed = 'all';
   state.query = '';
@@ -805,8 +992,8 @@ function bindSorting() {
         state.sortDir = state.sortDir === 'asc' ? 'desc' : 'asc';
       } else {
         state.sortKey = key;
-        // 数值型：优先级越小越靠前；其余字符串默认升序
-        state.sortDir = key === 'monetization_level' ? 'desc' : 'asc';
+        // 机会列按分数，默认从高到低；其余字符串默认升序
+        state.sortDir = key === 'money' ? 'desc' : 'asc';
       }
       renderFilters();
       render();
@@ -860,6 +1047,7 @@ async function boot() {
   renderChangesPanel();
   renderCountdown();
   renderDiscover();
+  renderOffshore();
 }
 
 document.addEventListener('DOMContentLoaded', boot);

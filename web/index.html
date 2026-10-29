@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>gameqker · 国服 / 海外服信息差情报表</title>
-<meta name="description" content="10 款国产游戏的国服 / 海外服信息差情报表：国内状态、海外状态、信息差窗口、目标市场、英文关键词、内容机会、变现与风险点，每日自动巡检一次，并自动发现国服领先于海外的游戏。">
-<link rel="stylesheet" href="styles.css?v=8">
+<meta name="description" content="已出海国产游戏的国服 / 海外服信息差情报表：国内状态、海外状态、信息差窗口、国内与海外攻略成熟度、机会评分与风险点，每日自动巡检一次，并自动发现国服领先于海外的游戏。">
+<link rel="stylesheet" href="styles.css?v=23">
 </head>
 <body>
 
@@ -87,8 +87,6 @@
     <div class="filter-row">
       <span class="filter-label">目标市场</span>
       <div class="chips" id="filter-market"></div>
-      <span class="filter-label">变现等级</span>
-      <div class="chips" id="filter-level"></div>
     </div>
     <div class="filter-row">
       <span class="filter-label">优先级</span>
@@ -114,22 +112,19 @@
       <table class="cmp-table" id="cmp-table">
         <thead>
           <tr class="group-row">
-            <th colspan="4">基础信息</th>
+            <th colspan="2">基础信息</th>
             <th colspan="5">情报差</th>
-            <th colspan="3">落地建议</th>
+            <th colspan="2">落地建议</th>
           </tr>
           <tr class="col-row">
             <th class="col-first" data-col="name"><button class="th-btn" data-sort-key="name_cn" type="button">游戏</button></th>
             <th data-col="developer"><button class="th-btn" data-sort-key="developer" type="button">厂商</button></th>
-            <th data-col="genre"><button class="th-btn" data-sort-key="genre" type="button">类型</button></th>
-            <th data-col="priority"><button class="th-btn" data-sort-key="priority" type="button">优先级</button></th>
             <th data-col="cn_status"><button class="th-btn" data-sort-key="cn_status" type="button">国内状态</button></th>
             <th data-col="global_status"><button class="th-btn" data-sort-key="global_status" type="button">海外状态</button><span class="badge badge-auto">自动校验</span></th>
             <th data-col="gap_window"><button class="th-btn" data-sort-key="gap_window" type="button">信息差窗口</button></th>
-            <th data-col="markets">目标市场</th>
-            <th data-col="keywords">潜在英文关键词</th>
-            <th data-col="opportunities">内容机会</th>
-            <th data-col="monetization"><button class="th-btn" data-sort-key="monetization_level" type="button">变现可能性</button></th>
+            <th data-col="guide_cn">国内攻略成熟度</th>
+            <th data-col="guide_intl">海外攻略成熟度</th>
+            <th data-col="monetization"><button class="th-btn" data-sort-key="money" type="button">机会</button></th>
             <th data-col="risks">风险点</th>
           </tr>
         </thead>
@@ -139,6 +134,15 @@
   </section>
 
   <section class="panel empty-state" id="empty-state" hidden></section>
+
+  <section class="panel discover-panel" id="offshore-panel" aria-label="未出海观察" hidden>
+    <div class="discover-head">
+      <h2 class="discover-title">未出海 · 未核实海外发行</h2>
+      <span class="discover-note" id="offshore-note"></span>
+    </div>
+    <p class="discover-hint">这些游戏既没有 Steam 美区页面，也没有其他任何已核实的海外发行记录（含港澳台 / 新马等非英文市场、手游与主机渠道），暂不计入主表；一旦确认出海即移入上方。</p>
+    <div class="offshore-list" id="offshore-list"></div>
+  </section>
 
   <details class="panel changes-panel" id="changes-panel">
     <summary>
@@ -150,8 +154,8 @@
 
   <footer class="site-footer">
     <p>
-      本表的「人工维护」字段（国内状态 / 海外状态 / 海外热度 / 信息差窗口 / 目标市场 / 英文关键词 / 内容机会 / 变现 / 风险点）
-      为定性判断，其中「海外热度」逐行标注各自的复核日期；关键词搜索量未经关键词工具实测；「自动校验」字段由 <code>collector/update.py</code> 每日巡检
+      本表的「人工维护」字段（国内状态 / 海外状态 / 海外热度 / 信息差窗口 / 国内攻略成熟度 / 海外攻略成熟度 / 机会 / 风险点）
+      为定性判断，其中「海外热度」逐行标注各自的复核日期；「自动校验」字段由 <code>collector/update.py</code> 每日巡检
       Steam 美区商店与官网后写入，每日更新一次。
     </p>
     <p class="footer-meta" id="footer-meta"></p>
@@ -159,6 +163,6 @@
 
 </main>
 
-<script src="app.js?v=10"></script>
+<script src="app.js?v=27"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28T22:27:23Z",
+  "updated_at": "2026-10-28T09:28:21Z",
   "items": {
     "domestic:暗夜勇士": {
       "checked_at": "2026-10-22",
@@ -2241,17 +2241,27 @@
       "approved_at": "2026-07-22",
       "candidate": null
     },
-    "domestic:霸刀逐日": {
+    "domestic:沉默的蟋蟀": {
       "checked_at": "2026-10-28",
       "approved_at": "2026-07-22",
       "candidate": null
     },
-    "domestic:爆爆战车": {
+    "domestic:冲鸭哒哒哒": {
       "checked_at": "2026-10-28",
       "approved_at": "2026-07-22",
       "candidate": null
     },
-    "domestic:爆裂防线": {
+    "domestic:出发吧英雄": {
+      "checked_at": "2026-10-28",
+      "approved_at": "2026-07-22",
+      "candidate": null
+    },
+    "domestic:闯关勇者": {
+      "checked_at": "2026-10-28",
+      "approved_at": "2026-07-22",
+      "candidate": null
+    },
+    "domestic:大鹅工厂": {
       "checked_at": "2026-10-28",
       "approved_at": "2026-07-22",
       "candidate": null
@@ -2286,136 +2296,6 @@
       "approved_at": "2026-07-22",
       "candidate": null
     },
-    "import:斗阵骑士": {
-      "checked_at": "2026-10-28",
-      "approved_at": "2026-03-24",
-      "candidate": null
-    },
-    "import:劫后公司": {
-      "checked_at": "2026-10-28",
-      "approved_at": "2026-03-24",
-      "candidate": {
-        "origin": "import",
-        "name_cn": "劫后公司",
-        "name_en": "After Inc: Revival",
-        "appid": 3337140,
-        "gap_type": "cn_first",
-        "gap_days": 148,
-        "note": "国服版号早于 Steam 美区发售",
-        "timeline": {
-          "cn": {
-            "date": "2026-08-19",
-            "basis": "released",
-            "estimated": false,
-            "source": "Steam 商店（国服）",
-            "url": "https://store.steampowered.com/app/3337140/"
-          },
-          "intl": {
-            "date": "2026-08-19",
-            "basis": "released",
-            "estimated": false,
-            "source": "Steam 商店（国际服）",
-            "url": "https://store.steampowered.com/app/3337140/"
-          }
-        },
-        "stage": {
-          "cn": "launch",
-          "os": "launch",
-          "cn_release": "2026-08-19",
-          "os_release": "2026-08-19"
-        },
-        "version": {
-          "steam": "1.0.2.2",
-          "source": "Halloween Horde - Patch Notes"
-        },
-        "playtest_os": false,
-        "nppa": {
-          "approved_at": "2026-03-24",
-          "publisher": "广州谷得网络科技有限公司",
-          "operator": "上海青禹游信息技术有限公司",
-          "approval_no": "国新出审〔2026〕744号",
-          "batch": "2026年进口网络游戏审批信息",
-          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html"
-        },
-        "steam": {
-          "store_url": "https://store.steampowered.com/app/3337140/",
-          "us_listed": true,
-          "us_release_date": "Aug 19, 2026",
-          "us_release_parsed": "2026-08-19",
-          "us_coming_soon": false,
-          "cn_listed": true,
-          "cn_release_date": "2026 年 8 月 19 日",
-          "cn_release_parsed": "2026-08-19",
-          "match_score": 1.0
-        },
-        "evidence": [
-          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
-          "https://store.steampowered.com/app/3337140/"
-        ],
-        "first_seen": "2026-10-28T22:26:34Z",
-        "last_checked": "2026-10-28"
-      }
-    },
-    "import:神泣纷争": {
-      "checked_at": "2026-10-28",
-      "approved_at": "2026-03-24",
-      "candidate": null
-    },
-    "import:宝石战争": {
-      "checked_at": "2026-10-28",
-      "approved_at": "2026-02-26",
-      "candidate": null
-    },
-    "import:基地银河纵横": {
-      "checked_at": "2026-10-28",
-      "approved_at": "2026-02-26",
-      "candidate": null
-    },
-    "import:飘流幻境新世界": {
-      "checked_at": "2026-10-28",
-      "approved_at": "2026-02-26",
-      "candidate": null
-    },
-    "import:神泣光与暗": {
-      "checked_at": "2026-10-28",
-      "approved_at": "2026-02-26",
-      "candidate": null
-    },
-    "import:小浣熊百将传2": {
-      "checked_at": "2026-10-28",
-      "approved_at": "2026-02-26",
-      "candidate": null
-    },
-    "import:辛特堡传说": {
-      "checked_at": "2026-10-28",
-      "approved_at": "2026-02-26",
-      "candidate": null
-    },
-    "import:彩虹六号攻势": {
-      "checked_at": "2026-10-28",
-      "approved_at": "2026-01-23",
-      "candidate": null
-    },
-    "import:彩虹岛爱丽丝之境": {
-      "checked_at": "2026-10-28",
-      "approved_at": "2026-01-23",
-      "candidate": null
-    },
-    "import:愤怒的小鸟经典归来": {
-      "checked_at": "2026-10-28",
-      "approved_at": "2026-01-23",
-      "candidate": null
-    },
-    "import:愤怒的小鸟梦幻爆破": {
-      "checked_at": "2026-10-28",
-      "approved_at": "2026-01-23",
-      "candidate": null
-    },
-    "import:秘境夺金": {
-      "checked_at": "2026-10-28",
-      "approved_at": "2026-01-23",
-      "candidate": null
-    },
     "domestic:长夜守卫者": {
       "checked_at": "2026-10-28",
       "approved_at": "2026-07-22",
@@ -2445,6 +2325,129 @@
       "checked_at": "2026-10-28",
       "approved_at": "2026-07-22",
       "candidate": null
+    },
+    "domestic:大富翁派对": {
+      "checked_at": "2026-10-28",
+      "approved_at": "2026-07-22",
+      "candidate": null
+    },
+    "domestic:大侠立志传侠道相逢": {
+      "checked_at": "2026-10-28",
+      "approved_at": "2026-07-22",
+      "candidate": null
+    },
+    "domestic:刀鸣九州": {
+      "checked_at": "2026-10-28",
+      "approved_at": "2026-07-22",
+      "candidate": null
+    },
+    "domestic:地堡先锋": {
+      "checked_at": "2026-10-28",
+      "approved_at": "2026-07-22",
+      "candidate": null
+    },
+    "domestic:巅峰射击": {
+      "checked_at": "2026-10-28",
+      "approved_at": "2026-07-22",
+      "candidate": null
+    },
+    "domestic:貂蝉向前冲": {
+      "checked_at": "2026-10-28",
+      "approved_at": "2026-07-22",
+      "candidate": null
+    },
+    "domestic:都市创业大亨": {
+      "checked_at": "2026-10-28",
+      "approved_at": "2026-07-22",
+      "candidate": null
+    },
+    "domestic:独孤求败归来": {
+      "checked_at": "2026-10-28",
+      "approved_at": "2026-07-22",
+      "candidate": null
+    },
+    "domestic:勇者征途": {
+      "checked_at": "2026-10-28",
+      "approved_at": "2025-11-26",
+      "candidate": null
+    },
+    "domestic:影之刃零": {
+      "checked_at": "2026-10-28",
+      "approved_at": "2026-07-22",
+      "candidate": {
+        "origin": "domestic",
+        "name_cn": "影之刃零",
+        "name_en": "Phantom Blade Zero",
+        "appid": 4115450,
+        "gap_type": "cn_first",
+        "gap_days": 98,
+        "advantages": [
+          "cn_first"
+        ],
+        "note": "国服版号早于 Steam 美区定档",
+        "timeline": {
+          "cn": {
+            "date": "2026-10-28",
+            "basis": "preorder",
+            "estimated": false,
+            "source": "Steam 商店（国服）",
+            "url": "https://store.steampowered.com/app/4115450/"
+          },
+          "intl": {
+            "date": "2026-10-28",
+            "basis": "preorder",
+            "estimated": false,
+            "source": "Steam 商店（国际服）",
+            "url": "https://store.steampowered.com/app/4115450/"
+          }
+        },
+        "stage": {
+          "cn": "preorder",
+          "os": "preorder",
+          "cn_release": "2026-10-28",
+          "os_release": "2026-10-28"
+        },
+        "version": {
+          "cn": null,
+          "cn_source": null,
+          "cn_url": null,
+          "steam": null,
+          "source": null,
+          "ahead": false
+        },
+        "guides": {
+          "cn": 101000,
+          "intl": 141000,
+          "ratio": 0.7,
+          "advantage": false
+        },
+        "playtest_os": false,
+        "nppa": {
+          "approved_at": "2026-07-22",
+          "publisher": "北京联合出版有限责任公司",
+          "operator": "北京灵游坊网络科技有限公司",
+          "approval_no": "国新出审〔2026〕1766号",
+          "batch": "2026年7月份国产网络游戏审批信息",
+          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202607/t20260723_1000636.html"
+        },
+        "steam": {
+          "store_url": "https://store.steampowered.com/app/4115450/",
+          "us_listed": true,
+          "us_release_date": "Oct 28, 2026",
+          "us_release_parsed": "2026-10-28",
+          "us_coming_soon": true,
+          "cn_listed": true,
+          "cn_release_date": "2026 年 10 月 28 日",
+          "cn_release_parsed": "2026-10-28",
+          "match_score": 1.0
+        },
+        "evidence": [
+          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202607/t20260723_1000636.html",
+          "https://store.steampowered.com/app/4115450/"
+        ],
+        "first_seen": "2026-10-28T05:36:37Z",
+        "last_checked": "2026-10-28"
+      }
     }
   }
 }

@@ -1,90 +1,106 @@
 {
   "generated_at": "2026-10-28",
-  "generated_at_utc": "2026-10-28T22:27:23Z",
+  "generated_at_utc": "2026-10-28T09:28:21Z",
   "source": {
-    "name": "国家新闻出版署 · 国产网络游戏审批信息",
+    "name": "Steam 美区按名定向搜索 × 国家新闻出版署 · 国产网络游戏审批信息（存量回填）",
     "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/",
-    "steam": "Steam appdetails（cc=us / cc=cn）"
+    "steam": "Steam 搜索列表（cc=us / l=schinese）+ appdetails（cc=us / cc=cn）"
   },
   "batches": [
     {
-      "origin": "import",
-      "title": "进口网络游戏审批信息（当年累计）",
-      "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/"
+      "origin": "domestic",
+      "title": "国产网络游戏审批信息（历史全量批次）",
+      "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/"
     },
     {
-      "origin": "domestic",
-      "title": "国产网络游戏审批信息（近三月）",
-      "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/"
+      "origin": "intl",
+      "title": "Steam 美区按名定向搜索（cc=us / l=schinese）",
+      "url": "https://store.steampowered.com/search/?cc=us&l=schinese"
     }
   ],
   "stats": {
-    "nppa_games": 654,
-    "evaluated": 20,
-    "matched": 1,
-    "skipped_budget": 177,
-    "deferred": 0
+    "indexed": 27491,
+    "attempted": 1,
+    "hit": 0,
+    "evaluated": 0,
+    "matched": 0,
+    "no_page": 0,
+    "deferred": 1,
+    "skipped": 86
   },
   "candidates": [
     {
-      "origin": "import",
-      "name_cn": "劫后公司",
-      "name_en": "After Inc: Revival",
-      "appid": 3337140,
+      "origin": "domestic",
+      "name_cn": "影之刃零",
+      "name_en": "Phantom Blade Zero",
+      "appid": 4115450,
       "gap_type": "cn_first",
-      "gap_days": 148,
-      "note": "国服版号早于 Steam 美区发售",
+      "gap_days": 98,
+      "advantages": [
+        "cn_first"
+      ],
+      "note": "国服版号早于 Steam 美区定档",
       "timeline": {
         "cn": {
-          "date": "2026-08-19",
-          "basis": "released",
+          "date": "2026-10-28",
+          "basis": "preorder",
           "estimated": false,
           "source": "Steam 商店（国服）",
-          "url": "https://store.steampowered.com/app/3337140/"
+          "url": "https://store.steampowered.com/app/4115450/"
         },
         "intl": {
-          "date": "2026-08-19",
-          "basis": "released",
+          "date": "2026-10-28",
+          "basis": "preorder",
           "estimated": false,
           "source": "Steam 商店（国际服）",
-          "url": "https://store.steampowered.com/app/3337140/"
+          "url": "https://store.steampowered.com/app/4115450/"
         }
       },
       "stage": {
-        "cn": "launch",
-        "os": "launch",
-        "cn_release": "2026-08-19",
-        "os_release": "2026-08-19"
+        "cn": "preorder",
+        "os": "preorder",
+        "cn_release": "2026-10-28",
+        "os_release": "2026-10-28"
       },
       "version": {
-        "steam": "1.0.2.2",
-        "source": "Halloween Horde - Patch Notes"
+        "cn": null,
+        "cn_source": null,
+        "cn_url": null,
+        "steam": null,
+        "source": null,
+        "ahead": false
+      },
+      "guides": {
+        "cn": 101000,
+        "intl": 141000,
+        "ratio": 0.7,
+        "advantage": false
       },
       "playtest_os": false,
       "nppa": {
-        "approved_at": "2026-03-24",
-        "publisher": "广州谷得网络科技有限公司",
-        "operator": "上海青禹游信息技术有限公司",
-        "approval_no": "国新出审〔2026〕744号",
-        "batch": "2026年进口网络游戏审批信息",
-        "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html"
+        "approved_at": "2026-07-22",
+        "publisher": "北京联合出版有限责任公司",
+        "operator": "北京灵游坊网络科技有限公司",
+        "approval_no": "国新出审〔2026〕1766号",
+        "batch": "2026年7月份国产网络游戏审批信息",
+        "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202607/t20260723_1000636.html"
       },
       "steam": {
-        "store_url": "https://store.steampowered.com/app/3337140/",
+        "store_url": "https://store.steampowered.com/app/4115450/",
         "us_listed": true,
-        "us_release_date": "Aug 19, 2026",
-        "us_release_parsed": "2026-08-19",
-        "us_coming_soon": false,
+        "us_release_date": "Oct 28, 2026",
+        "us_release_parsed": "2026-10-28",
+        "us_coming_soon": true,
         "cn_listed": true,
-        "cn_release_date": "2026 年 8 月 19 日",
-        "cn_release_parsed": "2026-08-19",
+        "cn_release_date": "2026 年 10 月 28 日",
+        "cn_release_parsed": "2026-10-28",
         "match_score": 1.0
       },
       "evidence": [
-        "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/jkwlyxspxx/202601/t20260126_947910.html",
-        "https://store.steampowered.com/app/3337140/"
+        "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202607/t20260723_1000636.html",
+        "https://store.steampowered.com/app/4115450/"
       ],
-      "first_seen": "2026-10-28T22:26:34Z",
+      "first_seen": "2026-10-28T05:36:37Z",
       "last_checked": "2026-10-28"
     }
   ],

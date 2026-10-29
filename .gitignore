@@ -1,6 +1,9 @@
 # 巡检用的 HTTP 落盘缓存（含 ETag / Last-Modified），不进仓库
 data/cache/
 
+# 版号全量索引（27k 款、约 13MB）由 collector/backfill.py 自动生成，可随时重建
+data/nppa_index.json
+
 # 注意：data/games.json 与 web/data/games.json 是「每日快照历史」的来源，必须入库，
 #       所以这里只排除 data/cache/，不排除 data/ 目录本身。
 

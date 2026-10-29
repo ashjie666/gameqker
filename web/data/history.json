@@ -291,7 +291,7 @@
       {
         "date": "2026-10-28",
         "source": "signal",
-        "value": 0
+        "value": 5
       }
     ],
     "ananta": [
@@ -420,11 +420,93 @@
         "value": 0
       }
     ],
+    "rainbow-six-siege": [
+      {
+        "date": "2026-10-22",
+        "source": "trends",
+        "value": 0
+      }
+    ],
+    "brotato": [
+      {
+        "date": "2026-10-22",
+        "source": "trends",
+        "value": 0
+      }
+    ],
+    "loop-hero": [
+      {
+        "date": "2026-10-22",
+        "source": "reviews",
+        "value": 36633
+      }
+    ],
+    "core-keeper": [
+      {
+        "date": "2026-10-22",
+        "source": "reviews",
+        "value": 68059
+      }
+    ],
+    "after-inc-revival": [
+      {
+        "date": "2026-10-22",
+        "source": "trends",
+        "value": 0
+      },
+      {
+        "date": "2026-10-28",
+        "source": "signal",
+        "value": 1
+      }
+    ],
+    "knightica": [
+      {
+        "date": "2026-10-22",
+        "source": "reviews",
+        "value": 1209
+      }
+    ],
+    "day-of-the-shell": [
+      {
+        "date": "2026-10-22",
+        "source": "reviews",
+        "value": 426
+      }
+    ],
+    "big-helmet-heroes": [
+      {
+        "date": "2026-10-22",
+        "source": "reviews",
+        "value": 1166
+      }
+    ],
+    "spirit-of-the-island": [
+      {
+        "date": "2026-10-22",
+        "source": "reviews",
+        "value": 1908
+      }
+    ],
+    "smash-it-wild": [
+      {
+        "date": "2026-10-22",
+        "source": "reviews",
+        "value": 157
+      }
+    ],
     "tensei-brave": [
       {
         "date": "2026-10-28",
         "source": "signal",
         "value": 1
+      }
+    ],
+    "steam-3081280": [
+      {
+        "date": "2026-10-28",
+        "source": "signal",
+        "value": 5
       }
     ]
   },

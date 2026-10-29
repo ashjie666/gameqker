@@ -60,15 +60,6 @@
   --shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 10px 24px -18px rgba(16, 24, 40, 0.25);
 }
 
-/* 变现等级色阶 */
-:root {
-  --c-lv-high: var(--brand);
-  --c-lv-midhigh: var(--blue);
-  --c-lv-mid: var(--amber);
-  --c-lv-midlow: var(--violet);
-  --c-lv-low: var(--text-faint);
-}
-
 /* ==========================================================================
    Base
    ========================================================================== */
@@ -372,8 +363,10 @@ code { font-family: var(--font-mono); font-size: 0.92em; color: var(--text-dim);
 .cmp-table tbody tr:hover td { background: var(--panel-3); }
 
 td.col-name { min-width: 190px; }
-td.col-markets, td.col-keywords, td.col-opportunities, td.col-risks { min-width: 190px; }
-td.col-cn_status, td.col-global_status, td.col-gap_window { min-width: 230px; }
+td.col-guide_cn, td.col-guide_intl { min-width: 110px; width: 120px; }
+td.col-risks, td.col-monetization { min-width: 110px; width: 120px; }
+td.col-global_status { min-width: 230px; }
+td.col-cn_status, td.col-gap_window { min-width: 80px; width: 90px; }
 
 .game-name { font-weight: 600; font-size: 14px; }
 .game-name-en { color: var(--text-faint); font-size: 12px; }
@@ -394,6 +387,83 @@ ul.cell-list { margin: 0; padding-left: 16px; }
 ul.cell-list li { margin: 2px 0; color: var(--text-dim); }
 ul.cell-list li::marker { color: var(--text-faint); }
 
+/* 攻略成熟度：0–10 分量化条，国内 / 海外两列并排即可看出差距 */
+.guide-block { display: flex; flex-direction: column; gap: 5px; }
+.guide-meter { display: flex; align-items: center; gap: 6px; }
+.guide-track {
+  flex: 1;
+  min-width: 30px;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--panel-3);
+  overflow: hidden;
+}
+.guide-fill { display: block; height: 100%; border-radius: 3px; background: var(--text-faint); }
+.guide-score { font-size: 11px; color: var(--text-faint); font-variant-numeric: tabular-nums; }
+.guide-desc { color: var(--text-dim); line-height: 1.45; }
+.guide-meter.tone-hi .guide-fill { background: var(--brand); }
+.guide-meter.tone-hi .guide-score { color: var(--brand); }
+.guide-meter.tone-mid .guide-fill { background: var(--amber); }
+.guide-meter.tone-mid .guide-score { color: var(--amber); }
+
+/* 版本比标签：国服相对国际服 */
+.ver-tag {
+  display: inline-block;
+  margin-bottom: 5px;
+  padding: 0 6px;
+  border: 1px solid currentColor;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  line-height: 16px;
+}
+.ver-ahead { color: var(--brand); }
+.ver-sync { color: var(--text-dim); }
+.ver-behind { color: var(--red); }
+.ver-unknown { color: var(--text-faint); }
+
+/* 信息差窗口：版本标签与内容一致性标签并排 */
+.gap-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 5px;
+}
+.parity-tag {
+  display: inline-block;
+  padding: 0 6px;
+  border: 1px dashed currentColor;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  line-height: 16px;
+  white-space: nowrap;
+}
+.parity-same { color: var(--brand); }
+.parity-partial { color: var(--amber, #b8860b); }
+.parity-diff { color: var(--text-dim); }
+.parity-unknown { color: var(--text-faint); }
+/* 变现综合分：进度条在上，原文字在下 */
+.money-block { margin-bottom: 5px; }
+
+/* 未出海观察区：不占主表名额的条目 */
+.offshore-list {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+.offshore-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--panel-2);
+}
+.offshore-name { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.offshore-row { display: flex; gap: 8px; font-size: 12px; line-height: 1.5; color: var(--text-dim); }
+.offshore-key { flex: none; color: var(--text-faint); }
+.offshore-val { flex: 1; }
+
 .tag-row { display: flex; flex-wrap: wrap; gap: 4px; }
 .tag {
   display: inline-block;
@@ -404,19 +474,6 @@ ul.cell-list li::marker { color: var(--text-faint); }
   font-size: 12px;
   white-space: nowrap;
 }
-
-.lv {
-  display: inline-block;
-  padding: 1px 8px;
-  border-radius: var(--radius-full);
-  border: 1px solid currentColor;
-  font-size: 12px;
-}
-.lv-high { color: var(--c-lv-high); }
-.lv-midhigh { color: var(--c-lv-midhigh); }
-.lv-mid { color: var(--c-lv-mid); }
-.lv-midlow { color: var(--c-lv-midlow); }
-.lv-low { color: var(--c-lv-low); }
 
 /* 自动校验区块 */
 .auto-block {
@@ -654,6 +711,9 @@ tr.row-changed td.col-first { box-shadow: inset 3px 0 0 var(--brand); }
 .d-tag.d-origin { border-color: var(--border-strong); color: var(--text-faint); }
 .d-tag.gap-overseas { border-color: var(--amber); color: var(--amber); }
 .d-tag.gap-cn { border-color: var(--brand); color: var(--brand); }
+.d-tag.gap-sync { border-color: var(--text-dim); color: var(--text-dim); }
+.d-tag.gap-version { border-color: var(--blue); color: var(--blue); }
+.d-tag.gap-guides { border-color: var(--violet); color: var(--violet); }
 .d-tag.gap-region { border-color: var(--violet); color: var(--violet); }
 .d-tag.d-days { border-color: var(--blue); color: var(--blue); }
 
@@ -712,6 +772,9 @@ tr.row-changed td.col-first { box-shadow: inset 3px 0 0 var(--brand); }
     border-bottom: 1px dashed var(--border);
     padding: 8px 14px;
     min-width: 0;
+    /* 窄屏是卡片模式，没有「列」的概念：宽屏下给各列设的 width 必须清掉，
+       否则「风险点」这类列会被压成一窄条 */
+    width: auto;
   }
   .cmp-table tbody tr td:last-child { border-bottom: none; }
 

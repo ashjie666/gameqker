@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T22:28:39Z",
+  "generated_at": "2026-10-28T09:19:37Z",
   "note": "汇总多源上线事件（Steam 商店 > 官网 > 新闻/RSS），每条标注来源；解析不出具体日期的条目不列，不做版本更新。",
   "events": [
     {
@@ -169,6 +169,25 @@
           "url": "https://store.steampowered.com/app/3081280/"
         }
       ],
+      "origin": "history",
+      "first_seen": "2026-10-28",
+      "alt_dates": []
+    },
+    {
+      "game_id": "legend-of-mortal-cultivation",
+      "name_cn": "凡人修仙传奇",
+      "name_en": "Legend of Mortal Cultivation",
+      "type": "launch",
+      "date": "2026-01-29",
+      "date_text": "Jan 29, 2026",
+      "store_url": "https://store.steampowered.com/app/3814570/",
+      "sources": [
+        {
+          "type": "steam",
+          "name": "Steam 商店",
+          "url": "https://store.steampowered.com/app/3814570/"
+        }
+      ],
       "origin": "current",
       "first_seen": null,
       "alt_dates": []
@@ -245,8 +264,8 @@
           "url": "https://store.steampowered.com/app/3337140/"
         }
       ],
-      "origin": "current",
-      "first_seen": null,
+      "origin": "history",
+      "first_seen": "2026-10-22",
       "alt_dates": []
     },
     {
@@ -361,13 +380,6 @@
           "url": "https://baijiahao.baidu.com/s?id=1879728086023040171&wfr=spider&for=pc",
           "title": "网易云音乐独家首发DOUDOU《燕云十六声》未央城宣传曲《宝船》",
           "market": "cn"
-        },
-        {
-          "type": "search",
-          "name": "ZAKER",
-          "url": "https://app.myzaker.com/news/article.php?pk=6ae1d8fcb15ec02e4e6e050c",
-          "title": "网易《燕云十六声》销量突破1000万份",
-          "market": "cn"
         }
       ],
       "origin": "news",
@@ -376,10 +388,6 @@
         {
           "date": "2026-10-23",
           "date_text": "10月23日"
-        },
-        {
-          "date": "2026-10-28",
-          "date_text": "2026 年 10 月 28 日"
         }
       ]
     },
