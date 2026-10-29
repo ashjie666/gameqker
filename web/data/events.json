@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T09:19:37Z",
+  "generated_at": "2026-10-29T02:07:25Z",
   "note": "汇总多源上线事件（Steam 商店 > 官网 > 新闻/RSS），每条标注来源；解析不出具体日期的条目不列，不做版本更新。",
   "events": [
     {
@@ -79,6 +79,44 @@
       "alt_dates": []
     },
     {
+      "game_id": "snowbreak",
+      "name_cn": "尘白禁区",
+      "name_en": "Snowbreak: Containment Zone",
+      "type": "launch",
+      "date": "2023-12-24",
+      "date_text": "Dec 24, 2023",
+      "store_url": "https://store.steampowered.com/app/2668080/",
+      "sources": [
+        {
+          "type": "steam",
+          "name": "Steam 商店",
+          "url": "https://store.steampowered.com/app/2668080/"
+        }
+      ],
+      "origin": "current",
+      "first_seen": null,
+      "alt_dates": []
+    },
+    {
+      "game_id": "sword-of-convallaria",
+      "name_cn": "铃兰之剑",
+      "name_en": "Sword of Convallaria",
+      "type": "launch",
+      "date": "2024-07-31",
+      "date_text": "Jul 31, 2024",
+      "store_url": "https://store.steampowered.com/app/2526380/",
+      "sources": [
+        {
+          "type": "steam",
+          "name": "Steam 商店",
+          "url": "https://store.steampowered.com/app/2526380/"
+        }
+      ],
+      "origin": "current",
+      "first_seen": null,
+      "alt_dates": []
+    },
+    {
       "game_id": "core-keeper",
       "name_cn": "护核纪元",
       "name_en": "Core Keeper",
@@ -95,6 +133,25 @@
       ],
       "origin": "history",
       "first_seen": "2026-10-22",
+      "alt_dates": []
+    },
+    {
+      "game_id": "strinova",
+      "name_cn": "卡拉彼丘",
+      "name_en": "Strinova",
+      "type": "launch",
+      "date": "2024-11-21",
+      "date_text": "Nov 21, 2024",
+      "store_url": "https://store.steampowered.com/app/1282270/",
+      "sources": [
+        {
+          "type": "steam",
+          "name": "Steam 商店",
+          "url": "https://store.steampowered.com/app/1282270/"
+        }
+      ],
+      "origin": "current",
+      "first_seen": null,
       "alt_dates": []
     },
     {
@@ -155,6 +212,48 @@
       "alt_dates": []
     },
     {
+      "game_id": "where-winds-meet",
+      "name_cn": "燕云十六声",
+      "name_en": "Where Winds Meet",
+      "type": "launch",
+      "date": "2025-11-14",
+      "date_text": "Nov 14, 2025",
+      "store_url": "https://store.steampowered.com/app/3564740/",
+      "sources": [
+        {
+          "type": "steam",
+          "name": "Steam 商店",
+          "url": "https://store.steampowered.com/app/3564740/"
+        },
+        {
+          "type": "rss",
+          "name": "PlayStation Blog",
+          "url": "https://blog.playstation.com/2026/10/27/where-winds-meets-climactic-hutuo-battlefield-narrative-arc-revealed-out-nov-13/",
+          "title": "Where Winds Meet’s climactic Hutuo Battlefield narrative arc revealed, out Nov 13",
+          "market": "intl"
+        },
+        {
+          "type": "search",
+          "name": "北青网",
+          "url": "https://ent.ynet.com/2026/10/22/4054112t1254.html",
+          "title": "网易云音乐独家首发DOUDOU《宝船》 唱尽《燕云十六声》未央城奇境",
+          "market": "cn"
+        }
+      ],
+      "origin": "current",
+      "first_seen": null,
+      "alt_dates": [
+        {
+          "date": "2026-11-13",
+          "date_text": "November 13"
+        },
+        {
+          "date": "2026-10-23",
+          "date_text": "10月23日"
+        }
+      ]
+    },
+    {
       "game_id": "steam-3081280",
       "name_cn": "无用之人：登神长阶",
       "name_en": "",
@@ -186,6 +285,25 @@
           "type": "steam",
           "name": "Steam 商店",
           "url": "https://store.steampowered.com/app/3814570/"
+        }
+      ],
+      "origin": "current",
+      "first_seen": null,
+      "alt_dates": []
+    },
+    {
+      "game_id": "vanishing-starlight",
+      "name_cn": "星烬 烛耀山海",
+      "name_en": "Vanishing Starlight",
+      "type": "launch",
+      "date": "2026-03-25",
+      "date_text": "Mar 25, 2026",
+      "store_url": "https://store.steampowered.com/app/2774370/",
+      "sources": [
+        {
+          "type": "steam",
+          "name": "Steam 商店",
+          "url": "https://store.steampowered.com/app/2774370/"
         }
       ],
       "origin": "current",
@@ -250,6 +368,25 @@
       "alt_dates": []
     },
     {
+      "game_id": "neverness-to-everness",
+      "name_cn": "异环",
+      "name_en": "NTE: Neverness to Everness",
+      "type": "launch",
+      "date": "2026-07-07",
+      "date_text": "Jul 7, 2026",
+      "store_url": "https://store.steampowered.com/app/4508340/",
+      "sources": [
+        {
+          "type": "steam",
+          "name": "Steam 商店",
+          "url": "https://store.steampowered.com/app/4508340/"
+        }
+      ],
+      "origin": "current",
+      "first_seen": null,
+      "alt_dates": []
+    },
+    {
       "game_id": "after-inc-revival",
       "name_cn": "劫后公司",
       "name_en": "After Inc: Revival",
@@ -269,6 +406,44 @@
       "alt_dates": []
     },
     {
+      "game_id": "piper-of-dawn",
+      "name_cn": "黎明门前的吹笛人",
+      "name_en": "The Piper of Dawn",
+      "type": "launch",
+      "date": "2026-09-22",
+      "date_text": "Sep 22, 2026",
+      "store_url": "https://store.steampowered.com/app/3804370/",
+      "sources": [
+        {
+          "type": "steam",
+          "name": "Steam 商店",
+          "url": "https://store.steampowered.com/app/3804370/"
+        }
+      ],
+      "origin": "current",
+      "first_seen": null,
+      "alt_dates": []
+    },
+    {
+      "game_id": "one-way-tickets",
+      "name_cn": "再再启程",
+      "name_en": "One Way Tickets",
+      "type": "launch",
+      "date": "2026-10-22",
+      "date_text": "Oct 22, 2026",
+      "store_url": "https://store.steampowered.com/app/4817620/",
+      "sources": [
+        {
+          "type": "steam",
+          "name": "Steam 商店",
+          "url": "https://store.steampowered.com/app/4817620/"
+        }
+      ],
+      "origin": "current",
+      "first_seen": null,
+      "alt_dates": []
+    },
+    {
       "game_id": "tensei-brave",
       "name_cn": "勇者传说",
       "name_en": "Tensei Brave",
@@ -283,8 +458,8 @@
           "url": "https://store.steampowered.com/app/2445430/"
         }
       ],
-      "origin": "current",
-      "first_seen": null,
+      "origin": "history",
+      "first_seen": "2026-10-28",
       "alt_dates": []
     },
     {
@@ -303,9 +478,16 @@
         },
         {
           "type": "search",
-          "name": "北青网",
-          "url": "https://baijiahao.baidu.com/s?id=1880098461535081102&wfr=spider&for=pc",
-          "title": "江湖大幕将启!国产3A《影之刃零》29日发售,上咪咕游戏先人一步入局",
+          "name": "每日经济新闻",
+          "url": "https://baijiahao.baidu.com/s?id=1880164240174960176&wfr=spider&for=pc",
+          "title": "国产武侠3A大作《影之刃零》定档,关注游戏ETF(516010)",
+          "market": "cn"
+        },
+        {
+          "type": "search",
+          "name": "快科技",
+          "url": "https://baijiahao.baidu.com/s?id=1880167134245387227&wfr=spider&for=pc",
+          "title": "国产3A《影之刃零》正式开启预下载:发售倒计时2天!",
           "market": "cn"
         }
       ],
@@ -315,29 +497,12 @@
         {
           "date": "2026-10-29",
           "date_text": "10月29日"
+        },
+        {
+          "date": "2026-10-27",
+          "date_text": "10月27日"
         }
       ]
-    },
-    {
-      "game_id": "lord-of-mysteries",
-      "name_cn": "诡秘之主",
-      "name_en": "Lord of Mysteries",
-      "type": "launch",
-      "date": "2026-10-29",
-      "date_text": "10月29日",
-      "store_url": null,
-      "sources": [
-        {
-          "type": "search",
-          "name": "每日经济新闻",
-          "url": "https://www.nbd.com.cn/articles/2026-10-26/4617516.html",
-          "title": "国产3A大作即将发售催化,游戏ETF国泰(516010)标的指数大涨2%",
-          "market": "cn"
-        }
-      ],
-      "origin": "news",
-      "first_seen": null,
-      "alt_dates": []
     },
     {
       "game_id": "world-of-jade-dynasty",
@@ -359,37 +524,46 @@
       "alt_dates": []
     },
     {
-      "game_id": "where-winds-meet",
-      "name_cn": "燕云十六声",
-      "name_en": "Where Winds Meet",
+      "game_id": "wenjian-changsheng",
+      "name_cn": "问剑长生",
+      "name_en": "Wenjian Changsheng",
       "type": "launch",
-      "date": "2026-11-13",
-      "date_text": "November 13",
+      "date": "2026-11-04",
+      "date_text": "11月4日",
       "store_url": null,
       "sources": [
         {
           "type": "rss",
-          "name": "PlayStation Blog",
-          "url": "https://blog.playstation.com/2026/10/27/where-winds-meets-climactic-hutuo-battlefield-narrative-arc-revealed-out-nov-13/",
-          "title": "Where Winds Meet’s climactic Hutuo Battlefield narrative arc revealed, out Nov 13",
-          "market": "intl"
-        },
-        {
-          "type": "search",
-          "name": "千龙网",
-          "url": "https://baijiahao.baidu.com/s?id=1879728086023040171&wfr=spider&for=pc",
-          "title": "网易云音乐独家首发DOUDOU《燕云十六声》未央城宣传曲《宝船》",
+          "name": "游戏陀螺",
+          "url": "https://www.youxituoluo.com/534990.html",
+          "title": "《杖剑传说》16个月流水破48亿元，卢竑岩：我们不赛马，只养马群​",
           "market": "cn"
         }
       ],
       "origin": "news",
       "first_seen": null,
-      "alt_dates": [
+      "alt_dates": []
+    },
+    {
+      "game_id": "azur-promilia",
+      "name_cn": "蓝色星原：旅谣",
+      "name_en": "Azur Promilia",
+      "type": "launch",
+      "date": "2026-11-26",
+      "date_text": "11月26日",
+      "store_url": null,
+      "sources": [
         {
-          "date": "2026-10-23",
-          "date_text": "10月23日"
+          "type": "rss",
+          "name": "游研社",
+          "url": "https://www.yystv.cn/p/14545",
+          "title": "专访蛮啾新游团队：《蓝色星原》，就是要给玩家最纯粹的二次元体验",
+          "market": "cn"
         }
-      ]
+      ],
+      "origin": "news",
+      "first_seen": null,
+      "alt_dates": []
     },
     {
       "game_id": "ananta",

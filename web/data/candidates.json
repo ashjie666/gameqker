@@ -1,32 +1,31 @@
 {
-  "generated_at": "2026-10-28",
-  "generated_at_utc": "2026-10-28T09:28:21Z",
+  "generated_at": "2026-10-29",
+  "generated_at_utc": "2026-10-29T02:03:46Z",
   "source": {
-    "name": "Steam 美区按名定向搜索 × 国家新闻出版署 · 国产网络游戏审批信息（存量回填）",
+    "name": "Steam 美区新作（支持简中）× 国家新闻出版署 · 国产网络游戏审批信息",
     "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/",
     "steam": "Steam 搜索列表（cc=us / l=schinese）+ appdetails（cc=us / cc=cn）"
   },
   "batches": [
     {
-      "origin": "domestic",
-      "title": "国产网络游戏审批信息（历史全量批次）",
-      "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/"
+      "origin": "intl",
+      "title": "Steam 美区新发售 / 即将发售（支持简中）",
+      "url": "https://store.steampowered.com/search/?filter=comingsoon&supportedlang=schinese&cc=us&l=schinese"
     },
     {
-      "origin": "intl",
-      "title": "Steam 美区按名定向搜索（cc=us / l=schinese）",
-      "url": "https://store.steampowered.com/search/?cc=us&l=schinese"
+      "origin": "domestic",
+      "title": "国产网络游戏审批信息（列表页全部批次）",
+      "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/"
     }
   ],
   "stats": {
-    "indexed": 27491,
-    "attempted": 1,
-    "hit": 0,
+    "steam_listed": 529,
+    "nppa_games": 2444,
+    "nppa_matched": 2,
     "evaluated": 0,
     "matched": 0,
-    "no_page": 0,
-    "deferred": 1,
-    "skipped": 86
+    "skipped_budget": 0,
+    "deferred": 0
   },
   "candidates": [
     {

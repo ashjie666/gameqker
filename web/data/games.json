@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28",
+  "generated_at": "2026-10-29",
   "data_cutoff": "2026-10-15",
   "note": "关键词搜索量为定性判断，未经关键词工具实测。cn_status / global_status / overseas_heat / overseas_heat_checked / gap_window / target_markets / keywords / content_opportunities / monetization / monetization_level / risks 为人工维护字段；last_checked / steam_listed / steam_release_date / official_signal / changes 由 collector/update.py 自动写入。data_cutoff 记录人工字段最后一次整体复核日期，脚本不会推进它。 auto_imported / auto_imported_at 标记由版号公示自动发现的条目：这类条目并入时脚本会额外写入 developer / cn_status / global_status / gap_window / priority(99=未定级) / watch / sources，其余定性字段填「待补」待人复核，人工条目的这些字段脚本仍不改写。",
   "field_origin": {
@@ -67,13 +67,22 @@
       },
       "skipped": [],
       "error": "官网: https://www.phantombladezero.com/: URLError: <urlopen error timed out>",
-      "duration_ms": 43500
+      "duration_ms": 42475
     },
     {
       "id": "where-winds-meet",
       "name": "燕云十六声",
       "status": "ok",
-      "steam": null,
+      "steam": {
+        "appid": 3564740,
+        "listed": true,
+        "release_date": "Nov 14, 2025",
+        "coming_soon": false,
+        "name": "Where Winds Meet",
+        "url": "https://store.steampowered.com/app/3564740/",
+        "error": null,
+        "stale": false
+      },
       "official": {
         "matched": true,
         "label": "即将推出",
@@ -97,11 +106,9 @@
         "error": null,
         "stale": false
       },
-      "skipped": [
-        "steam(未配置 appid)"
-      ],
+      "skipped": [],
       "error": null,
-      "duration_ms": 3389
+      "duration_ms": 2532
     },
     {
       "id": "lord-of-mysteries",
@@ -135,7 +142,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2985
+      "duration_ms": 2217
     },
     {
       "id": "world-of-jade-dynasty",
@@ -176,13 +183,22 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 3547
+      "duration_ms": 3701
     },
     {
       "id": "neverness-to-everness",
       "name": "异环",
       "status": "ok",
-      "steam": null,
+      "steam": {
+        "appid": 4508340,
+        "listed": true,
+        "release_date": "Jul 7, 2026",
+        "coming_soon": false,
+        "name": "NTE: Neverness to Everness",
+        "url": "https://store.steampowered.com/app/4508340/",
+        "error": null,
+        "stale": false
+      },
       "official": {
         "matched": false,
         "label": "unknown",
@@ -204,11 +220,9 @@
         "error": null,
         "stale": false
       },
-      "skipped": [
-        "steam(未配置 appid)"
-      ],
+      "skipped": [],
       "error": null,
-      "duration_ms": 2546
+      "duration_ms": 2477
     },
     {
       "id": "scroll-of-taiwu",
@@ -249,7 +263,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 5968
+      "duration_ms": 2290
     },
     {
       "id": "legend-of-mortal-cultivation",
@@ -270,7 +284,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 1796
+      "duration_ms": 352
     },
     {
       "id": "ananta",
@@ -311,7 +325,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 3813
+      "duration_ms": 4926
     },
     {
       "id": "wang-yue",
@@ -343,7 +357,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2186
+      "duration_ms": 3197
     },
     {
       "id": "sanguo-mou-ding-tianxia",
@@ -372,19 +386,32 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 594
+      "duration_ms": 1072
     },
     {
       "id": "tensei-brave",
       "name": "勇者传说",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "strinova",
+      "name": "卡拉彼丘",
       "status": "ok",
       "steam": {
-        "appid": 2445430,
+        "appid": 1282270,
         "listed": true,
-        "release_date": "Oct 23, 2026",
+        "release_date": "Nov 21, 2024",
         "coming_soon": false,
-        "name": "Tensei Brave",
-        "url": "https://store.steampowered.com/app/2445430/",
+        "name": "Strinova",
+        "url": "https://store.steampowered.com/app/1282270/",
         "error": null,
         "stale": false
       },
@@ -393,7 +420,530 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 1390
+      "duration_ms": 200
+    },
+    {
+      "id": "arena-breakout",
+      "name": "暗区突围",
+      "status": "ok",
+      "steam": null,
+      "official": {
+        "matched": false,
+        "label": "unknown",
+        "signals": [],
+        "url": "https://www.arenabreakoutinfinite.com/",
+        "snippet": null,
+        "pages": [
+          {
+            "url": "https://www.arenabreakoutinfinite.com/",
+            "status": 200,
+            "ok": true
+          }
+        ],
+        "error": null,
+        "stale": false
+      },
+      "skipped": [
+        "steam(未配置 appid)"
+      ],
+      "error": null,
+      "duration_ms": 498
+    },
+    {
+      "id": "girls-frontline-2",
+      "name": "少女前线2：追放",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "reverse-1999",
+      "name": "重返未来：1999",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "delta-force",
+      "name": "三角洲行动",
+      "status": "ok",
+      "steam": null,
+      "official": {
+        "matched": true,
+        "label": "英文/多语言",
+        "signals": [
+          "english"
+        ],
+        "url": "https://www.playdeltaforce.com/",
+        "snippet": "| Competitive Operator-Based Extraction Shooter --> --> Register/Log In Log Out English Français Español Русский Deutsch العربية 繁體中文 Português 한국어 日本語 Türkçe 03 --> -",
+        "pages": [
+          {
+            "url": "https://www.playdeltaforce.com/",
+            "status": 200,
+            "ok": true
+          }
+        ],
+        "error": null,
+        "stale": false
+      },
+      "skipped": [
+        "steam(未配置 appid)"
+      ],
+      "error": null,
+      "duration_ms": 641
+    },
+    {
+      "id": "tower-of-fantasy",
+      "name": "幻塔",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "zenless-zone-zero",
+      "name": "绝区零",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "wuthering-waves",
+      "name": "鸣潮",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "infinity-nikki",
+      "name": "无限暖暖",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "mecha-break",
+      "name": "解限机",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "duet-night-abyss",
+      "name": "二重螺旋",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "arknights",
+      "name": "明日方舟",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "punishing-gray-raven",
+      "name": "战双帕弥什",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "azur-lane",
+      "name": "碧蓝航线",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "sword-of-convallaria",
+      "name": "铃兰之剑",
+      "status": "ok",
+      "steam": {
+        "appid": 2526380,
+        "listed": true,
+        "release_date": "Jul 31, 2024",
+        "coming_soon": false,
+        "name": "Sword of Convallaria",
+        "url": "https://store.steampowered.com/app/2526380/",
+        "error": null,
+        "stale": false
+      },
+      "official": null,
+      "skipped": [
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 828
+    },
+    {
+      "id": "justice-online-mobile",
+      "name": "逆水寒手游",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "honkai-impact-3rd",
+      "name": "崩坏3",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "genshin-impact",
+      "name": "原神",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "honkai-star-rail",
+      "name": "崩坏：星穹铁道",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "snowbreak",
+      "name": "尘白禁区",
+      "status": "ok",
+      "steam": {
+        "appid": 2668080,
+        "listed": true,
+        "release_date": "Dec 24, 2023",
+        "coming_soon": false,
+        "name": "Snowbreak: Containment Zone",
+        "url": "https://store.steampowered.com/app/2668080/",
+        "error": null,
+        "stale": false
+      },
+      "official": null,
+      "skipped": [
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 2182
+    },
+    {
+      "id": "beyond-the-world",
+      "name": "世界之外",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "neo-artifacts",
+      "name": "物华弥新",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "new-three-kingdoms-cao-cao",
+      "name": "新三国志曹操传",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "arknights-endfield",
+      "name": "明日方舟：终末地",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "aniimo",
+      "name": "伊莫",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "one-way-tickets",
+      "name": "再再启程",
+      "status": "ok",
+      "steam": {
+        "appid": 4817620,
+        "listed": true,
+        "release_date": "Oct 22, 2026",
+        "coming_soon": false,
+        "name": "One Way Tickets",
+        "url": "https://store.steampowered.com/app/4817620/",
+        "error": null,
+        "stale": false
+      },
+      "official": null,
+      "skipped": [
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 1964
+    },
+    {
+      "id": "tomb-busters",
+      "name": "超自然行动组",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "behemoth-battlefield",
+      "name": "巨兽战场",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "vanishing-starlight",
+      "name": "星烬 烛耀山海",
+      "status": "ok",
+      "steam": {
+        "appid": 2774370,
+        "listed": true,
+        "release_date": "Mar 25, 2026",
+        "coming_soon": false,
+        "name": "Vanishing Starlight",
+        "url": "https://store.steampowered.com/app/2774370/",
+        "error": null,
+        "stale": false
+      },
+      "official": null,
+      "skipped": [
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 1887
+    },
+    {
+      "id": "piper-of-dawn",
+      "name": "黎明门前的吹笛人",
+      "status": "ok",
+      "steam": {
+        "appid": 3804370,
+        "listed": true,
+        "release_date": "Sep 22, 2026",
+        "coming_soon": false,
+        "name": "The Piper of Dawn",
+        "url": "https://store.steampowered.com/app/3804370/",
+        "error": null,
+        "stale": false
+      },
+      "official": null,
+      "skipped": [
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 1933
+    },
+    {
+      "id": "roco-kingdom-world",
+      "name": "洛克王国：世界",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
+    },
+    {
+      "id": "azur-promilia",
+      "name": "蓝色星原：旅谣",
+      "status": "ok",
+      "steam": null,
+      "official": {
+        "matched": true,
+        "label": "测试/公测",
+        "signals": [
+          "test"
+        ],
+        "url": "https://azurpromilia.manjuu.com/m",
+        "snippet": "《蓝色星原：旅谣》官方网站 -11月26日正式公测！ -->",
+        "pages": [
+          {
+            "url": "https://azurpromilia.manjuu.com/m",
+            "status": 200,
+            "ok": true
+          }
+        ],
+        "error": null,
+        "stale": false
+      },
+      "skipped": [
+        "steam(未配置 appid)"
+      ],
+      "error": null,
+      "duration_ms": 1137
+    },
+    {
+      "id": "daba-land-of-watermarks",
+      "name": "达巴：水痕之地",
+      "status": "ok",
+      "steam": {
+        "appid": 4810160,
+        "listed": true,
+        "release_date": "2027",
+        "coming_soon": true,
+        "name": "DABA Land of Water Scar",
+        "url": "https://store.steampowered.com/app/4810160/",
+        "error": null,
+        "stale": false
+      },
+      "official": null,
+      "skipped": [
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 871
+    },
+    {
+      "id": "wenjian-changsheng",
+      "name": "问剑长生",
+      "status": "skipped",
+      "steam": null,
+      "official": null,
+      "skipped": [
+        "steam(未配置 appid)",
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 0
     }
   ],
   "games": [
@@ -439,7 +989,7 @@
         "steam_appid": 4115450,
         "official": "https://www.phantombladezero.com/"
       },
-      "last_checked": "2026-10-28T09:16:21Z",
+      "last_checked": "2026-10-29T02:02:25Z",
       "steam_listed": true,
       "steam_release_date": "Oct 28, 2026",
       "official_signal": null,
@@ -518,7 +1068,7 @@
         "steam_appid": 3564740,
         "official": "https://www.wherewindsmeetgame.com/"
       },
-      "last_checked": "2026-10-28T09:16:25Z",
+      "last_checked": "2026-10-29T02:02:28Z",
       "steam_listed": true,
       "steam_release_date": "Nov 14, 2025",
       "official_signal": {
@@ -608,7 +1158,7 @@
         "steam_appid": null,
         "official": "https://lordofthemysteriesgame.com/"
       },
-      "last_checked": "2026-10-28T09:16:27Z",
+      "last_checked": "2026-10-29T02:02:30Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -687,7 +1237,7 @@
         "steam_appid": 3384260,
         "official": "https://zx.wanmei.com/"
       },
-      "last_checked": "2026-10-28T09:16:31Z",
+      "last_checked": "2026-10-29T02:02:33Z",
       "steam_listed": false,
       "steam_release_date": null,
       "official_signal": {
@@ -777,7 +1327,7 @@
         "steam_appid": 4508340,
         "official": "https://nte.perfectworld.com/"
       },
-      "last_checked": "2026-10-28T09:16:34Z",
+      "last_checked": "2026-10-29T02:02:36Z",
       "steam_listed": true,
       "steam_release_date": "Jul 7, 2026",
       "official_signal": {
@@ -845,7 +1395,7 @@
         "steam_appid": 838350,
         "official": "https://scrolloftaiwu.com/"
       },
-      "last_checked": "2026-10-28T09:16:40Z",
+      "last_checked": "2026-10-29T02:02:38Z",
       "steam_listed": true,
       "steam_release_date": "Jun 16, 2026",
       "official_signal": {
@@ -941,7 +1491,7 @@
         "steam_appid": 3814570,
         "official": null
       },
-      "last_checked": "2026-10-28T09:16:41Z",
+      "last_checked": "2026-10-29T02:02:39Z",
       "steam_listed": true,
       "steam_release_date": "Jan 29, 2026",
       "official_signal": null,
@@ -1017,7 +1567,7 @@
         "steam_appid": 4814120,
         "official": "https://ananta.163.com/"
       },
-      "last_checked": "2026-10-28T09:16:45Z",
+      "last_checked": "2026-10-29T02:02:43Z",
       "steam_listed": true,
       "steam_release_date": "Jan 15, 2027",
       "official_signal": {
@@ -1116,7 +1666,7 @@
         "steam_appid": null,
         "official": "https://wy.shiyue.com/"
       },
-      "last_checked": "2026-10-28T09:16:47Z",
+      "last_checked": "2026-10-29T02:02:47Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1183,7 +1733,7 @@
         "steam_appid": null,
         "official": "https://store.steamchina.com/app/4542640/"
       },
-      "last_checked": "2026-10-28T09:16:48Z",
+      "last_checked": "2026-10-29T02:02:48Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1281,9 +1831,9 @@
       "overseas_channels": []
     },
     {
-      "last_checked": null,
-      "steam_listed": null,
-      "steam_release_date": null,
+      "last_checked": "2026-10-29T02:02:48Z",
+      "steam_listed": true,
+      "steam_release_date": "Nov 21, 2024",
       "id": "strinova",
       "name_cn": "卡拉彼丘",
       "name_en": "Strinova",
@@ -1334,7 +1884,26 @@
         "official": null
       },
       "official_signal": null,
-      "changes": [],
+      "changes": [
+        {
+          "at": "2026-10-29T02:03:00Z",
+          "game_id": "strinova",
+          "field": "steam_release_date",
+          "old": null,
+          "new": "Nov 21, 2024",
+          "url": "https://store.steampowered.com/app/1282270/",
+          "evidence": "release_date.date=Nov 21, 2024；coming_soon=False"
+        },
+        {
+          "at": "2026-10-29T02:03:00Z",
+          "game_id": "strinova",
+          "field": "steam_listed",
+          "old": null,
+          "new": true,
+          "url": "https://store.steampowered.com/app/1282270/",
+          "evidence": "Steam cc=us 商店 success=true；name=Strinova"
+        }
+      ],
       "sources": [
         "https://www.idreamsky.com/6638.html",
         "https://store.steampowered.com/app/1282270/"
@@ -1342,7 +1911,7 @@
       "global_launch_at": "2024-11-21"
     },
     {
-      "last_checked": null,
+      "last_checked": "2026-10-29T02:02:48Z",
       "steam_listed": null,
       "steam_release_date": null,
       "id": "arena-breakout",
@@ -1394,7 +1963,15 @@
         "steam_appid": null,
         "official": "https://www.arenabreakoutinfinite.com/"
       },
-      "official_signal": null,
+      "official_signal": {
+        "matched": false,
+        "signals": [],
+        "label": "unknown",
+        "pattern": null,
+        "snippet": null,
+        "url": "https://www.arenabreakoutinfinite.com/",
+        "site": "通用官方站"
+      },
       "changes": [],
       "sources": [
         "https://press.levelinfinite.com/en-US/THE-NEXT-GENERATION-OF-TACTICAL-FPS-ARRIVES---ARENA-BREAKOUT-LAUNCHES-",
@@ -1526,7 +2103,7 @@
       "global_launch_at": "2023-10-26"
     },
     {
-      "last_checked": null,
+      "last_checked": "2026-10-29T02:02:49Z",
       "steam_listed": null,
       "steam_release_date": null,
       "id": "delta-force",
@@ -1580,8 +2157,28 @@
         "steam_appid": null,
         "official": "https://www.playdeltaforce.com/"
       },
-      "official_signal": null,
-      "changes": [],
+      "official_signal": {
+        "matched": true,
+        "signals": [
+          "english"
+        ],
+        "label": "英文/多语言",
+        "pattern": "\\benglish\\b|多语言|英文(?:化|字幕|语音|支持)|language\\s+support",
+        "snippet": "| Competitive Operator-Based Extraction Shooter --> --> Register/Log In Log Out English Français Español Русский Deutsch العربية 繁體中文 Português 한국어 日本語 Türkçe 03 --> -",
+        "url": "https://www.playdeltaforce.com/",
+        "site": "通用官方站"
+      },
+      "changes": [
+        {
+          "at": "2026-10-29T02:03:00Z",
+          "game_id": "delta-force",
+          "field": "official_signal",
+          "old": "unknown",
+          "new": "英文/多语言",
+          "url": "https://www.playdeltaforce.com/",
+          "evidence": "| Competitive Operator-Based Extraction Shooter --> --> Register/Log In Log Out English Français Español Русский Deutsch العربية 繁體中文 Português 한국어 日本語 Türkçe 03 --> -"
+        }
+      ],
       "sources": [
         "https://www.playdeltaforce.com/zh-tw/detail/news-notice-i-global-pc-announcement-of-not-deleting-files-and-opening-servers.html",
         "https://m.3dmgame.com/ol/news/202409/40008.html"
@@ -2145,9 +2742,9 @@
       "global_launch_at": "2018-08-16"
     },
     {
-      "last_checked": null,
-      "steam_listed": null,
-      "steam_release_date": null,
+      "last_checked": "2026-10-29T02:02:50Z",
+      "steam_listed": true,
+      "steam_release_date": "Jul 31, 2024",
       "id": "sword-of-convallaria",
       "name_cn": "铃兰之剑",
       "name_en": "Sword of Convallaria",
@@ -2198,7 +2795,26 @@
         "official": null
       },
       "official_signal": null,
-      "changes": [],
+      "changes": [
+        {
+          "at": "2026-10-29T02:03:00Z",
+          "game_id": "sword-of-convallaria",
+          "field": "steam_release_date",
+          "old": null,
+          "new": "Jul 31, 2024",
+          "url": "https://store.steampowered.com/app/2526380/",
+          "evidence": "release_date.date=Jul 31, 2024；coming_soon=False"
+        },
+        {
+          "at": "2026-10-29T02:03:00Z",
+          "game_id": "sword-of-convallaria",
+          "field": "steam_listed",
+          "old": null,
+          "new": true,
+          "url": "https://store.steampowered.com/app/2526380/",
+          "evidence": "Steam cc=us 商店 success=true；name=Sword of Convallaria"
+        }
+      ],
       "sources": [
         "https://store.steampowered.com/app/2526380/",
         "https://www.xd.com/games/single/13418"
@@ -2456,9 +3072,9 @@
       "global_launch_at": "2023-04-26"
     },
     {
-      "last_checked": null,
-      "steam_listed": null,
-      "steam_release_date": null,
+      "last_checked": "2026-10-29T02:02:52Z",
+      "steam_listed": true,
+      "steam_release_date": "Dec 24, 2023",
       "id": "snowbreak",
       "name_cn": "尘白禁区",
       "name_en": "Snowbreak: Containment Zone",
@@ -2509,7 +3125,26 @@
         "official": null
       },
       "official_signal": null,
-      "changes": [],
+      "changes": [
+        {
+          "at": "2026-10-29T02:03:00Z",
+          "game_id": "snowbreak",
+          "field": "steam_release_date",
+          "old": null,
+          "new": "Dec 24, 2023",
+          "url": "https://store.steampowered.com/app/2668080/",
+          "evidence": "release_date.date=Dec 24, 2023；coming_soon=False"
+        },
+        {
+          "at": "2026-10-29T02:03:00Z",
+          "game_id": "snowbreak",
+          "field": "steam_listed",
+          "old": null,
+          "new": true,
+          "url": "https://store.steampowered.com/app/2668080/",
+          "evidence": "Steam cc=us 商店 success=true；name=Snowbreak: Containment Zone"
+        }
+      ],
       "sources": [
         "https://store.steampowered.com/app/2668080/Snowbreak_Containment_Zone/",
         "https://www.cbjq.com/p/m/2023/04/13/index/news.html?catid=7130&infoid=53"
@@ -2831,9 +3466,9 @@
       "content_note": "跨端同版本，内容一致"
     },
     {
-      "last_checked": null,
-      "steam_listed": null,
-      "steam_release_date": null,
+      "last_checked": "2026-10-29T02:02:54Z",
+      "steam_listed": true,
+      "steam_release_date": "Oct 22, 2026",
       "id": "one-way-tickets",
       "name_cn": "再再启程",
       "name_en": "One Way Tickets",
@@ -2882,7 +3517,26 @@
         "official": null
       },
       "official_signal": null,
-      "changes": [],
+      "changes": [
+        {
+          "at": "2026-10-29T02:03:00Z",
+          "game_id": "one-way-tickets",
+          "field": "steam_release_date",
+          "old": null,
+          "new": "Oct 22, 2026",
+          "url": "https://store.steampowered.com/app/4817620/",
+          "evidence": "release_date.date=Oct 22, 2026；coming_soon=False"
+        },
+        {
+          "at": "2026-10-29T02:03:00Z",
+          "game_id": "one-way-tickets",
+          "field": "steam_listed",
+          "old": null,
+          "new": true,
+          "url": "https://store.steampowered.com/app/4817620/",
+          "evidence": "Steam cc=us 商店 success=true；name=One Way Tickets"
+        }
+      ],
       "sources": [
         "https://store.steampowered.com/app/4817620/",
         "https://www.taptap.cn/hashtag/%E5%86%8D%E5%86%8D%E5%90%AF%E7%A8%8B"
@@ -3016,9 +3670,9 @@
       "content_note": "捉兽—机甲—基地—军团骨架相同，海外为新开进度（日服仅基础巨兽，国服已到十代）；适配集中在世界观与开服福利，未提数值重做"
     },
     {
-      "last_checked": null,
-      "steam_listed": null,
-      "steam_release_date": null,
+      "last_checked": "2026-10-29T02:02:56Z",
+      "steam_listed": true,
+      "steam_release_date": "Mar 25, 2026",
       "id": "vanishing-starlight",
       "name_cn": "星烬 烛耀山海",
       "name_en": "Vanishing Starlight",
@@ -3069,7 +3723,26 @@
         "official": null
       },
       "official_signal": null,
-      "changes": [],
+      "changes": [
+        {
+          "at": "2026-10-29T02:03:00Z",
+          "game_id": "vanishing-starlight",
+          "field": "steam_release_date",
+          "old": null,
+          "new": "Mar 25, 2026",
+          "url": "https://store.steampowered.com/app/2774370/",
+          "evidence": "release_date.date=Mar 25, 2026；coming_soon=False"
+        },
+        {
+          "at": "2026-10-29T02:03:00Z",
+          "game_id": "vanishing-starlight",
+          "field": "steam_listed",
+          "old": null,
+          "new": true,
+          "url": "https://store.steampowered.com/app/2774370/",
+          "evidence": "Steam cc=us 商店 success=true；name=Vanishing Starlight"
+        }
+      ],
       "sources": [
         "https://store.steampowered.com/app/2774370/Vanishing_Starlight/",
         "https://www.playstation.com/zh-hans-cn/games/vanishing-starlight/"
@@ -3078,9 +3751,9 @@
       "content_note": "国区与全球同版本，内容一致"
     },
     {
-      "last_checked": null,
-      "steam_listed": null,
-      "steam_release_date": null,
+      "last_checked": "2026-10-29T02:02:58Z",
+      "steam_listed": true,
+      "steam_release_date": "Sep 22, 2026",
       "id": "piper-of-dawn",
       "name_cn": "黎明门前的吹笛人",
       "name_en": "The Piper of Dawn",
@@ -3129,7 +3802,26 @@
         "official": null
       },
       "official_signal": null,
-      "changes": [],
+      "changes": [
+        {
+          "at": "2026-10-29T02:03:00Z",
+          "game_id": "piper-of-dawn",
+          "field": "steam_release_date",
+          "old": null,
+          "new": "Sep 22, 2026",
+          "url": "https://store.steampowered.com/app/3804370/",
+          "evidence": "release_date.date=Sep 22, 2026；coming_soon=False"
+        },
+        {
+          "at": "2026-10-29T02:03:00Z",
+          "game_id": "piper-of-dawn",
+          "field": "steam_listed",
+          "old": null,
+          "new": true,
+          "url": "https://store.steampowered.com/app/3804370/",
+          "evidence": "Steam cc=us 商店 success=true；name=The Piper of Dawn"
+        }
+      ],
       "sources": [
         "https://store.steampowered.com/app/3804370/The_Piper_Of_Dawn/?l=schinese",
         "https://ldt.indienova.com/game/the-piper-of-dawn"
@@ -3261,9 +3953,29 @@
       },
       "steam_listed": false,
       "steam_release_date": null,
-      "last_checked": null,
-      "official_signal": null,
-      "changes": [],
+      "last_checked": "2026-10-29T02:02:59Z",
+      "official_signal": {
+        "matched": true,
+        "signals": [
+          "test"
+        ],
+        "label": "测试/公测",
+        "pattern": "\\b(?:closed|open)?\\s*beta\\b|\\bCBT\\b|\\bOBT\\b|playtest|首测|二测|内测|公测|测试",
+        "snippet": "《蓝色星原：旅谣》官方网站 -11月26日正式公测！ -->",
+        "url": "https://azurpromilia.manjuu.com/m",
+        "site": "通用官方站"
+      },
+      "changes": [
+        {
+          "at": "2026-10-29T02:03:00Z",
+          "game_id": "azur-promilia",
+          "field": "official_signal",
+          "old": "unknown",
+          "new": "测试/公测",
+          "url": "https://azurpromilia.manjuu.com/m",
+          "evidence": "《蓝色星原：旅谣》官方网站 -11月26日正式公测！ -->"
+        }
+      ],
       "sources": [
         "https://azurpromilia.manjuu.com/m",
         "https://www.taptap.cn/app/593829",
@@ -3324,7 +4036,7 @@
       },
       "steam_listed": true,
       "steam_release_date": "2027",
-      "last_checked": null,
+      "last_checked": "2026-10-29T02:03:00Z",
       "official_signal": null,
       "changes": [],
       "sources": [
@@ -3399,5 +4111,5 @@
       ]
     }
   ],
-  "last_run_at": "2026-10-28T09:16:49Z"
+  "last_run_at": "2026-10-29T02:03:00Z"
 }
