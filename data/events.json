@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T02:07:25Z",
+  "generated_at": "2026-10-29T22:30:52Z",
   "note": "汇总多源上线事件（Steam 商店 > 官网 > 新闻/RSS），每条标注来源；解析不出具体日期的条目不列，不做版本更新。",
   "events": [
     {
@@ -234,9 +234,16 @@
         },
         {
           "type": "search",
-          "name": "北青网",
-          "url": "https://ent.ynet.com/2026/10/22/4054112t1254.html",
-          "title": "网易云音乐独家首发DOUDOU《宝船》 唱尽《燕云十六声》未央城奇境",
+          "name": "千龙网",
+          "url": "https://baijiahao.baidu.com/s?id=1879728086023040171&wfr=spider&for=pc",
+          "title": "网易云音乐独家首发DOUDOU《燕云十六声》未央城宣传曲《宝船》",
+          "market": "cn"
+        },
+        {
+          "type": "search",
+          "name": "ZAKER",
+          "url": "https://app.myzaker.com/news/article.php?pk=6ae1d8fcb15ec02e4e6e050c",
+          "title": "网易《燕云十六声》销量突破1000万份",
           "market": "cn"
         }
       ],
@@ -250,6 +257,10 @@
         {
           "date": "2026-10-23",
           "date_text": "10月23日"
+        },
+        {
+          "date": "2026-10-28",
+          "date_text": "2026 年 10 月 28 日"
         }
       ]
     },
@@ -478,16 +489,9 @@
         },
         {
           "type": "search",
-          "name": "每日经济新闻",
-          "url": "https://baijiahao.baidu.com/s?id=1880164240174960176&wfr=spider&for=pc",
-          "title": "国产武侠3A大作《影之刃零》定档,关注游戏ETF(516010)",
-          "market": "cn"
-        },
-        {
-          "type": "search",
-          "name": "快科技",
-          "url": "https://baijiahao.baidu.com/s?id=1880167134245387227&wfr=spider&for=pc",
-          "title": "国产3A《影之刃零》正式开启预下载:发售倒计时2天!",
+          "name": "游民星空",
+          "url": "https://www.gamersky.com/news/202610/2235963.shtml",
+          "title": "权重媒体仅给60分!《影之刃零》真的差吗?",
           "market": "cn"
         }
       ],
@@ -497,10 +501,6 @@
         {
           "date": "2026-10-29",
           "date_text": "10月29日"
-        },
-        {
-          "date": "2026-10-27",
-          "date_text": "10月27日"
         }
       ]
     },

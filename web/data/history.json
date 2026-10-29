@@ -44,7 +44,7 @@
       {
         "date": "2026-10-29",
         "source": "trends",
-        "value": 52
+        "value": 38
       }
     ],
     "where-winds-meet": [
@@ -90,8 +90,8 @@
       },
       {
         "date": "2026-10-29",
-        "source": "signal",
-        "value": 3
+        "source": "trends",
+        "value": 0
       }
     ],
     "lord-of-mysteries": [
@@ -278,8 +278,8 @@
       },
       {
         "date": "2026-10-29",
-        "source": "signal",
-        "value": 3
+        "source": "trends",
+        "value": 0
       }
     ],
     "legend-of-mortal-cultivation": [
@@ -372,8 +372,8 @@
       },
       {
         "date": "2026-10-29",
-        "source": "signal",
-        "value": 3
+        "source": "trends",
+        "value": 46
       }
     ],
     "wang-yue": [
@@ -589,20 +589,20 @@
       {
         "date": "2026-10-29",
         "source": "trends",
-        "value": 25
+        "value": 31
       }
     ],
     "delta-force": [
       {
         "date": "2026-10-29",
         "source": "trends",
-        "value": 0
+        "value": 10
       }
     ],
     "tower-of-fantasy": [
       {
         "date": "2026-10-29",
-        "source": "signal",
+        "source": "trends",
         "value": 0
       }
     ],
@@ -610,27 +610,27 @@
       {
         "date": "2026-10-29",
         "source": "trends",
-        "value": 29
+        "value": 36
       }
     ],
     "wuthering-waves": [
       {
         "date": "2026-10-29",
         "source": "trends",
-        "value": 21
+        "value": 24
       }
     ],
     "infinity-nikki": [
       {
         "date": "2026-10-29",
         "source": "trends",
-        "value": 72
+        "value": 81
       }
     ],
     "mecha-break": [
       {
         "date": "2026-10-29",
-        "source": "signal",
+        "source": "trends",
         "value": 0
       }
     ],
@@ -645,28 +645,28 @@
       {
         "date": "2026-10-29",
         "source": "trends",
-        "value": 37
+        "value": 41
       }
     ],
     "punishing-gray-raven": [
       {
         "date": "2026-10-29",
         "source": "trends",
-        "value": 27
+        "value": 29
       }
     ],
     "azur-lane": [
       {
         "date": "2026-10-29",
         "source": "trends",
-        "value": 55
+        "value": 50
       }
     ],
     "sword-of-convallaria": [
       {
         "date": "2026-10-29",
         "source": "trends",
-        "value": 34
+        "value": 41
       }
     ],
     "justice-online-mobile": [
@@ -694,14 +694,14 @@
       {
         "date": "2026-10-29",
         "source": "trends",
-        "value": 34
+        "value": 39
       }
     ],
     "snowbreak": [
       {
         "date": "2026-10-29",
         "source": "trends",
-        "value": 0
+        "value": 71
       }
     ],
     "beyond-the-world": [
@@ -729,21 +729,21 @@
       {
         "date": "2026-10-29",
         "source": "trends",
-        "value": 21
+        "value": 24
       }
     ],
     "aniimo": [
       {
         "date": "2026-10-29",
         "source": "trends",
-        "value": 16
+        "value": 17
       }
     ],
     "one-way-tickets": [
       {
         "date": "2026-10-29",
-        "source": "signal",
-        "value": 5
+        "source": "trends",
+        "value": 100
       }
     ],
     "tomb-busters": [
@@ -770,8 +770,8 @@
     "piper-of-dawn": [
       {
         "date": "2026-10-29",
-        "source": "signal",
-        "value": 5
+        "source": "trends",
+        "value": 0
       }
     ],
     "roco-kingdom-world": [

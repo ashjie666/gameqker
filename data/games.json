@@ -43,7 +43,7 @@
         "appid": 4115450,
         "listed": true,
         "release_date": "Oct 28, 2026",
-        "coming_soon": true,
+        "coming_soon": false,
         "name": "Phantom Blade Zero",
         "url": "https://store.steampowered.com/app/4115450/",
         "error": null,
@@ -67,7 +67,7 @@
       },
       "skipped": [],
       "error": "官网: https://www.phantombladezero.com/: URLError: <urlopen error timed out>",
-      "duration_ms": 42475
+      "duration_ms": 42490
     },
     {
       "id": "where-winds-meet",
@@ -89,8 +89,8 @@
         "signals": [
           "coming_soon"
         ],
-        "url": "https://www.wherewindsmeetgame.com/news/",
-        "snippet": ". New Appearance Set [Aureate Dominion], specially designed for Global players, arrives after the October 15 version update, available until November 9 at 4:59:59 (UTC",
+        "url": "https://www.wherewindsmeetgame.com/",
+        "snippet": "r 29, November 1 & 8 [Autumn Eve Whimsy] The [Autumn Eve Whimsy] Accessory Pack arrives on Oct 29 at 0:00 (UTC+8)! New Accessory [Ghostlight Pumpkin]: A candle, flicke",
         "pages": [
           {
             "url": "https://www.wherewindsmeetgame.com/",
@@ -108,7 +108,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 2532
+      "duration_ms": 2712
     },
     {
       "id": "lord-of-mysteries",
@@ -142,7 +142,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2217
+      "duration_ms": 2164
     },
     {
       "id": "world-of-jade-dynasty",
@@ -183,7 +183,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 3701
+      "duration_ms": 3253
     },
     {
       "id": "neverness-to-everness",
@@ -222,7 +222,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 2477
+      "duration_ms": 2359
     },
     {
       "id": "scroll-of-taiwu",
@@ -263,7 +263,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 2290
+      "duration_ms": 2486
     },
     {
       "id": "legend-of-mortal-cultivation",
@@ -284,7 +284,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 352
+      "duration_ms": 218
     },
     {
       "id": "ananta",
@@ -325,7 +325,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 4926
+      "duration_ms": 4951
     },
     {
       "id": "wang-yue",
@@ -357,7 +357,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 3197
+      "duration_ms": 2924
     },
     {
       "id": "sanguo-mou-ding-tianxia",
@@ -386,7 +386,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 1072
+      "duration_ms": 1369
     },
     {
       "id": "tensei-brave",
@@ -420,7 +420,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 200
+      "duration_ms": 204
     },
     {
       "id": "arena-breakout",
@@ -447,7 +447,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 498
+      "duration_ms": 369
     },
     {
       "id": "girls-frontline-2",
@@ -502,7 +502,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 641
+      "duration_ms": 363
     },
     {
       "id": "tower-of-fantasy",
@@ -640,7 +640,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 828
+      "duration_ms": 1272
     },
     {
       "id": "justice-online-mobile",
@@ -713,7 +713,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 2182
+      "duration_ms": 1970
     },
     {
       "id": "beyond-the-world",
@@ -799,7 +799,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 1964
+      "duration_ms": 2109
     },
     {
       "id": "tomb-busters",
@@ -846,7 +846,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 1887
+      "duration_ms": 1899
     },
     {
       "id": "piper-of-dawn",
@@ -867,7 +867,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 1933
+      "duration_ms": 2000
     },
     {
       "id": "roco-kingdom-world",
@@ -909,7 +909,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 1137
+      "duration_ms": 1000
     },
     {
       "id": "daba-land-of-watermarks",
@@ -930,7 +930,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 871
+      "duration_ms": 1044
     },
     {
       "id": "wenjian-changsheng",
@@ -989,7 +989,7 @@
         "steam_appid": 4115450,
         "official": "https://www.phantombladezero.com/"
       },
-      "last_checked": "2026-10-29T02:02:25Z",
+      "last_checked": "2026-10-29T22:26:32Z",
       "steam_listed": true,
       "steam_release_date": "Oct 28, 2026",
       "official_signal": null,
@@ -1068,7 +1068,7 @@
         "steam_appid": 3564740,
         "official": "https://www.wherewindsmeetgame.com/"
       },
-      "last_checked": "2026-10-29T02:02:28Z",
+      "last_checked": "2026-10-29T22:26:35Z",
       "steam_listed": true,
       "steam_release_date": "Nov 14, 2025",
       "official_signal": {
@@ -1078,8 +1078,8 @@
         ],
         "label": "即将推出",
         "pattern": "coming\\s+(?:soon|to)|due\\s+(?:out|on)|set\\s+for|arriv(?:es|ing)|敬请期待|即将(?:上线|推出|开服)",
-        "snippet": ". New Appearance Set [Aureate Dominion], specially designed for Global players, arrives after the October 15 version update, available until November 9 at 4:59:59 (UTC",
-        "url": "https://www.wherewindsmeetgame.com/news/",
+        "snippet": "r 29, November 1 & 8 [Autumn Eve Whimsy] The [Autumn Eve Whimsy] Accessory Pack arrives on Oct 29 at 0:00 (UTC+8)! New Accessory [Ghostlight Pumpkin]: A candle, flicke",
+        "url": "https://www.wherewindsmeetgame.com/",
         "site": "燕云十六声英文官网"
       },
       "changes": [
@@ -1158,7 +1158,7 @@
         "steam_appid": null,
         "official": "https://lordofthemysteriesgame.com/"
       },
-      "last_checked": "2026-10-29T02:02:30Z",
+      "last_checked": "2026-10-29T22:26:37Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1237,7 +1237,7 @@
         "steam_appid": 3384260,
         "official": "https://zx.wanmei.com/"
       },
-      "last_checked": "2026-10-29T02:02:33Z",
+      "last_checked": "2026-10-29T22:26:40Z",
       "steam_listed": false,
       "steam_release_date": null,
       "official_signal": {
@@ -1327,7 +1327,7 @@
         "steam_appid": 4508340,
         "official": "https://nte.perfectworld.com/"
       },
-      "last_checked": "2026-10-29T02:02:36Z",
+      "last_checked": "2026-10-29T22:26:43Z",
       "steam_listed": true,
       "steam_release_date": "Jul 7, 2026",
       "official_signal": {
@@ -1395,7 +1395,7 @@
         "steam_appid": 838350,
         "official": "https://scrolloftaiwu.com/"
       },
-      "last_checked": "2026-10-29T02:02:38Z",
+      "last_checked": "2026-10-29T22:26:45Z",
       "steam_listed": true,
       "steam_release_date": "Jun 16, 2026",
       "official_signal": {
@@ -1491,7 +1491,7 @@
         "steam_appid": 3814570,
         "official": null
       },
-      "last_checked": "2026-10-29T02:02:39Z",
+      "last_checked": "2026-10-29T22:26:45Z",
       "steam_listed": true,
       "steam_release_date": "Jan 29, 2026",
       "official_signal": null,
@@ -1567,7 +1567,7 @@
         "steam_appid": 4814120,
         "official": "https://ananta.163.com/"
       },
-      "last_checked": "2026-10-29T02:02:43Z",
+      "last_checked": "2026-10-29T22:26:50Z",
       "steam_listed": true,
       "steam_release_date": "Jan 15, 2027",
       "official_signal": {
@@ -1666,7 +1666,7 @@
         "steam_appid": null,
         "official": "https://wy.shiyue.com/"
       },
-      "last_checked": "2026-10-29T02:02:47Z",
+      "last_checked": "2026-10-29T22:26:53Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1733,7 +1733,7 @@
         "steam_appid": null,
         "official": "https://store.steamchina.com/app/4542640/"
       },
-      "last_checked": "2026-10-29T02:02:48Z",
+      "last_checked": "2026-10-29T22:26:55Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1831,7 +1831,7 @@
       "overseas_channels": []
     },
     {
-      "last_checked": "2026-10-29T02:02:48Z",
+      "last_checked": "2026-10-29T22:26:55Z",
       "steam_listed": true,
       "steam_release_date": "Nov 21, 2024",
       "id": "strinova",
@@ -1911,7 +1911,7 @@
       "global_launch_at": "2024-11-21"
     },
     {
-      "last_checked": "2026-10-29T02:02:48Z",
+      "last_checked": "2026-10-29T22:26:55Z",
       "steam_listed": null,
       "steam_release_date": null,
       "id": "arena-breakout",
@@ -2103,7 +2103,7 @@
       "global_launch_at": "2023-10-26"
     },
     {
-      "last_checked": "2026-10-29T02:02:49Z",
+      "last_checked": "2026-10-29T22:26:55Z",
       "steam_listed": null,
       "steam_release_date": null,
       "id": "delta-force",
@@ -2742,7 +2742,7 @@
       "global_launch_at": "2018-08-16"
     },
     {
-      "last_checked": "2026-10-29T02:02:50Z",
+      "last_checked": "2026-10-29T22:26:57Z",
       "steam_listed": true,
       "steam_release_date": "Jul 31, 2024",
       "id": "sword-of-convallaria",
@@ -3072,7 +3072,7 @@
       "global_launch_at": "2023-04-26"
     },
     {
-      "last_checked": "2026-10-29T02:02:52Z",
+      "last_checked": "2026-10-29T22:26:59Z",
       "steam_listed": true,
       "steam_release_date": "Dec 24, 2023",
       "id": "snowbreak",
@@ -3466,7 +3466,7 @@
       "content_note": "跨端同版本，内容一致"
     },
     {
-      "last_checked": "2026-10-29T02:02:54Z",
+      "last_checked": "2026-10-29T22:27:01Z",
       "steam_listed": true,
       "steam_release_date": "Oct 22, 2026",
       "id": "one-way-tickets",
@@ -3670,7 +3670,7 @@
       "content_note": "捉兽—机甲—基地—军团骨架相同，海外为新开进度（日服仅基础巨兽，国服已到十代）；适配集中在世界观与开服福利，未提数值重做"
     },
     {
-      "last_checked": "2026-10-29T02:02:56Z",
+      "last_checked": "2026-10-29T22:27:03Z",
       "steam_listed": true,
       "steam_release_date": "Mar 25, 2026",
       "id": "vanishing-starlight",
@@ -3751,7 +3751,7 @@
       "content_note": "国区与全球同版本，内容一致"
     },
     {
-      "last_checked": "2026-10-29T02:02:58Z",
+      "last_checked": "2026-10-29T22:27:05Z",
       "steam_listed": true,
       "steam_release_date": "Sep 22, 2026",
       "id": "piper-of-dawn",
@@ -3953,7 +3953,7 @@
       },
       "steam_listed": false,
       "steam_release_date": null,
-      "last_checked": "2026-10-29T02:02:59Z",
+      "last_checked": "2026-10-29T22:27:06Z",
       "official_signal": {
         "matched": true,
         "signals": [
@@ -4036,7 +4036,7 @@
       },
       "steam_listed": true,
       "steam_release_date": "2027",
-      "last_checked": "2026-10-29T02:03:00Z",
+      "last_checked": "2026-10-29T22:27:07Z",
       "official_signal": null,
       "changes": [],
       "sources": [
@@ -4111,5 +4111,5 @@
       ]
     }
   ],
-  "last_run_at": "2026-10-29T02:03:00Z"
+  "last_run_at": "2026-10-29T22:27:07Z"
 }
