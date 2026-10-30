@@ -359,6 +359,19 @@ def _as_dict(value):
     return value if isinstance(value, dict) else {}
 
 
+def _launch_date(timeline):
+    """国际服正式上线日期；basis 不是 released 时返回 None。
+
+    候选里的 intl 段常是 preorder / estimated / unknown——这些都不是「已上线」，
+    填进 global_launch_at 会把刚定档的新作误判成老游戏，所以只认 released。
+    """
+    intl = _as_dict(_as_dict(timeline).get("intl"))
+    if intl.get("basis") != "released":
+        return None
+    date = intl.get("date")
+    return date if isinstance(date, str) and date else None
+
+
 def game_from_candidate(candidate, imported_at):
     """把一条候选折成 games 里的一条记录。
 
@@ -397,6 +410,9 @@ def game_from_candidate(candidate, imported_at):
         # 双市场上市时间轴：国服 / 国际服各自的阶段、日期、来源，
         # 国际服查不到时间是常态，这里保留 basis 说明当前阶段而不是编日期
         "timeline": timeline,
+        # 国际服正式上线日：只有 basis=released 才算「已上线」，前端据此套
+        # 「海外正式上线超 1 年不收录」；预购/定档/未知一律留空（空值按未上线保留）
+        "global_launch_at": _launch_date(timeline),
         "overseas_heat": PLACEHOLDER,
         "overseas_heat_checked": None,
         "gap_window": candidate.get("note") or PLACEHOLDER,

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29",
+  "generated_at": "2026-10-31",
   "data_cutoff": "2026-10-15",
   "note": "关键词搜索量为定性判断，未经关键词工具实测。cn_status / global_status / overseas_heat / overseas_heat_checked / gap_window / target_markets / keywords / content_opportunities / monetization / monetization_level / risks 为人工维护字段；last_checked / steam_listed / steam_release_date / official_signal / changes 由 collector/update.py 自动写入。data_cutoff 记录人工字段最后一次整体复核日期，脚本不会推进它。 auto_imported / auto_imported_at 标记由版号公示自动发现的条目：这类条目并入时脚本会额外写入 developer / cn_status / global_status / gap_window / priority(99=未定级) / watch / sources，其余定性字段填「待补」待人复核，人工条目的这些字段脚本仍不改写。",
   "field_origin": {
@@ -62,12 +62,12 @@
             "ok": false
           }
         ],
-        "error": "https://www.phantombladezero.com/: URLError: <urlopen error timed out>",
+        "error": "https://www.phantombladezero.com/: URLError: <urlopen error _ssl.c:993: The handshake operation timed out>",
         "stale": false
       },
       "skipped": [],
-      "error": "官网: https://www.phantombladezero.com/: URLError: <urlopen error timed out>",
-      "duration_ms": 42490
+      "error": "官网: https://www.phantombladezero.com/: URLError: <urlopen error _ssl.c:993: The handshake operation timed out>",
+      "duration_ms": 43046
     },
     {
       "id": "where-winds-meet",
@@ -108,7 +108,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 2712
+      "duration_ms": 3875
     },
     {
       "id": "lord-of-mysteries",
@@ -142,7 +142,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2164
+      "duration_ms": 3156
     },
     {
       "id": "world-of-jade-dynasty",
@@ -183,7 +183,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 3253
+      "duration_ms": 5343
     },
     {
       "id": "neverness-to-everness",
@@ -222,7 +222,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 2359
+      "duration_ms": 5859
     },
     {
       "id": "scroll-of-taiwu",
@@ -249,7 +249,7 @@
         "pages": [
           {
             "url": "https://scrolloftaiwu.com/",
-            "status": 200,
+            "status": 304,
             "ok": true
           },
           {
@@ -263,7 +263,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 2486
+      "duration_ms": 6406
     },
     {
       "id": "legend-of-mortal-cultivation",
@@ -284,7 +284,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 218
+      "duration_ms": 843
     },
     {
       "id": "ananta",
@@ -325,7 +325,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 4951
+      "duration_ms": 6687
     },
     {
       "id": "wang-yue",
@@ -357,7 +357,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2924
+      "duration_ms": 2219
     },
     {
       "id": "sanguo-mou-ding-tianxia",
@@ -386,7 +386,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 1369
+      "duration_ms": 625
     },
     {
       "id": "tensei-brave",
@@ -420,7 +420,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 204
+      "duration_ms": 1514
     },
     {
       "id": "arena-breakout",
@@ -436,7 +436,7 @@
         "pages": [
           {
             "url": "https://www.arenabreakoutinfinite.com/",
-            "status": 200,
+            "status": 304,
             "ok": true
           }
         ],
@@ -447,7 +447,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 369
+      "duration_ms": 2390
     },
     {
       "id": "girls-frontline-2",
@@ -491,7 +491,7 @@
         "pages": [
           {
             "url": "https://www.playdeltaforce.com/",
-            "status": 200,
+            "status": 304,
             "ok": true
           }
         ],
@@ -502,7 +502,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 363
+      "duration_ms": 1547
     },
     {
       "id": "tower-of-fantasy",
@@ -640,7 +640,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 1272
+      "duration_ms": 2780
     },
     {
       "id": "justice-online-mobile",
@@ -713,7 +713,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 1970
+      "duration_ms": 1500
     },
     {
       "id": "beyond-the-world",
@@ -799,7 +799,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 2109
+      "duration_ms": 3969
     },
     {
       "id": "tomb-busters",
@@ -846,7 +846,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 1899
+      "duration_ms": 2718
     },
     {
       "id": "piper-of-dawn",
@@ -867,7 +867,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 2000
+      "duration_ms": 3093
     },
     {
       "id": "roco-kingdom-world",
@@ -898,7 +898,7 @@
         "pages": [
           {
             "url": "https://azurpromilia.manjuu.com/m",
-            "status": 200,
+            "status": 304,
             "ok": true
           }
         ],
@@ -909,7 +909,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 1000
+      "duration_ms": 171
     },
     {
       "id": "daba-land-of-watermarks",
@@ -930,7 +930,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 1044
+      "duration_ms": 1563
     },
     {
       "id": "wenjian-changsheng",
@@ -944,6 +944,27 @@
       ],
       "error": null,
       "duration_ms": 0
+    },
+    {
+      "id": "heroes-duel",
+      "name": "英雄对决",
+      "status": "ok",
+      "steam": {
+        "appid": 5207740,
+        "listed": true,
+        "release_date": "Oct 31, 2026",
+        "coming_soon": true,
+        "name": "Heroes Duel",
+        "url": "https://store.steampowered.com/app/5207740/",
+        "error": null,
+        "stale": false
+      },
+      "official": null,
+      "skipped": [
+        "official(未配置官网)"
+      ],
+      "error": null,
+      "duration_ms": 3703
     }
   ],
   "games": [
@@ -989,7 +1010,7 @@
         "steam_appid": 4115450,
         "official": "https://www.phantombladezero.com/"
       },
-      "last_checked": "2026-10-29T22:26:32Z",
+      "last_checked": "2026-10-30T16:18:35Z",
       "steam_listed": true,
       "steam_release_date": "Oct 28, 2026",
       "official_signal": null,
@@ -1068,7 +1089,7 @@
         "steam_appid": 3564740,
         "official": "https://www.wherewindsmeetgame.com/"
       },
-      "last_checked": "2026-10-29T22:26:35Z",
+      "last_checked": "2026-10-30T16:18:38Z",
       "steam_listed": true,
       "steam_release_date": "Nov 14, 2025",
       "official_signal": {
@@ -1158,7 +1179,7 @@
         "steam_appid": null,
         "official": "https://lordofthemysteriesgame.com/"
       },
-      "last_checked": "2026-10-29T22:26:37Z",
+      "last_checked": "2026-10-30T16:18:42Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1237,7 +1258,7 @@
         "steam_appid": 3384260,
         "official": "https://zx.wanmei.com/"
       },
-      "last_checked": "2026-10-29T22:26:40Z",
+      "last_checked": "2026-10-30T16:18:47Z",
       "steam_listed": false,
       "steam_release_date": null,
       "official_signal": {
@@ -1327,7 +1348,7 @@
         "steam_appid": 4508340,
         "official": "https://nte.perfectworld.com/"
       },
-      "last_checked": "2026-10-29T22:26:43Z",
+      "last_checked": "2026-10-30T16:18:53Z",
       "steam_listed": true,
       "steam_release_date": "Jul 7, 2026",
       "official_signal": {
@@ -1339,7 +1360,26 @@
         "url": "https://nte.perfectworld.com/",
         "site": "异环官网"
       },
-      "changes": [],
+      "changes": [
+        {
+          "at": "2026-10-30T16:19:35Z",
+          "game_id": "neverness-to-everness",
+          "field": "steam_release_date",
+          "old": "Jul 8, 2026",
+          "new": "Jul 7, 2026",
+          "url": "https://store.steampowered.com/app/4508340/",
+          "evidence": "release_date.date=Jul 7, 2026；coming_soon=False"
+        },
+        {
+          "at": "2026-10-30T15:30:58Z",
+          "game_id": "neverness-to-everness",
+          "field": "steam_release_date",
+          "old": "Jul 7, 2026",
+          "new": "Jul 8, 2026",
+          "url": "https://store.steampowered.com/app/4508340/",
+          "evidence": "release_date.date=Jul 8, 2026；coming_soon=False"
+        }
+      ],
       "sources": [
         "https://nte.global/nte-neverness-to-everness-official-launch-april-29/",
         "https://nteguide.com/en/faq/cn-vs-global/"
@@ -1395,7 +1435,7 @@
         "steam_appid": 838350,
         "official": "https://scrolloftaiwu.com/"
       },
-      "last_checked": "2026-10-29T22:26:45Z",
+      "last_checked": "2026-10-30T16:18:59Z",
       "steam_listed": true,
       "steam_release_date": "Jun 16, 2026",
       "official_signal": {
@@ -1491,7 +1531,7 @@
         "steam_appid": 3814570,
         "official": null
       },
-      "last_checked": "2026-10-29T22:26:45Z",
+      "last_checked": "2026-10-30T16:19:00Z",
       "steam_listed": true,
       "steam_release_date": "Jan 29, 2026",
       "official_signal": null,
@@ -1567,7 +1607,7 @@
         "steam_appid": 4814120,
         "official": "https://ananta.163.com/"
       },
-      "last_checked": "2026-10-29T22:26:50Z",
+      "last_checked": "2026-10-30T16:19:07Z",
       "steam_listed": true,
       "steam_release_date": "Jan 15, 2027",
       "official_signal": {
@@ -1666,7 +1706,7 @@
         "steam_appid": null,
         "official": "https://wy.shiyue.com/"
       },
-      "last_checked": "2026-10-29T22:26:53Z",
+      "last_checked": "2026-10-30T16:19:09Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1733,7 +1773,7 @@
         "steam_appid": null,
         "official": "https://store.steamchina.com/app/4542640/"
       },
-      "last_checked": "2026-10-29T22:26:55Z",
+      "last_checked": "2026-10-30T16:19:10Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1831,7 +1871,7 @@
       "overseas_channels": []
     },
     {
-      "last_checked": "2026-10-29T22:26:55Z",
+      "last_checked": "2026-10-30T16:19:11Z",
       "steam_listed": true,
       "steam_release_date": "Nov 21, 2024",
       "id": "strinova",
@@ -1911,7 +1951,7 @@
       "global_launch_at": "2024-11-21"
     },
     {
-      "last_checked": "2026-10-29T22:26:55Z",
+      "last_checked": "2026-10-30T16:19:13Z",
       "steam_listed": null,
       "steam_release_date": null,
       "id": "arena-breakout",
@@ -2103,7 +2143,7 @@
       "global_launch_at": "2023-10-26"
     },
     {
-      "last_checked": "2026-10-29T22:26:55Z",
+      "last_checked": "2026-10-30T16:19:15Z",
       "steam_listed": null,
       "steam_release_date": null,
       "id": "delta-force",
@@ -2742,7 +2782,7 @@
       "global_launch_at": "2018-08-16"
     },
     {
-      "last_checked": "2026-10-29T22:26:57Z",
+      "last_checked": "2026-10-30T16:19:18Z",
       "steam_listed": true,
       "steam_release_date": "Jul 31, 2024",
       "id": "sword-of-convallaria",
@@ -3072,7 +3112,7 @@
       "global_launch_at": "2023-04-26"
     },
     {
-      "last_checked": "2026-10-29T22:26:59Z",
+      "last_checked": "2026-10-30T16:19:19Z",
       "steam_listed": true,
       "steam_release_date": "Dec 24, 2023",
       "id": "snowbreak",
@@ -3466,7 +3506,7 @@
       "content_note": "跨端同版本，内容一致"
     },
     {
-      "last_checked": "2026-10-29T22:27:01Z",
+      "last_checked": "2026-10-30T16:19:23Z",
       "steam_listed": true,
       "steam_release_date": "Oct 22, 2026",
       "id": "one-way-tickets",
@@ -3670,7 +3710,7 @@
       "content_note": "捉兽—机甲—基地—军团骨架相同，海外为新开进度（日服仅基础巨兽，国服已到十代）；适配集中在世界观与开服福利，未提数值重做"
     },
     {
-      "last_checked": "2026-10-29T22:27:03Z",
+      "last_checked": "2026-10-30T16:19:26Z",
       "steam_listed": true,
       "steam_release_date": "Mar 25, 2026",
       "id": "vanishing-starlight",
@@ -3751,7 +3791,7 @@
       "content_note": "国区与全球同版本，内容一致"
     },
     {
-      "last_checked": "2026-10-29T22:27:05Z",
+      "last_checked": "2026-10-30T16:19:29Z",
       "steam_listed": true,
       "steam_release_date": "Sep 22, 2026",
       "id": "piper-of-dawn",
@@ -3953,7 +3993,7 @@
       },
       "steam_listed": false,
       "steam_release_date": null,
-      "last_checked": "2026-10-29T22:27:06Z",
+      "last_checked": "2026-10-30T16:19:29Z",
       "official_signal": {
         "matched": true,
         "signals": [
@@ -4036,7 +4076,7 @@
       },
       "steam_listed": true,
       "steam_release_date": "2027",
-      "last_checked": "2026-10-29T22:27:07Z",
+      "last_checked": "2026-10-30T16:19:31Z",
       "official_signal": null,
       "changes": [],
       "sources": [
@@ -4109,7 +4149,565 @@
         "https://game.leiting.com/list/jian/news/19192",
         "https://www.g-bits.com/zh/news/1029.html"
       ]
+    },
+    {
+      "id": "heroes-duel",
+      "name_cn": "英雄对决",
+      "name_en": "Heroes Duel",
+      "developer": "重庆芒着乐网络科技有限公司",
+      "genre": "待补",
+      "priority": 99,
+      "cn_status": "预约中 · 2026-10-31",
+      "global_status": "预约中 · 2026-10-31",
+      "timeline": {
+        "cn": {
+          "date": "2026-10-31",
+          "basis": "preorder",
+          "estimated": false,
+          "source": "Steam 商店（国服）",
+          "url": "https://store.steampowered.com/app/5207740/"
+        },
+        "intl": {
+          "date": "2026-10-31",
+          "basis": "preorder",
+          "estimated": false,
+          "source": "Steam 商店（国际服）",
+          "url": "https://store.steampowered.com/app/5207740/"
+        }
+      },
+      "overseas_heat": "待补",
+      "overseas_heat_checked": null,
+      "gap_window": "国服版号早于 Steam 美区定档",
+      "target_markets": [],
+      "keywords": [],
+      "content_opportunities": [],
+      "monetization_level": "待补",
+      "monetization": "待补",
+      "risks": [],
+      "watch": {
+        "steam_appid": 5207740
+      },
+      "last_checked": "2026-10-30T16:19:35Z",
+      "steam_listed": true,
+      "steam_release_date": "Oct 31, 2026",
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        {
+          "label": "版号公示",
+          "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html"
+        },
+        {
+          "label": "Steam 商店",
+          "url": "https://store.steampowered.com/app/5207740/"
+        }
+      ],
+      "auto_imported": true,
+      "auto_imported_at": "2026-10-30"
+    },
+    {
+      "id": "steam-3839930",
+      "name_cn": "三国群英录",
+      "name_en": "",
+      "developer": "广州星一网络科技有限公司",
+      "genre": "待补",
+      "priority": 99,
+      "cn_status": "已上线 · 2025-07-17",
+      "global_status": "已上线 · 2025-07-17",
+      "timeline": {
+        "cn": {
+          "date": "2025-07-17",
+          "basis": "released",
+          "estimated": false,
+          "source": "Steam 商店（国服）",
+          "url": "https://store.steampowered.com/app/3839930/"
+        },
+        "intl": {
+          "date": "2025-07-17",
+          "basis": "released",
+          "estimated": false,
+          "source": "Steam 商店（国际服）",
+          "url": "https://store.steampowered.com/app/3839930/"
+        }
+      },
+      "overseas_heat": "待补",
+      "overseas_heat_checked": null,
+      "gap_window": "国服与国际服同日上线；中文攻略检索量 50 条，是英文 8 条的 6.2 倍",
+      "target_markets": [],
+      "keywords": [],
+      "content_opportunities": [],
+      "monetization_level": "待补",
+      "monetization": "待补",
+      "risks": [],
+      "watch": {
+        "steam_appid": 3839930
+      },
+      "last_checked": null,
+      "steam_listed": true,
+      "steam_release_date": "Jul 17, 2025",
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        {
+          "label": "版号公示",
+          "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html"
+        },
+        {
+          "label": "Steam 商店",
+          "url": "https://store.steampowered.com/app/3839930/"
+        }
+      ],
+      "auto_imported": true,
+      "auto_imported_at": "2026-10-31",
+      "global_launch_at": "2025-07-17"
+    },
+    {
+      "id": "sanctum-whispers-of-qingcheng",
+      "name_cn": "下一站青城",
+      "name_en": "Sanctum:Whispers of Qingcheng",
+      "developer": "成都忆墨轩网络科技有限公司",
+      "genre": "待补",
+      "priority": 99,
+      "cn_status": "预约中",
+      "global_status": "预约中",
+      "timeline": {
+        "cn": {
+          "date": null,
+          "basis": "preorder",
+          "estimated": false,
+          "source": "Steam 商店（国服）",
+          "url": "https://store.steampowered.com/app/3638680/"
+        },
+        "intl": {
+          "date": null,
+          "basis": "preorder",
+          "estimated": false,
+          "source": "Steam 商店（国际服）",
+          "url": "https://store.steampowered.com/app/3638680/"
+        }
+      },
+      "overseas_heat": "待补",
+      "overseas_heat_checked": null,
+      "gap_window": "中文攻略检索量 158,000 条，是英文 71,500 条的 2.2 倍",
+      "target_markets": [],
+      "keywords": [],
+      "content_opportunities": [],
+      "monetization_level": "待补",
+      "monetization": "待补",
+      "risks": [],
+      "watch": {
+        "steam_appid": 3638680
+      },
+      "last_checked": null,
+      "steam_listed": true,
+      "steam_release_date": "Coming soon",
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        {
+          "label": "版号公示",
+          "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html"
+        },
+        {
+          "label": "Steam 商店",
+          "url": "https://store.steampowered.com/app/3638680/"
+        }
+      ],
+      "auto_imported": true,
+      "auto_imported_at": "2026-10-31"
+    },
+    {
+      "id": "danmo-three-kingdoms-battle-of-wits",
+      "name_cn": "丹墨三国：弈",
+      "name_en": "Danmo Three Kingdoms: Battle of Wits",
+      "developer": "厦门巴巴耶图信息技术有限公司",
+      "genre": "待补",
+      "priority": 99,
+      "cn_status": "已上线 · 2026-01-26",
+      "global_status": "已上线 · 2026-01-26",
+      "timeline": {
+        "cn": {
+          "date": "2026-01-26",
+          "basis": "released",
+          "estimated": false,
+          "source": "Steam 商店（国服）",
+          "url": "https://store.steampowered.com/app/3905040/"
+        },
+        "intl": {
+          "date": "2026-01-26",
+          "basis": "released",
+          "estimated": false,
+          "source": "Steam 商店（国际服）",
+          "url": "https://store.steampowered.com/app/3905040/"
+        }
+      },
+      "overseas_heat": "待补",
+      "overseas_heat_checked": null,
+      "gap_window": "国服与国际服同日上线",
+      "target_markets": [],
+      "keywords": [],
+      "content_opportunities": [],
+      "monetization_level": "待补",
+      "monetization": "待补",
+      "risks": [],
+      "watch": {
+        "steam_appid": 3905040
+      },
+      "last_checked": null,
+      "steam_listed": true,
+      "steam_release_date": "Jan 26, 2026",
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        {
+          "label": "版号公示",
+          "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html"
+        },
+        {
+          "label": "Steam 商店",
+          "url": "https://store.steampowered.com/app/3905040/"
+        }
+      ],
+      "auto_imported": true,
+      "auto_imported_at": "2026-10-31",
+      "global_launch_at": "2026-01-26"
+    },
+    {
+      "id": "skewer-squad",
+      "name_cn": "别拽了！烤串师傅",
+      "name_en": "Skewer Squad",
+      "developer": "深圳市曜祚科技有限责任公司",
+      "genre": "待补",
+      "priority": 99,
+      "cn_status": "已上线 · 2026-02-01",
+      "global_status": "已上线 · 2026-02-01",
+      "timeline": {
+        "cn": {
+          "date": "2026-02-01",
+          "basis": "released",
+          "estimated": false,
+          "source": "Steam 商店（国服）",
+          "url": "https://store.steampowered.com/app/3926160/"
+        },
+        "intl": {
+          "date": "2026-02-01",
+          "basis": "released",
+          "estimated": false,
+          "source": "Steam 商店（国际服）",
+          "url": "https://store.steampowered.com/app/3926160/"
+        }
+      },
+      "overseas_heat": "待补",
+      "overseas_heat_checked": null,
+      "gap_window": "国服与国际服同日上线",
+      "target_markets": [],
+      "keywords": [],
+      "content_opportunities": [],
+      "monetization_level": "待补",
+      "monetization": "待补",
+      "risks": [],
+      "watch": {
+        "steam_appid": 3926160
+      },
+      "last_checked": null,
+      "steam_listed": true,
+      "steam_release_date": "Feb 1, 2026",
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        {
+          "label": "版号公示",
+          "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html"
+        },
+        {
+          "label": "Steam 商店",
+          "url": "https://store.steampowered.com/app/3926160/"
+        }
+      ],
+      "auto_imported": true,
+      "auto_imported_at": "2026-10-31",
+      "global_launch_at": "2026-02-01"
+    },
+    {
+      "id": "the-brave-never-alone",
+      "name_cn": "勇者不孤单",
+      "name_en": "The Brave Never Alone",
+      "developer": "北京轻舟创游科技有限公司",
+      "genre": "待补",
+      "priority": 99,
+      "cn_status": "已上线 · 2025-07-21",
+      "global_status": "已上线 · 2025-07-21",
+      "timeline": {
+        "cn": {
+          "date": "2025-07-21",
+          "basis": "released",
+          "estimated": false,
+          "source": "Steam 商店（国服）",
+          "url": "https://store.steampowered.com/app/3790750/"
+        },
+        "intl": {
+          "date": "2025-07-21",
+          "basis": "released",
+          "estimated": false,
+          "source": "Steam 商店（国际服）",
+          "url": "https://store.steampowered.com/app/3790750/"
+        }
+      },
+      "overseas_heat": "待补",
+      "overseas_heat_checked": null,
+      "gap_window": "国服与国际服同日上线",
+      "target_markets": [],
+      "keywords": [],
+      "content_opportunities": [],
+      "monetization_level": "待补",
+      "monetization": "待补",
+      "risks": [],
+      "watch": {
+        "steam_appid": 3790750
+      },
+      "last_checked": null,
+      "steam_listed": true,
+      "steam_release_date": "Jul 21, 2025",
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        {
+          "label": "版号公示",
+          "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html"
+        },
+        {
+          "label": "Steam 商店",
+          "url": "https://store.steampowered.com/app/3790750/"
+        }
+      ],
+      "auto_imported": true,
+      "auto_imported_at": "2026-10-31",
+      "global_launch_at": "2025-07-21"
+    },
+    {
+      "id": "go-fight-fantastic",
+      "name_cn": "奇妙大作战",
+      "name_en": "Go Fight Fantastic",
+      "developer": "海南青木瓜互娱文化有限公司",
+      "genre": "待补",
+      "priority": 99,
+      "cn_status": "已上线 · 2024-03-26",
+      "global_status": "已上线 · 2024-03-26",
+      "timeline": {
+        "cn": {
+          "date": "2024-03-26",
+          "basis": "released",
+          "estimated": false,
+          "source": "Steam 商店（国服）",
+          "url": "https://store.steampowered.com/app/1183530/"
+        },
+        "intl": {
+          "date": "2024-03-26",
+          "basis": "released",
+          "estimated": false,
+          "source": "Steam 商店（国际服）",
+          "url": "https://store.steampowered.com/app/1183530/"
+        }
+      },
+      "overseas_heat": "待补",
+      "overseas_heat_checked": null,
+      "gap_window": "国服与国际服同日上线",
+      "target_markets": [],
+      "keywords": [],
+      "content_opportunities": [],
+      "monetization_level": "待补",
+      "monetization": "待补",
+      "risks": [],
+      "watch": {
+        "steam_appid": 1183530
+      },
+      "last_checked": null,
+      "steam_listed": true,
+      "steam_release_date": "Mar 26, 2024",
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        {
+          "label": "版号公示",
+          "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202609/t20260930_1011281.html"
+        },
+        {
+          "label": "Steam 商店",
+          "url": "https://store.steampowered.com/app/1183530/"
+        }
+      ],
+      "auto_imported": true,
+      "auto_imported_at": "2026-10-31",
+      "global_launch_at": "2024-03-26"
+    },
+    {
+      "id": "kotama-and-academy-citadel",
+      "name_cn": "少女与学院城",
+      "name_en": "Kotama and Academy Citadel",
+      "developer": "广州核弦科技有限公司",
+      "genre": "待补",
+      "priority": 99,
+      "cn_status": "已上线 · 2026-01-14",
+      "global_status": "已上线 · 2026-01-14",
+      "timeline": {
+        "cn": {
+          "date": "2026-01-14",
+          "basis": "released",
+          "estimated": false,
+          "source": "Steam 商店（国服）",
+          "url": "https://store.steampowered.com/app/3639650/"
+        },
+        "intl": {
+          "date": "2026-01-14",
+          "basis": "released",
+          "estimated": false,
+          "source": "Steam 商店（国际服）",
+          "url": "https://store.steampowered.com/app/3639650/"
+        }
+      },
+      "overseas_heat": "待补",
+      "overseas_heat_checked": null,
+      "gap_window": "国服与国际服同日上线",
+      "target_markets": [],
+      "keywords": [],
+      "content_opportunities": [],
+      "monetization_level": "待补",
+      "monetization": "待补",
+      "risks": [],
+      "watch": {
+        "steam_appid": 3639650
+      },
+      "last_checked": null,
+      "steam_listed": true,
+      "steam_release_date": "Jan 14, 2026",
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        {
+          "label": "版号公示",
+          "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html"
+        },
+        {
+          "label": "Steam 商店",
+          "url": "https://store.steampowered.com/app/3639650/"
+        }
+      ],
+      "auto_imported": true,
+      "auto_imported_at": "2026-10-31",
+      "global_launch_at": "2026-01-14"
+    },
+    {
+      "id": "tiny-civilization",
+      "name_cn": "方寸文明",
+      "name_en": "Tiny Civilization",
+      "developer": "成都豆朵科技有限公司",
+      "genre": "待补",
+      "priority": 99,
+      "cn_status": "已上线 · 2022-12-31",
+      "global_status": "已上线 · 2022-12-31",
+      "timeline": {
+        "cn": {
+          "date": "2022-12-31",
+          "basis": "released",
+          "estimated": false,
+          "source": "Steam 商店（国服）",
+          "url": "https://store.steampowered.com/app/2230280/"
+        },
+        "intl": {
+          "date": "2022-12-31",
+          "basis": "released",
+          "estimated": false,
+          "source": "Steam 商店（国际服）",
+          "url": "https://store.steampowered.com/app/2230280/"
+        }
+      },
+      "overseas_heat": "待补",
+      "overseas_heat_checked": null,
+      "gap_window": "国服与国际服同日上线",
+      "target_markets": [],
+      "keywords": [],
+      "content_opportunities": [],
+      "monetization_level": "待补",
+      "monetization": "待补",
+      "risks": [],
+      "watch": {
+        "steam_appid": 2230280
+      },
+      "last_checked": null,
+      "steam_listed": true,
+      "steam_release_date": "Dec 31, 2022",
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        {
+          "label": "版号公示",
+          "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html"
+        },
+        {
+          "label": "Steam 商店",
+          "url": "https://store.steampowered.com/app/2230280/"
+        }
+      ],
+      "auto_imported": true,
+      "auto_imported_at": "2026-10-31",
+      "global_launch_at": "2022-12-31"
+    },
+    {
+      "id": "box-bakery",
+      "name_cn": "盒子面包坊",
+      "name_en": "Box Bakery",
+      "developer": "上海芒果盒子网络科技有限公司",
+      "genre": "待补",
+      "priority": 99,
+      "cn_status": "已上线 · 2026-03-05",
+      "global_status": "已上线 · 2026-03-05",
+      "timeline": {
+        "cn": {
+          "date": "2026-03-05",
+          "basis": "released",
+          "estimated": false,
+          "source": "Steam 商店（国服）",
+          "url": "https://store.steampowered.com/app/2942950/"
+        },
+        "intl": {
+          "date": "2026-03-05",
+          "basis": "released",
+          "estimated": false,
+          "source": "Steam 商店（国际服）",
+          "url": "https://store.steampowered.com/app/2942950/"
+        }
+      },
+      "overseas_heat": "待补",
+      "overseas_heat_checked": null,
+      "gap_window": "国服与国际服同日上线",
+      "target_markets": [],
+      "keywords": [],
+      "content_opportunities": [],
+      "monetization_level": "待补",
+      "monetization": "待补",
+      "risks": [],
+      "watch": {
+        "steam_appid": 2942950
+      },
+      "last_checked": null,
+      "steam_listed": true,
+      "steam_release_date": "Mar 5, 2026",
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        {
+          "label": "版号公示",
+          "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html"
+        },
+        {
+          "label": "Steam 商店",
+          "url": "https://store.steampowered.com/app/2942950/"
+        }
+      ],
+      "auto_imported": true,
+      "auto_imported_at": "2026-10-31",
+      "global_launch_at": "2026-03-05"
     }
   ],
-  "last_run_at": "2026-10-29T22:27:07Z"
+  "last_run_at": "2026-10-30T16:19:35Z"
 }

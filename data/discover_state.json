@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28T09:28:21Z",
+  "updated_at": "2026-10-30T16:13:53Z",
   "items": {
     "domestic:暗夜勇士": {
       "checked_at": "2026-10-22",
@@ -632,9 +632,82 @@
       "candidate": null
     },
     "domestic:奇妙大作战": {
-      "checked_at": "2026-10-22",
+      "checked_at": "2026-10-30",
       "approved_at": "2026-09-29",
-      "candidate": null
+      "candidate": {
+        "origin": "domestic",
+        "name_cn": "奇妙大作战",
+        "name_en": "Go Fight Fantastic",
+        "appid": 1183530,
+        "gap_type": "cn_sync",
+        "gap_days": 0,
+        "advantages": [
+          "cn_sync"
+        ],
+        "note": "国服与国际服同日上线",
+        "timeline": {
+          "cn": {
+            "date": "2024-03-26",
+            "basis": "released",
+            "estimated": false,
+            "source": "Steam 商店（国服）",
+            "url": "https://store.steampowered.com/app/1183530/"
+          },
+          "intl": {
+            "date": "2024-03-26",
+            "basis": "released",
+            "estimated": false,
+            "source": "Steam 商店（国际服）",
+            "url": "https://store.steampowered.com/app/1183530/"
+          }
+        },
+        "stage": {
+          "cn": "launch",
+          "os": "launch",
+          "cn_release": "2024-03-26",
+          "os_release": "2024-03-26"
+        },
+        "version": {
+          "cn": null,
+          "cn_source": null,
+          "cn_url": null,
+          "steam": null,
+          "source": null,
+          "ahead": false
+        },
+        "guides": {
+          "cn": 50,
+          "intl": 944000,
+          "ratio": 0.0,
+          "advantage": false
+        },
+        "playtest_os": false,
+        "nppa": {
+          "approved_at": "2026-09-29",
+          "publisher": "湖南电子音像出版社有限责任公司",
+          "operator": "海南青木瓜互娱文化有限公司",
+          "approval_no": "国新出审〔2026〕2312号",
+          "batch": "2026年9月份国产网络游戏审批信息",
+          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202609/t20260930_1011281.html"
+        },
+        "steam": {
+          "store_url": "https://store.steampowered.com/app/1183530/",
+          "us_listed": true,
+          "us_release_date": "Mar 26, 2024",
+          "us_release_parsed": "2024-03-26",
+          "us_coming_soon": false,
+          "cn_listed": true,
+          "cn_release_date": "2024 年 3 月 26 日",
+          "cn_release_parsed": "2024-03-26",
+          "match_score": 1.0
+        },
+        "evidence": [
+          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202609/t20260930_1011281.html",
+          "https://store.steampowered.com/app/1183530/"
+        ],
+        "first_seen": "2026-10-30T16:02:20Z",
+        "last_checked": "2026-10-30"
+      }
     },
     "domestic:千次初见": {
       "checked_at": "2026-10-22",
@@ -2301,31 +2374,6 @@
       "approved_at": "2026-07-22",
       "candidate": null
     },
-    "domestic:沉默的蟋蟀": {
-      "checked_at": "2026-10-28",
-      "approved_at": "2026-07-22",
-      "candidate": null
-    },
-    "domestic:冲鸭哒哒哒": {
-      "checked_at": "2026-10-28",
-      "approved_at": "2026-07-22",
-      "candidate": null
-    },
-    "domestic:出发吧英雄": {
-      "checked_at": "2026-10-28",
-      "approved_at": "2026-07-22",
-      "candidate": null
-    },
-    "domestic:闯关勇者": {
-      "checked_at": "2026-10-28",
-      "approved_at": "2026-07-22",
-      "candidate": null
-    },
-    "domestic:大鹅工厂": {
-      "checked_at": "2026-10-28",
-      "approved_at": "2026-07-22",
-      "candidate": null
-    },
     "domestic:大富翁派对": {
       "checked_at": "2026-10-28",
       "approved_at": "2026-07-22",
@@ -2447,6 +2495,714 @@
         ],
         "first_seen": "2026-10-28T05:36:37Z",
         "last_checked": "2026-10-28"
+      }
+    },
+    "domestic:英雄对决": {
+      "checked_at": "2026-10-30",
+      "approved_at": "2026-10-28",
+      "candidate": {
+        "origin": "domestic",
+        "name_cn": "英雄对决",
+        "name_en": "Heroes Duel",
+        "appid": 5207740,
+        "gap_type": "cn_first",
+        "gap_days": 3,
+        "advantages": [
+          "cn_first"
+        ],
+        "note": "国服版号早于 Steam 美区定档",
+        "timeline": {
+          "cn": {
+            "date": "2026-10-31",
+            "basis": "preorder",
+            "estimated": false,
+            "source": "Steam 商店（国服）",
+            "url": "https://store.steampowered.com/app/5207740/"
+          },
+          "intl": {
+            "date": "2026-10-31",
+            "basis": "preorder",
+            "estimated": false,
+            "source": "Steam 商店（国际服）",
+            "url": "https://store.steampowered.com/app/5207740/"
+          }
+        },
+        "stage": {
+          "cn": "preorder",
+          "os": "preorder",
+          "cn_release": "2026-10-31",
+          "os_release": "2026-10-31"
+        },
+        "version": {
+          "cn": null,
+          "cn_source": null,
+          "cn_url": null,
+          "steam": null,
+          "source": null,
+          "ahead": false
+        },
+        "guides": {
+          "cn": null,
+          "intl": 262000,
+          "ratio": null,
+          "advantage": false
+        },
+        "playtest_os": false,
+        "nppa": {
+          "approved_at": "2026-10-28",
+          "publisher": "重庆华龙网集团股份有限公司",
+          "operator": "重庆芒着乐网络科技有限公司",
+          "approval_no": "国新出审〔2026〕2663号",
+          "batch": "2026年10月份国产网络游戏审批信息",
+          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html"
+        },
+        "steam": {
+          "store_url": "https://store.steampowered.com/app/5207740/",
+          "us_listed": true,
+          "us_release_date": "Oct 31, 2026",
+          "us_release_parsed": "2026-10-31",
+          "us_coming_soon": true,
+          "cn_listed": true,
+          "cn_release_date": "2026 年 10 月 31 日",
+          "cn_release_parsed": "2026-10-31",
+          "match_score": 1.0
+        },
+        "evidence": [
+          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html",
+          "https://store.steampowered.com/app/5207740/"
+        ],
+        "first_seen": "2026-10-30T16:00:39Z",
+        "last_checked": "2026-10-30"
+      }
+    },
+    "domestic:别拽了烤串师傅": {
+      "checked_at": "2026-10-30",
+      "approved_at": "2026-10-28",
+      "candidate": {
+        "origin": "domestic",
+        "name_cn": "别拽了！烤串师傅",
+        "name_en": "Skewer Squad",
+        "appid": 3926160,
+        "gap_type": "cn_sync",
+        "gap_days": 0,
+        "advantages": [
+          "cn_sync"
+        ],
+        "note": "国服与国际服同日上线",
+        "timeline": {
+          "cn": {
+            "date": "2026-02-01",
+            "basis": "released",
+            "estimated": false,
+            "source": "Steam 商店（国服）",
+            "url": "https://store.steampowered.com/app/3926160/"
+          },
+          "intl": {
+            "date": "2026-02-01",
+            "basis": "released",
+            "estimated": false,
+            "source": "Steam 商店（国际服）",
+            "url": "https://store.steampowered.com/app/3926160/"
+          }
+        },
+        "stage": {
+          "cn": "launch",
+          "os": "launch",
+          "cn_release": "2026-02-01",
+          "os_release": "2026-02-01"
+        },
+        "version": {
+          "cn": null,
+          "cn_source": null,
+          "cn_url": null,
+          "steam": "1.1.1",
+          "source": "Jul 6 Hotfix 1.1.1",
+          "ahead": false
+        },
+        "guides": {
+          "cn": 50,
+          "intl": 78300,
+          "ratio": 0.0,
+          "advantage": false
+        },
+        "playtest_os": false,
+        "nppa": {
+          "approved_at": "2026-10-28",
+          "publisher": "江苏凤凰数字传媒有限公司",
+          "operator": "深圳市曜祚科技有限责任公司",
+          "approval_no": "国新出审〔2026〕2514号",
+          "batch": "2026年10月份国产网络游戏审批信息",
+          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html"
+        },
+        "steam": {
+          "store_url": "https://store.steampowered.com/app/3926160/",
+          "us_listed": true,
+          "us_release_date": "Feb 1, 2026",
+          "us_release_parsed": "2026-02-01",
+          "us_coming_soon": false,
+          "cn_listed": true,
+          "cn_release_date": "2026 年 2 月 1 日",
+          "cn_release_parsed": "2026-02-01",
+          "match_score": 1.0
+        },
+        "evidence": [
+          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html",
+          "https://store.steampowered.com/app/3926160/"
+        ],
+        "first_seen": "2026-10-30T15:41:19Z",
+        "last_checked": "2026-10-30"
+      }
+    },
+    "domestic:城市派对": {
+      "checked_at": "2026-10-30",
+      "approved_at": "2026-10-28",
+      "candidate": null
+    },
+    "domestic:丹墨三国弈": {
+      "checked_at": "2026-10-30",
+      "approved_at": "2026-10-28",
+      "candidate": {
+        "origin": "domestic",
+        "name_cn": "丹墨三国：弈",
+        "name_en": "Danmo Three Kingdoms: Battle of Wits",
+        "appid": 3905040,
+        "gap_type": "cn_sync",
+        "gap_days": 0,
+        "advantages": [
+          "cn_sync"
+        ],
+        "note": "国服与国际服同日上线",
+        "timeline": {
+          "cn": {
+            "date": "2026-01-26",
+            "basis": "released",
+            "estimated": false,
+            "source": "Steam 商店（国服）",
+            "url": "https://store.steampowered.com/app/3905040/"
+          },
+          "intl": {
+            "date": "2026-01-26",
+            "basis": "released",
+            "estimated": false,
+            "source": "Steam 商店（国际服）",
+            "url": "https://store.steampowered.com/app/3905040/"
+          }
+        },
+        "stage": {
+          "cn": "launch",
+          "os": "launch",
+          "cn_release": "2026-01-26",
+          "os_release": "2026-01-26"
+        },
+        "version": {
+          "cn": null,
+          "cn_source": null,
+          "cn_url": null,
+          "steam": null,
+          "source": null,
+          "ahead": false
+        },
+        "guides": {
+          "cn": 68400,
+          "intl": 238000,
+          "ratio": 0.3,
+          "advantage": false
+        },
+        "playtest_os": false,
+        "nppa": {
+          "approved_at": "2026-10-28",
+          "publisher": "厦门大学电子出版社有限责任公司",
+          "operator": "厦门巴巴耶图信息技术有限公司",
+          "approval_no": "国新出审〔2026〕2521号",
+          "batch": "2026年10月份国产网络游戏审批信息",
+          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html"
+        },
+        "steam": {
+          "store_url": "https://store.steampowered.com/app/3905040/",
+          "us_listed": true,
+          "us_release_date": "Jan 26, 2026",
+          "us_release_parsed": "2026-01-26",
+          "us_coming_soon": false,
+          "cn_listed": true,
+          "cn_release_date": "2026 年 1 月 26 日",
+          "cn_release_parsed": "2026-01-26",
+          "match_score": 1.0
+        },
+        "evidence": [
+          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html",
+          "https://store.steampowered.com/app/3905040/"
+        ],
+        "first_seen": "2026-10-30T15:41:59Z",
+        "last_checked": "2026-10-30"
+      }
+    },
+    "domestic:方寸文明": {
+      "checked_at": "2026-10-30",
+      "approved_at": "2026-10-28",
+      "candidate": {
+        "origin": "domestic",
+        "name_cn": "方寸文明",
+        "name_en": "Tiny Civilization",
+        "appid": 2230280,
+        "gap_type": "cn_sync",
+        "gap_days": 0,
+        "advantages": [
+          "cn_sync"
+        ],
+        "note": "国服与国际服同日上线",
+        "timeline": {
+          "cn": {
+            "date": "2022-12-31",
+            "basis": "released",
+            "estimated": false,
+            "source": "Steam 商店（国服）",
+            "url": "https://store.steampowered.com/app/2230280/"
+          },
+          "intl": {
+            "date": "2022-12-31",
+            "basis": "released",
+            "estimated": false,
+            "source": "Steam 商店（国际服）",
+            "url": "https://store.steampowered.com/app/2230280/"
+          }
+        },
+        "stage": {
+          "cn": "launch",
+          "os": "launch",
+          "cn_release": "2022-12-31",
+          "os_release": "2022-12-31"
+        },
+        "version": {
+          "cn": null,
+          "cn_source": null,
+          "cn_url": null,
+          "steam": "1.12",
+          "source": "v1.12",
+          "ahead": false
+        },
+        "guides": {
+          "cn": 15200,
+          "intl": 138000,
+          "ratio": 0.1,
+          "advantage": false
+        },
+        "playtest_os": false,
+        "nppa": {
+          "approved_at": "2026-10-28",
+          "publisher": "天津电子出版社有限公司",
+          "operator": "成都豆朵科技有限公司",
+          "approval_no": "国新出审〔2026〕2528号",
+          "batch": "2026年10月份国产网络游戏审批信息",
+          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html"
+        },
+        "steam": {
+          "store_url": "https://store.steampowered.com/app/2230280/",
+          "us_listed": true,
+          "us_release_date": "Dec 31, 2022",
+          "us_release_parsed": "2022-12-31",
+          "us_coming_soon": false,
+          "cn_listed": true,
+          "cn_release_date": "2022 年 12 月 31 日",
+          "cn_release_parsed": "2022-12-31",
+          "match_score": 1.0
+        },
+        "evidence": [
+          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html",
+          "https://store.steampowered.com/app/2230280/"
+        ],
+        "first_seen": "2026-10-30T15:42:24Z",
+        "last_checked": "2026-10-30"
+      }
+    },
+    "domestic:盒子面包坊": {
+      "checked_at": "2026-10-30",
+      "approved_at": "2026-10-28",
+      "candidate": {
+        "origin": "domestic",
+        "name_cn": "盒子面包坊",
+        "name_en": "Box Bakery",
+        "appid": 2942950,
+        "gap_type": "cn_sync",
+        "gap_days": 0,
+        "advantages": [
+          "cn_sync"
+        ],
+        "note": "国服与国际服同日上线",
+        "timeline": {
+          "cn": {
+            "date": "2026-03-05",
+            "basis": "released",
+            "estimated": false,
+            "source": "Steam 商店（国服）",
+            "url": "https://store.steampowered.com/app/2942950/"
+          },
+          "intl": {
+            "date": "2026-03-05",
+            "basis": "released",
+            "estimated": false,
+            "source": "Steam 商店（国际服）",
+            "url": "https://store.steampowered.com/app/2942950/"
+          }
+        },
+        "stage": {
+          "cn": "launch",
+          "os": "launch",
+          "cn_release": "2026-03-05",
+          "os_release": "2026-03-05"
+        },
+        "version": {
+          "cn": null,
+          "cn_source": null,
+          "cn_url": null,
+          "steam": null,
+          "source": null,
+          "ahead": false
+        },
+        "guides": {
+          "cn": 50,
+          "intl": 280000,
+          "ratio": 0.0,
+          "advantage": false
+        },
+        "playtest_os": false,
+        "nppa": {
+          "approved_at": "2026-10-28",
+          "publisher": "华中科技大学电子音像出版社",
+          "operator": "上海芒果盒子网络科技有限公司",
+          "approval_no": "国新出审〔2026〕2535号",
+          "batch": "2026年10月份国产网络游戏审批信息",
+          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html"
+        },
+        "steam": {
+          "store_url": "https://store.steampowered.com/app/2942950/",
+          "us_listed": true,
+          "us_release_date": "Mar 5, 2026",
+          "us_release_parsed": "2026-03-05",
+          "us_coming_soon": false,
+          "cn_listed": true,
+          "cn_release_date": "2026 年 3 月 5 日",
+          "cn_release_parsed": "2026-03-05",
+          "match_score": 1.0
+        },
+        "evidence": [
+          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html",
+          "https://store.steampowered.com/app/2942950/"
+        ],
+        "first_seen": "2026-10-30T15:42:48Z",
+        "last_checked": "2026-10-30"
+      }
+    },
+    "domestic:三国群英录": {
+      "checked_at": "2026-10-30",
+      "approved_at": "2026-10-28",
+      "candidate": {
+        "origin": "domestic",
+        "name_cn": "三国群英录",
+        "name_en": "三国.群英录",
+        "appid": 3839930,
+        "gap_type": "cn_sync",
+        "gap_days": 0,
+        "advantages": [
+          "cn_sync",
+          "cn_guides"
+        ],
+        "note": "国服与国际服同日上线；中文攻略检索量 50 条，是英文 8 条的 6.2 倍",
+        "timeline": {
+          "cn": {
+            "date": "2025-07-17",
+            "basis": "released",
+            "estimated": false,
+            "source": "Steam 商店（国服）",
+            "url": "https://store.steampowered.com/app/3839930/"
+          },
+          "intl": {
+            "date": "2025-07-17",
+            "basis": "released",
+            "estimated": false,
+            "source": "Steam 商店（国际服）",
+            "url": "https://store.steampowered.com/app/3839930/"
+          }
+        },
+        "stage": {
+          "cn": "launch",
+          "os": "launch",
+          "cn_release": "2025-07-17",
+          "os_release": "2025-07-17"
+        },
+        "version": {
+          "cn": null,
+          "cn_source": null,
+          "cn_url": null,
+          "steam": null,
+          "source": null,
+          "ahead": false
+        },
+        "guides": {
+          "cn": 50,
+          "intl": 8,
+          "ratio": 6.2,
+          "advantage": true
+        },
+        "playtest_os": false,
+        "nppa": {
+          "approved_at": "2026-10-28",
+          "publisher": "北京闪联互动网络科技有限责任公司",
+          "operator": "广州星一网络科技有限公司",
+          "approval_no": "国新出审〔2026〕2593号",
+          "batch": "2026年10月份国产网络游戏审批信息",
+          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html"
+        },
+        "steam": {
+          "store_url": "https://store.steampowered.com/app/3839930/",
+          "us_listed": true,
+          "us_release_date": "Jul 17, 2025",
+          "us_release_parsed": "2025-07-17",
+          "us_coming_soon": false,
+          "cn_listed": true,
+          "cn_release_date": "2025 年 7 月 17 日",
+          "cn_release_parsed": "2025-07-17",
+          "match_score": 1.0
+        },
+        "evidence": [
+          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html",
+          "https://store.steampowered.com/app/3839930/"
+        ],
+        "first_seen": "2026-10-30T15:55:18Z",
+        "last_checked": "2026-10-30"
+      }
+    },
+    "domestic:少女与学院城": {
+      "checked_at": "2026-10-30",
+      "approved_at": "2026-10-28",
+      "candidate": {
+        "origin": "domestic",
+        "name_cn": "少女与学院城",
+        "name_en": "Kotama and Academy Citadel",
+        "appid": 3639650,
+        "gap_type": "cn_sync",
+        "gap_days": 0,
+        "advantages": [
+          "cn_sync"
+        ],
+        "note": "国服与国际服同日上线",
+        "timeline": {
+          "cn": {
+            "date": "2026-01-14",
+            "basis": "released",
+            "estimated": false,
+            "source": "Steam 商店（国服）",
+            "url": "https://store.steampowered.com/app/3639650/"
+          },
+          "intl": {
+            "date": "2026-01-14",
+            "basis": "released",
+            "estimated": false,
+            "source": "Steam 商店（国际服）",
+            "url": "https://store.steampowered.com/app/3639650/"
+          }
+        },
+        "stage": {
+          "cn": "launch",
+          "os": "launch",
+          "cn_release": "2026-01-14",
+          "os_release": "2026-01-14"
+        },
+        "version": {
+          "cn": null,
+          "cn_source": null,
+          "cn_url": null,
+          "steam": null,
+          "source": null,
+          "ahead": false
+        },
+        "guides": {
+          "cn": null,
+          "intl": 16800,
+          "ratio": null,
+          "advantage": false
+        },
+        "playtest_os": false,
+        "nppa": {
+          "approved_at": "2026-10-28",
+          "publisher": "江苏凤凰电子音像出版社有限公司",
+          "operator": "广州核弦科技有限公司",
+          "approval_no": "国新出审〔2026〕2601号",
+          "batch": "2026年10月份国产网络游戏审批信息",
+          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html"
+        },
+        "steam": {
+          "store_url": "https://store.steampowered.com/app/3639650/",
+          "us_listed": true,
+          "us_release_date": "Jan 14, 2026",
+          "us_release_parsed": "2026-01-14",
+          "us_coming_soon": false,
+          "cn_listed": true,
+          "cn_release_date": "2026 年 1 月 14 日",
+          "cn_release_parsed": "2026-01-14",
+          "match_score": 1.0
+        },
+        "evidence": [
+          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html",
+          "https://store.steampowered.com/app/3639650/"
+        ],
+        "first_seen": "2026-10-30T15:56:31Z",
+        "last_checked": "2026-10-30"
+      }
+    },
+    "domestic:下一站青城": {
+      "checked_at": "2026-10-30",
+      "approved_at": "2026-10-28",
+      "candidate": {
+        "origin": "domestic",
+        "name_cn": "下一站青城",
+        "name_en": "Sanctum:Whispers of Qingcheng",
+        "appid": 3638680,
+        "gap_type": "cn_guides",
+        "gap_days": null,
+        "advantages": [
+          "cn_guides"
+        ],
+        "note": "中文攻略检索量 158,000 条，是英文 71,500 条的 2.2 倍",
+        "timeline": {
+          "cn": {
+            "date": null,
+            "basis": "preorder",
+            "estimated": false,
+            "source": "Steam 商店（国服）",
+            "url": "https://store.steampowered.com/app/3638680/"
+          },
+          "intl": {
+            "date": null,
+            "basis": "preorder",
+            "estimated": false,
+            "source": "Steam 商店（国际服）",
+            "url": "https://store.steampowered.com/app/3638680/"
+          }
+        },
+        "stage": {
+          "cn": "preorder",
+          "os": "preorder",
+          "cn_release": null,
+          "os_release": null
+        },
+        "version": {
+          "cn": null,
+          "cn_source": null,
+          "cn_url": null,
+          "steam": null,
+          "source": null,
+          "ahead": false
+        },
+        "guides": {
+          "cn": 158000,
+          "intl": 71500,
+          "ratio": 2.2,
+          "advantage": true
+        },
+        "playtest_os": null,
+        "nppa": {
+          "approved_at": "2026-10-28",
+          "publisher": "四川数字出版传媒有限公司",
+          "operator": "成都忆墨轩网络科技有限公司",
+          "approval_no": "国新出审〔2026〕2639号",
+          "batch": "2026年10月份国产网络游戏审批信息",
+          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html"
+        },
+        "steam": {
+          "store_url": "https://store.steampowered.com/app/3638680/",
+          "us_listed": true,
+          "us_release_date": "Coming soon",
+          "us_release_parsed": null,
+          "us_coming_soon": true,
+          "cn_listed": true,
+          "cn_release_date": "即将推出",
+          "cn_release_parsed": null,
+          "match_score": 1.0
+        },
+        "evidence": [
+          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html",
+          "https://store.steampowered.com/app/3638680/"
+        ],
+        "first_seen": "2026-10-30T15:59:49Z",
+        "last_checked": "2026-10-30"
+      }
+    },
+    "domestic:勇者不孤单": {
+      "checked_at": "2026-10-30",
+      "approved_at": "2026-10-28",
+      "candidate": {
+        "origin": "domestic",
+        "name_cn": "勇者不孤单",
+        "name_en": "The Brave Never Alone",
+        "appid": 3790750,
+        "gap_type": "cn_sync",
+        "gap_days": 0,
+        "advantages": [
+          "cn_sync"
+        ],
+        "note": "国服与国际服同日上线",
+        "timeline": {
+          "cn": {
+            "date": "2025-07-21",
+            "basis": "released",
+            "estimated": false,
+            "source": "Steam 商店（国服）",
+            "url": "https://store.steampowered.com/app/3790750/"
+          },
+          "intl": {
+            "date": "2025-07-21",
+            "basis": "released",
+            "estimated": false,
+            "source": "Steam 商店（国际服）",
+            "url": "https://store.steampowered.com/app/3790750/"
+          }
+        },
+        "stage": {
+          "cn": "launch",
+          "os": "launch",
+          "cn_release": "2025-07-21",
+          "os_release": "2025-07-21"
+        },
+        "version": {
+          "cn": null,
+          "cn_source": null,
+          "cn_url": null,
+          "steam": null,
+          "source": null,
+          "ahead": false
+        },
+        "guides": {
+          "cn": 110000,
+          "intl": 1340000,
+          "ratio": 0.1,
+          "advantage": false
+        },
+        "playtest_os": false,
+        "nppa": {
+          "approved_at": "2026-10-28",
+          "publisher": "北京中娱在线网络科技有限公司",
+          "operator": "北京轻舟创游科技有限公司",
+          "approval_no": "国新出审〔2026〕2668号",
+          "batch": "2026年10月份国产网络游戏审批信息",
+          "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html"
+        },
+        "steam": {
+          "store_url": "https://store.steampowered.com/app/3790750/",
+          "us_listed": true,
+          "us_release_date": "Jul 21, 2025",
+          "us_release_parsed": "2025-07-21",
+          "us_coming_soon": false,
+          "cn_listed": true,
+          "cn_release_date": "2025 年 7 月 21 日",
+          "cn_release_parsed": "2025-07-21",
+          "match_score": 1.0
+        },
+        "evidence": [
+          "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202610/t20261029_1015044.html",
+          "https://store.steampowered.com/app/3790750/"
+        ],
+        "first_seen": "2026-10-30T16:01:03Z",
+        "last_checked": "2026-10-30"
       }
     }
   }

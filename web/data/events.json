@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T22:30:52Z",
+  "generated_at": "2026-10-30T16:28:18Z",
   "note": "汇总多源上线事件（Steam 商店 > 官网 > 新闻/RSS），每条标注来源；解析不出具体日期的条目不列，不做版本更新。",
   "events": [
     {
@@ -60,6 +60,25 @@
       "alt_dates": []
     },
     {
+      "game_id": "tiny-civilization",
+      "name_cn": "方寸文明",
+      "name_en": "Tiny Civilization",
+      "type": "launch",
+      "date": "2022-12-31",
+      "date_text": "Dec 31, 2022",
+      "store_url": "https://store.steampowered.com/app/2230280/",
+      "sources": [
+        {
+          "type": "steam",
+          "name": "Steam 商店",
+          "url": "https://store.steampowered.com/app/2230280/"
+        }
+      ],
+      "origin": "current",
+      "first_seen": null,
+      "alt_dates": []
+    },
+    {
       "game_id": "brotato",
       "name_cn": "土豆兄弟",
       "name_en": "Brotato",
@@ -91,6 +110,25 @@
           "type": "steam",
           "name": "Steam 商店",
           "url": "https://store.steampowered.com/app/2668080/"
+        }
+      ],
+      "origin": "current",
+      "first_seen": null,
+      "alt_dates": []
+    },
+    {
+      "game_id": "go-fight-fantastic",
+      "name_cn": "奇妙大作战",
+      "name_en": "Go Fight Fantastic",
+      "type": "launch",
+      "date": "2024-03-26",
+      "date_text": "Mar 26, 2024",
+      "store_url": "https://store.steampowered.com/app/1183530/",
+      "sources": [
+        {
+          "type": "steam",
+          "name": "Steam 商店",
+          "url": "https://store.steampowered.com/app/1183530/"
         }
       ],
       "origin": "current",
@@ -174,6 +212,44 @@
       "alt_dates": []
     },
     {
+      "game_id": "steam-3839930",
+      "name_cn": "三国群英录",
+      "name_en": "",
+      "type": "launch",
+      "date": "2025-07-17",
+      "date_text": "Jul 17, 2025",
+      "store_url": "https://store.steampowered.com/app/3839930/",
+      "sources": [
+        {
+          "type": "steam",
+          "name": "Steam 商店",
+          "url": "https://store.steampowered.com/app/3839930/"
+        }
+      ],
+      "origin": "current",
+      "first_seen": null,
+      "alt_dates": []
+    },
+    {
+      "game_id": "the-brave-never-alone",
+      "name_cn": "勇者不孤单",
+      "name_en": "The Brave Never Alone",
+      "type": "launch",
+      "date": "2025-07-21",
+      "date_text": "Jul 21, 2025",
+      "store_url": "https://store.steampowered.com/app/3790750/",
+      "sources": [
+        {
+          "type": "steam",
+          "name": "Steam 商店",
+          "url": "https://store.steampowered.com/app/3790750/"
+        }
+      ],
+      "origin": "current",
+      "first_seen": null,
+      "alt_dates": []
+    },
+    {
       "game_id": "day-of-the-shell",
       "name_cn": "孤岛猎神",
       "name_en": "Day of the Shell",
@@ -231,20 +307,6 @@
           "url": "https://blog.playstation.com/2026/10/27/where-winds-meets-climactic-hutuo-battlefield-narrative-arc-revealed-out-nov-13/",
           "title": "Where Winds Meet’s climactic Hutuo Battlefield narrative arc revealed, out Nov 13",
           "market": "intl"
-        },
-        {
-          "type": "search",
-          "name": "千龙网",
-          "url": "https://baijiahao.baidu.com/s?id=1879728086023040171&wfr=spider&for=pc",
-          "title": "网易云音乐独家首发DOUDOU《燕云十六声》未央城宣传曲《宝船》",
-          "market": "cn"
-        },
-        {
-          "type": "search",
-          "name": "ZAKER",
-          "url": "https://app.myzaker.com/news/article.php?pk=6ae1d8fcb15ec02e4e6e050c",
-          "title": "网易《燕云十六声》销量突破1000万份",
-          "market": "cn"
         }
       ],
       "origin": "current",
@@ -253,14 +315,6 @@
         {
           "date": "2026-11-13",
           "date_text": "November 13"
-        },
-        {
-          "date": "2026-10-23",
-          "date_text": "10月23日"
-        },
-        {
-          "date": "2026-10-28",
-          "date_text": "2026 年 10 月 28 日"
         }
       ]
     },
@@ -284,6 +338,44 @@
       "alt_dates": []
     },
     {
+      "game_id": "kotama-and-academy-citadel",
+      "name_cn": "少女与学院城",
+      "name_en": "Kotama and Academy Citadel",
+      "type": "launch",
+      "date": "2026-01-14",
+      "date_text": "Jan 14, 2026",
+      "store_url": "https://store.steampowered.com/app/3639650/",
+      "sources": [
+        {
+          "type": "steam",
+          "name": "Steam 商店",
+          "url": "https://store.steampowered.com/app/3639650/"
+        }
+      ],
+      "origin": "current",
+      "first_seen": null,
+      "alt_dates": []
+    },
+    {
+      "game_id": "danmo-three-kingdoms-battle-of-wits",
+      "name_cn": "丹墨三国：弈",
+      "name_en": "Danmo Three Kingdoms: Battle of Wits",
+      "type": "launch",
+      "date": "2026-01-26",
+      "date_text": "Jan 26, 2026",
+      "store_url": "https://store.steampowered.com/app/3905040/",
+      "sources": [
+        {
+          "type": "steam",
+          "name": "Steam 商店",
+          "url": "https://store.steampowered.com/app/3905040/"
+        }
+      ],
+      "origin": "current",
+      "first_seen": null,
+      "alt_dates": []
+    },
+    {
       "game_id": "legend-of-mortal-cultivation",
       "name_cn": "凡人修仙传奇",
       "name_en": "Legend of Mortal Cultivation",
@@ -296,6 +388,44 @@
           "type": "steam",
           "name": "Steam 商店",
           "url": "https://store.steampowered.com/app/3814570/"
+        }
+      ],
+      "origin": "current",
+      "first_seen": null,
+      "alt_dates": []
+    },
+    {
+      "game_id": "skewer-squad",
+      "name_cn": "别拽了！烤串师傅",
+      "name_en": "Skewer Squad",
+      "type": "launch",
+      "date": "2026-02-01",
+      "date_text": "Feb 1, 2026",
+      "store_url": "https://store.steampowered.com/app/3926160/",
+      "sources": [
+        {
+          "type": "steam",
+          "name": "Steam 商店",
+          "url": "https://store.steampowered.com/app/3926160/"
+        }
+      ],
+      "origin": "current",
+      "first_seen": null,
+      "alt_dates": []
+    },
+    {
+      "game_id": "box-bakery",
+      "name_cn": "盒子面包坊",
+      "name_en": "Box Bakery",
+      "type": "launch",
+      "date": "2026-03-05",
+      "date_text": "Mar 5, 2026",
+      "store_url": "https://store.steampowered.com/app/2942950/",
+      "sources": [
+        {
+          "type": "steam",
+          "name": "Steam 商店",
+          "url": "https://store.steampowered.com/app/2942950/"
         }
       ],
       "origin": "current",
@@ -489,9 +619,9 @@
         },
         {
           "type": "search",
-          "name": "游民星空",
-          "url": "https://www.gamersky.com/news/202610/2235963.shtml",
-          "title": "权重媒体仅给60分!《影之刃零》真的差吗?",
+          "name": "每日经济新闻",
+          "url": "https://baijiahao.baidu.com/s?id=1880374060009111735&wfr=spider&for=pc",
+          "title": "国产新作《影之刃零》发售登顶全球畅销榜!评分超《黑神话:悟空...",
           "market": "cn"
         }
       ],
@@ -520,6 +650,46 @@
         }
       ],
       "origin": "official",
+      "first_seen": null,
+      "alt_dates": []
+    },
+    {
+      "game_id": "heroes-duel",
+      "name_cn": "英雄对决",
+      "name_en": "Heroes Duel",
+      "type": "launch",
+      "date": "2026-10-31",
+      "date_text": "Oct 31, 2026",
+      "store_url": "https://store.steampowered.com/app/5207740/",
+      "sources": [
+        {
+          "type": "steam",
+          "name": "Steam 商店",
+          "url": "https://store.steampowered.com/app/5207740/"
+        }
+      ],
+      "origin": "current",
+      "first_seen": null,
+      "alt_dates": []
+    },
+    {
+      "game_id": "sanctum-whispers-of-qingcheng",
+      "name_cn": "下一站青城",
+      "name_en": "Sanctum:Whispers of Qingcheng",
+      "type": "launch",
+      "date": "2026-11-04",
+      "date_text": "2026 年 11 月 4 日",
+      "store_url": "https://store.steampowered.com/app/3638680/",
+      "sources": [
+        {
+          "type": "news",
+          "name": "Steam 公告",
+          "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1847286114029029",
+          "title": "《下一站青城》青城×江湖×蜀山五作联动",
+          "market": "intl"
+        }
+      ],
+      "origin": "news",
       "first_seen": null,
       "alt_dates": []
     },
@@ -555,9 +725,9 @@
       "sources": [
         {
           "type": "rss",
-          "name": "游研社",
-          "url": "https://www.yystv.cn/p/14545",
-          "title": "专访蛮啾新游团队：《蓝色星原》，就是要给玩家最纯粹的二次元体验",
+          "name": "游戏陀螺",
+          "url": "https://www.youxituoluo.com/534995.html",
+          "title": "腾讯曝新游，叠纸造机器人，京东搞游戏 | 陀螺周报",
           "market": "cn"
         }
       ],
