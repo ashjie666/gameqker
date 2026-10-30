@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-31",
-  "generated_at_utc": "2026-10-30T16:21:28Z",
+  "generated_at": "2026-10-30",
+  "generated_at_utc": "2026-10-30T16:43:36Z",
   "source": {
     "name": "Steam 美区新作（支持简中）× 国家新闻出版署 · 国产网络游戏审批信息",
     "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/",
@@ -19,9 +19,9 @@
     }
   ],
   "stats": {
-    "steam_listed": 164,
+    "steam_listed": 490,
     "nppa_games": 2500,
-    "nppa_matched": 0,
+    "nppa_matched": 1,
     "evaluated": 0,
     "matched": 0,
     "skipped_budget": 0,
