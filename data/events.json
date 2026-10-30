@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T16:48:11Z",
+  "generated_at": "2026-10-30T22:29:54Z",
   "note": "汇总多源上线事件（Steam 商店 > 官网 > 新闻/RSS），每条标注来源；解析不出具体日期的条目不列，不做版本更新。",
   "events": [
     {
@@ -302,13 +302,6 @@
           "url": "https://store.steampowered.com/app/3564740/"
         },
         {
-          "type": "rss",
-          "name": "PlayStation Blog",
-          "url": "https://blog.playstation.com/2026/10/27/where-winds-meets-climactic-hutuo-battlefield-narrative-arc-revealed-out-nov-13/",
-          "title": "Where Winds Meet’s climactic Hutuo Battlefield narrative arc revealed, out Nov 13",
-          "market": "intl"
-        },
-        {
           "type": "search",
           "name": "界面新闻",
           "url": "https://m.jiemian.com/article/15221036.html",
@@ -319,10 +312,6 @@
       "origin": "current",
       "first_seen": null,
       "alt_dates": [
-        {
-          "date": "2026-11-13",
-          "date_text": "November 13"
-        },
         {
           "date": "2026-10-23",
           "date_text": "10月23日"

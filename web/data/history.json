@@ -58,8 +58,8 @@
       },
       {
         "date": "2026-10-30",
-        "source": "signal",
-        "value": 1
+        "source": "trends",
+        "value": 85
       }
     ],
     "where-winds-meet": [
@@ -120,8 +120,8 @@
       },
       {
         "date": "2026-10-30",
-        "source": "signal",
-        "value": 3
+        "source": "trends",
+        "value": 0
       }
     ],
     "lord-of-mysteries": [
@@ -183,7 +183,7 @@
       {
         "date": "2026-10-30",
         "source": "trends",
-        "value": 0
+        "value": 60
       }
     ],
     "world-of-jade-dynasty": [
@@ -493,7 +493,7 @@
       {
         "date": "2026-10-30",
         "source": "trends",
-        "value": 52
+        "value": 45
       }
     ],
     "wang-yue": [
@@ -770,7 +770,7 @@
       {
         "date": "2026-10-30",
         "source": "trends",
-        "value": 0
+        "value": 6
       }
     ],
     "girls-frontline-2": [
@@ -791,7 +791,7 @@
       },
       {
         "date": "2026-10-30",
-        "source": "trends",
+        "source": "signal",
         "value": 0
       }
     ],
@@ -814,7 +814,7 @@
       {
         "date": "2026-10-30",
         "source": "trends",
-        "value": 25
+        "value": 29
       }
     ],
     "delta-force": [
@@ -835,8 +835,8 @@
       },
       {
         "date": "2026-10-30",
-        "source": "signal",
-        "value": 2
+        "source": "trends",
+        "value": 42
       }
     ],
     "tower-of-fantasy": [
@@ -880,7 +880,7 @@
       {
         "date": "2026-10-30",
         "source": "trends",
-        "value": 21
+        "value": 26
       }
     ],
     "wuthering-waves": [
@@ -902,7 +902,7 @@
       {
         "date": "2026-10-30",
         "source": "trends",
-        "value": 17
+        "value": 18
       }
     ],
     "infinity-nikki": [
@@ -924,7 +924,7 @@
       {
         "date": "2026-10-30",
         "source": "trends",
-        "value": 51
+        "value": 94
       }
     ],
     "mecha-break": [
@@ -990,7 +990,7 @@
       {
         "date": "2026-10-30",
         "source": "trends",
-        "value": 45
+        "value": 48
       }
     ],
     "punishing-gray-raven": [
@@ -1012,7 +1012,7 @@
       {
         "date": "2026-10-30",
         "source": "trends",
-        "value": 0
+        "value": 42
       }
     ],
     "azur-lane": [
@@ -1034,7 +1034,7 @@
       {
         "date": "2026-10-30",
         "source": "trends",
-        "value": 34
+        "value": 11
       }
     ],
     "sword-of-convallaria": [
@@ -1056,7 +1056,7 @@
       {
         "date": "2026-10-30",
         "source": "trends",
-        "value": 16
+        "value": 11
       }
     ],
     "justice-online-mobile": [
@@ -1122,7 +1122,7 @@
       {
         "date": "2026-10-30",
         "source": "trends",
-        "value": 15
+        "value": 14
       }
     ],
     "honkai-star-rail": [
@@ -1144,7 +1144,7 @@
       {
         "date": "2026-10-30",
         "source": "trends",
-        "value": 41
+        "value": 47
       }
     ],
     "snowbreak": [
@@ -1166,7 +1166,7 @@
       {
         "date": "2026-10-30",
         "source": "trends",
-        "value": 91
+        "value": 0
       }
     ],
     "beyond-the-world": [
@@ -1254,7 +1254,7 @@
       {
         "date": "2026-10-30",
         "source": "trends",
-        "value": 22
+        "value": 33
       }
     ],
     "aniimo": [
@@ -1276,7 +1276,7 @@
       {
         "date": "2026-10-30",
         "source": "trends",
-        "value": 26
+        "value": 27
       }
     ],
     "one-way-tickets": [
@@ -1297,8 +1297,8 @@
       },
       {
         "date": "2026-10-30",
-        "source": "signal",
-        "value": 1
+        "source": "trends",
+        "value": 0
       }
     ],
     "tomb-busters": [
@@ -1341,7 +1341,7 @@
       },
       {
         "date": "2026-10-30",
-        "source": "trends",
+        "source": "signal",
         "value": 0
       }
     ],
@@ -1407,7 +1407,7 @@
       },
       {
         "date": "2026-10-30",
-        "source": "trends",
+        "source": "signal",
         "value": 0
       }
     ],
