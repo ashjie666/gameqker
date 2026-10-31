@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T22:29:54Z",
+  "generated_at": "2026-10-31T17:35:02Z",
   "note": "汇总多源上线事件（Steam 商店 > 官网 > 新闻/RSS），每条标注来源；解析不出具体日期的条目不列，不做版本更新。",
   "events": [
     {
@@ -303,9 +303,9 @@
         },
         {
           "type": "search",
-          "name": "界面新闻",
-          "url": "https://m.jiemian.com/article/15221036.html",
-          "title": "网易云音乐独家首发DOUDOU《宝船》 唱尽《燕云十六声》未央城奇境...",
+          "name": "ZAKER",
+          "url": "https://app.myzaker.com/news/article.php?pk=6ae1d8fcb15ec02e4e6e050c",
+          "title": "网易《燕云十六声》销量突破1000万份",
           "market": "cn"
         }
       ],
@@ -313,8 +313,8 @@
       "first_seen": null,
       "alt_dates": [
         {
-          "date": "2026-10-23",
-          "date_text": "10月23日"
+          "date": "2026-10-28",
+          "date_text": "2026 年 10 月 28 日"
         }
       ]
     },
@@ -619,9 +619,9 @@
         },
         {
           "type": "search",
-          "name": "每日经济新闻",
-          "url": "https://baijiahao.baidu.com/s?id=1880374060009111735&wfr=spider&for=pc",
-          "title": "国产新作《影之刃零》发售登顶全球畅销榜!评分超《黑神话:悟空...",
+          "name": "观察者网",
+          "url": "https://baijiahao.baidu.com/s?id=1880369969772466448&wfr=spider&for=pc",
+          "title": "挥刃破局!国产3A武侠动作游戏《影之刃零》正式发售!",
           "market": "cn"
         }
       ],
@@ -728,6 +728,27 @@
           "name": "游戏陀螺",
           "url": "https://www.youxituoluo.com/534995.html",
           "title": "腾讯曝新游，叠纸造机器人，京东搞游戏 | 陀螺周报",
+          "market": "cn"
+        }
+      ],
+      "origin": "news",
+      "first_seen": null,
+      "alt_dates": []
+    },
+    {
+      "game_id": "silver-palace",
+      "name_cn": "白银之城",
+      "name_en": "Silver Palace",
+      "type": "launch",
+      "date": "2026-12-14",
+      "date_text": "2026年12月14日",
+      "store_url": null,
+      "sources": [
+        {
+          "type": "rss",
+          "name": "机核",
+          "url": "https://www.gcores.com/articles/221736",
+          "title": "《白银之城》官宣定档12月14日，全球同步上线",
           "market": "cn"
         }
       ],
