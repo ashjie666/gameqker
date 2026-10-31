@@ -4896,6 +4896,72 @@
       "auto_imported": true,
       "auto_imported_at": "2026-10-31",
       "global_launch_at": "2026-03-05"
+    },
+    {
+      "id": "silver-palace",
+      "name_cn": "白银之城",
+      "name_en": "Silver Palace",
+      "developer": "上海乐元素世界科技（乐元素；海外发行 Elementa）",
+      "genre": "大世界动作 RPG（虚幻5 · 侦探冒险）",
+      "priority": 8,
+      "platforms": [
+        "PC",
+        "主机",
+        "移动端"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "全球（PC / PS5 / iOS / Android）"
+      ],
+      "global_launch_at": "2026-12-14",
+      "cn_status": "2025-12-24 获国服版号；2026-12-14 全球公测，国服同期开服",
+      "global_status": "2026-12-14 全球公测：PC（Epic Games Store）/ PS5 / iOS / Android，海外由 Elementa 发行",
+      "overseas_heat": "极高 · 全球预约突破 1500 万，参展 gamescom asia、泰国 TGS、韩国 Anime X Game 2026",
+      "overseas_heat_checked": "2026-11-01",
+      "gap_window": "无落差：全球同步公测，国服与国际服同日开服",
+      "target_markets": [
+        "欧美/日本开放世界 RPG 玩家",
+        "移动 + 主机跨平台用户"
+      ],
+      "keywords": [
+        "silver palace guide",
+        "白银之城 攻略",
+        "silver palace tier list"
+      ],
+      "content_opportunities": [
+        "开服养成路线",
+        "侦探解谜流程",
+        "角色强度与配队"
+      ],
+      "monetization_level": "中高",
+      "monetization": "免费 + 角色抽卡，按开放世界二游常见结构；未开服，无付费实测数据",
+      "risks": [
+        "全球同步上线，没有先发窗口，攻略只能拼质量与速度",
+        "未开服，所有玩法/数值结论待验证，过早产出易被版本推翻",
+        "海外由 Elementa 独立发行，英文侧社区与内容生态将快速铺开",
+        "PC 端走 Epic Games Store，Steam 侧暂无可跟踪页面"
+      ],
+      "guide_cn": "低 · 未开服，国服只有预约期玩法前瞻与展会试玩",
+      "guide_intl": "低 · 海外同样未开服，仅英文媒体前瞻与展会试玩",
+      "version_compare": "同步",
+      "version_note": "官方明确全球同步公测，国服与国际服同日开服",
+      "content_parity": "unknown",
+      "content_note": "未开服，无同版本可比；官方称全球同一版本上线，待开服后核",
+      "watch": {
+        "steam_appid": null,
+        "official": null
+      },
+      "steam_listed": null,
+      "steam_release_date": null,
+      "last_checked": null,
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://m.3dmgame.com/news/202610/3958500.html",
+        "http://news.17173.com/content/10312026/123001317.shtml",
+        "https://noisypixel.net/author/orpheus-joshua/",
+        "https://www.taptap.cn/app/754910/topic?os=ios"
+      ]
     }
   ],
   "last_run_at": "2026-10-30T22:24:59Z"
