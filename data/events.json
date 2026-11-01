@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T22:27:15Z",
+  "generated_at": "2026-11-01T22:28:00Z",
   "note": "汇总多源上线事件（Steam 商店 > 官网 > 新闻/RSS），每条标注来源；解析不出具体日期的条目不列，不做版本更新。",
   "events": [
     {
@@ -623,6 +623,13 @@
           "url": "https://baijiahao.baidu.com/s?id=1880369969772466448&wfr=spider&for=pc",
           "title": "挥刃破局!国产3A武侠动作游戏《影之刃零》正式发售!",
           "market": "cn"
+        },
+        {
+          "type": "search",
+          "name": "快科技",
+          "url": "https://baijiahao.baidu.com/s?id=1880167134245387227&wfr=spider&for=pc",
+          "title": "国产3A《影之刃零》正式开启预下载:发售倒计时2天!",
+          "market": "cn"
         }
       ],
       "origin": "current",
@@ -631,6 +638,10 @@
         {
           "date": "2026-10-29",
           "date_text": "10月29日"
+        },
+        {
+          "date": "2026-10-27",
+          "date_text": "10月27日"
         }
       ]
     },
@@ -668,8 +679,8 @@
           "url": "https://store.steampowered.com/app/5207740/"
         }
       ],
-      "origin": "current",
-      "first_seen": null,
+      "origin": "history",
+      "first_seen": "2026-10-31",
       "alt_dates": []
     },
     {
