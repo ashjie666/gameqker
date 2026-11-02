@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-01",
-  "generated_at_utc": "2026-11-01T22:23:36Z",
+  "generated_at": "2026-11-02",
+  "generated_at_utc": "2026-11-02T22:29:42Z",
   "source": {
     "name": "Steam 美区新作（支持简中）× 国家新闻出版署 · 国产网络游戏审批信息",
     "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/",
@@ -19,15 +19,89 @@
     }
   ],
   "stats": {
-    "steam_listed": 503,
+    "steam_listed": 536,
     "nppa_games": 2500,
-    "nppa_matched": 0,
-    "evaluated": 0,
-    "matched": 0,
+    "nppa_matched": 1,
+    "evaluated": 1,
+    "matched": 1,
     "skipped_budget": 0,
     "deferred": 0
   },
   "candidates": [
+    {
+      "origin": "domestic",
+      "name_cn": "遮天：帝路争锋",
+      "name_en": "遮天：帝路争锋",
+      "appid": 5237060,
+      "gap_type": "cn_first",
+      "gap_days": 285,
+      "advantages": [
+        "cn_first"
+      ],
+      "note": "国服版号早于 Steam 美区定档",
+      "timeline": {
+        "cn": {
+          "date": "2026-11-04",
+          "basis": "preorder",
+          "estimated": false,
+          "source": "Steam 商店（国服）",
+          "url": "https://store.steampowered.com/app/5237060/"
+        },
+        "intl": {
+          "date": "2026-11-04",
+          "basis": "preorder",
+          "estimated": false,
+          "source": "Steam 商店（国际服）",
+          "url": "https://store.steampowered.com/app/5237060/"
+        }
+      },
+      "stage": {
+        "cn": "preorder",
+        "os": "preorder",
+        "cn_release": "2026-11-04",
+        "os_release": "2026-11-04"
+      },
+      "version": {
+        "cn": null,
+        "cn_source": null,
+        "cn_url": null,
+        "steam": null,
+        "source": null,
+        "ahead": false
+      },
+      "guides": {
+        "cn": 50,
+        "intl": 417,
+        "ratio": 0.1,
+        "advantage": false
+      },
+      "playtest_os": false,
+      "nppa": {
+        "approved_at": "2026-01-23",
+        "publisher": "北京闪联互动网络科技有限责任公司",
+        "operator": "山西特迪瑞网络科技有限公司",
+        "approval_no": "国新出审〔2026〕257号",
+        "batch": "2026年1月份国产网络游戏审批信息",
+        "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202601/t20260126_947903.html"
+      },
+      "steam": {
+        "store_url": "https://store.steampowered.com/app/5237060/",
+        "us_listed": true,
+        "us_release_date": "Nov 4, 2026",
+        "us_release_parsed": "2026-11-04",
+        "us_coming_soon": true,
+        "cn_listed": true,
+        "cn_release_date": "2026 年 11 月 4 日",
+        "cn_release_parsed": "2026-11-04",
+        "match_score": 1.0
+      },
+      "evidence": [
+        "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202601/t20260126_947903.html",
+        "https://store.steampowered.com/app/5237060/"
+      ],
+      "first_seen": "2026-11-02T22:29:42Z",
+      "last_checked": "2026-11-02"
+    },
     {
       "origin": "domestic",
       "name_cn": "影之刃零",
