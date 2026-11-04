@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T22:33:36Z",
+  "generated_at": "2026-11-04T22:39:47Z",
   "note": "汇总多源上线事件（Steam 商店 > 官网 > 新闻/RSS），每条标注来源；解析不出具体日期的条目不列，不做版本更新。",
   "events": [
     {
@@ -303,16 +303,16 @@
         },
         {
           "type": "search",
-          "name": "游民星空",
-          "url": "https://www.gamersky.com/news/202611/2239919.shtml",
-          "title": "国内首款DLSS5游戏来了!《燕云十六声》11月24日正式上线DLSS5",
+          "name": "每日经济新闻",
+          "url": "https://baijiahao.baidu.com/s?id=1880879957486298948&wfr=spider&for=pc",
+          "title": "《燕云十六声》将接入英伟达DLSS 5;《无主之地》系列累计销量突破...",
           "market": "cn"
         },
         {
           "type": "search",
-          "name": "ZAKER",
-          "url": "https://app.myzaker.com/news/article.php?pk=6ae1d8fcb15ec02e4e6e050c",
-          "title": "网易《燕云十六声》销量突破1000万份",
+          "name": "上海证券报·中国证券网",
+          "url": "https://www.cnstock.com/commonDetail/823767",
+          "title": "《燕云十六声》:11月24日接入英伟达DLSS 5技术并全球上线",
           "market": "cn"
         }
       ],
@@ -324,8 +324,8 @@
           "date_text": "11月24日"
         },
         {
-          "date": "2026-10-28",
-          "date_text": "2026 年 10 月 28 日"
+          "date": "2026-11-04",
+          "date_text": "11月4日"
         }
       ]
     },
@@ -641,6 +641,13 @@
           "url": "https://baijiahao.baidu.com/s?id=1880739891952743013&wfr=spider&for=pc",
           "title": "《影之刃零》发售后 72 小时销量突破 400 万",
           "market": "cn"
+        },
+        {
+          "type": "search",
+          "name": "齐鲁壹点",
+          "url": "https://baijiahao.baidu.com/s?id=1880715184497756519&wfr=spider&for=pc",
+          "title": "国产武侠3A游戏《影之刃零》72小时销量突破400万,热度持续攀升",
+          "market": "cn"
         }
       ],
       "origin": "current",
@@ -653,27 +660,12 @@
         {
           "date": "2026-11-02",
           "date_text": "11月2日"
+        },
+        {
+          "date": "2026-10-29",
+          "date_text": "2026年10月29日"
         }
       ]
-    },
-    {
-      "game_id": "world-of-jade-dynasty",
-      "name_cn": "诛仙世界",
-      "name_en": "World of Jade Dynasty",
-      "type": "launch",
-      "date": "2026-10-29",
-      "date_text": "2026年10月29日",
-      "store_url": "https://store.steampowered.com/app/3384260/",
-      "sources": [
-        {
-          "type": "official",
-          "name": "诛仙世界官网",
-          "url": "https://zx.wanmei.com/news/"
-        }
-      ],
-      "origin": "official",
-      "first_seen": null,
-      "alt_dates": []
     },
     {
       "game_id": "heroes-duel",
@@ -769,27 +761,6 @@
           "name": "游戏陀螺",
           "url": "https://www.youxituoluo.com/534990.html",
           "title": "《杖剑传说》16个月流水破48亿元，卢竑岩：我们不赛马，只养马群​",
-          "market": "cn"
-        }
-      ],
-      "origin": "news",
-      "first_seen": null,
-      "alt_dates": []
-    },
-    {
-      "game_id": "arknights",
-      "name_cn": "明日方舟",
-      "name_en": "Arknights",
-      "type": "launch",
-      "date": "2026-11-17",
-      "date_text": "11月17日",
-      "store_url": null,
-      "sources": [
-        {
-          "type": "rss",
-          "name": "机核",
-          "url": "https://www.gcores.com/articles/221843",
-          "title": "硬核音游《韵律源点Arcaea》国服现已上线",
           "market": "cn"
         }
       ],
