@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T22:39:47Z",
+  "generated_at": "2026-11-05T22:38:59Z",
   "note": "汇总多源上线事件（Steam 商店 > 官网 > 新闻/RSS），每条标注来源；解析不出具体日期的条目不列，不做版本更新。",
   "events": [
     {
@@ -303,16 +303,16 @@
         },
         {
           "type": "search",
-          "name": "每日经济新闻",
-          "url": "https://baijiahao.baidu.com/s?id=1880879957486298948&wfr=spider&for=pc",
-          "title": "《燕云十六声》将接入英伟达DLSS 5;《无主之地》系列累计销量突破...",
+          "name": "同花顺财经",
+          "url": "https://field.10jqka.com.cn/20261104/c681458318.shtml",
+          "title": "《燕云十六声》:11月24日接入英伟达DLSS 5技术并全球上线",
           "market": "cn"
         },
         {
           "type": "search",
-          "name": "上海证券报·中国证券网",
-          "url": "https://www.cnstock.com/commonDetail/823767",
-          "title": "《燕云十六声》:11月24日接入英伟达DLSS 5技术并全球上线",
+          "name": "每日经济新闻",
+          "url": "https://baijiahao.baidu.com/s?id=1880879957486298948&wfr=spider&for=pc",
+          "title": "《燕云十六声》将接入英伟达DLSS 5;《无主之地》系列累计销量突破...",
           "market": "cn"
         }
       ],
@@ -320,12 +320,12 @@
       "first_seen": null,
       "alt_dates": [
         {
-          "date": "2026-11-24",
-          "date_text": "11月24日"
-        },
-        {
           "date": "2026-11-04",
           "date_text": "11月4日"
+        },
+        {
+          "date": "2026-11-24",
+          "date_text": "11月24日"
         }
       ]
     },
@@ -644,9 +644,9 @@
         },
         {
           "type": "search",
-          "name": "齐鲁壹点",
-          "url": "https://baijiahao.baidu.com/s?id=1880715184497756519&wfr=spider&for=pc",
-          "title": "国产武侠3A游戏《影之刃零》72小时销量突破400万,热度持续攀升",
+          "name": "北青网",
+          "url": "https://baijiahao.baidu.com/s?id=1880353392926018470&wfr=spider&for=pc",
+          "title": "《影之刃零》正式发售!上咪咕游戏即刻畅享多端武侠世界",
           "market": "cn"
         }
       ],
@@ -663,7 +663,7 @@
         },
         {
           "date": "2026-10-29",
-          "date_text": "2026年10月29日"
+          "date_text": "10月29日"
         }
       ]
     },
@@ -687,19 +687,19 @@
       "alt_dates": []
     },
     {
-      "game_id": "daba-land-of-watermarks",
-      "name_cn": "达巴：水痕之地",
-      "name_en": "Daba: Land of Watermarks",
+      "game_id": "lord-of-mysteries",
+      "name_cn": "诡秘之主",
+      "name_en": "Lord of Mysteries",
       "type": "launch",
-      "date": "2026-11-03",
-      "date_text": "2026年11月3日",
-      "store_url": "https://store.steampowered.com/app/4810160/",
+      "date": "2026-11-02",
+      "date_text": "2026年11月2日",
+      "store_url": null,
       "sources": [
         {
-          "type": "rss",
-          "name": "机核",
-          "url": "https://www.gcores.com/articles/221889",
-          "title": "“中国之星计划”第四期新增多家战略合作伙伴，单项目将获价值百万美元投资",
+          "type": "search",
+          "name": "北青网",
+          "url": "https://baijiahao.baidu.com/s?id=1880998282068756654&wfr=spider&for=pc",
+          "title": "首发揭秘:近3000亿的游戏IP市场,超8成玩家都在为什么买单?",
           "market": "cn"
         }
       ],
@@ -743,8 +743,8 @@
           "url": "https://store.steampowered.com/app/5237060/"
         }
       ],
-      "origin": "current",
-      "first_seen": null,
+      "origin": "history",
+      "first_seen": "2026-11-02",
       "alt_dates": []
     },
     {
