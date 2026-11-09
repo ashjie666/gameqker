@@ -333,7 +333,7 @@
       {
         "date": "2026-11-09",
         "source": "trends",
-        "value": 0
+        "value": 52
       }
     ],
     "world-of-jade-dynasty": [
@@ -668,8 +668,8 @@
       },
       {
         "date": "2026-11-09",
-        "source": "signal",
-        "value": 3
+        "source": "trends",
+        "value": 100
       }
     ],
     "legend-of-mortal-cultivation": [
@@ -893,7 +893,7 @@
       {
         "date": "2026-11-09",
         "source": "trends",
-        "value": 36
+        "value": 38
       }
     ],
     "wang-yue": [
@@ -1347,8 +1347,8 @@
       },
       {
         "date": "2026-11-09",
-        "source": "trends",
-        "value": 100
+        "source": "signal",
+        "value": 1
       }
     ],
     "arena-breakout": [
@@ -1564,7 +1564,7 @@
       {
         "date": "2026-11-09",
         "source": "trends",
-        "value": 55
+        "value": 60
       }
     ],
     "delta-force": [
@@ -1636,7 +1636,7 @@
       {
         "date": "2026-11-09",
         "source": "trends",
-        "value": 10
+        "value": 9
       }
     ],
     "tower-of-fantasy": [
@@ -1707,8 +1707,8 @@
       },
       {
         "date": "2026-11-09",
-        "source": "signal",
-        "value": 0
+        "source": "trends",
+        "value": 100
       }
     ],
     "zenless-zone-zero": [
@@ -1780,7 +1780,7 @@
       {
         "date": "2026-11-09",
         "source": "trends",
-        "value": 29
+        "value": 30
       }
     ],
     "wuthering-waves": [
@@ -1852,7 +1852,7 @@
       {
         "date": "2026-11-09",
         "source": "trends",
-        "value": 41
+        "value": 38
       }
     ],
     "infinity-nikki": [
@@ -1924,7 +1924,7 @@
       {
         "date": "2026-11-09",
         "source": "trends",
-        "value": 48
+        "value": 68
       }
     ],
     "mecha-break": [
@@ -2140,7 +2140,7 @@
       {
         "date": "2026-11-09",
         "source": "trends",
-        "value": 34
+        "value": 32
       }
     ],
     "punishing-gray-raven": [
@@ -2212,7 +2212,7 @@
       {
         "date": "2026-11-09",
         "source": "trends",
-        "value": 43
+        "value": 49
       }
     ],
     "azur-lane": [
@@ -2284,7 +2284,7 @@
       {
         "date": "2026-11-09",
         "source": "trends",
-        "value": 50
+        "value": 51
       }
     ],
     "sword-of-convallaria": [
@@ -2356,7 +2356,7 @@
       {
         "date": "2026-11-09",
         "source": "trends",
-        "value": 34
+        "value": 75
       }
     ],
     "justice-online-mobile": [
@@ -2644,7 +2644,7 @@
       {
         "date": "2026-11-09",
         "source": "trends",
-        "value": 52
+        "value": 53
       }
     ],
     "snowbreak": [
@@ -2716,7 +2716,7 @@
       {
         "date": "2026-11-09",
         "source": "trends",
-        "value": 0
+        "value": 66
       }
     ],
     "beyond-the-world": [
@@ -3004,7 +3004,7 @@
       {
         "date": "2026-11-09",
         "source": "trends",
-        "value": 19
+        "value": 21
       }
     ],
     "aniimo": [
@@ -3076,7 +3076,7 @@
       {
         "date": "2026-11-09",
         "source": "trends",
-        "value": 29
+        "value": 30
       }
     ],
     "one-way-tickets": [
@@ -4400,7 +4400,7 @@
       },
       {
         "date": "2026-11-09",
-        "source": "trends",
+        "source": "signal",
         "value": 0
       }
     ],
@@ -4473,6 +4473,27 @@
         "date": "2026-11-09",
         "source": "signal",
         "value": 0
+      }
+    ],
+    "lost-castle-2": [
+      {
+        "date": "2026-11-09",
+        "source": "signal",
+        "value": 1
+      }
+    ],
+    "showa-american-story": [
+      {
+        "date": "2026-11-09",
+        "source": "signal",
+        "value": 1
+      }
+    ],
+    "sword-and-fairy-world": [
+      {
+        "date": "2026-11-09",
+        "source": "signal",
+        "value": 3
       }
     ]
   },
