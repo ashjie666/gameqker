@@ -4428,7 +4428,10 @@
         }
       ],
       "auto_imported": true,
-      "auto_imported_at": "2026-10-30"
+      "auto_imported_at": "2026-10-30",
+      "platforms": [
+        "PC"
+      ]
     },
     {
       "id": "steam-3839930",
@@ -4484,7 +4487,10 @@
       ],
       "auto_imported": true,
       "auto_imported_at": "2026-10-31",
-      "global_launch_at": "2025-07-17"
+      "global_launch_at": "2025-07-17",
+      "platforms": [
+        "PC"
+      ]
     },
     {
       "id": "sanctum-whispers-of-qingcheng",
@@ -4539,7 +4545,10 @@
         }
       ],
       "auto_imported": true,
-      "auto_imported_at": "2026-10-31"
+      "auto_imported_at": "2026-10-31",
+      "platforms": [
+        "PC"
+      ]
     },
     {
       "id": "danmo-three-kingdoms-battle-of-wits",
@@ -4595,7 +4604,10 @@
       ],
       "auto_imported": true,
       "auto_imported_at": "2026-10-31",
-      "global_launch_at": "2026-01-26"
+      "global_launch_at": "2026-01-26",
+      "platforms": [
+        "PC"
+      ]
     },
     {
       "id": "skewer-squad",
@@ -4651,7 +4663,10 @@
       ],
       "auto_imported": true,
       "auto_imported_at": "2026-10-31",
-      "global_launch_at": "2026-02-01"
+      "global_launch_at": "2026-02-01",
+      "platforms": [
+        "PC"
+      ]
     },
     {
       "id": "the-brave-never-alone",
@@ -4707,7 +4722,10 @@
       ],
       "auto_imported": true,
       "auto_imported_at": "2026-10-31",
-      "global_launch_at": "2025-07-21"
+      "global_launch_at": "2025-07-21",
+      "platforms": [
+        "PC"
+      ]
     },
     {
       "id": "go-fight-fantastic",
@@ -4763,7 +4781,10 @@
       ],
       "auto_imported": true,
       "auto_imported_at": "2026-10-31",
-      "global_launch_at": "2024-03-26"
+      "global_launch_at": "2024-03-26",
+      "platforms": [
+        "PC"
+      ]
     },
     {
       "id": "kotama-and-academy-citadel",
@@ -4819,7 +4840,10 @@
       ],
       "auto_imported": true,
       "auto_imported_at": "2026-10-31",
-      "global_launch_at": "2026-01-14"
+      "global_launch_at": "2026-01-14",
+      "platforms": [
+        "PC"
+      ]
     },
     {
       "id": "tiny-civilization",
@@ -4875,7 +4899,10 @@
       ],
       "auto_imported": true,
       "auto_imported_at": "2026-10-31",
-      "global_launch_at": "2022-12-31"
+      "global_launch_at": "2022-12-31",
+      "platforms": [
+        "PC"
+      ]
     },
     {
       "id": "box-bakery",
@@ -4931,7 +4958,10 @@
       ],
       "auto_imported": true,
       "auto_imported_at": "2026-10-31",
-      "global_launch_at": "2026-03-05"
+      "global_launch_at": "2026-03-05",
+      "platforms": [
+        "PC"
+      ]
     },
     {
       "id": "silver-palace",
@@ -5066,116 +5096,194 @@
       ]
     },
     {
-      "id": "steam-5237060",
-      "name_cn": "遮天：帝路争锋",
-      "name_en": "",
-      "developer": "山西特迪瑞网络科技有限公司",
-      "genre": "待补",
-      "priority": 99,
-      "cn_status": "预约中 · 2026-11-04",
-      "global_status": "预约中 · 2026-11-04",
-      "timeline": {
-        "cn": {
-          "date": "2026-11-04",
-          "basis": "preorder",
-          "estimated": false,
-          "source": "Steam 商店（国服）",
-          "url": "https://store.steampowered.com/app/5237060/"
-        },
-        "intl": {
-          "date": "2026-11-04",
-          "basis": "preorder",
-          "estimated": false,
-          "source": "Steam 商店（国际服）",
-          "url": "https://store.steampowered.com/app/5237060/"
-        }
-      },
-      "global_launch_at": null,
-      "overseas_heat": "待补",
-      "overseas_heat_checked": null,
-      "gap_window": "国服版号早于 Steam 美区定档",
-      "target_markets": [],
-      "keywords": [],
-      "content_opportunities": [],
-      "monetization_level": "待补",
-      "monetization": "待补",
-      "risks": [],
+      "id": "lost-castle-2",
+      "name_cn": "失落城堡2",
+      "name_en": "Lost Castle 2",
+      "developer": "Hunter Studio（猎人工作室）",
+      "genre": "2D 横版 Roguelite 动作",
+      "priority": 6,
+      "platforms": [
+        "PC"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "全球（Steam，自研自发）"
+      ],
+      "global_launch_at": "2026-06-10",
+      "cn_status": "2026-06-10 与全球同步发售（Steam 简中）；2024-07-25 起抢先体验，EA 不计正式上线",
+      "global_status": "2026-06-10 全球正式发售（Steam，含英/日/韩/法/德/俄/西/葡等语言）",
+      "overseas_heat": "中 · Steam 全球发售，承接一代口碑，Roguelite 品类有稳定受众",
+      "overseas_heat_checked": "2026-11-09",
+      "gap_window": "无落差：全球同步发售，同一构建",
+      "target_markets": [
+        "欧美 Roguelite / 横版动作玩家",
+        "日韩独立游戏受众"
+      ],
+      "keywords": [
+        "lost castle 2 guide",
+        "失落城堡2 攻略",
+        "lost castle 2 build"
+      ],
+      "content_opportunities": [
+        "武器与流派搭配",
+        "Boss 打法",
+        "联机开荒路线"
+      ],
+      "monetization_level": "低",
+      "monetization": "买断制（Steam），无内购",
+      "risks": [
+        "买断制独立游戏，攻略变现靠流量而非付费转化",
+        "Roguelite 赛道竞品密集，头部 IP 占据英文攻略位",
+        "全球同版，无先发窗口",
+        "EA 期内容已大量公开，正式版新增量有限"
+      ],
+      "guide_cn": "中 · 一代与 EA 期积累，B 站与 Steam 指南已有存量",
+      "guide_intl": "中 · 英文 Wiki 与 YouTube 攻略随正式版铺开",
+      "version_compare": "同步",
+      "version_note": "全球同步发售，国区与海外同一构建",
+      "content_parity": "same",
+      "content_note": "Steam 全球单版本，国区与海外同构建，内容一致",
       "watch": {
-        "steam_appid": 5237060
+        "steam_appid": 2445690,
+        "official": null
       },
-      "last_checked": null,
       "steam_listed": true,
-      "steam_release_date": "Nov 4, 2026",
+      "steam_release_date": "Jun 10, 2026",
+      "last_checked": null,
       "official_signal": null,
       "changes": [],
       "sources": [
-        {
-          "label": "版号公示",
-          "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202601/t20260126_947903.html"
-        },
-        {
-          "label": "Steam 商店",
-          "url": "https://store.steampowered.com/app/5237060/"
-        }
-      ],
-      "auto_imported": true,
-      "auto_imported_at": "2026-11-09"
+        "https://store.steampowered.com/app/2445690/Lost_Castle_2/",
+        "https://store.steampowered.com/app/2445690/2/?l=tchinese"
+      ]
     },
     {
-      "id": "pocket-legend-inventory-roguelike-deckbuilder",
-      "name_cn": "口袋传奇",
-      "name_en": "Pocket Legend : Inventory Roguelike Deckbuilder",
-      "developer": "上海数龙科技有限公司",
-      "genre": "待补",
-      "priority": 99,
-      "cn_status": "预约中 · 2026-11-10",
-      "global_status": "预约中 · 2026-11-10",
-      "timeline": {
-        "cn": {
-          "date": "2026-11-10",
-          "basis": "preorder",
-          "estimated": false,
-          "source": "Steam 商店（国服）",
-          "url": "https://store.steampowered.com/app/3129790/"
-        },
-        "intl": {
-          "date": "2026-11-10",
-          "basis": "preorder",
-          "estimated": false,
-          "source": "Steam 商店（国际服）",
-          "url": "https://store.steampowered.com/app/3129790/"
-        }
-      },
+      "id": "showa-american-story",
+      "name_cn": "昭和米国物语",
+      "name_en": "Showa American Story",
+      "developer": "NEKCOM Entertainment（铃空游戏）",
+      "genre": "动作冒险 RPG（买断制）",
+      "priority": 7,
+      "platforms": [
+        "PC",
+        "主机"
+      ],
+      "overseas_verified": true,
+      "overseas_channels": [
+        "全球（4Divinity 发行）",
+        "亚洲（2P Games，日本除外）"
+      ],
       "global_launch_at": null,
-      "overseas_heat": "待补",
-      "overseas_heat_checked": null,
-      "gap_window": "国服版号早于 Steam 美区定档",
-      "target_markets": [],
-      "keywords": [],
-      "content_opportunities": [],
-      "monetization_level": "待补",
-      "monetization": "待补",
-      "risks": [],
+      "cn_status": "国服 2026 年内发售（未定具体日），PC / PS5",
+      "global_status": "2026 年全球发售：Steam 全球页 + PS5，4Divinity 全球发行、2P Games 负责亚洲（日本除外）",
+      "overseas_heat": "中高 · 「昭和美国」世界观在海外社媒自带话题，AUTOMATON 等外媒持续跟进",
+      "overseas_heat_checked": "2026-11-09",
+      "gap_window": "无落差：全球同期发售，国区与海外同版",
+      "target_markets": [
+        "欧美 B 级片 / 亚文化受众",
+        "日式动作冒险玩家"
+      ],
+      "keywords": [
+        "showa american story guide",
+        "昭和米国物语 攻略",
+        "showa american story walkthrough"
+      ],
+      "content_opportunities": [
+        "流程攻略",
+        "Boss 与战斗技巧",
+        "彩蛋与支线收集"
+      ],
+      "monetization_level": "低",
+      "monetization": "买断制，无内购",
+      "risks": [
+        "只给到「2026 年内」，具体档期可能再变",
+        "全球同步发售，无先发窗口",
+        "题材在部分市场敏感，投放需注意",
+        "独立团队作品，优化与手感口碑待验证"
+      ],
+      "guide_cn": "低 · 尚未发售，仅国内线下试玩与前瞻",
+      "guide_intl": "低 · 仅有英文媒体前瞻与试玩报道",
+      "version_compare": "同步",
+      "version_note": "全球同期发售，暂无时间差",
+      "content_parity": "unknown",
+      "content_note": "尚未发售，无同版本正式服可比",
       "watch": {
-        "steam_appid": 3129790
+        "steam_appid": 1687540,
+        "official": null
       },
-      "last_checked": null,
       "steam_listed": true,
-      "steam_release_date": "Nov 10, 2026",
+      "steam_release_date": "2026",
+      "last_checked": null,
       "official_signal": null,
       "changes": [],
       "sources": [
-        {
-          "label": "版号公示",
-          "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202606/t20260630_996870.html"
-        },
-        {
-          "label": "Steam 商店",
-          "url": "https://store.steampowered.com/app/3129790/"
-        }
+        "https://store.steampowered.com/app/1687540/Showa_American_Story/?l=schinese",
+        "http://news.17173.com/content/11022026/063038795.shtml"
+      ]
+    },
+    {
+      "id": "sword-and-fairy-world",
+      "name_cn": "仙剑世界",
+      "name_en": "Sword and Fairy World",
+      "developer": "中手游（CMGE）",
+      "genre": "开放世界 MMORPG",
+      "priority": 7,
+      "platforms": [
+        "PC",
+        "移动端"
       ],
-      "auto_imported": true,
-      "auto_imported_at": "2026-11-09"
+      "overseas_verified": true,
+      "overseas_channels": [
+        "港澳台 / 新马（2026 下半年）",
+        "海外 Steam"
+      ],
+      "global_launch_at": null,
+      "cn_status": "国服 2025-02-19 上线（PC / 移动端）",
+      "global_status": "2026 下半年登陆港澳台、新马并上架海外 Steam，尚未开服",
+      "overseas_heat": "低 · 海外未开服，仅 Steam 页与发行计划",
+      "overseas_heat_checked": "2026-11-09",
+      "gap_window": "国服领先约 1.5 年：国服 2025-02 已上线并多轮迭代，海外尚未开服",
+      "target_markets": [
+        "港澳台 / 新马 仙侠 MMO 玩家",
+        "海外华人市场"
+      ],
+      "keywords": [
+        "sword and fairy world guide",
+        "仙剑世界 攻略",
+        "仙剑世界 职业推荐"
+      ],
+      "content_opportunities": [
+        "国服版本前瞻可直接输出",
+        "职业与养成路线",
+        "开服节奏与氪金点避坑"
+      ],
+      "monetization_level": "中高",
+      "monetization": "免费 + 外观 / 坐骑付费，国服付费结构已成型",
+      "risks": [
+        "国服上线后口碑与留存承压，海外表现存疑",
+        "尚未开服，具体日期未定",
+        "仙侠题材在欧美接受度有限，主战场是港澳台与新马",
+        "国服活跃度下滑会影响攻略素材的持续性"
+      ],
+      "guide_cn": "中 · 国服运营一年多，攻略与视频存量较完整",
+      "guide_intl": "极低 · 海外未开服，几乎无外文攻略",
+      "version_compare": "领先",
+      "version_note": "国服 2025-02-19 上线，海外 2026 下半年才开服，版本领先约 1.5 年",
+      "content_parity": "unknown",
+      "content_note": "海外尚未开服，计划以国服现版本为底；同版本差异待开服后核",
+      "watch": {
+        "steam_appid": 2749070,
+        "official": null
+      },
+      "steam_listed": true,
+      "steam_release_date": "即将推出",
+      "last_checked": null,
+      "official_signal": null,
+      "changes": [],
+      "sources": [
+        "https://store.steampowered.com/app/2749070/",
+        "https://wap.cmge.com/cn/investorRelations/news/20260826163808"
+      ]
     }
   ],
   "last_run_at": "2026-11-09T02:39:11Z"

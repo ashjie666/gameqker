@@ -403,6 +403,9 @@ def game_from_candidate(candidate, imported_at):
         "developer": nppa.get("operator") or nppa.get("publisher") or PLACEHOLDER,
         "genre": PLACEHOLDER,
         "priority": AUTO_PRIORITY,
+        # 平台：Steam 上架即代表有 PC 原生客户端。前端「只收录原生客户端」的
+        # 判定读的就是这个字段，缺了会让自动并入的条目在主表里彻底看不见。
+        "platforms": ["PC"] if (steam.get("us_listed") or steam.get("cn_listed")) else [],
         "cn_status": (timeline_text(timeline.get("cn"))
                       or _stage_text(stage.get("cn"), stage.get("cn_release"))),
         "global_status": (timeline_text(timeline.get("intl"))
