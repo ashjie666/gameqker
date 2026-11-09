@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T03:02:08Z",
+  "generated_at": "2026-11-09T22:48:24Z",
   "note": "汇总多源上线事件（Steam 商店 > 官网 > 新闻/RSS），每条标注来源；解析不出具体日期的条目不列，不做版本更新。",
   "events": [
     {
@@ -303,9 +303,9 @@
         },
         {
           "type": "search",
-          "name": "每日经济新闻",
-          "url": "https://baijiahao.baidu.com/s?id=1880879957486298948&wfr=spider&for=pc",
-          "title": "《燕云十六声》将接入英伟达DLSS 5;《无主之地》系列累计销量突破...",
+          "name": "快科技",
+          "url": "http://baijiahao.baidu.com/s?id=1880999286966491043&wfr=spider&for=pc",
+          "title": "国内首款且唯一!《燕云十六声》DLSS 5定档11月24日上线",
           "market": "cn"
         }
       ],
@@ -639,15 +639,8 @@
         {
           "type": "rss",
           "name": "机核",
-          "url": "https://www.gcores.com/articles/222020",
-          "title": "从“资金支持”到“全球发行”：索尼“中国之星计划”第四期媒体群访",
-          "market": "cn"
-        },
-        {
-          "type": "rss",
-          "name": "游戏陀螺",
-          "url": "https://www.youxituoluo.com/535017.html",
-          "title": "《星布谷地》《白银之城》定档，《影之刃零》在线超70万人，世纪华通Q3营收111亿元 | 陀螺周报",
+          "url": "https://www.gcores.com/articles/222078",
+          "title": "今晚六点！吉考斯工业新品有奖直播来咯",
           "market": "cn"
         },
         {
@@ -656,22 +649,29 @@
           "url": "https://baijiahao.baidu.com/s?id=1880739891952743013&wfr=spider&for=pc",
           "title": "《影之刃零》发售后 72 小时销量突破 400 万",
           "market": "cn"
+        },
+        {
+          "type": "search",
+          "name": "游民星空",
+          "url": "https://www.gamersky.com/news/202611/2242184.shtml",
+          "title": "曝《影之刃零》国外赚得更多!老外:这质量活该你赚钱",
+          "market": "cn"
         }
       ],
       "origin": "current",
       "first_seen": null,
       "alt_dates": [
         {
-          "date": "2026-11-03",
-          "date_text": "2026年11月3日"
-        },
-        {
-          "date": "2027-03-23",
-          "date_text": "2027年3月23日"
+          "date": "2026-11-09",
+          "date_text": "11 月 9 日"
         },
         {
           "date": "2026-11-02",
           "date_text": "11月2日"
+        },
+        {
+          "date": "2027-01-26",
+          "date_text": "1月26日"
         }
       ]
     },
@@ -730,8 +730,8 @@
           "url": "https://store.steampowered.com/app/5237060/"
         }
       ],
-      "origin": "current",
-      "first_seen": null,
+      "origin": "history",
+      "first_seen": "2026-11-02",
       "alt_dates": []
     },
     {
@@ -754,27 +754,6 @@
       "alt_dates": []
     },
     {
-      "game_id": "azur-lane",
-      "name_cn": "碧蓝航线",
-      "name_en": "Azur Lane",
-      "type": "launch",
-      "date": "2026-11-24",
-      "date_text": "11月24日",
-      "store_url": null,
-      "sources": [
-        {
-          "type": "rss",
-          "name": "游戏陀螺",
-          "url": "https://www.youxituoluo.com/535019.html",
-          "title": "20+新游定档、10+产品测试！11月手游市场迎来“内容型产品”大爆发",
-          "market": "cn"
-        }
-      ],
-      "origin": "news",
-      "first_seen": null,
-      "alt_dates": []
-    },
-    {
       "game_id": "honkai-impact-3rd",
       "name_cn": "崩坏3",
       "name_en": "Honkai Impact 3rd",
@@ -788,27 +767,6 @@
           "name": "游研社",
           "url": "https://www.yystv.cn/p/14597",
           "title": "捉宠和自走棋全都要，《崩坏：因缘精灵》定档2027年春季",
-          "market": "cn"
-        }
-      ],
-      "origin": "news",
-      "first_seen": null,
-      "alt_dates": []
-    },
-    {
-      "game_id": "silver-palace",
-      "name_cn": "白银之城",
-      "name_en": "Silver Palace",
-      "type": "launch",
-      "date": "2026-12-14",
-      "date_text": "12月14日",
-      "store_url": null,
-      "sources": [
-        {
-          "type": "rss",
-          "name": "游戏陀螺",
-          "url": "https://www.youxituoluo.com/535016.html",
-          "title": "预约破1500万，乐元素《白银之城》官宣定档12月14日",
           "market": "cn"
         }
       ],
