@@ -5029,126 +5029,70 @@
       ]
     },
     {
-      "id": "steam-5237060",
-      "name_cn": "遮天：帝路争锋",
-      "name_en": "",
-      "developer": "山西特迪瑞网络科技有限公司",
-      "genre": "待补",
-      "priority": 99,
-      "cn_status": "预约中 · 2026-11-04",
-      "global_status": "预约中 · 2026-11-04",
-      "timeline": {
-        "cn": {
-          "date": "2026-11-04",
-          "basis": "preorder",
-          "estimated": false,
-          "source": "Steam 商店（国服）",
-          "url": "https://store.steampowered.com/app/5237060/"
-        },
-        "intl": {
-          "date": "2026-11-04",
-          "basis": "preorder",
-          "estimated": false,
-          "source": "Steam 商店（国际服）",
-          "url": "https://store.steampowered.com/app/5237060/"
-        }
-      },
-      "global_launch_at": null,
-      "overseas_heat": "待补",
-      "overseas_heat_checked": null,
-      "gap_window": "国服版号早于 Steam 美区定档",
-      "target_markets": [],
-      "keywords": [],
-      "content_opportunities": [],
-      "monetization_level": "待补",
-      "monetization": "待补",
-      "risks": [],
-      "watch": {
-        "steam_appid": 5237060
-      },
-      "last_checked": "2026-11-08T22:25:24Z",
-      "steam_listed": true,
-      "steam_release_date": "Coming soon",
-      "official_signal": null,
-      "changes": [
-        {
-          "at": "2026-11-05T22:34:48Z",
-          "game_id": "steam-5237060",
-          "field": "steam_release_date",
-          "old": "Nov 4, 2026",
-          "new": "Coming soon",
-          "url": "https://store.steampowered.com/app/5237060/",
-          "evidence": "release_date.date=Coming soon；coming_soon=True"
-        }
+      "id": "honkai-nexus-anima",
+      "name_cn": "崩坏：因缘精灵",
+      "name_en": "Honkai: Nexus Anima",
+      "developer": "米哈游（miHoYo / HoYoverse）",
+      "genre": "精灵养成冒险策略（开放世界捉宠 RPG）",
+      "priority": 8,
+      "platforms": [
+        "PC",
+        "移动端"
       ],
-      "sources": [
-        {
-          "label": "版号公示",
-          "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202601/t20260126_947903.html"
-        },
-        {
-          "label": "Steam 商店",
-          "url": "https://store.steampowered.com/app/5237060/"
-        }
+      "overseas_verified": true,
+      "overseas_channels": [
+        "全球（HoYoverse 自主发行）"
       ],
-      "auto_imported": true,
-      "auto_imported_at": "2026-11-02"
-    },
-    {
-      "id": "pocket-legend-inventory-roguelike-deckbuilder",
-      "name_cn": "口袋传奇",
-      "name_en": "Pocket Legend : Inventory Roguelike Deckbuilder",
-      "developer": "上海数龙科技有限公司",
-      "genre": "待补",
-      "priority": 99,
-      "cn_status": "预约中 · 2026-11-10",
-      "global_status": "预约中 · 2026-11-10",
-      "timeline": {
-        "cn": {
-          "date": "2026-11-10",
-          "basis": "preorder",
-          "estimated": false,
-          "source": "Steam 商店（国服）",
-          "url": "https://store.steampowered.com/app/3129790/"
-        },
-        "intl": {
-          "date": "2026-11-10",
-          "basis": "preorder",
-          "estimated": false,
-          "source": "Steam 商店（国际服）",
-          "url": "https://store.steampowered.com/app/3129790/"
-        }
-      },
       "global_launch_at": null,
-      "overseas_heat": "待补",
-      "overseas_heat_checked": null,
-      "gap_window": "国服版号早于 Steam 美区定档",
-      "target_markets": [],
-      "keywords": [],
-      "content_opportunities": [],
-      "monetization_level": "待补",
-      "monetization": "待补",
-      "risks": [],
+      "cn_status": "2025-09-24 获国服版号（国新出审〔2025〕1717号）；已三轮测试（结缘 2025-09、进化 2026-07、幸福 2026-11-25），公测定档 2027 春季",
+      "global_status": "HoYoverse 全球发行；全球 Final Closed Beta 2026-11-25 开测；公测定档 2027 春季（PC / iOS / Android）",
+      "overseas_heat": "高 · 崩坏 IP 首款捉宠新作，2026-11-05 开放全球 Final CBT 招募，Gematsu / Noisy Pixel / AUTOMATON 等英文媒体密集跟进",
+      "overseas_heat_checked": "2026-11-09",
+      "gap_window": "无落差：国服「幸福测试」与海外 Final CBT 同日（2026-11-25），公测同期定档 2027 春季",
+      "target_markets": [
+        "崩坏 IP 存量用户",
+        "捉宠 / 开放世界手游玩家的欧美与日本市场"
+      ],
+      "keywords": [
+        "honkai nexus anima guide",
+        "崩坏 因缘精灵 攻略",
+        "honkai nexus anima tier list"
+      ],
+      "content_opportunities": [
+        "精灵图鉴与强度榜",
+        "捉宠路线与养成规划",
+        "开服抽卡与资源分配"
+      ],
+      "monetization_level": "中高",
+      "monetization": "免费 + 角色/精灵抽卡；「幸福测试」为限量删档计费测试，付费结构已成型",
+      "risks": [
+        "米哈游自研自发，海外攻略生态会被官方社区与英文大站迅速占满",
+        "2027 春季窗口，与同赛道捉宠新作及自家产品存在撞车风险",
+        "国服与海外最终测试同期开测，先发窗口极短，只能拼上线速度",
+        "同步有云游戏技术测试，云版本可用性会影响跨端口径"
+      ],
+      "guide_cn": "中低 · 已三轮测试，积累部分前瞻与测试期攻略，公测未开",
+      "guide_intl": "极低 · 海外仅 2026-11-25 一轮 Final CBT，此前无公开测试",
+      "version_compare": "同步",
+      "version_note": "国服「幸福测试」与海外 Final CBT 同日开测，公测同期定档 2027 春季",
+      "content_parity": "unknown",
+      "content_note": "未公测，无同版本正式服可比；国服与海外最终测试同轮，待公测后核",
       "watch": {
-        "steam_appid": 3129790
+        "steam_appid": null,
+        "official": null
       },
-      "last_checked": "2026-11-08T22:25:27Z",
-      "steam_listed": true,
-      "steam_release_date": "Nov 10, 2026",
+      "steam_listed": null,
+      "steam_release_date": null,
+      "last_checked": null,
       "official_signal": null,
       "changes": [],
       "sources": [
-        {
-          "label": "版号公示",
-          "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202606/t20260630_996870.html"
-        },
-        {
-          "label": "Steam 商店",
-          "url": "https://store.steampowered.com/app/3129790/"
-        }
-      ],
-      "auto_imported": true,
-      "auto_imported_at": "2026-11-06"
+        "https://hna.hoyoverse.com/en-us",
+        "https://www.gematsu.com/games/honkai-nexus-anima",
+        "https://noisypixel.net/honkai-nexus-anima-final-closed-beta-november-25-spring-2027/",
+        "https://honkainexusanima.gg/honkai-nexus-anima-final-closed-beta-faq",
+        "https://m.baike.com/wiki/%E5%B4%A9%E5%9D%8F%EF%BC%9A%E5%9B%A0%E7%BC%98%E7%B2%BE%E7%81%B5/7500422925389643828"
+      ]
     }
   ],
   "last_run_at": "2026-11-08T22:25:27Z"
