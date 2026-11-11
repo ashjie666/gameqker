@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T22:36:10Z",
+  "generated_at": "2026-11-11T22:47:40Z",
   "note": "汇总多源上线事件（Steam 商店 > 官网 > 新闻/RSS），每条标注来源；解析不出具体日期的条目不列，不做版本更新。",
   "events": [
     {
@@ -650,13 +650,6 @@
         },
         {
           "type": "rss",
-          "name": "机核",
-          "url": "https://www.gcores.com/articles/222114",
-          "title": "在《影之刃零》里，你找到自己的那把\"轮椅\"武器了吗？",
-          "market": "cn"
-        },
-        {
-          "type": "rss",
           "name": "游戏陀螺",
           "url": "https://www.youxituoluo.com/535041.html",
           "title": "米哈游新游定档，游族签下42亿GPU采购大单，腾讯鹰角又投新团队丨陀螺周报",
@@ -673,10 +666,6 @@
       "origin": "current",
       "first_seen": null,
       "alt_dates": [
-        {
-          "date": "2026-12-09",
-          "date_text": "2026 年 12 月 9 日"
-        },
         {
           "date": "2026-11-25",
           "date_text": "11月25日"
@@ -801,6 +790,13 @@
           "type": "steam",
           "name": "Steam 商店",
           "url": "https://store.steampowered.com/app/4814120/"
+        },
+        {
+          "type": "search",
+          "name": "IT之家",
+          "url": "https://www.ithome.com/0/994/268.htm",
+          "title": "网易二次元都市冒险游戏《无限大》官宣 2027 年 1 月 15 日全球上线",
+          "market": "cn"
         }
       ],
       "origin": "current",
