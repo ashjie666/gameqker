@@ -130,6 +130,11 @@
         "date": "2026-11-13",
         "source": "trends",
         "value": 33
+      },
+      {
+        "date": "2026-11-14",
+        "source": "trends",
+        "value": 24
       }
     ],
     "where-winds-meet": [
@@ -262,6 +267,11 @@
         "date": "2026-11-13",
         "source": "trends",
         "value": 0
+      },
+      {
+        "date": "2026-11-14",
+        "source": "signal",
+        "value": 3
       }
     ],
     "lord-of-mysteries": [
@@ -394,6 +404,11 @@
         "date": "2026-11-13",
         "source": "trends",
         "value": 0
+      },
+      {
+        "date": "2026-11-14",
+        "source": "trends",
+        "value": 7
       }
     ],
     "world-of-jade-dynasty": [
@@ -524,6 +539,11 @@
       },
       {
         "date": "2026-11-13",
+        "source": "signal",
+        "value": 2
+      },
+      {
+        "date": "2026-11-14",
         "source": "signal",
         "value": 2
       }
@@ -658,6 +678,11 @@
         "date": "2026-11-13",
         "source": "trends",
         "value": 0
+      },
+      {
+        "date": "2026-11-14",
+        "source": "signal",
+        "value": 1
       }
     ],
     "scroll-of-taiwu": [
@@ -788,6 +813,11 @@
       },
       {
         "date": "2026-11-13",
+        "source": "signal",
+        "value": 3
+      },
+      {
+        "date": "2026-11-14",
         "source": "signal",
         "value": 3
       }
@@ -922,6 +952,11 @@
         "date": "2026-11-13",
         "source": "signal",
         "value": 1
+      },
+      {
+        "date": "2026-11-14",
+        "source": "signal",
+        "value": 1
       }
     ],
     "ananta": [
@@ -1054,6 +1089,11 @@
         "date": "2026-11-13",
         "source": "trends",
         "value": 62
+      },
+      {
+        "date": "2026-11-14",
+        "source": "trends",
+        "value": 56
       }
     ],
     "wang-yue": [
@@ -1186,6 +1226,11 @@
         "date": "2026-11-13",
         "source": "signal",
         "value": 0
+      },
+      {
+        "date": "2026-11-14",
+        "source": "trends",
+        "value": 0
       }
     ],
     "sanguo-mou-ding-tianxia": [
@@ -1316,6 +1361,11 @@
       },
       {
         "date": "2026-11-13",
+        "source": "signal",
+        "value": 2
+      },
+      {
+        "date": "2026-11-14",
         "source": "signal",
         "value": 2
       }
@@ -1490,6 +1540,11 @@
         "date": "2026-11-13",
         "source": "signal",
         "value": 0
+      },
+      {
+        "date": "2026-11-14",
+        "source": "signal",
+        "value": 0
       }
     ],
     "steam-3081280": [
@@ -1589,6 +1644,11 @@
         "date": "2026-11-13",
         "source": "signal",
         "value": 1
+      },
+      {
+        "date": "2026-11-14",
+        "source": "signal",
+        "value": 1
       }
     ],
     "arena-breakout": [
@@ -1681,6 +1741,11 @@
         "date": "2026-11-13",
         "source": "trends",
         "value": 70
+      },
+      {
+        "date": "2026-11-14",
+        "source": "trends",
+        "value": 0
       }
     ],
     "girls-frontline-2": [
@@ -1771,6 +1836,11 @@
       },
       {
         "date": "2026-11-13",
+        "source": "signal",
+        "value": 0
+      },
+      {
+        "date": "2026-11-14",
         "source": "signal",
         "value": 0
       }
@@ -1865,6 +1935,11 @@
         "date": "2026-11-13",
         "source": "trends",
         "value": 40
+      },
+      {
+        "date": "2026-11-14",
+        "source": "trends",
+        "value": 39
       }
     ],
     "delta-force": [
@@ -1957,6 +2032,11 @@
         "date": "2026-11-13",
         "source": "trends",
         "value": 14
+      },
+      {
+        "date": "2026-11-14",
+        "source": "trends",
+        "value": 68
       }
     ],
     "tower-of-fantasy": [
@@ -2047,6 +2127,11 @@
       },
       {
         "date": "2026-11-13",
+        "source": "signal",
+        "value": 0
+      },
+      {
+        "date": "2026-11-14",
         "source": "signal",
         "value": 0
       }
@@ -2141,6 +2226,11 @@
         "date": "2026-11-13",
         "source": "trends",
         "value": 41
+      },
+      {
+        "date": "2026-11-14",
+        "source": "trends",
+        "value": 80
       }
     ],
     "wuthering-waves": [
@@ -2233,6 +2323,11 @@
         "date": "2026-11-13",
         "source": "trends",
         "value": 100
+      },
+      {
+        "date": "2026-11-14",
+        "source": "trends",
+        "value": 47
       }
     ],
     "infinity-nikki": [
@@ -2325,6 +2420,11 @@
         "date": "2026-11-13",
         "source": "trends",
         "value": 39
+      },
+      {
+        "date": "2026-11-14",
+        "source": "trends",
+        "value": 47
       }
     ],
     "mecha-break": [
@@ -2415,6 +2515,11 @@
       },
       {
         "date": "2026-11-13",
+        "source": "signal",
+        "value": 0
+      },
+      {
+        "date": "2026-11-14",
         "source": "signal",
         "value": 0
       }
@@ -2509,6 +2614,11 @@
         "date": "2026-11-13",
         "source": "signal",
         "value": 0
+      },
+      {
+        "date": "2026-11-14",
+        "source": "signal",
+        "value": 0
       }
     ],
     "arknights": [
@@ -2601,6 +2711,11 @@
         "date": "2026-11-13",
         "source": "trends",
         "value": 18
+      },
+      {
+        "date": "2026-11-14",
+        "source": "trends",
+        "value": 24
       }
     ],
     "punishing-gray-raven": [
@@ -2693,6 +2808,11 @@
         "date": "2026-11-13",
         "source": "trends",
         "value": 60
+      },
+      {
+        "date": "2026-11-14",
+        "source": "trends",
+        "value": 67
       }
     ],
     "azur-lane": [
@@ -2785,6 +2905,11 @@
         "date": "2026-11-13",
         "source": "trends",
         "value": 56
+      },
+      {
+        "date": "2026-11-14",
+        "source": "trends",
+        "value": 100
       }
     ],
     "sword-of-convallaria": [
@@ -2877,6 +3002,11 @@
         "date": "2026-11-13",
         "source": "trends",
         "value": 14
+      },
+      {
+        "date": "2026-11-14",
+        "source": "trends",
+        "value": 40
       }
     ],
     "justice-online-mobile": [
@@ -2967,6 +3097,11 @@
       },
       {
         "date": "2026-11-13",
+        "source": "trends",
+        "value": 0
+      },
+      {
+        "date": "2026-11-14",
         "source": "trends",
         "value": 0
       }
@@ -3061,6 +3196,11 @@
         "date": "2026-11-13",
         "source": "signal",
         "value": 0
+      },
+      {
+        "date": "2026-11-14",
+        "source": "signal",
+        "value": 0
       }
     ],
     "genshin-impact": [
@@ -3153,6 +3293,11 @@
         "date": "2026-11-13",
         "source": "trends",
         "value": 39
+      },
+      {
+        "date": "2026-11-14",
+        "source": "trends",
+        "value": 40
       }
     ],
     "honkai-star-rail": [
@@ -3245,6 +3390,11 @@
         "date": "2026-11-13",
         "source": "trends",
         "value": 54
+      },
+      {
+        "date": "2026-11-14",
+        "source": "trends",
+        "value": 40
       }
     ],
     "snowbreak": [
@@ -3335,6 +3485,11 @@
       },
       {
         "date": "2026-11-13",
+        "source": "trends",
+        "value": 0
+      },
+      {
+        "date": "2026-11-14",
         "source": "trends",
         "value": 0
       }
@@ -3429,6 +3584,11 @@
         "date": "2026-11-13",
         "source": "signal",
         "value": 0
+      },
+      {
+        "date": "2026-11-14",
+        "source": "signal",
+        "value": 0
       }
     ],
     "neo-artifacts": [
@@ -3519,6 +3679,11 @@
       },
       {
         "date": "2026-11-13",
+        "source": "signal",
+        "value": 0
+      },
+      {
+        "date": "2026-11-14",
         "source": "signal",
         "value": 0
       }
@@ -3613,6 +3778,11 @@
         "date": "2026-11-13",
         "source": "signal",
         "value": 0
+      },
+      {
+        "date": "2026-11-14",
+        "source": "signal",
+        "value": 0
       }
     ],
     "arknights-endfield": [
@@ -3705,6 +3875,11 @@
         "date": "2026-11-13",
         "source": "trends",
         "value": 16
+      },
+      {
+        "date": "2026-11-14",
+        "source": "trends",
+        "value": 17
       }
     ],
     "aniimo": [
@@ -3797,6 +3972,11 @@
         "date": "2026-11-13",
         "source": "trends",
         "value": 25
+      },
+      {
+        "date": "2026-11-14",
+        "source": "trends",
+        "value": 32
       }
     ],
     "one-way-tickets": [
@@ -3889,6 +4069,11 @@
         "date": "2026-11-13",
         "source": "trends",
         "value": 0
+      },
+      {
+        "date": "2026-11-14",
+        "source": "signal",
+        "value": 1
       }
     ],
     "tomb-busters": [
@@ -3979,6 +4164,11 @@
       },
       {
         "date": "2026-11-13",
+        "source": "signal",
+        "value": 0
+      },
+      {
+        "date": "2026-11-14",
         "source": "signal",
         "value": 0
       }
@@ -4073,6 +4263,11 @@
         "date": "2026-11-13",
         "source": "signal",
         "value": 0
+      },
+      {
+        "date": "2026-11-14",
+        "source": "signal",
+        "value": 0
       }
     ],
     "vanishing-starlight": [
@@ -4163,6 +4358,11 @@
       },
       {
         "date": "2026-11-13",
+        "source": "signal",
+        "value": 1
+      },
+      {
+        "date": "2026-11-14",
         "source": "signal",
         "value": 1
       }
@@ -4257,6 +4457,11 @@
         "date": "2026-11-13",
         "source": "signal",
         "value": 1
+      },
+      {
+        "date": "2026-11-14",
+        "source": "trends",
+        "value": 0
       }
     ],
     "roco-kingdom-world": [
@@ -4347,6 +4552,11 @@
       },
       {
         "date": "2026-11-13",
+        "source": "signal",
+        "value": 0
+      },
+      {
+        "date": "2026-11-14",
         "source": "signal",
         "value": 0
       }
@@ -4441,6 +4651,11 @@
         "date": "2026-11-13",
         "source": "signal",
         "value": 2
+      },
+      {
+        "date": "2026-11-14",
+        "source": "signal",
+        "value": 2
       }
     ],
     "daba-land-of-watermarks": [
@@ -4533,6 +4748,11 @@
         "date": "2026-11-13",
         "source": "signal",
         "value": 1
+      },
+      {
+        "date": "2026-11-14",
+        "source": "trends",
+        "value": 0
       }
     ],
     "wenjian-changsheng": [
@@ -4625,6 +4845,11 @@
         "date": "2026-11-13",
         "source": "signal",
         "value": 0
+      },
+      {
+        "date": "2026-11-14",
+        "source": "signal",
+        "value": 0
       }
     ],
     "heroes-duel": [
@@ -4712,6 +4937,11 @@
         "date": "2026-11-13",
         "source": "signal",
         "value": 1
+      },
+      {
+        "date": "2026-11-14",
+        "source": "signal",
+        "value": 1
       }
     ],
     "steam-3839930": [
@@ -4792,6 +5022,11 @@
       },
       {
         "date": "2026-11-13",
+        "source": "signal",
+        "value": 1
+      },
+      {
+        "date": "2026-11-14",
         "source": "signal",
         "value": 1
       }
@@ -4876,6 +5111,11 @@
         "date": "2026-11-13",
         "source": "signal",
         "value": 1
+      },
+      {
+        "date": "2026-11-14",
+        "source": "signal",
+        "value": 1
       }
     ],
     "danmo-three-kingdoms-battle-of-wits": [
@@ -4956,6 +5196,11 @@
       },
       {
         "date": "2026-11-13",
+        "source": "signal",
+        "value": 1
+      },
+      {
+        "date": "2026-11-14",
         "source": "signal",
         "value": 1
       }
@@ -5040,6 +5285,11 @@
         "date": "2026-11-13",
         "source": "signal",
         "value": 1
+      },
+      {
+        "date": "2026-11-14",
+        "source": "signal",
+        "value": 1
       }
     ],
     "the-brave-never-alone": [
@@ -5120,6 +5370,11 @@
       },
       {
         "date": "2026-11-13",
+        "source": "signal",
+        "value": 1
+      },
+      {
+        "date": "2026-11-14",
         "source": "signal",
         "value": 1
       }
@@ -5204,6 +5459,11 @@
         "date": "2026-11-13",
         "source": "signal",
         "value": 1
+      },
+      {
+        "date": "2026-11-14",
+        "source": "signal",
+        "value": 1
       }
     ],
     "kotama-and-academy-citadel": [
@@ -5284,6 +5544,11 @@
       },
       {
         "date": "2026-11-13",
+        "source": "signal",
+        "value": 1
+      },
+      {
+        "date": "2026-11-14",
         "source": "signal",
         "value": 1
       }
@@ -5368,6 +5633,11 @@
         "date": "2026-11-13",
         "source": "signal",
         "value": 1
+      },
+      {
+        "date": "2026-11-14",
+        "source": "signal",
+        "value": 1
       }
     ],
     "box-bakery": [
@@ -5450,6 +5720,11 @@
         "date": "2026-11-13",
         "source": "signal",
         "value": 1
+      },
+      {
+        "date": "2026-11-14",
+        "source": "signal",
+        "value": 1
       }
     ],
     "silver-palace": [
@@ -5522,6 +5797,11 @@
         "date": "2026-11-13",
         "source": "trends",
         "value": 0
+      },
+      {
+        "date": "2026-11-14",
+        "source": "trends",
+        "value": 0
       }
     ],
     "steam-5237060": [
@@ -5584,6 +5864,11 @@
         "date": "2026-11-13",
         "source": "signal",
         "value": 1
+      },
+      {
+        "date": "2026-11-14",
+        "source": "signal",
+        "value": 1
       }
     ],
     "pocket-legend-inventory-roguelike-deckbuilder": [
@@ -5626,6 +5911,11 @@
         "date": "2026-11-13",
         "source": "signal",
         "value": 1
+      },
+      {
+        "date": "2026-11-14",
+        "source": "signal",
+        "value": 1
       }
     ],
     "honkai-nexus-anima": [
@@ -5651,6 +5941,11 @@
       },
       {
         "date": "2026-11-13",
+        "source": "signal",
+        "value": 0
+      },
+      {
+        "date": "2026-11-14",
         "source": "signal",
         "value": 0
       }
@@ -5680,6 +5975,11 @@
         "date": "2026-11-13",
         "source": "signal",
         "value": 1
+      },
+      {
+        "date": "2026-11-14",
+        "source": "signal",
+        "value": 1
       }
     ],
     "showa-american-story": [
@@ -5705,6 +6005,11 @@
       },
       {
         "date": "2026-11-13",
+        "source": "signal",
+        "value": 1
+      },
+      {
+        "date": "2026-11-14",
         "source": "signal",
         "value": 1
       }
@@ -5734,10 +6039,15 @@
         "date": "2026-11-13",
         "source": "signal",
         "value": 1
+      },
+      {
+        "date": "2026-11-14",
+        "source": "signal",
+        "value": 1
       }
     ]
   },
-  "generated_at": "2026-11-13",
+  "generated_at": "2026-11-14",
   "note": "每款游戏按天的热度序列；取值优先级 A→B→C：Google Trends 关键词热度 → Steam 评测总数 → 自建信号活跃度。",
   "days": 90,
   "sources": {
