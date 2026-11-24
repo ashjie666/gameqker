@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T02:11:46Z",
+  "generated_at": "2026-11-24T05:46:21Z",
   "note": "汇总多源上线事件（Steam 商店 > 官网 > 新闻/RSS），每条标注来源；解析不出具体日期的条目不列，不做版本更新。",
   "events": [
     {
@@ -486,9 +486,9 @@
         },
         {
           "type": "rss",
-          "name": "游研社",
-          "url": "https://www.yystv.cn/p/14644",
-          "title": "B站新旗舰游戏，想要改变三国SLG的竞争方向",
+          "name": "游戏陀螺",
+          "url": "https://www.youxituoluo.com/535059.html",
+          "title": "将重金砸公测抢量！SLG 赛道，B 站还能再 “掀桌” 吗？",
           "market": "cn"
         }
       ],
@@ -497,7 +497,7 @@
       "alt_dates": [
         {
           "date": "2026-12-24",
-          "date_text": "12月24日"
+          "date_text": "12 月24日"
         }
       ]
     },
@@ -651,6 +651,13 @@
         {
           "type": "rss",
           "name": "游戏陀螺",
+          "url": "https://www.youxituoluo.com/535085.html",
+          "title": "腾讯Q3游戏收入665亿，网易游戏收入下滑，《GTA6》首日销售额超253亿元｜陀螺周报",
+          "market": "cn"
+        },
+        {
+          "type": "rss",
+          "name": "游戏陀螺",
           "url": "https://www.youxituoluo.com/535069.html",
           "title": "预售狂揽 14.5 亿美元，GTA6还没上线就已经创造历史",
           "market": "cn"
@@ -666,6 +673,10 @@
       "origin": "current",
       "first_seen": null,
       "alt_dates": [
+        {
+          "date": "2027-03-03",
+          "date_text": "2027年3月3日"
+        },
         {
           "date": "2026-11-19",
           "date_text": "11月19日"
@@ -744,15 +755,15 @@
       "name_en": "Arknights",
       "type": "launch",
       "date": "2026-11-25",
-      "date_text": "11月25日",
+      "date_text": "November 25",
       "store_url": null,
       "sources": [
         {
           "type": "rss",
-          "name": "机核",
-          "url": "https://www.gcores.com/articles/222631",
-          "title": "穿越蘑境，共赴新程：《明日方舟：终末地》全新版本＆2.0揭幕前瞻特别节目消息汇总",
-          "market": "cn"
+          "name": "Gematsu",
+          "url": "https://www.gematsu.com/2026/11/arknights-endfield-version-update-meeting-you-in-the-world-oshrooms-launches-november-25",
+          "title": "Arknights: Endfield version update ‘Meeting You in the World o’Shrooms’ launches November 25",
+          "market": "intl"
         }
       ],
       "origin": "news",
@@ -772,13 +783,6 @@
           "type": "steam",
           "name": "Steam 商店",
           "url": "https://store.steampowered.com/app/4814120/"
-        },
-        {
-          "type": "search",
-          "name": "新浪财经",
-          "url": "https://baijiahao.baidu.com/s?id=1882374577861577355&wfr=spider&for=pc",
-          "title": "「游戏风云」短剧抢走用户注意力,网易游戏承压待《无限大》破局",
-          "market": "cn"
         }
       ],
       "origin": "current",
@@ -787,10 +791,6 @@
         {
           "date": "2027-01-15",
           "date_text": "Jan 15, 2027"
-        },
-        {
-          "date": "2027-01-15",
-          "date_text": "2027年1月15日"
         }
       ]
     }
