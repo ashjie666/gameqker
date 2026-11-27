@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26",
+  "generated_at": "2026-11-27",
   "data_cutoff": "2026-10-15",
   "note": "关键词搜索量为定性判断，未经关键词工具实测。cn_status / global_status / overseas_heat / overseas_heat_checked / gap_window / target_markets / keywords / content_opportunities / monetization / monetization_level / risks 为人工维护字段；last_checked / steam_listed / steam_release_date / official_signal / changes 由 collector/update.py 自动写入。data_cutoff 记录人工字段最后一次整体复核日期，脚本不会推进它。 auto_imported / auto_imported_at 标记由版号公示自动发现的条目：这类条目并入时脚本会额外写入 developer / cn_status / global_status / gap_window / priority(99=未定级) / watch / sources，其余定性字段填「待补」待人复核，人工条目的这些字段脚本仍不改写。",
   "field_origin": {
@@ -67,7 +67,7 @@
       },
       "skipped": [],
       "error": "官网: https://www.phantombladezero.com/: URLError: <urlopen error timed out>",
-      "duration_ms": 42212
+      "duration_ms": 42453
     },
     {
       "id": "where-winds-meet",
@@ -108,7 +108,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 2748
+      "duration_ms": 2978
     },
     {
       "id": "lord-of-mysteries",
@@ -142,7 +142,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 2165
+      "duration_ms": 2176
     },
     {
       "id": "world-of-jade-dynasty",
@@ -183,7 +183,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 3039
+      "duration_ms": 3172
     },
     {
       "id": "neverness-to-everness",
@@ -222,7 +222,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 2231
+      "duration_ms": 2383
     },
     {
       "id": "scroll-of-taiwu",
@@ -263,7 +263,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 2460
+      "duration_ms": 2487
     },
     {
       "id": "legend-of-mortal-cultivation",
@@ -284,7 +284,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 139
+      "duration_ms": 242
     },
     {
       "id": "ananta",
@@ -325,7 +325,7 @@
       },
       "skipped": [],
       "error": null,
-      "duration_ms": 4817
+      "duration_ms": 4963
     },
     {
       "id": "wang-yue",
@@ -357,7 +357,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 4059
+      "duration_ms": 3387
     },
     {
       "id": "sanguo-mou-ding-tianxia",
@@ -386,7 +386,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 1143
+      "duration_ms": 1472
     },
     {
       "id": "tensei-brave",
@@ -420,7 +420,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 168
+      "duration_ms": 240
     },
     {
       "id": "arena-breakout",
@@ -447,7 +447,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 474
+      "duration_ms": 534
     },
     {
       "id": "girls-frontline-2",
@@ -502,7 +502,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 590
+      "duration_ms": 465
     },
     {
       "id": "tower-of-fantasy",
@@ -640,7 +640,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 910
+      "duration_ms": 1044
     },
     {
       "id": "justice-online-mobile",
@@ -713,7 +713,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 2008
+      "duration_ms": 1960
     },
     {
       "id": "beyond-the-world",
@@ -799,7 +799,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 2020
+      "duration_ms": 2031
     },
     {
       "id": "tomb-busters",
@@ -846,7 +846,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 1984
+      "duration_ms": 2070
     },
     {
       "id": "piper-of-dawn",
@@ -867,7 +867,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 1990
+      "duration_ms": 1873
     },
     {
       "id": "roco-kingdom-world",
@@ -909,7 +909,7 @@
         "steam(未配置 appid)"
       ],
       "error": null,
-      "duration_ms": 823
+      "duration_ms": 921
     },
     {
       "id": "daba-land-of-watermarks",
@@ -930,7 +930,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 1243
+      "duration_ms": 1159
     },
     {
       "id": "wenjian-changsheng",
@@ -964,7 +964,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 2002
+      "duration_ms": 1900
     },
     {
       "id": "steam-3839930",
@@ -985,7 +985,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 2019
+      "duration_ms": 2023
     },
     {
       "id": "sanctum-whispers-of-qingcheng",
@@ -1006,7 +1006,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 1894
+      "duration_ms": 2036
     },
     {
       "id": "danmo-three-kingdoms-battle-of-wits",
@@ -1027,7 +1027,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 2028
+      "duration_ms": 1938
     },
     {
       "id": "skewer-squad",
@@ -1048,7 +1048,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 2017
+      "duration_ms": 2075
     },
     {
       "id": "the-brave-never-alone",
@@ -1069,7 +1069,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 1978
+      "duration_ms": 1979
     },
     {
       "id": "go-fight-fantastic",
@@ -1090,7 +1090,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 1939
+      "duration_ms": 1953
     },
     {
       "id": "kotama-and-academy-citadel",
@@ -1111,7 +1111,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 2082
+      "duration_ms": 2084
     },
     {
       "id": "tiny-civilization",
@@ -1132,7 +1132,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 2051
+      "duration_ms": 1905
     },
     {
       "id": "box-bakery",
@@ -1153,7 +1153,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 2037
+      "duration_ms": 2087
     },
     {
       "id": "silver-palace",
@@ -1200,7 +1200,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 1948
+      "duration_ms": 1943
     },
     {
       "id": "showa-american-story",
@@ -1221,7 +1221,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 1922
+      "duration_ms": 1944
     },
     {
       "id": "sword-and-fairy-world",
@@ -1242,7 +1242,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 2090
+      "duration_ms": 2067
     },
     {
       "id": "steam-5237060",
@@ -1263,7 +1263,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 2136
+      "duration_ms": 1999
     },
     {
       "id": "pocket-legend-inventory-roguelike-deckbuilder",
@@ -1284,7 +1284,7 @@
         "official(未配置官网)"
       ],
       "error": null,
-      "duration_ms": 1882
+      "duration_ms": 2011
     }
   ],
   "games": [
@@ -1330,7 +1330,7 @@
         "steam_appid": 4115450,
         "official": "https://www.phantombladezero.com/"
       },
-      "last_checked": "2026-11-26T03:49:56Z",
+      "last_checked": "2026-11-27T03:51:34Z",
       "steam_listed": true,
       "steam_release_date": "Oct 28, 2026",
       "official_signal": null,
@@ -1409,7 +1409,7 @@
         "steam_appid": 3564740,
         "official": "https://www.wherewindsmeetgame.com/"
       },
-      "last_checked": "2026-11-26T03:49:58Z",
+      "last_checked": "2026-11-27T03:51:37Z",
       "steam_listed": true,
       "steam_release_date": "Nov 14, 2025",
       "official_signal": {
@@ -1517,7 +1517,7 @@
         "steam_appid": null,
         "official": "https://lordofthemysteriesgame.com/"
       },
-      "last_checked": "2026-11-26T03:50:01Z",
+      "last_checked": "2026-11-27T03:51:40Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -1596,7 +1596,7 @@
         "steam_appid": 3384260,
         "official": "https://zx.wanmei.com/"
       },
-      "last_checked": "2026-11-26T03:50:04Z",
+      "last_checked": "2026-11-27T03:51:43Z",
       "steam_listed": false,
       "steam_release_date": null,
       "official_signal": {
@@ -1686,7 +1686,7 @@
         "steam_appid": 4508340,
         "official": "https://nte.perfectworld.com/"
       },
-      "last_checked": "2026-11-26T03:50:06Z",
+      "last_checked": "2026-11-27T03:51:45Z",
       "steam_listed": true,
       "steam_release_date": "Jul 7, 2026",
       "official_signal": {
@@ -1773,7 +1773,7 @@
         "steam_appid": 838350,
         "official": "https://scrolloftaiwu.com/"
       },
-      "last_checked": "2026-11-26T03:50:08Z",
+      "last_checked": "2026-11-27T03:51:48Z",
       "steam_listed": true,
       "steam_release_date": "Jun 16, 2026",
       "official_signal": {
@@ -1869,7 +1869,7 @@
         "steam_appid": 3814570,
         "official": null
       },
-      "last_checked": "2026-11-26T03:50:08Z",
+      "last_checked": "2026-11-27T03:51:48Z",
       "steam_listed": true,
       "steam_release_date": "Jan 29, 2026",
       "official_signal": null,
@@ -1945,7 +1945,7 @@
         "steam_appid": 4814120,
         "official": "https://ananta.163.com/"
       },
-      "last_checked": "2026-11-26T03:50:13Z",
+      "last_checked": "2026-11-27T03:51:53Z",
       "steam_listed": true,
       "steam_release_date": "Jan 14, 2027",
       "official_signal": {
@@ -2053,7 +2053,7 @@
         "steam_appid": null,
         "official": "https://wy.shiyue.com/"
       },
-      "last_checked": "2026-11-26T03:50:17Z",
+      "last_checked": "2026-11-27T03:51:56Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -2120,7 +2120,7 @@
         "steam_appid": null,
         "official": "https://store.steamchina.com/app/4542640/"
       },
-      "last_checked": "2026-11-26T03:50:18Z",
+      "last_checked": "2026-11-27T03:51:58Z",
       "steam_listed": null,
       "steam_release_date": null,
       "official_signal": {
@@ -2218,7 +2218,7 @@
       "overseas_channels": []
     },
     {
-      "last_checked": "2026-11-26T03:50:19Z",
+      "last_checked": "2026-11-27T03:51:58Z",
       "steam_listed": true,
       "steam_release_date": "Nov 21, 2024",
       "id": "strinova",
@@ -2298,7 +2298,7 @@
       "global_launch_at": "2024-11-21"
     },
     {
-      "last_checked": "2026-11-26T03:50:19Z",
+      "last_checked": "2026-11-27T03:51:58Z",
       "steam_listed": null,
       "steam_release_date": null,
       "id": "arena-breakout",
@@ -2490,7 +2490,7 @@
       "global_launch_at": "2023-10-26"
     },
     {
-      "last_checked": "2026-11-26T03:50:20Z",
+      "last_checked": "2026-11-27T03:51:59Z",
       "steam_listed": null,
       "steam_release_date": null,
       "id": "delta-force",
@@ -3129,7 +3129,7 @@
       "global_launch_at": "2018-08-16"
     },
     {
-      "last_checked": "2026-11-26T03:50:21Z",
+      "last_checked": "2026-11-27T03:52:00Z",
       "steam_listed": true,
       "steam_release_date": "Jul 31, 2024",
       "id": "sword-of-convallaria",
@@ -3459,7 +3459,7 @@
       "global_launch_at": "2023-04-26"
     },
     {
-      "last_checked": "2026-11-26T03:50:23Z",
+      "last_checked": "2026-11-27T03:52:02Z",
       "steam_listed": true,
       "steam_release_date": "Dec 24, 2023",
       "id": "snowbreak",
@@ -3853,7 +3853,7 @@
       "content_note": "跨端同版本，内容一致"
     },
     {
-      "last_checked": "2026-11-26T03:50:25Z",
+      "last_checked": "2026-11-27T03:52:04Z",
       "steam_listed": true,
       "steam_release_date": "Oct 22, 2026",
       "id": "one-way-tickets",
@@ -4057,7 +4057,7 @@
       "content_note": "捉兽—机甲—基地—军团骨架相同，海外为新开进度（日服仅基础巨兽，国服已到十代）；适配集中在世界观与开服福利，未提数值重做"
     },
     {
-      "last_checked": "2026-11-26T03:50:27Z",
+      "last_checked": "2026-11-27T03:52:06Z",
       "steam_listed": true,
       "steam_release_date": "Mar 25, 2026",
       "id": "vanishing-starlight",
@@ -4138,7 +4138,7 @@
       "content_note": "国区与全球同版本，内容一致"
     },
     {
-      "last_checked": "2026-11-26T03:50:29Z",
+      "last_checked": "2026-11-27T03:52:08Z",
       "steam_listed": true,
       "steam_release_date": "Sep 22, 2026",
       "id": "piper-of-dawn",
@@ -4340,7 +4340,7 @@
       },
       "steam_listed": false,
       "steam_release_date": null,
-      "last_checked": "2026-11-26T03:50:29Z",
+      "last_checked": "2026-11-27T03:52:09Z",
       "official_signal": {
         "matched": true,
         "signals": [
@@ -4423,7 +4423,7 @@
       },
       "steam_listed": true,
       "steam_release_date": "2027",
-      "last_checked": "2026-11-26T03:50:31Z",
+      "last_checked": "2026-11-27T03:52:10Z",
       "official_signal": null,
       "changes": [],
       "sources": [
@@ -4534,7 +4534,7 @@
       "watch": {
         "steam_appid": 5207740
       },
-      "last_checked": "2026-11-26T03:50:33Z",
+      "last_checked": "2026-11-27T03:52:12Z",
       "steam_listed": true,
       "steam_release_date": "Coming soon",
       "official_signal": null,
@@ -4602,7 +4602,7 @@
       "watch": {
         "steam_appid": 3839930
       },
-      "last_checked": "2026-11-26T03:50:35Z",
+      "last_checked": "2026-11-27T03:52:14Z",
       "steam_listed": true,
       "steam_release_date": "Jul 17, 2025",
       "official_signal": null,
@@ -4661,7 +4661,7 @@
       "watch": {
         "steam_appid": 3638680
       },
-      "last_checked": "2026-11-26T03:50:37Z",
+      "last_checked": "2026-11-27T03:52:16Z",
       "steam_listed": true,
       "steam_release_date": "Coming soon",
       "official_signal": null,
@@ -4719,7 +4719,7 @@
       "watch": {
         "steam_appid": 3905040
       },
-      "last_checked": "2026-11-26T03:50:39Z",
+      "last_checked": "2026-11-27T03:52:18Z",
       "steam_listed": true,
       "steam_release_date": "Jan 26, 2026",
       "official_signal": null,
@@ -4778,7 +4778,7 @@
       "watch": {
         "steam_appid": 3926160
       },
-      "last_checked": "2026-11-26T03:50:41Z",
+      "last_checked": "2026-11-27T03:52:20Z",
       "steam_listed": true,
       "steam_release_date": "Feb 1, 2026",
       "official_signal": null,
@@ -4837,7 +4837,7 @@
       "watch": {
         "steam_appid": 3790750
       },
-      "last_checked": "2026-11-26T03:50:43Z",
+      "last_checked": "2026-11-27T03:52:22Z",
       "steam_listed": true,
       "steam_release_date": "Jul 21, 2025",
       "official_signal": null,
@@ -4896,7 +4896,7 @@
       "watch": {
         "steam_appid": 1183530
       },
-      "last_checked": "2026-11-26T03:50:45Z",
+      "last_checked": "2026-11-27T03:52:24Z",
       "steam_listed": true,
       "steam_release_date": "Mar 26, 2024",
       "official_signal": null,
@@ -4955,7 +4955,7 @@
       "watch": {
         "steam_appid": 3639650
       },
-      "last_checked": "2026-11-26T03:50:47Z",
+      "last_checked": "2026-11-27T03:52:26Z",
       "steam_listed": true,
       "steam_release_date": "Jan 14, 2026",
       "official_signal": null,
@@ -5014,7 +5014,7 @@
       "watch": {
         "steam_appid": 2230280
       },
-      "last_checked": "2026-11-26T03:50:49Z",
+      "last_checked": "2026-11-27T03:52:28Z",
       "steam_listed": true,
       "steam_release_date": "Dec 31, 2022",
       "official_signal": null,
@@ -5073,7 +5073,7 @@
       "watch": {
         "steam_appid": 2942950
       },
-      "last_checked": "2026-11-26T03:50:51Z",
+      "last_checked": "2026-11-27T03:52:30Z",
       "steam_listed": true,
       "steam_release_date": "Mar 5, 2026",
       "official_signal": null,
@@ -5281,7 +5281,7 @@
       },
       "steam_listed": true,
       "steam_release_date": "Jun 10, 2026",
-      "last_checked": "2026-11-26T03:50:53Z",
+      "last_checked": "2026-11-27T03:52:32Z",
       "official_signal": null,
       "changes": [],
       "sources": [
@@ -5345,7 +5345,7 @@
       },
       "steam_listed": true,
       "steam_release_date": "Oct 27, 2027",
-      "last_checked": "2026-11-26T03:50:55Z",
+      "last_checked": "2026-11-27T03:52:34Z",
       "official_signal": null,
       "changes": [
         {
@@ -5428,7 +5428,7 @@
       },
       "steam_listed": true,
       "steam_release_date": "Coming soon",
-      "last_checked": "2026-11-26T03:50:57Z",
+      "last_checked": "2026-11-27T03:52:36Z",
       "official_signal": null,
       "changes": [
         {
@@ -5487,7 +5487,7 @@
       "watch": {
         "steam_appid": 5237060
       },
-      "last_checked": "2026-11-26T03:50:59Z",
+      "last_checked": "2026-11-27T03:52:38Z",
       "steam_listed": true,
       "steam_release_date": "Coming soon",
       "official_signal": null,
@@ -5556,7 +5556,7 @@
       "watch": {
         "steam_appid": 3129790
       },
-      "last_checked": "2026-11-26T03:51:01Z",
+      "last_checked": "2026-11-27T03:52:40Z",
       "steam_listed": true,
       "steam_release_date": "Nov 10, 2026",
       "official_signal": null,
@@ -5594,5 +5594,5 @@
       "auto_imported_at": "2026-11-09"
     }
   ],
-  "last_run_at": "2026-11-26T03:51:01Z"
+  "last_run_at": "2026-11-27T03:52:40Z"
 }
