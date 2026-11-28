@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-27",
-  "generated_at_utc": "2026-11-27T03:53:24Z",
+  "generated_at": "2026-11-28",
+  "generated_at_utc": "2026-11-28T03:39:55Z",
   "source": {
     "name": "Steam 美区新作（支持简中）× 国家新闻出版署 · 国产网络游戏审批信息",
     "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/",
@@ -19,11 +19,11 @@
     }
   ],
   "stats": {
-    "steam_listed": 508,
+    "steam_listed": 517,
     "nppa_games": 2500,
-    "nppa_matched": 0,
-    "evaluated": 0,
-    "matched": 0,
+    "nppa_matched": 1,
+    "evaluated": 1,
+    "matched": 1,
     "skipped_budget": 0,
     "deferred": 0
   },
@@ -546,6 +546,80 @@
       ],
       "first_seen": "2026-10-30T15:41:59Z",
       "last_checked": "2026-10-30"
+    },
+    {
+      "origin": "domestic",
+      "name_cn": "仙帝神兵",
+      "name_en": "仙帝神兵",
+      "appid": 5071200,
+      "gap_type": "cn_sync",
+      "gap_days": 0,
+      "advantages": [
+        "cn_sync"
+      ],
+      "note": "国服与国际服同日上线",
+      "timeline": {
+        "cn": {
+          "date": "2026-11-27",
+          "basis": "released",
+          "estimated": false,
+          "source": "Steam 商店（国服）",
+          "url": "https://store.steampowered.com/app/5071200/"
+        },
+        "intl": {
+          "date": "2026-11-27",
+          "basis": "released",
+          "estimated": false,
+          "source": "Steam 商店（国际服）",
+          "url": "https://store.steampowered.com/app/5071200/"
+        }
+      },
+      "stage": {
+        "cn": "launch",
+        "os": "launch",
+        "cn_release": "2026-11-27",
+        "os_release": "2026-11-27"
+      },
+      "version": {
+        "cn": null,
+        "cn_source": null,
+        "cn_url": null,
+        "steam": null,
+        "source": null,
+        "ahead": false
+      },
+      "guides": {
+        "cn": null,
+        "intl": 83,
+        "ratio": null,
+        "advantage": false
+      },
+      "playtest_os": false,
+      "nppa": {
+        "approved_at": "2025-11-26",
+        "publisher": "时代新媒体出版社有限责任公司",
+        "operator": "成都繁英网络科技有限公司",
+        "approval_no": "国新出审〔2025〕2337号",
+        "batch": "2025年11月份国产网络游戏审批信息",
+        "batch_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202511/t20251127_940634.html"
+      },
+      "steam": {
+        "store_url": "https://store.steampowered.com/app/5071200/",
+        "us_listed": true,
+        "us_release_date": "Nov 27, 2026",
+        "us_release_parsed": "2026-11-27",
+        "us_coming_soon": false,
+        "cn_listed": true,
+        "cn_release_date": "2026 年 11 月 27 日",
+        "cn_release_parsed": "2026-11-27",
+        "match_score": 1.0
+      },
+      "evidence": [
+        "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/gcwlyxspxx/202511/t20251127_940634.html",
+        "https://store.steampowered.com/app/5071200/"
+      ],
+      "first_seen": "2026-11-28T03:39:55Z",
+      "last_checked": "2026-11-28"
     },
     {
       "origin": "domestic",
